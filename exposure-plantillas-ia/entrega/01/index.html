@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Reseñas en Piloto · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Reseñas en Piloto, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Reseñas en Piloto">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 01 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Reseñas en Piloto</h1>
+  <p class="bajada">Pedido automático de reseñas en Google. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Restaurantes</span><span class="chip">Setup USD 300–600</span><span class="chip">3–5 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p>Decisiones de este ejemplo. Si alguna no te sirve, adaptala a tu cliente.</p>
+<ul>
+<li><strong>Canal: mail (Gmail), no WhatsApp.</strong> Es la versión mínima que podés entregar bien en tu primer cliente. Para escribirle primero a alguien por WhatsApp, Meta exige plantillas aprobadas y el permiso de cada comensal. Si el restaurante solo tiene teléfonos, decímelo y lo adapto con el paso 7 de la ficha.</li>
+<li><strong>n8n Cloud, no un servidor propio.</strong> n8n es la herramienta donde se arman las automatizaciones uniendo bloques, que se llaman «nodos». La versión Cloud corre todo el día sin que mantengas nada. Además te ahorra el problema de la conexión de Google que vence a los 7 días.</li>
+<li><strong>Son tres plantillas que se conectan y se instalan en este orden:</strong><ol>
+<li><strong>17059</strong> manda el agradecimiento y el recordatorio.</li>
+<li><strong>16289</strong> lee las respuestas a esos mails y, si hay una queja, avisa al dueño. Las encuentra porque el asunto lleva el nombre del negocio.</li>
+<li><strong>16889</strong> cuenta las reseñas nuevas una vez por mes.</li>
+</ol>
+</li>
+<li>⚠️ Las dos plantillas complementarias, la <strong>16289</strong> y la <strong>16889</strong>, van explicadas en general: antes de instalarlas, leé las notas que trae cada una en n8n.</li>
+</ul>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Reseñas en Piloto" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar setup y primer mes</strong> 🟨</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cobrás el setup y la primera mensualidad antes de tocar nada.</li>
+<li><strong>Cómo:</strong> Le mandás el link de pago (Mercado Pago) o los datos de transferencia con el monto que cerraste en la venta (<strong>POR DEFINIR</strong>).</li>
+<li><strong>Qué le pedís:</strong> El pago.</li>
+<li><strong>Cuánto tarda:</strong> El mismo día que acepta.</li>
+<li><strong>Listo cuando:</strong> Ves la plata acreditada en tu cuenta. Una captura de pantalla no alcanza.</li>
+<li><strong>Si sale mal:</strong> Te dice «te pago la semana que viene». No arrancás. El plazo de entrega empieza a contar con el pago.</li>
+</ul>
+<p><strong>P2 · Enviar bienvenida con lista de pedidos</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le confirmás que arrancaron y le pedís todo junto, en un solo mensaje.</li>
+<li><strong>Cómo:</strong> Le mandás por WhatsApp el <strong>mensaje 1</strong> de la sección 4. Le proponés dos horarios para una visita de 30 minutos al local, fuera del servicio (por ejemplo, 11 h o 17 h).</li>
+<li><strong>Qué le pedís:</strong> Lo de la lista de la sección 3.</li>
+<li><strong>Qué le entregás:</strong> La fecha concreta de los primeros mails: «si nos vemos el martes, el martes siguiente ya salen».</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Confirma día y hora de la visita.</li>
+<li><strong>Si sale mal:</strong> No contesta en 24 horas. Le mandás el <strong>mensaje 2</strong>.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P3 · Crear cuentas de n8n y de IA</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Abrís el lugar donde va a vivir la automatización y las cuentas de IA que usan las alertas y el conteo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrás a n8n.io → <em>Get started</em> y creás la cuenta con tu mail de trabajo. Nombrá el espacio con el nombre del restaurante.</li>
+<li>Entrás a console.anthropic.com, creás una cuenta, cargás saldo y generás una <strong>clave de API</strong>. Una API es la «puerta» por la que un programa usa la IA. La clave es la llave de esa puerta y se paga por uso.</li>
+<li>Si la 16889 la usás con OpenAI, hacés lo mismo en platform.openai.com.</li>
+<li>Guardás las claves en un lugar seguro, por ejemplo un gestor de contraseñas.</li>
+</ol>
+</li>
+<li><strong>Quién paga n8n y la IA:</strong> <strong>POR DEFINIR</strong>. Te recomiendo pagarlo vos y que vaya incluido en la mensualidad.</li>
+<li><strong>Cuánto tarda:</strong> 30 a 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Entrás a n8n y ves el panel vacío, y tenés las claves guardadas.</li>
+<li><strong>Si sale mal:</strong> La tarjeta rebota en Anthropic u OpenAI. Probá con otra tarjeta. Sin saldo, la IA de quejas no funciona.</li>
+</ul>
+<p><strong>P4 · Conectar su Google en visita al local</strong> 🟨</p>
+<ul>
+<li><strong>Qué hacés:</strong> En una visita corta, el dueño inicia sesión con la cuenta de Google del negocio en tu n8n y te pasa el link de reseñas.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Llevás tu notebook.</li>
+<li>En n8n entrás a <em>Overview → Create → Credential → Gmail OAuth2 API → Sign in with Google</em>. Una «credencial» es el permiso guardado para que n8n use esa cuenta.</li>
+<li>El dueño escribe su contraseña y aprueba el acceso en su celular.</li>
+<li>Repetís lo mismo con <em>Google Sheets OAuth2 API</em>.</li>
+<li>Desde su celular, con esa cuenta abierta, busca el nombre del restaurante en Google. Aparece su perfil con el botón <strong>«Pedir reseñas»</strong>. Copia el link y te lo manda por WhatsApp.</li>
+<li>Ahí mismo anotás la <strong>foto de arranque</strong>: cuántas reseñas tiene hoy y qué nota promedio. La vas a usar en el reporte.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Que tenga a mano la contraseña de la cuenta de Google del negocio y su celular.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos, más el viaje.</li>
+<li><strong>Listo cuando:</strong> Las dos credenciales aparecen en n8n sin error y tenés el link corto de reseñas.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>No aparece «Pedir reseñas». Seguramente el perfil no está verificado o él no es el administrador. Hay que verificarlo, y Google puede tardar días. Mientras tanto la puerta P8 da NO.</li>
+<li>No puede recibirte en persona. Hacelo por videollamada con un programa de control remoto (por ejemplo AnyDesk), así él escribe su contraseña en tu pantalla. <strong>POR DEFINIR</strong>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P5 · Contar cómo registra comensales y quién carga</strong> 🟨</p>
+<ul>
+<li><strong>Qué hacés:</strong> En la misma visita averiguás de dónde van a salir los nombres y mails, y quién los anota cada día.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Le preguntás: ¿toman reservas? ¿Por dónde: teléfono, WhatsApp, alguna app? ¿Piden el mail? ¿Tienen delivery propio con datos de clientes?</li>
+<li>Los pedidos de las apps de delivery no sirven, porque esas apps no comparten el mail del cliente.</li>
+<li>Elegís con él <strong>una persona encargada</strong> (por ejemplo, el que cierra la caja) y <strong>un momento fijo</strong> (al cerrar cada turno).</li>
+<li>Le dejás clara una regla: <strong>se carga a todos los que dejaron su mail, sin elegir a los que se fueron contentos.</strong> Google prohíbe pedirle la reseña solo a los conformes. También prohíbe dar descuentos o regalos a cambio de una reseña.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> El nombre y el mail del encargado, para compartirle la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos, dentro de la misma visita.</li>
+<li><strong>Listo cuando:</strong> Podés completar esta frase: «Los mails salen de ___ y los carga ___ al cierre de ___».</li>
+<li><strong>Si sale mal:</strong> Te dice «que el mozo cargue solo a los que vea contentos». Lo frenás ahí mismo: va contra las reglas de Google y le puede costar el perfil.</li>
+</ul>
+<p><strong>P6 · ¿Hay mails de comensales para cargar?</strong> 🟥</p>
+<ul>
+<li><strong>SÍ:</strong> Hay al menos una fuente con mails, como reservas, delivery propio o una lista de clientes. Pasás a P8.</li>
+<li><strong>NO:</strong> Pasás a P7.</li>
+<li><strong>Si sale mal:</strong> Tiene teléfonos pero no mails. Se puede hacer por WhatsApp (paso 7 de la ficha), pero exige dos plantillas aprobadas por Meta y el permiso de cada comensal. Para tu primer cliente conviene empezar a pedir el mail.</li>
+</ul>
+<p><strong>P7 · Sumar pedido de mail en reservas</strong> 🟨</p>
+<ul>
+<li><strong>Qué hacés:</strong> Lográs que el restaurante empiece a pedir el mail.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Al tomar la reserva: «¿A qué mail te mando la confirmación?».</li>
+<li>O al cobrar: «¿Nos dejás tu mail? Te escribimos para saber cómo te fue».</li>
+<li>Lo importante es que la persona sepa que le van a escribir.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> Que el equipo use esa frase desde hoy.</li>
+<li><strong>Cuánto tarda:</strong> De 1 a 3 días hasta juntar los primeros mails.</li>
+<li><strong>Listo cuando:</strong> Hay al menos 5 mails reales anotados. Volvés a P5 para confirmar quién los carga.</li>
+<li><strong>Si sale mal:</strong> El equipo se olvida de preguntar. Pegá la frase en un cartelito al lado de la caja.</li>
+</ul>
+<p><strong>P8 · ¿Tengo accesos, link y encargado?</strong> 🟥</p>
+<ul>
+<li><strong>SÍ:</strong> Tenés las credenciales de Google en n8n, el link de reseñas y el nombre del encargado. Pasás a P10.</li>
+<li><strong>NO:</strong> Pasás a P9.</li>
+</ul>
+<p><strong>P9 · Mandar recordatorio y esperar respuesta</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le recordás lo que falta, sin presionar.</li>
+<li><strong>Cómo:</strong> Le mandás el <strong>mensaje 2</strong> nombrando exactamente lo que falta. Mientras esperás, podés adelantar los textos de P12.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> Llega lo que faltaba. Volvés a P4 si falta el acceso a Google.</li>
+<li><strong>Si sale mal:</strong> Pasan 3 días sin respuesta. Lo llamás por teléfono y le avisás que la fecha de lanzamiento se corre.</li>
+</ul>
+<h3>Etapa 3 · Instalación del flujo principal (17059)</h3>
+<p><strong>P10 · Armar planilla con 8 columnas en texto</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Creás la planilla donde el restaurante anota a cada comensal.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La planilla tiene que estar en el Drive de la cuenta de Google del negocio. Lo más fácil es crearla en la visita. Si no, pedile que cree una vacía llamada «Reseñas – [restaurante]» y te la comparta como editor.</li>
+<li>En la fila 1 escribís, una por columna y tal cual: <code>job_id</code> · <code>customer_name</code> · <code>customer_email</code> · <code>job_description</code> · <code>job_date</code> · <code>status</code> · <code>request_sent</code> · <code>reminder_sent</code>.</li>
+<li>Seleccionás las columnas de <code>job_date</code>, <code>request_sent</code> y <code>reminder_sent</code> y ponés <strong>Formato → Número → Texto sin formato</strong>. Si no lo hacés, Sheets puede leer 1/10 como 10 de enero.</li>
+<li>Inmovilizás la fila 1 (<em>Ver → Inmovilizar → 1 fila</em>).</li>
+<li>La compartís con el encargado como editor.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> Están los 8 encabezados exactos, en inglés, y las 3 columnas en texto sin formato.</li>
+<li><strong>Si sale mal:</strong> Un encabezado con mayúscula o un espacio de más («Job_id ») hace que la plantilla no lo encuentre. Copiá y pegá los nombres, no los tipees.</li>
+</ul>
+<p><strong>P11 · Importar plantilla 17059 y conectar credenciales</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Traés la plantilla a tu n8n y la conectás a las cuentas del negocio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrís n8n.io/workflows/17059 y usás el botón para copiar el flujo.</li>
+<li>En tu n8n creás un flujo nuevo y pegás con Ctrl+V.</li>
+<li>En los nodos <strong>«Read all customers»</strong> y <strong>«Stamp the sheet (sent)»</strong> elegís la credencial de Google Sheets del negocio, el archivo y la hoja.</li>
+<li>En <strong>«Send the review request»</strong> elegís la credencial de Gmail.</li>
+<li>Lo guardás como «01 Reseñas – [restaurante]».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> Ningún nodo muestra el triángulo rojo de advertencia.</li>
+<li><strong>Si sale mal:</strong> La planilla no aparece en la lista. La creaste con otra cuenta: tiene que estar en el Drive de la cuenta conectada.</li>
+</ul>
+<p><strong>P12 · Completar Your settings y traducir mails</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cargás los datos del restaurante y dejás los mails en español.</li>
+<li><strong>Cómo:</strong> Abrís el nodo del engranaje <strong>«Your settings»</strong> y completás:<ul>
+<li><code>businessName</code>: el nombre con el que lo conocen (<strong>POR DEFINIR</strong>).</li>
+<li><code>yourName</code>: quien firma, por ejemplo «Marta, de [restaurante]» (<strong>POR DEFINIR</strong>).</li>
+<li><code>reviewLink</code>: el link de P4.</li>
+<li><code>requestOffset</code> = <strong>0</strong> y <code>reminderGap</code> = <strong>3</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Textos propuestos (no toques nada que esté entre llaves):
+    - <strong>subject1:</strong> <code>¿Cómo te fue en {business_name}, {customer_name}?</code>
+    - <strong>body1:</strong>
+    &gt; Hola {customer_name}, gracias por venir a {business_name}. Esperamos que hayas disfrutado {job_description}.
+    &gt; Si tenés un minuto, nos ayuda mucho que cuentes tu experiencia en Google: {review_link}
+    &gt; Y si algo no salió bien, respondé este mail y lo resolvemos.
+    &gt; {your_name}
+    &gt; Si no querés recibir más mails, respondé BAJA.
+    - <strong>subject2:</strong> <code>{customer_name}, ¿nos contás cómo te fue en {business_name}?</code>
+    - <strong>body2:</strong>
+    &gt; Hola {customer_name}, hace unos días te escribimos después de tu visita a {business_name}. Si querés dejar tu opinión en Google, este es el link: {review_link}
+    &gt; Sea como sea, gracias por venir.
+    &gt; {your_name}
+    &gt; Si no querés recibir más mails, respondé BAJA.</p>
+<p>No escribas «dejanos 5 estrellas» ni «si te gustó, dejá tu reseña»: Google prohíbe orientar la reseña.
+- <strong>Cuánto tarda:</strong> 40 minutos.
+- <strong>Listo cuando:</strong> Los 4 textos están en español, <code>{business_name}</code> está en los dos asuntos, la opción de queja va aparte y BAJA va al final.
+- <strong>Si sale mal:</strong> Si borraste una llave, el mail llega con «{customer_name}» escrito tal cual. La prueba de P18 lo detecta.</p>
+<p><strong>P13 · Corregir tres líneas en Pick who to ask</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Arreglás el error de fechas de la plantilla y hacés que un mail mal escrito no frene todo.</li>
+<li><strong>Cómo:</strong> Abrís el nodo <strong>«Pick who to ask»</strong>, que es una caja con instrucciones escritas en código. Buscás cada línea con Ctrl+F y la reemplazás:<ol>
+<li>Las líneas <code>const today = new Date();</code> y <code>today.setHours(0, 0, 0, 0);</code> se reemplazan por <code>const today = new Date($now.toFormat('yyyy-MM-dd') + 'T00:00:00');</code></li>
+<li><code>const d = new Date(dateStr);</code> se cambia por <code>const d = new Date(dateStr + 'T00:00:00');</code></li>
+<li><code>if (!row.job_date || !row.customer_email) continue;</code> se cambia por <code>if (!row.job_date || !String(row.customer_email).includes('@')) continue;</code></li>
+</ol>
+</li>
+</ul>
+<p>En el mismo código cambiás <code>'there'</code> por <code>'cliente'</code> y <code>'your project'</code> por <code>'tu visita'</code>.</p>
+<p>Los cambios 1 y 2 evitan que en América el mail salga un día antes. El 3 hace que se saltee un mail mal escrito, que si no hace fallar a Gmail y corta la corrida para todas las filas siguientes.
+- <strong>Cuánto tarda:</strong> 20 minutos.
+- <strong>Listo cuando:</strong> Están los 5 cambios hechos y el nodo no marca error al guardar.
+- <strong>Si sale mal:</strong> Borraste un <code>;</code> o un paréntesis y aparece un error en rojo. Deshacés con Ctrl+Z y volvés a pegar la línea.</p>
+<p><strong>P14 · Apagar pie n8n, fijar remitente y horario</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que el mail parezca del restaurante y que salga en horario razonable.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Send the review request» → <em>Options → Add option</em> agregás <strong>Append n8n Attribution</strong> y lo dejás apagado. Agregás también <strong>Sender Name</strong> con el nombre del restaurante.</li>
+<li>En el menú <strong>…</strong> (arriba a la derecha) → <em>Settings</em> → <strong>Timezone</strong> elegís la del país del restaurante. Por ejemplo <code>America/Argentina/Buenos_Aires</code> (<strong>POR DEFINIR</strong> si está en otro país).</li>
+<li>En el nodo <strong>«Every day at 9am»</strong> → <em>Trigger Interval</em> → <strong>Custom (Cron)</strong> escribís <code>0 9-21/3 * * *</code>. «Cron» es una forma abreviada de escribir horarios que se repiten. Esta dice: a las 9, 12, 15, 18 y 21.
+- En un restaurante funciona así: quien cenó y fue cargado al cierre recibe el mail a las 9 del día siguiente. Quien almorzó lo recibe a las 15 o a las 18.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Los 4 ajustes están guardados.</li>
+<li><strong>Si sale mal:</strong> Sin la zona horaria, los mails salen de madrugada o con un día corrido.</li>
+</ul>
+<h3>Etapa 4 · Alerta de quejas y conteo mensual</h3>
+<p><strong>P15 · Instalar alerta de quejas 16289</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Sumás el flujo que lee las respuestas a los mails y avisa al dueño si hay una queja.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importás n8n.io/workflows/16289 igual que en P11.</li>
+<li>Conectás el Gmail del negocio y la clave de Anthropic (<em>Create → Credential → Anthropic</em>).</li>
+<li>Este flujo encuentra las respuestas por el asunto con el nombre del negocio. Por eso lo pusiste en los dos asuntos.</li>
+<li>Durante la prueba, el aviso tiene que llegarte <strong>a vos</strong>. En el lanzamiento lo cambiás al dueño. El canal del aviso es <strong>POR DEFINIR</strong>: pegame la ficha y te digo dónde se configura.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Está importado, las credenciales no muestran error y el aviso apunta a tu mail.</li>
+<li><strong>Si sale mal:</strong> Con el saldo de Anthropic en cero, no analiza nada. Cargá saldo y activá el aviso de saldo bajo en la consola.</li>
+</ul>
+<p><strong>P16 · Instalar conteo mensual 16889</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Sumás el flujo que cuenta las reseñas nuevas del mes.</li>
+<li><strong>Cómo:</strong> Importás n8n.io/workflows/16889 y conectás la clave de OpenAI, o la de Anthropic si cambiás el modelo. Los ajustes finos quedan <strong>POR DEFINIR</strong> hasta que pegues la ficha.</li>
+<li><strong>Plan B:</strong> Si no queda andando para el día 30, contás a mano en el Perfil de Empresa → Reseñas y comparás con la foto de arranque de P4.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Está configurado, o el plan B está anotado en tu calendario para el día 30.</li>
+<li><strong>Si sale mal:</strong> Error de modelo al cambiar de OpenAI a Anthropic. Volvé al modelo original y probá de nuevo.</li>
+</ul>
+<h3>Etapa 5 · Prueba</h3>
+<p><strong>P17 · Cargar cuatro filas de prueba propias</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cargás comensales falsos con tus propios mails para ver todo lo que puede fallar.</li>
+<li><strong>Cómo:</strong> Usá alias de Gmail: <code>tumail+1@gmail.com</code> llega a tu misma casilla. Cargá estas filas en este orden:</li>
+</ul>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>job_id</th>
+<th>customer_name</th>
+<th>customer_email</th>
+<th>job_date</th>
+<th>status</th>
+<th>Qué tiene que pasar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Prueba Mal</td>
+<td>tumail.gmail.com</td>
+<td>hoy</td>
+<td>open</td>
+<td>Se saltea y la corrida sigue</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Prueba Hoy</td>
+<td>tumail+2@gmail.com</td>
+<td>hoy</td>
+<td>open</td>
+<td>Sale el agradecimiento</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Prueba Mañana</td>
+<td>tumail+3@gmail.com</td>
+<td>mañana</td>
+<td>open</td>
+<td>No sale hoy</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Prueba Record</td>
+<td>tumail+4@gmail.com</td>
+<td>hace 3 días</td>
+<td>open</td>
+<td>Sale el recordatorio</td>
+</tr>
+</tbody>
+</table></div>
+<pre><code>- Las fechas van así: `2026-10-03`.
+- En la fila 4, `request_sent` va con la fecha de hace 3 días. Copiá el formato exacto que la plantilla escribe en la fila 2 después de la primera corrida y recién ahí cargás la fila 4.
+</code></pre>
+<ul>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Las filas están cargadas con job_id del 1 al 4, sin repetir.</li>
+</ul>
+<p><strong>P18 · Enviar pedidos y marcar la planilla</strong> 🟪</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés correr el flujo a mano para ver qué haría solo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el flujo 17059 apretás <strong>Execute workflow</strong> (en algunas versiones dice <em>Test workflow</em>) y mirás qué nodos quedan en verde.</li>
+<li>Lo corrés una segunda vez.</li>
+<li>Respondés el mail de prueba con algo como «la comida llegó fría y tardaron una hora».</li>
+<li>Corrés el flujo 16289 a mano.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos con la revisión.</li>
+<li><strong>Listo cuando:</strong> Las corridas terminan sin nodos en rojo.</li>
+</ul>
+<p><strong>P19 · ¿Llegó bien, una sola vez y en hora?</strong> 🟥</p>
+<ul>
+<li><strong>SÍ, si se cumple todo esto:</strong><ul>
+<li>El mail de «Prueba Hoy» llegó a la bandeja de entrada, no a spam.</li>
+<li>El remitente es el nombre del restaurante y no aparece el pie de n8n.</li>
+<li>El nombre del comensal sale bien y el link abre la reseña.</li>
+<li>«Prueba Mal» se salteó y la corrida siguió.</li>
+<li>«Prueba Mañana» no salió.</li>
+<li><code>request_sent</code> quedó completo.</li>
+<li>En la segunda corrida no se repitió nada.</li>
+<li>La fila 4 recibió el recordatorio.</li>
+<li>A vos te llegó la alerta de la queja.</li>
+</ul>
+</li>
+<li><strong>NO:</strong> Si falla cualquier punto, pasás a P20.</li>
+</ul>
+<p><strong>P20 · Corregir y limpiar marcas de prueba</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Arreglás lo que falló y repetís la prueba desde cero.</li>
+<li><strong>Cómo:</strong> Abrís <em>Executions</em> (el historial de corridas), entrás a la que falló y mirás el nodo en rojo: ahí dice el error. Lo corregís, borrás <code>request_sent</code> y <code>reminder_sent</code> de las filas de prueba y volvés a P17.</li>
+<li><strong>Cuánto tarda:</strong> De 15 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> Corregiste el error y las filas quedaron limpias.</li>
+<li><strong>Si sale mal:</strong> El mail cae en spam. Revisá que tenga un solo link. Marcalo como «No es spam» y pedile al dueño que mande un par de mails normales desde esa cuenta.</li>
+</ul>
+<h3>Etapa 6 · Demo</h3>
+<p><strong>P21 · Mostrar demo con el mail del dueño</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mostrás al dueño el sistema funcionando en su propio celular.</li>
+<li><strong>Cómo:</strong> En una videollamada de 15 minutos o en el local:<ol>
+<li>Cargás una fila con su nombre y su mail, con fecha de hoy, y corrés el flujo. Le llega el mail.</li>
+<li>Le mostrás el recordatorio que generaste en la prueba.</li>
+<li>Le pedís que responda con una queja inventada y le mostrás la alerta.</li>
+<li>Le mostrás la planilla: «esto es lo único que tiene que hacer tu equipo».</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> Ve con sus ojos cómo funciona el sistema.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Vio el agradecimiento, el recordatorio y la alerta de queja.</li>
+</ul>
+<p><strong>P22 · ¿El dueño aprueba textos y rutina?</strong> 🟥</p>
+<ul>
+<li><strong>SÍ:</strong> Te escribe «dale, va» por WhatsApp. Pasás a P24.</li>
+<li><strong>NO:</strong> Pasás a P23.</li>
+</ul>
+<p><strong>P23 · Ajustar lo que pidió el dueño</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cambiás textos, firma o nombre según lo que pidió.</li>
+<li><strong>Cómo:</strong> Hacés los cambios en «Your settings» y le reenviás el mail de prueba. No hace falta otra reunión: alcanza con que lo apruebe por WhatsApp.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> Le llegó la versión nueva. Volvés a P21 y P22.</li>
+<li><strong>Si sale mal:</strong> Pide «mandáselo solo a los que quedaron contentos». Le explicás que Google lo prohíbe y que la opción de responder el mail ya cubre a los disconformes.</li>
+</ul>
+<h3>Etapa 7 · Lanzamiento</h3>
+<p><strong>P24 · Entregar guía y capacitar al encargado</strong> 🟩</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le dejás al encargado una guía de una página y lo ves cargar una fila.</li>
+<li><strong>Cómo:</strong> La guía dice:<ul>
+<li>«Al cerrar cada turno, desde la app de Google Sheets en el celular, sumá una fila por cliente que dejó mail».</li>
+<li><code>job_id</code>: el número siguiente, sin repetir. <code>customer_name</code> y <code>customer_email</code>. <code>job_description</code> es opcional, por ejemplo «tu cena». <code>job_date</code> va así: 2026-10-03. <code>status</code>: open.</li>
+<li>No se tocan <code>request_sent</code> ni <code>reminder_sent</code>.</li>
+<li>Si alguien responde BAJA o su reseña aparece en Google, se cambia su <code>status</code> a skip o a done.</li>
+<li>Se carga a todos, sin elegir.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> La guía, en PDF o fijada en el chat.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> El encargado cargó una fila solo, sin errores, delante tuyo.</li>
+<li><strong>Si sale mal:</strong> Escribe la fecha como 3/10. Dejale un ejemplo bien escrito arriba de todo y repetí la carga.</li>
+</ul>
+<p><strong>P25 · Activar flujos y borrar filas de prueba</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Prendés el sistema de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrás las filas de prueba, o les ponés <code>status</code> skip.</li>
+<li>Cambiás el destino de la alerta de quejas al dueño.</li>
+<li>Activás los 3 flujos con el interruptor de arriba (<em>Active</em> o <em>Publish</em>, según la versión).</li>
+<li>Anotás la fecha de lanzamiento.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Los 3 flujos figuran como activos.</li>
+<li><strong>Si sale mal:</strong> Te olvidaste de cambiar el destino de la alerta y las quejas te llegan a vos. Reenviáselas al dueño y corregilo.</li>
+</ul>
+<p><strong>P26 · Cargar comensales al cerrar cada turno</strong> 🟨</p>
+<ul>
+<li><strong>Qué hacés:</strong> El restaurante empieza a cargar a sus comensales reales.</li>
+<li><strong>Qué le pedís:</strong> Que el encargado cargue desde el primer turno.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos por turno, del lado de ellos.</li>
+<li><strong>Listo cuando:</strong> Aparecen las primeras filas reales.</li>
+<li><strong>Si sale mal:</strong> No cargan. Lo detecta la puerta P29.</li>
+</ul>
+<p><strong>P27 · ⭐ Enviar primeros agradecimientos reales</strong> 🟪</p>
+<ul>
+<li><strong>Qué hacés:</strong> Confirmás que salieron los primeros mails a comensales reales y se lo mostrás al dueño.</li>
+<li><strong>Cómo:</strong> Después de la corrida siguiente (9, 12, 15, 18 o 21 h) entrás a <em>Executions</em> y verificás la corrida en verde, y en la planilla que <code>request_sent</code> esté completo. Le mandás al dueño el <strong>mensaje 3</strong> con una captura.<ul>
+<li>Este es el primer resultado visible. No es la reseña, que depende del comensal: es ver que el sistema ya trabaja solo.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> El aviso de lanzamiento con la captura.</li>
+<li><strong>Cuánto tarda:</strong> Pocas horas desde la carga.</li>
+<li><strong>Listo cuando:</strong> Hay al menos un mail real enviado y marcado en la planilla.</li>
+<li><strong>Si sale mal:</strong> La corrida está en rojo. Abrila y mirá el nodo que falló. Lo más común es una fecha mal escrita o un mail con un espacio.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento, ajustes y reporte</h3>
+<p><strong>P28 · Avisar quejas y mandar recordatorios a 3 días</strong> 🟪</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás que el sistema trabaje y lo vigilás de lejos.</li>
+<li><strong>Cómo:</strong> La primera semana mirás <em>Executions</em> cada mañana, 5 minutos. Después, dos veces por semana.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos por revisión.</li>
+<li><strong>Listo cuando:</strong> Corre siempre. Este paso no termina.</li>
+<li><strong>Si sale mal:</strong> El dueño cambió la contraseña de Google y se cortó la conexión. Reconectás la credencial con él, igual que en P4.</li>
+</ul>
+<p><strong>P29 · ¿Se carga la planilla todos los días?</strong> 🟥</p>
+<ul>
+<li><strong>Cómo lo ves:</strong> Al día 3 y al día 7 revisás si hay filas de cada día que abrió el restaurante.</li>
+<li><strong>SÍ:</strong> Pasás a P31.</li>
+<li><strong>NO:</strong> Pasás a P30.</li>
+</ul>
+<p><strong>P30 · Simplificar la carga con el encargado</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Averiguás qué le traba la carga y lo simplificás.</li>
+<li><strong>Cómo:</strong> Le preguntás qué le cuesta. Algunas opciones:<ul>
+<li>Un acceso directo a la planilla en la pantalla del celular.</li>
+<li>Cargar una sola vez por noche.</li>
+<li>Pasar la carga a otra persona.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> Al dueño, que respalde la rutina.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> Hay una rutina nueva acordada. Volvés a P26.</li>
+<li><strong>Si sale mal:</strong> Al dueño no le importa. Se lo dejás por escrito: sin carga no salen mails, y el sistema sí está funcionando.</li>
+</ul>
+<p><strong>P31 · Revisar planilla y ajustar textos cada semana</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Mantenés la planilla limpia y juntás los números del reporte.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Quien respondió BAJA pasa a skip.</li>
+<li>Si reconocés en Google la reseña de alguien de la planilla, su fila pasa a done.</li>
+<li>Corregís filas con errores.</li>
+<li>Mirás si las quejas que llegaron al dueño tuvieron respuesta. Las resuelve él, no vos.</li>
+<li>Anotás los pedidos enviados, recordatorios, quejas y bajas de la semana.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> La planilla no tiene errores y los números de la semana están anotados.</li>
+<li><strong>Si sale mal:</strong> Un job_id repetido hace que esa persona reciba un mail en cada corrida. Lo corregís en el momento y le pedís disculpas si hace falta.</li>
+</ul>
+<p><strong>P32 · Entregar reporte del primer mes</strong> 🟩</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mandás el resumen del mes.</li>
+<li><strong>Cómo:</strong> Usás el <strong>mensaje 4</strong> con estos datos: pedidos enviados, recordatorios, quejas y cuántas se atendieron, bajas, reseñas nuevas (de la 16889 o contadas a mano) y la nota de hoy contra la de la foto de arranque. Mostrás lo que pasó, sin prometer cifras.</li>
+<li><strong>Qué le entregás:</strong> El reporte.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> El dueño lo recibió y respondió.</li>
+</ul>
+<h3>Etapa 9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> 🟥</p>
+<ul>
+<li><strong>SÍ:</strong> Paga el segundo mes. Pasás a P34.</li>
+<li><strong>NO:</strong> Pasás a P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer Motor de Contenido como siguiente paso</strong> 🟦</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás planteado el próximo servicio.</li>
+<li><strong>Cómo:</strong> Para un restaurante encaja mejor <strong>17 · Motor de Contenido</strong>, porque necesita publicar sus platos todas las semanas. <strong>12 · Nadie se Va en Silencio</strong> sirve solo si tiene membresías, abonos o contratos de catering (<strong>POR DEFINIR</strong>). No lo ofrezcas el mismo día de la renovación. Mencionalo en el reporte del segundo o tercer mes, cuando ya confía en vos.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> Quedó planteado. El sistema sigue corriendo (P28).</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar flujos ordenadamente</strong> 🟩</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cerrás prolijo, para que te recomiende igual.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Desactivás los 3 flujos.</li>
+<li>Borrás las credenciales de su Google de tu n8n.</li>
+<li>Le dejás la planilla, que es suya.</li>
+<li>Le pasás el link de reseñas para que lo use a mano.</li>
+<li>Si quiere seguir con otra persona, le exportás el flujo como archivo JSON, que es un archivo de texto con el flujo entero.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> Planilla, link, archivo del flujo y un último reporte.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> No queda nada corriendo a su nombre.</li>
+<li><strong>Si sale mal:</strong> Te olvidás de borrar las credenciales y seguís teniendo acceso a su Gmail. Borralas siempre: es su cuenta.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup y del primer mes — día 0</li>
+<li>☐ Día y hora para la visita de 30 minutos — día 0</li>
+<li>☐ Contraseña de la cuenta de Google del negocio y el celular a mano, en la visita — día 1</li>
+<li>☐ Acceso al Perfil de Empresa de Google y el link de «Pedir reseñas» — día 1</li>
+<li>☐ De dónde salen los mails de los comensales — día 1</li>
+<li>☐ Nombre y mail del encargado de cargar — día 1</li>
+<li>☐ Nombre del negocio como quiere que aparezca y quién firma — día 1</li>
+<li>☐ Canal donde quiere recibir las alertas de queja — día 1</li>
+<li>☐ Aprobación de los textos por WhatsApp — día 5</li>
+<li>☐ Carga de comensales en cada turno — desde el día 6</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Planilla de comensales armada y compartida</li>
+<li>☐ Flujo de agradecimiento y recordatorio a 3 días, por mail</li>
+<li>☐ Link directo a la reseña de Google</li>
+<li>☐ Alerta de quejas al dueño</li>
+<li>☐ Conteo mensual de reseñas nuevas</li>
+<li>☐ Guía de carga de una página para el encargado</li>
+<li>☐ Aviso de lanzamiento con captura</li>
+<li>☐ Reporte del primer mes</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, con 2 horas por día; si una puerta da NO, todo se corre)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>P1–P3: pago, bienvenida, cuentas</td>
+</tr>
+<tr>
+<td>1</td>
+<td>P4–P5 y P10: visita al local y planilla</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P11–P13: importar, textos y código</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P14–P16: horario, alerta de quejas y conteo</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P17–P20: pruebas</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P21–P24: demo, aprobación y capacitación</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P25–P26: activación y primera carga real</td>
+</tr>
+<tr>
+<td>7</td>
+<td>⭐ P27: primeros agradecimientos reales</td>
+</tr>
+<tr>
+<td>Semana 2</td>
+<td>P28–P29: revisión diaria corta y control de carga al día 3 y al día 7</td>
+</tr>
+<tr>
+<td>Semanas 2 a 4</td>
+<td>P31: revisión semanal</td>
+</tr>
+<tr>
+<td>Día 30</td>
+<td>P32–P33: reporte y renovación</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lo que le garantizás es que el sistema esté funcionando a los 5 días hábiles de tener los accesos y que el reporte llegue. La cantidad de reseñas depende de sus comensales.</p>
+<hr />
+<h2>4. Mensajes listos para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Gracias por confiar 🙌 Ya arrancamos con el pedido de reseñas para [Restaurante].
+Para dejarlo andando necesito:
+1️⃣ 30 min en el local para conectar la cuenta de Google del negocio (tené a mano la contraseña y el celu).
+2️⃣ Acceso al perfil de Google del restaurante.
+3️⃣ Que me cuentes de dónde sacamos los mails de los clientes (reservas, delivery propio, etc.).
+4️⃣ Quién del equipo va a anotar a los clientes al cerrar cada turno.
+¿Te queda bien el [día] a las [hora] o el [día] a las [hora]? Si nos vemos el [día], el [día] ya salen los primeros mails.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>[Nombre], ¿cómo va? Para seguir solo me falta esto: [lo que falta]. Apenas lo tenga, en [X] días está andando. ¿Lo vemos hoy o mañana?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [Nombre]! Desde hoy está andando 🎉 Esta mañana salieron los primeros [N] mails de agradecimiento con el link a Google (te paso captura).
+A los 3 días sale solo un recordatorio a quien todavía no dejó su opinión. Si alguien responde con una queja, te llega un aviso para que lo resuelvas.
+Lo único que necesita: que [encargado] cargue a los clientes al cerrar cada turno.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>[Nombre], va el resumen del primer mes de [Restaurante] 📊
+• Mails de agradecimiento enviados: [N]
+• Recordatorios: [N]
+• Respuestas con queja: [N] (atendidas: [N])
+• Pedidos de baja: [N]
+• Reseñas en Google: antes [N], hoy [N]
+• Nota promedio: antes [X], hoy [X]
+Para el mes que viene propongo: [ajuste]. El sistema sigue andando; la mensualidad de [mes] te la mando el [día]. ¿Lo charlamos 10 min?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p01">← Volver a la ficha 01</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

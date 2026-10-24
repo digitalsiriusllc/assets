@@ -1,0 +1,617 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Máquina de Conversión · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Máquina de Conversión, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Máquina de Conversión">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.71 .2 350)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 15 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Transformación</p>
+  <h1>Máquina de Conversión</h1>
+  <p class="bajada">De la consulta a la venta sin que nadie se caiga en el camino. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Inmobiliarias</span><span class="chip">Setup USD 3.500–5.000</span><span class="chip">4–6 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos (si alguno no es así, adaptalo a tu cliente):</strong></p>
+<ul>
+<li>Ninguno de los 2 o 3 sistemas que ya le instalaste es una de las cinco fichas que forman esta máquina. Si alguno ya está (por ejemplo, la 03 de agenda), salteá esa etapa y solo lo conectás.</li>
+<li>Las consultas entran por el <strong>formulario de la web, WhatsApp e Instagram</strong>. Las de los portales inmobiliarios (Zonaprop, Argenprop, Mercado Libre) quedan fuera de esta versión. Se suman como ajuste del mes 2.</li>
+<li>La «propuesta» es la <strong>selección de propiedades y condiciones</strong> que se le manda al comprador o inquilino después de la visita. La propuesta de tasación para el propietario que quiere vender queda <strong>POR DEFINIR</strong>.</li>
+<li>Los arreglos de la plantilla salen de la ficha 15. <strong>Para los tramos de las fichas 07, 03, 10 y 09, seguí también «Cómo dejarla lista» de cada una</strong>: son arreglos ya probados.</li>
+</ul>
+<p><strong>Cómo se conectan las cinco fichas:</strong></p>
+<ol>
+<li>Entra la consulta y la <strong>07 Respuesta 24/7</strong> contesta.</li>
+<li>La <strong>08 Filtro de Oro</strong> la califica.</li>
+<li>Si el lead está listo, la <strong>03 Cero Ausencias</strong> le agenda la visita.</li>
+<li>Después de la visita, la <strong>10 Propuesta el Mismo Día</strong> arma la propuesta.</li>
+<li>La <strong>09 Seguimiento Constante</strong> insiste hasta un sí o un no.</li>
+</ol>
+<p><strong>Orden de instalación:</strong> primero 07 + 08, porque ya vienen juntas en la plantilla de n8n. Después 03, 10 y 09. WhatsApp va al final, porque Meta tarda en aprobarlo. Por eso el pedido a Meta se hace el día 1.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Máquina de Conversión" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Palabras que vas a ver:</strong></p>
+<ul>
+<li><strong>n8n</strong>: la herramienta donde armás los flujos uniendo cajitas.</li>
+<li><strong>Nodo</strong>: cada una de esas cajitas.</li>
+<li><strong>Credencial</strong>: un permiso guardado para que n8n entre a una cuenta.</li>
+<li><strong>API</strong>: la puerta por la que un programa habla con otro.</li>
+<li><strong>Webhook</strong>: una dirección web a la que un sistema le avisa a otro que pasó algo.</li>
+</ul>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup acordado</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró el pago del setup en las condiciones que ya pactaron.</li>
+<li><strong>Cómo:</strong> revisás tu cuenta o Mercado Pago y le mandás el comprobante o la factura.</li>
+<li><strong>Qué le pedís:</strong> el pago. Desde cuándo corre la mensualidad queda <strong>POR DEFINIR</strong> según lo que acordaron. Lo usual es desde el lanzamiento.</li>
+<li><strong>Qué le entregás:</strong> factura o recibo.</li>
+<li><strong>Cuánto tarda:</strong> el día 1.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si se demora, no arranques igual «por la confianza». Mandale el link de pago de nuevo, con fecha.</li>
+</ul>
+<p><strong>P2 · Enviar bienvenida con pedido de datos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás el mensaje 1 de abajo y agendás la reunión de arranque.</li>
+<li><strong>Cómo:</strong> WhatsApp con la lista de lo que necesitás y un Google Doc «Checklist de arranque» con casillas que él pueda tildar.</li>
+<li><strong>Qué le pedís:</strong> todo lo de la lista del final, marcado «día 1».</li>
+<li><strong>Qué le entregás:</strong> el checklist y la fecha de la reunión.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la reunión está agendada para el día 2 o 3.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, llamalo. Ya hay confianza: un audio corto funciona mejor que otro texto.</li>
+</ul>
+<p><strong>P3 · Definir con el dueño el buen cliente</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> una reunión de 90 minutos para escribir qué es un lead que vale una visita. Sin esto la ficha 08 no existe: es consultoría, no un sistema.</li>
+<li><strong>Cómo:</strong> compartís pantalla con un Doc y completan juntos:<ul>
+<li><strong>Operaciones que trabajan:</strong> compra, alquiler o ambas.</li>
+<li><strong>Zonas:</strong> las que sí y las que no.</li>
+<li><strong>Presupuesto mínimo</strong> por operación.</li>
+<li><strong>Plazo:</strong> para cuándo tiene que mudarse o comprar.</li>
+<li><strong>Forma de pago:</strong> contado, crédito o «tiene que vender para comprar».</li>
+<li><strong>Lead listo para visita</strong> (demo-ready), <strong>lead para nutrir</strong> (todavía no está listo, recibe mails de valor) y <strong>descarte</strong> (drop).</li>
+<li><strong>Dos datos de su proceso actual:</strong> quién atiende hoy y qué agente recibe qué zona.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> su tiempo y que estén los agentes que van a recibir los leads, si puede.</li>
+<li><strong>Qué le entregás:</strong> el Doc «Buen cliente» con los criterios escritos.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora de preparación y 90 minutos de reunión.</li>
+<li><strong>Listo cuando:</strong> están escritas las tres categorías, con zona, presupuesto y plazo en cada una.</li>
+<li><strong>Si sale mal:</strong> si el dueño dice «me sirven todos», preguntale por las últimas 5 visitas que no sirvieron y por qué. Ahí salen los criterios.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P4 · Entregar accesos, información y lista de propiedades</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> recibís todo lo que el sistema necesita para contestar y conectarse.</li>
+<li><strong>Cómo:</strong> él tilda el checklist. Vos verificás cada acceso entrando de verdad, no solo porque te dijo «ya está».</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>Acceso a la cuenta de Google del negocio (Gmail, Calendar y Drive).</li>
+<li>Datos para contestar: zonas, tipos de propiedad, honorarios, horarios, requisitos para alquilar y preguntas frecuentes.</li>
+<li>Lista de propiedades actuales, o el link donde están publicadas.</li>
+<li>Una propuesta que haya mandado y le guste.</li>
+<li>Mails y teléfonos de los agentes.</li>
+<li>Que pague él las cuentas de n8n, la API de Anthropic, ManyChat y el uso de WhatsApp. Los montos quedan <strong>POR DEFINIR</strong> según el plan.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 o 3 días de su lado.</li>
+<li><strong>Listo cuando:</strong> pasa la puerta P6.</li>
+<li><strong>Si sale mal:</strong> la información de las preguntas frecuentes llega a medias. Mandale un Doc con las preguntas ya escritas para que solo complete las respuestas.</li>
+</ul>
+<p><strong>P5 · Pedir alta de WhatsApp API a Meta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> arrancás hoy el trámite de WhatsApp, que es lo que más tarda.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Pedile que te sume como administrador en su Meta Business (business.facebook.com).</li>
+<li>Entrá a developers.facebook.com, creá una app y sumale el producto WhatsApp.</li>
+<li>Iniciá la verificación del negocio y registrá el número.</li>
+<li>El número no puede estar usándose en la app común de WhatsApp: usá uno nuevo, o fijate si Meta ofrece en su país la opción de usar el mismo número en la app y en la API a la vez.</li>
+<li>En la semana 2, cuando tengas los textos, subí las <strong>plantillas</strong>: mensajes preaprobados por Meta, obligatorios para escribirle primero a alguien o fuera de la ventana de 24 horas desde su último mensaje.</li>
+</ol>
+</li>
+<li><strong>Plantillas a subir:</strong> confirmación de visita, recordatorio de visita, aviso de propuesta y los 5 mensajes de seguimiento. Todas las de marketing terminan con «Si no querés recibir más mensajes, respondé BAJA».</li>
+<li><strong>Qué le pedís:</strong> el acceso de administrador y los papeles del negocio que pida Meta.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora tuya. Meta tarda de 2 días a varias semanas.</li>
+<li><strong>Listo cuando:</strong> el trámite está enviado y tenés número de caso.</li>
+<li><strong>Si sale mal:</strong> si Meta rechaza la verificación, casi siempre es porque el nombre o la dirección no coinciden con la web o los papeles. Corregí eso y reenviá.</li>
+</ul>
+<p><strong>P6 · ¿Están todos los accesos y datos?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> entraste a Gmail, Calendar y Drive, y tenés la información del negocio completa. Pasás a P8.</li>
+<li><strong>NO:</strong> vas a P7. No empezás la instalación con datos a medias: después rehacés todo.</li>
+</ul>
+<p><strong>P7 · Mandar recordatorio con lo que falta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> mensaje 2, con lo que falta puntualmente.</li>
+<li><strong>Cómo:</strong> WhatsApp corto. Si a las 48 horas sigue faltando, ofrecé 10 minutos por llamada para hacerlo juntos.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> volvés a P4 con lo nuevo.</li>
+<li><strong>Si sale mal:</strong> si se traba siempre en lo mismo, hacelo vos con él en una videollamada.</li>
+</ul>
+<h3>Etapa 3 · Instalación del primer tramo (fichas 07 y 08, plantilla n8n.io/workflows/6941)</h3>
+<p><strong>P8 · Conectar Google, Claude y planilla Leads</strong> (yo). Corresponde a los pasos 1 y 2 de «Cómo dejarla lista».</p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás la plantilla conectada a las cuentas del negocio y a la planilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n tocá <strong>Import from URL</strong> y pegá el link de la plantilla.</li>
+<li>Creá las tres credenciales de Google (Gmail, Sheets y Calendar) con la cuenta del negocio.</li>
+<li>Reemplazá los nodos «OpenAI Chat Model», «OpenAI Search Model» y «OpenAI Chat» por <strong>Anthropic Chat Model</strong>, conectados en el mismo lugar. La credencial es la clave de la API de Anthropic, que sacás en console.anthropic.com.</li>
+<li>Creá la planilla con la pestaña <strong>Leads</strong> y en la fila 1 escribí: Date, Name, Email, Company, Job Title, Message, Number of Employees, Industry, Geography, Annual Revenue, Technology, Pain Points y Lead Classification.</li>
+<li>En los 5 nodos de Google Sheets cambiá YOUR_GOOGLE_SHEET_ID eligiendo la planilla y la pestaña de la lista.</li>
+<li>En «Log Lead to Sheet» mapeá Email con <code>{{ $json.Email }}</code>.</li>
+<li>Sumá dos pestañas más: <strong>Seguimiento</strong>, que la llenan las fichas 03, 10 y 09, y <strong>Tablero</strong>, con fórmulas CONTAR.SI por etapa.</li>
+</ol>
+</li>
+<li><strong>Ojo:</strong> varias de las 13 columnas están pensadas para empresas (empleados, facturación). En una inmobiliaria van a quedar casi vacías. No las borres: la plantilla escribe ahí.</li>
+<li><strong>Cuánto tarda:</strong> 2 a 3 horas.</li>
+<li><strong>Listo cuando:</strong> ejecutás «Log Lead to Sheet» con un dato de prueba y aparece una fila con el mail completo.</li>
+<li><strong>Si sale mal:</strong> el error «columns.schema is required» significa que no elegiste la planilla de la lista. Volvé a elegirla en ese nodo.</li>
+</ul>
+<p><strong>P9 · Cargar info del negocio en el agente</strong> (yo). Corresponde al paso 3.</p>
+<ul>
+<li><strong>Qué hacés:</strong> le das a la IA la información real con la que va a contestar.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el System Message del «AI Answer Agent» cambiá [Your Company Name].</li>
+<li>Pegá en español las zonas, los tipos de propiedad, los honorarios, los horarios, los requisitos y las preguntas frecuentes de P4.</li>
+<li>Sumá una regla: «Nunca inventes precios ni disponibilidad. Si no está acá, decí que un agente le confirma».</li>
+<li>Reemplazá <strong>user@example.com</strong>, que aparece dos veces, por el mail del equipo. Ahí llegan las consultas que la IA no sabe responder.</li>
+<li>Al traducir, sacá los <code>{{ $json... }}</code>: en ese campo no se reemplazan y la IA los lee tal cual.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 horas.</li>
+<li><strong>Listo cuando:</strong> el texto no tiene ningún corchete [ ] ni ningún user@example.com.</li>
+<li><strong>Si sale mal:</strong> la IA promete cosas como «tenemos departamentos desde X». Es porque cargaste precios viejos. Pedí que te confirme cuáles están vigentes.</li>
+</ul>
+<p><strong>P10 · Escribir los criterios del buen cliente</strong> (yo). Corresponde al paso 7.</p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás el Doc de P3 al clasificador.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Define ICP and Lead Criteria» (ICP es el perfil del cliente ideal), reescribí en español los textos de ICP, demo-ready, nurture y drop con zona, presupuesto y plazo. No toques «output».</li>
+<li>Si en P11 sumás preguntas al formulario, agregalas al campo Text del «AI Lead Classifier».</li>
+<li>En Settings del flujo poné la zona horaria del negocio, por ejemplo America/Argentina/Buenos_Aires. Si no, usa la de Nueva York.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> los cuatro textos están en español y la zona horaria está cambiada.</li>
+<li><strong>Si sale mal:</strong> criterios vagos como «buen presupuesto» hacen que la IA clasifique al azar. Poné números y zonas con nombre.</li>
+</ul>
+<p><strong>P11 · Rehacer formulario y traducir los mails</strong> (yo). Corresponde a los pasos 5 y 6.</p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás en español todo lo que ve el lead.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá «Input Form» y agregá un <strong>On form submission</strong> llamado «Input Form».</li>
+<li>Conectalo a «Log Lead to Sheet» y al «AI Answer Agent».</li>
+<li>En «Label» poné el texto en español. En «Custom Field Name» dejá Name, Email, Company, Job Title y Message. El campo del mail va de tipo Email.</li>
+<li>Para la inmobiliaria usá estas etiquetas: Company = «¿Qué buscás? Compra o alquiler y tipo», Job Title = «Zona que te interesa», Message = «Contanos más».</li>
+<li>Sumá «Presupuesto», «Para cuándo» y «WhatsApp», y una casilla «Acepto que me escriban por WhatsApp». Esa casilla es el permiso que exige Meta.</li>
+<li>Las preguntas nuevas van al Text del clasificador. En ese campo cambiá también la palabra visible «Company:» por «Operación:», sin tocar lo que está entre <code>{{ }}</code>.</li>
+<li>Traducí el título, el botón y el mensaje final del formulario. Apagá «Append n8n Attribution».</li>
+<li>Traducí los 3 mails con sus asuntos («Send Drop Message», «Send Nurture Email - Resources» y «Send Nurture Email - Event») y el título y la descripción de los eventos. Completá [Your Company], [Your Website URL], [Link to video/guide], [Webinar Link] y los beneficios. El evento puede ser, por ejemplo, una guía «Cómo comprar con crédito», según lo que tenga el cliente: <strong>POR DEFINIR</strong>.</li>
+<li>En los 4 nodos de Gmail apagá Options → «Append n8n Attribution».</li>
+</ol>
+</li>
+<li><strong>Sobre el mail de rechazo:</strong> al descartado igual le llega la respuesta de la IA. Te sugiero desconectar «Send Drop Message» para que no reciba dos mails. Decidilo con el dueño.</li>
+<li><strong>Ojo:</strong> la columna «Company» de la planilla va a guardar la operación y «Job Title» la zona. Avisale al dueño.</li>
+<li><strong>Ojo:</strong> guardar el WhatsApp en una columna nueva «Phone» es un cambio extra, fuera de los arreglos probados. Probalo bien en P13.</li>
+<li><strong>Cuánto tarda:</strong> 3 a 4 horas.</li>
+<li><strong>Listo cuando:</strong> abrís el formulario de prueba y no hay ni una palabra en inglés.</li>
+<li><strong>Si sale mal:</strong> traducir el nombre del campo en vez de la etiqueta rompe las expresiones y llegan datos vacíos. Solo se traduce el Label.</li>
+</ul>
+<p><strong>P12 · Reordenar ramas y activar Continue</strong> (yo). Corresponde al paso 4.</p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que la respuesta salga primero y que un error no frene todo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Arrastrá «AI Answer Agent» y «Send Answer or Escalate» más arriba que «Log Lead to Sheet» en el lienzo. n8n ejecuta primero la rama de arriba.</li>
+<li>En «Send Answer or Escalate» poné Settings → On Error → <strong>Continue</strong>.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> las dos cajas están arriba y el Continue está activo.</li>
+<li><strong>Si sale mal:</strong> si te salteás esto, al lead «nurture» la respuesta «al instante» le llega después de 3 días de espera.</li>
+</ul>
+<h3>Etapa 4 · Prueba y primer resultado</h3>
+<p><strong>P13 · Probar con seis leads inventados</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> usás datos de prueba, nunca de clientes reales.</li>
+<li><strong>Cómo:</strong> completás el formulario 6 veces con mails tuyos:<ul>
+<li>2 leads que deberían quedar listos para visita.</li>
+<li>2 leads para nutrir.</li>
+<li>1 descarte.</li>
+<li>1 pregunta que la IA no sabe, por ejemplo sobre un barrio que no trabajan.</li>
+</ul>
+</li>
+</ul>
+<p>En cada uno mirás la respuesta, la clasificación, la fila en la planilla y que el mail del equipo reciba la consulta derivada.
+- <strong>Cuánto tarda:</strong> 2 horas.
+- <strong>Listo cuando:</strong> los 6 salen bien. Esa es la puerta P14.
+- <strong>Si sale mal:</strong> si clasifica mal, el problema está en P10. Si contesta mal, está en P9.</p>
+<p><strong>P14 · ¿Responde y clasifica bien?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P15.</li>
+<li><strong>NO:</strong> volvés a P9 y corregís donde estaba la falla (P9, P10 u P11). Después repetís la prueba completa.</li>
+</ul>
+<p><strong>P15 · Mostrar demo corta al dueño</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> 20 minutos por videollamada mostrando el primer tramo.</li>
+<li><strong>Cómo:</strong> él completa el formulario desde su celular y ve llegar la respuesta. Le mostrás la planilla.</li>
+<li><strong>Qué le pedís:</strong> que lea 3 respuestas y te diga si así hablaría la inmobiliaria.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> te dice que sí, o te pasa cambios concretos.</li>
+<li><strong>Si sale mal:</strong> si pide cambios de tono, anotalos todos de una vez para no iterar diez veces.</li>
+</ul>
+<p><strong>P16 · ¿El dueño aprueba el primer tramo?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P17.</li>
+<li><strong>NO:</strong> volvés a P9 con sus cambios.</li>
+</ul>
+<p><strong>P17 · ⭐ Activar formulario web con respuesta inmediata</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el primer resultado visible. Los leads reales de la web reciben respuesta en segundos y quedan clasificados.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Activá el flujo en n8n con el interruptor «Active».</li>
+<li>Poné el link del formulario en la web, o embebelo con quien maneje la web: <strong>POR DEFINIR</strong>.</li>
+<li>Revisá cada lead real las primeras 48 horas.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> el formulario funcionando y el acceso a la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora. Pasa entre el día 9 y el 11.</li>
+<li><strong>Listo cuando:</strong> entra el primer lead real y recibe respuesta en menos de 2 minutos.</li>
+<li><strong>Si sale mal:</strong> si no llega nada, revisá que el flujo esté activo y que la web use el link de producción y no el de prueba.</li>
+</ul>
+<h3>Etapa 5 · Agenda de visitas (ficha 03)</h3>
+<p><strong>P18 · Conectar agenda de visitas y recordatorios</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el lead listo elige solo el horario de visita, y le llegan confirmación y recordatorios.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá una cuenta de Cal.com del negocio, con el tipo de evento «Visita a propiedad». Duración <strong>POR DEFINIR</strong>, sugiero 45 minutos.</li>
+<li>Conectala al Google Calendar del agente o a uno compartido: <strong>POR DEFINIR</strong>.</li>
+<li>Cargá los horarios disponibles.</li>
+<li>La plantilla crea un evento en Google Calendar para el lead listo. Revisá qué fecha le pone. Si no es una que eligió el lead, poné el link de Cal.com en el mail al calificado, así elige él.</li>
+<li>Armá un flujo nuevo en n8n con el nodo «Cal.com Trigger»: cada visita reservada, cancelada o reprogramada se escribe en la pestaña Seguimiento.</li>
+<li>Otro flujo revisa cada 30 minutos las visitas a 24 y a 2 horas y manda el recordatorio con link para reprogramar. Hasta que esté WhatsApp, por mail. Después, con la plantilla aprobada.</li>
+<li>A las 8 de la mañana, cada agente recibe su agenda del día.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 6 horas, en 2 días.</li>
+<li><strong>Listo cuando:</strong> reservás una visita de prueba y te llegan la confirmación, el evento en el calendario y el recordatorio.</li>
+<li><strong>Si sale mal:</strong> los horarios aparecen corridos. Revisá la zona horaria en Cal.com y en los dos flujos.</li>
+</ul>
+<h3>Etapa 6 · Propuesta el mismo día (ficha 10)</h3>
+<p><strong>P19 · Armar generador de propuesta con aprobación</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> después de cada visita, la IA redacta la propuesta y el dueño la aprueba con un clic.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Armá un Google Doc plantilla en base a la propuesta que te pasó, con marcadores como {{nombre}}, {{propiedades}}, {{condiciones}} y {{proximos_pasos}}.</li>
+<li>En n8n: cuando entra un registro de visita (P21), se copia el Doc y Claude escribe el texto con lo que cargó el agente.</li>
+<li><strong>Precio, honorarios y condiciones salen siempre de lo que escribe el agente. La IA no los inventa.</strong></li>
+<li>El nodo de Gmail con la opción «Enviar y esperar respuesta» le manda al dueño el link con los botones Aprobar y Rechazar.</li>
+<li>Si aprueba, la propuesta se envía al lead y la fila pasa a «Propuesta enviada» con la fecha.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 6 a 8 horas.</li>
+<li><strong>Listo cuando:</strong> una visita de prueba genera la propuesta y, al tocar Aprobar, le llega al lead de prueba.</li>
+<li><strong>Si sale mal:</strong> si la IA mete precios que no estaban, agregá al prompt «usá solo los montos del registro» y revisá que el registro los traiga.</li>
+</ul>
+<p><strong>P20 · Aprobar la plantilla de propuesta</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño revisa la plantilla y 2 propuestas de ejemplo.</li>
+<li><strong>Qué le pedís:</strong> cambios por escrito, todos juntos.</li>
+<li><strong>Qué le entregás:</strong> la plantilla final.</li>
+<li><strong>Cuánto tarda:</strong> 1 o 2 días de su lado. Mientras tanto, avanzás con P21.</li>
+<li><strong>Listo cuando:</strong> te escribe «aprobada».</li>
+<li><strong>Si sale mal:</strong> si se cuelga, recordatorio a las 48 horas (mensaje 2).</li>
+</ul>
+<h3>Etapa 7 · Seguimiento (ficha 09)</h3>
+<p><strong>P21 · Armar registro de visita y secuencia de 30 días</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> los agentes cargan cada visita en 2 minutos y el seguimiento arranca solo. Sin registro no arranca nada: es el punto débil de esta ficha.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Armá un Google Form «Registro de visita» con estos campos: mail del lead, propiedad, qué le gustó, qué no, presupuesto confirmado y próximo paso.</li>
+<li>Las respuestas van a la pestaña Seguimiento y disparan P19.</li>
+<li>Un flujo diario a las 9 manda el mensaje que toca a cada propuesta sin respuesta: días 2, 5, 10, 20 y 30, o sea 5 mensajes en 30 días. Los mails los personaliza Claude con lo que pidió el lead. En WhatsApp van las plantillas aprobadas, con nombre y propiedad como datos variables.</li>
+<li>Cuando el lead responde, por mail o WhatsApp, Claude detecta la intención (interesado, duda, objeción de precio o no le interesa), corta la secuencia y le avisa al agente con un resumen.</li>
+<li>Si dice que no o responde «BAJA», queda en Perdido o Baja y no recibe nada más.</li>
+<li>A las 9, cada agente recibe la lista de leads calientes del día.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 6 a 8 horas.</li>
+<li><strong>Listo cuando:</strong> un lead de prueba recibe el mensaje del día 2 y, al responder, la secuencia se corta y el agente recibe el aviso.</li>
+<li><strong>Si sale mal:</strong> la secuencia sigue aunque el lead respondió. Revisá que la búsqueda del lead use el mismo mail o teléfono que la pestaña Seguimiento.</li>
+</ul>
+<h3>Etapa 8 · WhatsApp e Instagram (ficha 07)</h3>
+<p><strong>P22 · ¿Meta aprobó número y plantillas?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P23.</li>
+<li><strong>NO:</strong> volvés a P5, revisás el motivo en el Business Manager, corregís y reenviás. Mientras tanto todo sigue funcionando por mail.</li>
+</ul>
+<p><strong>P23 · Conectar WhatsApp e Instagram al agente</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> la misma IA contesta también por WhatsApp e Instagram.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n creá la credencial de WhatsApp con el token permanente de un «usuario del sistema» de Meta.</li>
+<li>Usá el nodo «WhatsApp Trigger» para recibir y el nodo «WhatsApp» para responder, pasando el mensaje por el mismo agente y el mismo clasificador.</li>
+<li>Dentro de las 24 horas desde el último mensaje del lead podés contestar libre. Después, solo con plantilla.</li>
+<li>Pasá los recordatorios de P18 y los seguimientos de P21 a las plantillas aprobadas.</li>
+<li>Instagram: con ManyChat conectado a la cuenta, la respuesta por defecto manda el mensaje a un webhook de n8n y devuelve la respuesta de la IA.</li>
+<li>Si Instagram trae pocas consultas, dejalo para el mes 2.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 6 a 9 horas.</li>
+<li><strong>Listo cuando:</strong> escribís desde tu celular al número y a Instagram, y recibís respuesta y clasificación.</li>
+<li><strong>Si sale mal:</strong> si no llegan los mensajes, el webhook de la app de Meta no está suscripto al campo «messages». Revisalo en la configuración de WhatsApp de la app.</li>
+</ul>
+<h3>Etapa 9 · Prueba completa y demo</h3>
+<p><strong>P24 · Probar el recorrido completo de punta a punta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> un lead de prueba hace todo el camino: consulta por WhatsApp, clasificación, reserva, recordatorio, registro de visita, propuesta, aprobación, seguimiento y respuesta.</li>
+<li><strong>Cómo:</strong> lo hacés con 3 leads de prueba, uno por canal, y tildás cada etapa en una lista. A esta revisión se le dice <strong>QA</strong>: control de calidad antes de salir.</li>
+<li><strong>Cuánto tarda:</strong> 4 horas.</li>
+<li><strong>Listo cuando:</strong> los 3 recorridos llegan al final y aparecen en el Tablero.</li>
+<li><strong>Si sale mal:</strong> casi siempre falla el paso de un flujo a otro, porque el mail o el teléfono no coinciden. Usá siempre el mismo dato para identificar al lead.</li>
+</ul>
+<p><strong>P25 · ¿Funciona todo el recorrido?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P26.</li>
+<li><strong>NO:</strong> corregís el tramo que falló y repetís P24 completo.</li>
+</ul>
+<p><strong>P26 · Hacer demo, capacitar y entregar manual</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> demo al dueño y capacitación a los agentes en la misma reunión.</li>
+<li><strong>Cómo:</strong> 60 minutos. Muestra en vivo cómo cargar una visita en 2 minutos, cómo aprobar una propuesta y qué hacer cuando llega un aviso de lead caliente.</li>
+<li><strong>Qué le entregás:</strong> un manual de 2 páginas en Google Docs con qué hace el sistema, qué hace cada persona, a quién avisar si algo falla y el link al Tablero.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas, con la preparación.</li>
+<li><strong>Listo cuando:</strong> cada agente cargó una visita de prueba él mismo.</li>
+<li><strong>Si sale mal:</strong> si un agente se resiste a cargar visitas, mostrale que sin registro no le llega la propuesta armada ni el seguimiento. Le ahorra trabajo, no se lo suma.</li>
+</ul>
+<p><strong>P27 · ¿El dueño aprueba el lanzamiento?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P28.</li>
+<li><strong>NO:</strong> ajustás lo que pidió y repetís P24 sobre lo que cambió.</li>
+</ul>
+<h3>Etapa 10 · Lanzamiento</h3>
+<p><strong>P28 · Prender todas las entradas con leads reales</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> activás todos los flujos y avisás (mensaje 3).</li>
+<li><strong>Cómo:</strong> activás uno por uno y mandás un lead real de control, por ejemplo un conocido. Borrás de la planilla las filas de prueba.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> todos los flujos están en «Active» y el lead de control recorrió bien su tramo.</li>
+<li><strong>Si sale mal:</strong> si algún flujo falla en las primeras horas, apagalo, avisá al dueño y corregí. Lo demás sigue andando.</li>
+</ul>
+<p><strong>P29 · Responder, calificar, agendar y seguir solo</strong> (sistema)</p>
+<ul>
+<li><strong>Qué pasa:</strong> el sistema trabaja solo las 24 horas.</li>
+<li><strong>Cómo:</strong> en n8n, la pestaña «Executions» muestra cada ejecución. Las rojas son errores. Activá el aviso de errores a tu mail.</li>
+<li><strong>Listo cuando:</strong> los primeros 7 días, más del 95 % de las ejecuciones salen en verde.</li>
+<li><strong>Si sale mal:</strong> si se acaba el saldo de la API de Anthropic, la IA deja de contestar. Configurá recarga automática o un aviso de saldo bajo.</li>
+</ul>
+<p><strong>P30 · Registrar visitas y aprobar propuestas</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> los agentes cargan cada visita apenas termina y el dueño aprueba las propuestas.</li>
+<li><strong>Cómo:</strong> el Form desde el celular y los botones del mail.</li>
+<li><strong>Cuánto tarda:</strong> 2 minutos por visita y 1 minuto por propuesta.</li>
+<li><strong>Listo cuando:</strong> cada visita del calendario tiene su registro.</li>
+<li><strong>Si sale mal:</strong> visitas sin registrar. En el Tablero poné «Visitas sin registro» por agente y mandáselo al dueño cada lunes.</li>
+</ul>
+<h3>Etapa 11 · Seguimiento y reporte</h3>
+<p><strong>P31 · Revisar conversaciones y ajustar cada semana</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> leés las charlas de la semana y mejorás las respuestas y los criterios.</li>
+<li><strong>Cómo:</strong> filtrás las derivadas a una persona y las mal clasificadas. Sumás la información que faltó al agente y ajustás los criterios. Le mandás al dueño 3 líneas de lo que cambiaste.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas por semana.</li>
+<li><strong>Listo cuando:</strong> la nota de cambios de la semana está enviada.</li>
+<li><strong>Si sale mal:</strong> si la misma pregunta se deriva una y otra vez, falta ese dato. Pedíselo al dueño ese mismo día.</li>
+</ul>
+<p><strong>P32 · Enviar tablero y reporte del mes</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el reporte del primer mes, con el mensaje 4 y el link al Tablero.</li>
+<li><strong>Cómo:</strong> la pestaña Tablero muestra:<ul>
+<li>consultas por canal;</li>
+<li>minutos hasta la primera respuesta;</li>
+<li>calificadas, visitas agendadas y concretadas;</li>
+<li>propuestas enviadas y respondidas;</li>
+<li><strong>% de consultas que terminan en venta</strong>.</li>
+</ul>
+</li>
+</ul>
+<p>Las ventas las carga el cliente al marcar «Ganado».
+- <strong>Ojo:</strong> no prometas ventas. Lo que garantizás es que el sistema funcione y que el reporte llegue.
+- <strong>Cuánto tarda:</strong> 2 horas, más una reunión de mejora de 30 minutos.
+- <strong>Listo cuando:</strong> el dueño lo recibió y tienen la reunión agendada.
+- <strong>Si sale mal:</strong> si los números de ventas están vacíos, es porque no marcan «Ganado». Sumalo a la capacitación.</p>
+<h3>Etapa 12 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P34.</li>
+<li><strong>NO:</strong> pasás a P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer el 20 Negocio Integrado</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> con tres o cuatro sistemas tuyos andando, ya cumple la condición de la ficha 20.</li>
+<li><strong>Cómo:</strong> en la reunión mensual, mostrás dónde se sigue cortando el camino con los datos del Tablero, y la sumás como siguiente paso. También podés sumar la entrada de portales como ajuste.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> te dice sí, no o «más adelante», y seguís con P31 el mes siguiente.</li>
+<li><strong>Si sale mal:</strong> no la empujes si el registro de visitas todavía falla. Primero que funcione lo que hay.</li>
+</ul>
+<p><strong>P35 · Entregar accesos, datos y manual de salida</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> una salida ordenada, para que te recomiende igual.</li>
+<li><strong>Cómo:</strong> exportás los flujos de n8n en archivos .json, pasás la propiedad de las cuentas al cliente, entregás la planilla y una guía de una página de qué apagar si lo deja de usar, y sacás tus accesos.</li>
+<li><strong>Cuánto tarda:</strong> 3 horas.</li>
+<li><strong>Listo cuando:</strong> el cliente confirma que entra a todo sin vos.</li>
+<li><strong>Si sale mal:</strong> si hay cuentas a tu nombre, pasalas antes de cortar. Nunca dejes al cliente sin su número de WhatsApp.</li>
+</ul>
+<hr />
+<h2>3. Las tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup (día 1)</li>
+<li>☐ Administrador en su Meta Business y papeles del negocio (día 1)</li>
+<li>☐ Fecha para la reunión del buen cliente, con agentes si se puede (día 1)</li>
+<li>☐ Acceso a la cuenta de Google del negocio: Gmail, Calendar y Drive (día 1)</li>
+<li>☐ Respuestas a las preguntas frecuentes, zonas, honorarios, horarios y requisitos (día 1, para el día 4)</li>
+<li>☐ Lista de propiedades o link donde están publicadas (día 1)</li>
+<li>☐ Una propuesta que le guste (día 1)</li>
+<li>☐ Mails y teléfonos de los agentes y qué zona atiende cada uno (día 2)</li>
+<li>☐ Que pague sus cuentas de n8n, Anthropic, ManyChat y WhatsApp (día 3)</li>
+<li>☐ Acceso a la web, o contacto de quien la maneja, para poner el formulario (día 8)</li>
+<li>☐ Aprobación de la plantilla de propuesta (semana 3)</li>
+<li>☐ Una hora para la demo y la capacitación de agentes (semana 5)</li>
+<li>☐ Registrar visitas y marcar «Ganado» o «Perdido» (desde el lanzamiento, siempre)</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Doc «Buen cliente» con los criterios</li>
+<li>☐ Formulario web en español con respuesta inmediata ⭐</li>
+<li>☐ Asistente que responde en web, WhatsApp e Instagram y deriva con resumen</li>
+<li>☐ Calificación automática de cada lead</li>
+<li>☐ Agenda de visitas con confirmación, recordatorios y agenda diaria por agente</li>
+<li>☐ Generador de propuestas con aprobación en un clic</li>
+<li>☐ Formulario de registro de visita para agentes</li>
+<li>☐ Secuencia de seguimiento de 30 días con opción de baja y alertas de leads calientes</li>
+<li>☐ Planilla con Tablero de conversión por etapa</li>
+<li>☐ Manual del equipo y capacitación</li>
+<li>☐ Reporte mensual y reunión de mejora</li>
+</ul>
+<p><strong>El calendario</strong> (3 horas por día, días hábiles)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Cuándo</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Día 1</td>
+<td>P1, P2, P5: pago, bienvenida, pedido de accesos y alta en Meta</td>
+</tr>
+<tr>
+<td>Día 2–3</td>
+<td>P3: reunión del buen cliente. El cliente junta la información (P4)</td>
+</tr>
+<tr>
+<td>Día 4</td>
+<td>P6: puerta de accesos (P7 si falta algo). Arranca P8</td>
+</tr>
+<tr>
+<td>Día 5–7</td>
+<td>P9 a P12: instalación del primer tramo</td>
+</tr>
+<tr>
+<td>Día 8–9</td>
+<td>P13–P14: pruebas. Subís las plantillas de WhatsApp a Meta</td>
+</tr>
+<tr>
+<td>Día 10–11</td>
+<td>P15–P17: demo corta y ⭐ <strong>formulario web contestando solo</strong></td>
+</tr>
+<tr>
+<td>Semana 3</td>
+<td>P18: agenda de visitas. P19–P20: propuestas</td>
+</tr>
+<tr>
+<td>Semana 4</td>
+<td>P21: registro y seguimiento. P22–P23: WhatsApp e Instagram, si Meta aprobó</td>
+</tr>
+<tr>
+<td>Semana 5</td>
+<td>P24 a P28: prueba completa, demo, capacitación y <strong>lanzamiento</strong></td>
+</tr>
+<tr>
+<td>Semanas 6–8</td>
+<td>P29–P31: el sistema corre solo y vos ajustás cada semana</td>
+</tr>
+<tr>
+<td>Semana 9</td>
+<td>P32: <strong>reporte del primer mes</strong> y reunión de mejora</td>
+</tr>
+</tbody>
+</table></div>
+<p>Si Meta se demora, el lanzamiento sale igual por mail y web. WhatsApp se suma apenas lo aprueben.</p>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! 🙌 Arrancamos con la Máquina de Conversión. Para no frenar nada necesito esta semana:
+1. Que me sumes como admin en el Meta Business de la inmobiliaria (te paso cómo).
+2. Acceso a la cuenta de Google del negocio.
+3. Las respuestas a lo que la gente pregunta siempre: zonas, honorarios, horarios, requisitos para alquilar. Te dejo un Doc con las preguntas ya escritas: [link].
+4. Una propuesta que hayas mandado y te guste.
+5. 90 minutos para definir juntos qué es un buen cliente. ¿Te va el [día] a las [hora]?</p>
+<p>En unos 10 días ya tenés el formulario de la web contestando solo.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Me falta solo [lo que falta] para seguir con [etapa]. Sin eso queda frenado [qué se frena]. ¿Me lo pasás hoy o mañana? Si querés, lo hacemos juntos en 10 minutos por llamada.</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está andando! 🚀 Desde hoy cada consulta de la web, WhatsApp e Instagram recibe respuesta en segundos, se califica y, si está lista, elige horario de visita. A vos y al equipo solo les pido dos cosas:
+1. Cargar cada visita en el formulario apenas termina (2 minutos): [link].
+2. Aprobar las propuestas cuando te llegue el mail.</p>
+<p>Estas semanas reviso todas las charlas y ajusto. Si ves una respuesta rara, mandame captura.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], el resumen del primer mes 📊
+• Consultas: [N] (web [n] · WhatsApp [n] · IG [n])
+• Primera respuesta: [x] min en promedio
+• Calificadas: [n] · visitas agendadas: [n] · concretadas: [n]
+• Propuestas enviadas: [n] · respondidas: [n]
+• Operaciones que marcaron como ganadas: [n]</p>
+<p>Lo que ajusté: [cambios]. Lo que propongo para el mes que viene: [propuesta]. El tablero completo está acá: [link]. ¿Lo charlamos 30 minutos el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p15">← Volver a la ficha 15</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Cero Ausencias · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Cero Ausencias, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Cero Ausencias">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 03 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Cero Ausencias</h1>
+  <p class="bajada">Agenda y confirmación de turnos. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Consultorios</span><span class="chip">Setup USD 500–1.000</span><span class="chip">5–7 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos</strong> (corregilos si no aplican):</p>
+<ul>
+<li>El consultorio está en Argentina.</li>
+<li>Atiende <strong>1 profesional</strong> (si son más, es <strong>POR DEFINIR</strong>: cambia el plan de Calendly).</li>
+<li>Hoy no usa otro sistema de turnos.</li>
+</ul>
+<p><strong>Qué incluye esta versión mínima:</strong></p>
+<ul>
+<li>Agenda online.</li>
+<li>Confirmación por WhatsApp y mail.</li>
+<li>Recordatorio del día anterior y de 2 horas antes.</li>
+<li>Link para cambiar o cancelar el turno.</li>
+<li>Resumen diario de turnos.</li>
+</ul>
+<p><strong>Qué no incluye todavía:</strong></p>
+<ul>
+<li>Botón de «confirmo». Cada mensaje trae el link para reprogramar, que cumple esa función.</li>
+<li>IA que entienda respuestas libres como «mejor el jueves». Se suma después.</li>
+<li>No se lo prometas en esta etapa.</li>
+</ul>
+<p><strong>Ojo:</strong> la plantilla del resumen diario (6566) va con pasos generales: antes de instalarla, leé las notas que trae en n8n.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Cero Ausencias" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup y el primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás antes de tocar nada.</li>
+<li><strong>Cómo:</strong> mandale un link de Mercado Pago o tus datos de transferencia. El monto del setup y de la mensualidad es <strong>POR DEFINIR</strong> (rango de la ficha: USD 500–1.000 de setup y USD 100–200 por mes).<ul>
+<li>En el mismo chat dejá escrito qué incluye: agenda online, confirmación y 2 recordatorios, link para reprogramar, resumen diario y reporte mensual.</li>
+<li>Aclará que Calendly, n8n y los mensajes de WhatsApp los paga él con su tarjeta. Verificá los precios vigentes.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> el recibo.</li>
+<li><strong>Cuánto tarda:</strong> el mismo día.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si te dice «te pago la semana que viene», no arranques. El plazo corre desde el pago.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís qué necesitás y agendás una sola llamada.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandale el Mensaje 1 (sección 4).</li>
+<li>Creá en tu Drive una carpeta «Consultorio – POR DEFINIR». Adentro, un documento «Datos» con la lista de P3.</li>
+<li>Compartile ese documento con permiso de edición.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que complete el documento y elija horario para una llamada de 45 minutos.</li>
+<li><strong>Qué le entregás:</strong> la lista de pedidos y el calendario estimado.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la llamada tiene fecha.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, mandale el Mensaje 2.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P3 · Completar datos del consultorio</strong></p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> te da la información para armar la agenda y los mensajes.</li>
+<li><strong>Cómo:</strong> completa en el documento:<ul>
+<li>Nombre exacto del consultorio.</li>
+<li>Dirección y cómo llegar.</li>
+<li>Tipos de turno y cuánto dura cada uno. Por ejemplo, primera consulta y control: <strong>POR DEFINIR</strong>.</li>
+<li>Días y horarios de atención.</li>
+<li>Con cuánta anticipación mínima se puede reservar y hasta cuántos días para adelante.</li>
+<li>Mail que recibe el resumen diario.</li>
+<li>Teléfono para consultas que va a aparecer en los mensajes.</li>
+<li>Cuántos pacientes faltan hoy, aproximadamente, por semana. Es tu punto de partida para el reporte.</li>
+</ul>
+</li>
+<li><strong>Ojo:</strong> en Calendly pedí solo nombre, mail y teléfono. No preguntes el motivo de la consulta en detalle. Los datos de salud son sensibles: en Argentina los protege la Ley 25.326.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días, del lado del cliente.</li>
+<li><strong>Listo cuando:</strong> están el nombre, la dirección, los horarios y las duraciones.</li>
+<li><strong>Si sale mal:</strong> si te dice «mis horarios cambian todo el tiempo», cargá los fijos. Lo que no pueda atender lo bloquea en su Google Calendar.</li>
+</ul>
+<p><strong>P4 · Crear cuentas a su nombre y darme acceso</strong></p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> crea las cuentas en la llamada, con vos guiándolo y la pantalla compartida.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>a) Gmail del sistema.</strong> Crea uno nuevo, por ejemplo <code>turnos.consultorio@gmail.com</code> (<strong>POR DEFINIR</strong>), y le activa la verificación en dos pasos. Desde ese Gmail salen los mails y con él se abren las cuentas.</li>
+<li><strong>b) Calendly.</strong> Abre la cuenta con ese Gmail, en el plan Standard, con su tarjeta.</li>
+<li><strong>c) n8n Cloud.</strong> Abre la cuenta con ese Gmail, en el plan pago más chico. n8n es la herramienta que conecta todo. La versión Cloud ya viene con dirección web segura (https) y prendida las 24 horas, que es lo que pide la ficha.</li>
+<li><strong>d) Meta.</strong> Entra a business.facebook.com con su Facebook y crea el portfolio comercial del consultorio. Después te suma como administrador desde Configuración → Usuarios → Personas.</li>
+<li><strong>e) Calendario.</strong> Comparte su Google Calendar de trabajo con el Gmail del sistema, con permiso «Ver todos los detalles».</li>
+<li><strong>f) Línea para avisos.</strong> Tiene que ser un chip que <strong>no</strong> tenga WhatsApp instalado. Que lo tenga a mano para recibir el SMS de verificación.</li>
+</ul>
+</li>
+<li><strong>Contraseñas:</strong> que te las pase en la llamada o por un gestor de contraseñas como Bitwarden. Nunca sueltas por WhatsApp.</li>
+<li><strong>Cuánto tarda:</strong> 45 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> entrás a Calendly, n8n y Meta, y ves su calendario desde el Gmail del sistema.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si el chip ya tiene WhatsApp, tiene que borrar esa cuenta de WhatsApp o conseguir otro chip.</li>
+<li>Si Meta pide verificar el negocio o rebota la tarjeta, seguí con Calendly y n8n, y resolvé Meta en paralelo.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P5 · ¿Están todos los datos y accesos?</strong></p>
+<ul>
+<li><strong>Cómo lo revisás:</strong> chequeá cada punto:<ul>
+<li>Documento de datos completo.</li>
+<li>Gmail del sistema creado.</li>
+<li>Calendly Standard activo.</li>
+<li>n8n Cloud activo.</li>
+<li>Sos administrador en Meta.</li>
+<li>Calendario compartido.</li>
+<li>Chip de avisos disponible.</li>
+</ul>
+</li>
+<li><strong>SÍ:</strong> pasás a P7.</li>
+<li><strong>NO:</strong> vas a P6.</li>
+</ul>
+<p><strong>P6 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, sin repetir toda la lista.</li>
+<li><strong>Cómo:</strong> usá el Mensaje 2, cada 48 horas.</li>
+<li><strong>Listo cuando:</strong> te responde con lo que faltaba. Volvés a P3 y revisás de nuevo.</li>
+<li><strong>Si sale mal:</strong> si pasa una semana sin respuesta, avisale con amabilidad que el plazo corre desde que está todo.</li>
+</ul>
+<h3>Etapa 3 · Agenda online y WhatsApp</h3>
+<p><strong>P7 · Configurar Calendly con pregunta de teléfono</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás la página donde el paciente elige su turno.</li>
+<li><strong>Cómo:</strong> entrá a calendly.com con el Gmail del sistema.<ol>
+<li>En Configuración, poné el idioma en Español y la zona horaria de Buenos Aires.</li>
+<li>En Disponibilidad, cargá los horarios de P3.</li>
+<li>Creá un tipo de evento por cada tipo de turno, con:<ul>
+<li>Duración.</li>
+<li>Ubicación: la dirección del consultorio.</li>
+<li>Anticipación mínima.</li>
+<li>Tiempo libre entre turnos, si lo quiere.</li>
+</ul>
+</li>
+<li>En «Preguntas al invitado», agregá una pregunta del tipo <strong>Número de teléfono</strong>:<ul>
+<li>Marcala como <strong>obligatoria</strong>.</li>
+<li>Poné el código de país +54 por defecto.</li>
+<li>El texto tiene que ser exactamente: «Te mandamos la confirmación y los recordatorios por WhatsApp a este número». Ese es el permiso que pide Meta.</li>
+</ul>
+</li>
+<li>Borrá las preguntas que vienen de más.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> el link abre en español y no deja reservar sin teléfono.</li>
+<li><strong>Si sale mal:</strong> si la pregunta quedó como texto libre, la gente escribe «15-xxxx» sin código de país. Cambiala al tipo «Número de teléfono».</li>
+</ul>
+<p><strong>P8 · Conectar Calendly a su Google Calendar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que Calendly vea su agenda real y anote los turnos ahí.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En Calendly, entrá a Disponibilidad → Calendarios conectados → Google.</li>
+<li>Inicia sesión <strong>él</strong>, con su cuenta de trabajo. Lo podés hacer en la llamada de P4.</li>
+<li>Marcá que revise conflictos en ese calendario y que agregue ahí los turnos nuevos.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong><ul>
+<li>Bloqueás una hora en su calendario y desaparece de Calendly.</li>
+<li>Hacés una reserva y aparece en su calendario.</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> si se conectó con el Gmail del sistema en vez del suyo, no ve sus conflictos. Desconectalo y conectá la cuenta correcta.</li>
+</ul>
+<p><strong>P9 · Mandarle su link de reserva ⭐</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el primer resultado: su agenda online funcionando.</li>
+<li><strong>Cómo:</strong> mandale el link y pedile que reserve un turno de prueba desde su celular. Que mire cómo aparece en su Google Calendar.</li>
+<li><strong>Aclarale:</strong> que todavía no lo publique. Los turnos reservados antes del lanzamiento no van a recibir los WhatsApp.</li>
+<li><strong>Qué le entregás:</strong> su link de reserva.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> te dice «me apareció».</li>
+<li><strong>Si sale mal:</strong> si no aparece, volvé a P8.</li>
+</ul>
+<p><strong>P10 · Armar número en Meta y enviar plantillas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> preparás el número oficial que manda los WhatsApp y pedís aprobación de los textos.</li>
+<li><strong>Dos palabras que vas a ver:</strong><ul>
+<li><strong>API:</strong> la puerta por la que dos programas se hablan. Acá, n8n le habla a WhatsApp.</li>
+<li><strong>Plantilla:</strong> un texto que Meta aprueba antes de que puedas escribirle primero a alguien.</li>
+</ul>
+</li>
+<li><strong>Cómo armás la app y el número:</strong><ol>
+<li>Entrá a developers.facebook.com → Mis apps → Crear app → tipo «Negocio».</li>
+<li>Vinculala al portfolio del consultorio y agregale el producto «WhatsApp».</li>
+<li>Entrá al WhatsApp Manager (business.facebook.com/wa/manage) y agregá el chip de avisos.</li>
+<li>Como nombre visible, poné el nombre del consultorio. Verificá el número por SMS.</li>
+<li>Cargá la tarjeta del cliente como medio de pago.</li>
+</ol>
+</li>
+<li><strong>Cómo sacás el token permanente</strong> (una clave que no vence):<ol>
+<li>Andá a Configuración del negocio → Usuarios del sistema y creá uno con rol de administrador.</li>
+<li>Asignale la app y la cuenta de WhatsApp.</li>
+<li>Tocá «Generar token». Marcá los permisos <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>, con vencimiento «Nunca».</li>
+<li>Guardá el token y el <strong>ID de la cuenta de WhatsApp Business</strong> en tu documento.</li>
+</ol>
+</li>
+<li><strong>Cómo creás las plantillas:</strong><ol>
+<li>Andá a WhatsApp Manager → Plantillas → Crear.</li>
+<li>Elegí la categoría <strong>Utilidad</strong> y el idioma Español (ARG).</li>
+<li>Cuando Meta te pida ejemplos de las variables, poné uno por cada una.</li>
+<li>Los textos los podés ajustar, pero respetá el orden de las variables {{1}} a {{4}}.</li>
+</ol>
+</li>
+</ul>
+<p>Las variables son estas: {{1}} es el nombre, {{2}} la fecha, {{3}} la hora y {{4}} el link.</p>
+<pre><code>- **confirmacion_turno:** «Hola {{1}}, tu turno en [Consultorio] quedó confirmado para el {{2}} a las {{3}}. Para cambiarlo o cancelarlo entrá acá: {{4}}. Este número solo envía avisos. Si no podés venir, cambiá el turno desde el link.»
+- **recordatorio_dia_antes:** «Hola {{1}}, te recordamos tu turno del {{2}} a las {{3}} en [Consultorio], [dirección]. Para cambiarlo: {{4}}. Si no podés venir, cambiá el turno desde el link así otro paciente usa el horario.»
+- **recordatorio_2_horas:** «Hola {{1}}, tu turno es el {{2}} a las {{3}} en [Consultorio]. Si no llegás, cambialo acá: {{4}}. Te esperamos.»
+</code></pre>
+<ul>
+<li><strong>Por qué los textos son así:</strong><ul>
+<li>Llevan la fecha y no «mañana», porque si alguien reserva para el mismo día, ese aviso sale enseguida.</li>
+<li>Ninguno termina en variable.</li>
+<li>No tienen promociones.</li>
+</ul>
+</li>
+<li><strong>El aviso de después del turno:</strong> no lo hagas en la versión mínima (lo explico en P15).</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media a 2 horas. La aprobación tarda de minutos a 1 o 2 días. Mientras tanto, seguís con P11.</li>
+<li><strong>Listo cuando:</strong> el número está verificado, el token guardado y las 3 plantillas enviadas.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si Meta la rechaza o la pasa a «Marketing», sacale todo lo que suene a venta.</li>
+<li>Si rechaza el nombre visible, que coincida con el nombre real del negocio.</li>
+</ul>
+</li>
+</ul>
+<h3>Etapa 4 · Instalación en n8n</h3>
+<p>En n8n, cada cajita del flujo se llama <strong>nodo</strong>. Una <strong>ejecución</strong> es cada vez que el flujo corre.</p>
+<p><strong>P11 · Importar la plantilla 17336 en n8n</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés el flujo ya armado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí n8n.io/workflows/17336 → «Use for free» → copiar.</li>
+<li>En tu n8n Cloud, creá un workflow nuevo y pegá con Ctrl+V.</li>
+<li>Ponele de nombre «Cero Ausencias – [Consultorio]».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> ves el flujo entero en pantalla.</li>
+<li><strong>Si sale mal:</strong> las advertencias rojas por credenciales faltantes son normales. Se van a ir resolviendo.</li>
+</ul>
+<p><strong>P12 · Cambiar el disparador por Calendly Trigger</strong> <em>(paso 1 de la ficha)</em></p>
+<ul>
+<li><strong>Dos palabras que vas a ver:</strong><ul>
+<li><strong>Disparador:</strong> el nodo que arranca el flujo.</li>
+<li><strong>Webhook:</strong> el aviso automático que Calendly le manda a n8n cuando alguien reserva.</li>
+</ul>
+</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá «Setup Booking Listener».</li>
+<li>Agregá un «Calendly Trigger» con Events: Event Created y Scope: User.</li>
+<li>Conectalo a «Normalize &amp; Validate Booking Data».</li>
+<li>Como credencial, elegí «Calendly OAuth2 API» y conectá la cuenta del Gmail del sistema.</li>
+<li>Si n8n te pide Client ID y Client Secret: andá a developer.calendly.com → crear app. Pegá la URL de redirección que te muestra n8n y copiá los dos datos que te da.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 a 45 minutos.</li>
+<li><strong>Listo cuando:</strong> la credencial queda en verde y, con «Listen for test event», una reserva de prueba llega a n8n.</li>
+<li><strong>Si sale mal:</strong> si no llega nada, revisá que Calendly esté en plan Standard. El plan gratis no tiene webhooks.</li>
+</ul>
+<p><strong>P13 · Ajustar lectura de teléfono y datos</strong> <em>(paso 2 de la ficha, parte de n8n)</em></p>
+<ul>
+<li><strong>Cómo:</strong> abrí «Normalize &amp; Validate Booking Data» y buscá la primera rama, la de Calendly. Hacé tres cambios:<ol>
+<li>Cambiá <code>/phone/i</code> por <code>/phone|tel|cel|whats/i</code>.</li>
+<li>Justo antes de <code>normalized = {</code>, agregá <code>phone = String(phone || '').replace(/\D/g, '');</code>.</li>
+<li>Debajo de la línea de <code>reschedule_url</code>, agregá <code>invitee_uri: p.uri || '',</code>.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> ejecutás el nodo con la reserva de prueba y ves el teléfono solo con números y el campo <code>invitee_uri</code> lleno.</li>
+<li><strong>Si sale mal:</strong> si el teléfono viene vacío, la pregunta de Calendly no dice «tel» ni «cel». Revisá el texto de la pregunta.</li>
+</ul>
+<p><strong>P14 · Cargar datos del consultorio en mensajes</strong> <em>(paso 3 de la ficha)</em></p>
+<ul>
+<li><strong>Cómo:</strong> en «Prepare Notification Messages», cambiá las 6 líneas con <code>$vars.…</code> por datos entre comillas:<ul>
+<li>Nombre del consultorio.</li>
+<li>Mail del consultorio.</li>
+<li>Gmail del sistema, que es el que envía.</li>
+<li><code>''</code> en el número de Twilio.</li>
+<li>Link de Calendly.</li>
+<li><code>'America/Argentina/Buenos_Aires'</code>.</li>
+</ul>
+</li>
+</ul>
+<p>En el mismo nodo:
+    - Poné <code>const MS_1H = 2 * 60 * 60 * 1000;</code> para que el aviso salga 2 horas antes.
+    - Cambiá los dos <code>'en-US'</code> por <code>'es-AR'</code>.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> al ejecutarlo ves la fecha en castellano y la hora de Argentina.
+- <strong>Si sale mal:</strong> si la hora sale corrida 3 horas, revisá la zona horaria.</p>
+<p><strong>P15 · Reemplazar Twilio por nodos de WhatsApp</strong> <em>(paso 5 de la ficha)</em></p>
+<ul>
+<li><strong>Primero, borrá estos nodos:</strong><ul>
+<li>Los 4 «Verify … Compliance». Llaman a un flujo que no existe y cortan todo.</li>
+<li>Los 4 «Check … Approval».</li>
+<li>Los 4 «Skip Opt-Out …».</li>
+<li>Los 4 «Dispatch … SMS».</li>
+</ul>
+</li>
+<li><strong>Versión mínima:</strong> borrá también la rama del aviso de después del turno, desde «Wait for No-Show Check» en adelante. Ese aviso le llega también a quien sí fue, y en un consultorio queda raro. Si después el equipo marca las ausencias en Calendly, la sumás como indica el paso 7 de la ficha.</li>
+<li><strong>Después, agregá un nodo «WhatsApp Business Cloud» por mensaje:</strong><ul>
+<li>Uno entre «Prepare Notification Messages» y «Deliver Confirmation Email».</li>
+<li>Uno antes de cada «Deliver … Email» que viene después de una espera.</li>
+</ul>
+</li>
+<li><strong>Configurá cada uno así:</strong><ul>
+<li>Operation: Send Template.</li>
+<li>Credencial «WhatsApp API», con el token y el ID de cuenta de P10.</li>
+<li>Sender Phone Number: tu número de avisos.</li>
+<li>Recipient's Phone Number: <code>{{ $('Prepare Notification Messages').item.json.contact_phone }}</code>.</li>
+<li>Template: la plantilla que corresponde.</li>
+<li>Components → Body → Parameters (Text): <code>first_name</code>, <code>apt_date_str</code>, <code>apt_time_str</code> y <code>reschedule_url_final</code> de ese mismo nodo, en el orden de la plantilla.</li>
+<li>Settings → On Error: <strong>Continue</strong>, para que un número mal cargado no corte el mail ni los avisos que siguen.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media a 2 horas.</li>
+<li><strong>Listo cuando:</strong> no queda ningún nodo de Twilio ni de «Compliance», y hay 3 nodos de WhatsApp configurados.</li>
+<li><strong>Si sale mal:</strong> si las plantillas todavía no aparecen en la lista, Meta no las aprobó. Seguí con P16 y volvé después.</li>
+</ul>
+<p><strong>P16 · Agregar chequeo de turnos cancelados</strong> <em>(paso 6 de la ficha)</em></p>
+<ul>
+<li><strong>Para qué sirve:</strong> sin este chequeo, quien cancela sigue recibiendo avisos.</li>
+<li><strong>Cómo:</strong> después de «Wait for 24h Reminder» y de «Wait for 1h Reminder», agregá dos nodos:<ol>
+<li>Un «HTTP Request» con:<ul>
+<li>Method: GET.</li>
+<li>URL: <code>{{ $('Prepare Notification Messages').item.json.invitee_uri }}</code>.</li>
+<li>Authentication: Predefined Credential Type → Calendly OAuth2 API.</li>
+</ul>
+</li>
+<li>Un «If» que siga solo si <code>{{ $json.resource.status }}</code> es igual a <code>active</code>. La salida false queda sin conectar.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> cada espera pasa por el chequeo antes del WhatsApp.</li>
+<li><strong>Si sale mal:</strong> si el HTTP da error 401, la credencial no es la de Calendly. Elegí la misma del disparador.</li>
+</ul>
+<p><strong>P17 · Configurar y traducir los mails</strong> <em>(paso 7 de la ficha)</em></p>
+<ul>
+<li><strong>SMTP</strong> es el sistema que usan los programas para mandar mails.</li>
+<li><strong>Cómo cargás la credencial:</strong><ol>
+<li>En el Gmail del sistema, entrá a Cuenta de Google → Seguridad → Contraseñas de aplicaciones y creá una.</li>
+<li>En n8n, creá la credencial SMTP con smtp.gmail.com, puerto 465, SSL activado y esa contraseña.</li>
+</ol>
+</li>
+<li><strong>Cómo traducís los textos:</strong><ul>
+<li>Traducí asuntos y textos con voseo.</li>
+<li>Poné la fecha en vez de «tomorrow».</li>
+<li>Poné «en 2 horas» en vez de «in 1 hour».</li>
+<li>Sacá el pie de «reply STOP».</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te llega a tu mail un mail de prueba en castellano.</li>
+<li><strong>Si sale mal:</strong> si el mail sale con campos vacíos, cambiá <code>{{ $json.campo }}</code> por <code>{{ $('Prepare Notification Messages').item.json.campo }}</code>. Pasa porque ahora los nodos nuevos van antes del mail.</li>
+</ul>
+<p><strong>P18 · Instalar el resumen diario de turnos</strong> <em>(plantilla 6566)</em></p>
+<ul>
+<li><strong>Cómo:</strong><ol>
+<li>Importá n8n.io/workflows/6566 igual que en P11.</li>
+<li>Conectá Google Calendar con el Gmail del sistema, que ya ve su calendario compartido, y elegí ese calendario.</li>
+<li>Conectá Gmail.</li>
+<li>Poné la hora de envío, por ejemplo 7:30 (<strong>POR DEFINIR</strong>), y el mail de P3 como destinatario.</li>
+<li>Traducí los textos y activá el flujo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo ejecutás a mano y llega el mail con los turnos de hoy.</li>
+<li><strong>Si sale mal:</strong> si llega vacío, elegiste el calendario equivocado.</li>
+</ul>
+<h3>Etapa 5 · Prueba</h3>
+<p><strong>P19 · ¿Meta aprobó las plantillas?</strong></p>
+<ul>
+<li><strong>Cómo lo revisás:</strong> en WhatsApp Manager → Plantillas, cada una tiene que decir «Activa».</li>
+<li><strong>SÍ:</strong> pasás a P21.</li>
+<li><strong>NO:</strong> vas a P20.</li>
+</ul>
+<p><strong>P20 · Corregir plantilla y reenviarla</strong></p>
+<ul>
+<li><strong>Cómo:</strong> leé el motivo del rechazo, sacá lo promocional y reenviala.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos más la espera de Meta.</li>
+<li><strong>Listo cuando:</strong> está reenviada. Volvés a P19.</li>
+</ul>
+<p><strong>P21 · Reservar, cambiar y cancelar turnos de prueba</strong></p>
+<ul>
+<li><strong>Antes de empezar:</strong><ul>
+<li>Encendé el workflow con el interruptor «Active». El disparador real solo funciona activado.</li>
+<li>Bajá a 0 la anticipación mínima de Calendly, por ahora.</li>
+</ul>
+</li>
+<li><strong>Hacé 4 pruebas con tu celular y el de alguien de confianza. Siempre con reservas nuevas:</strong><ul>
+<li><strong>A.</strong> Reservá para dentro de 2 horas y media. Tienen que llegar la confirmación, el aviso del día anterior (sale enseguida) y el de 2 horas.</li>
+<li><strong>B.</strong> Reservá y cancelá. No tiene que llegar ningún recordatorio.</li>
+<li><strong>C.</strong> Reservá y reprogramá. Solo tienen que llegar los avisos del turno nuevo.</li>
+<li><strong>D.</strong> Reservá con un teléfono inventado. El mail tiene que salir igual.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas, más las esperas.</li>
+</ul>
+<p><strong>P22 · Enviar confirmación, recordatorios y resumen solos</strong></p>
+<ul>
+<li><strong>Qué pasa solo:</strong> el sistema manda cada mensaje en su momento y el resumen sale a la mañana siguiente. Vos solo mirás.</li>
+</ul>
+<p><strong>P23 · ¿Llegó todo bien y a tiempo?</strong></p>
+<ul>
+<li><strong>SÍ, si se cumple todo esto:</strong><ul>
+<li>La confirmación llegó en menos de un minuto.</li>
+<li>Fechas y horas correctas.</li>
+<li>Textos en castellano.</li>
+<li>La reserva cancelada no recibió nada.</li>
+<li>La reprogramada recibió solo lo del turno nuevo.</li>
+<li>El resumen diario llegó.</li>
+</ul>
+</li>
+<li><strong>NO:</strong> vas a P24.</li>
+</ul>
+<p><strong>P24 · Corregir el nodo que falló</strong></p>
+<ul>
+<li><strong>Cómo:</strong> en n8n, abrí la pestaña «Executions», entrá a la ejecución en rojo y mirá qué nodo falló y qué mensaje da.</li>
+<li><strong>Errores típicos:</strong><ul>
+<li>Distinta cantidad de variables entre el nodo y la plantilla.</li>
+<li>Campos vacíos en el mail (lo resolvés como en P17).</li>
+<li>Hora corrida (lo resolvés como en P14).</li>
+<li>Un número argentino que no recibe: probá con y sin el 9 después del 54.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> está corregido. Volvés a P21.</li>
+</ul>
+<h3>Etapa 6 · Demo</h3>
+<p><strong>P25 · Hacer la demo con su celular</strong></p>
+<ul>
+<li><strong>Cómo:</strong> en 20 o 30 minutos, por videollamada o en el consultorio:<ol>
+<li>Que reserve desde su celular un turno para dentro de 2 horas y media. Que vea llegar el WhatsApp y el mail.</li>
+<li>Mostrale el resumen diario y cómo se cancela desde el link.</li>
+<li>Enseñale a quien atiende el teléfono a cargar por el link los turnos que dan por teléfono, con el celular del paciente.</li>
+<li>Mostrale cómo marcar una ausencia en Calendly, desde la lista de reuniones.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> una guía de una página para la secretaria: cómo cargar un turno y cómo marcar una ausencia.</li>
+<li><strong>Listo cuando:</strong> vio todo funcionar.</li>
+</ul>
+<p><strong>P26 · ¿Aprueba textos y horarios?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P28.</li>
+<li><strong>NO:</strong> vas a P27.</li>
+</ul>
+<p><strong>P27 · Ajustar lo que pidió</strong></p>
+<ul>
+<li><strong>Cómo:</strong> los mails los cambiás al toque. Un texto de WhatsApp necesita una plantilla nueva y otra aprobación de Meta.</li>
+<li><strong>Cuánto tarda:</strong> de 1 hora a 1 día.</li>
+<li><strong>Listo cuando:</strong> está ajustado. Volvés a P25.</li>
+</ul>
+<h3>Etapa 7 · Lanzamiento</h3>
+<p><strong>P28 · Pasar el sistema a turnos reales</strong></p>
+<ul>
+<li><strong>Cómo:</strong><ol>
+<li>Volvé la anticipación mínima a lo acordado.</li>
+<li>Cancelá las reservas de prueba.</li>
+<li>Confirmá que el workflow sigue «Active».</li>
+</ol>
+</li>
+<li><strong>Turnos ya agendados de antes:</strong> no reciben avisos. Qué se hace con ellos es <strong>POR DEFINIR</strong>: los recarga la secretaria o se avisan a mano.</li>
+<li><strong>Listo cuando:</strong> el calendario no tiene pruebas y el flujo está activo.</li>
+</ul>
+<p><strong>P29 · Compartir el link con sus pacientes</strong></p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> pone el link en:<ul>
+<li>La biografía de Instagram.</li>
+<li>Su perfil de Google.</li>
+<li>La respuesta automática del WhatsApp que ya usa.</li>
+</ul>
+</li>
+<li><strong>Además:</strong> la secretaria carga ahí los turnos que da por teléfono.</li>
+<li><strong>Qué le entregás:</strong> el Mensaje 3.</li>
+<li><strong>Listo cuando:</strong> entra solo el primer turno real.</li>
+</ul>
+<p><strong>P30 · Confirmar y recordar cada turno real</strong></p>
+<ul>
+<li><strong>Qué pasa solo:</strong> cada reserva recibe su confirmación y sus 2 recordatorios, y cada mañana llega el resumen.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento y ajustes</h3>
+<p><strong>P31 · Revisar ejecuciones y ajustar fallas</strong></p>
+<ul>
+<li><strong>Cómo:</strong> el primer mes, dos veces por semana, 20 minutos. Revisá:<ul>
+<li>Las ejecuciones en rojo en n8n.</li>
+<li>La calidad del número y de las plantillas en WhatsApp Manager.</li>
+<li>Que el medio de pago de Meta esté al día.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> no hay errores sin resolver.</li>
+<li><strong>Si sale mal:</strong> si baja la calidad del número, es porque hay gente que bloquea. Revisá que los textos sean cortos y útiles.</li>
+</ul>
+<p><strong>P32 · Entregar reporte mensual de turnos</strong></p>
+<ul>
+<li><strong>Qué le entregás, el día 30:</strong><ul>
+<li>Turnos reservados por el link.</li>
+<li>Mensajes enviados.</li>
+<li>Errores y qué se arregló.</li>
+<li>Ausencias marcadas, comparadas con lo que te dijo en P3.</li>
+</ul>
+</li>
+<li><strong>Ojo:</strong> si no marcaron ausencias, decilo así: «no se puede medir todavía». No inventes números.</li>
+<li><strong>Cómo:</strong> usá el Mensaje 4.</li>
+</ul>
+<h3>Etapa 9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P34.</li>
+<li><strong>NO:</strong> vas a P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer el servicio 15 o 18</strong></p>
+<ul>
+<li><strong>Qué le ofrecés:</strong><ul>
+<li><strong>15 Máquina de Conversión</strong>: responder, filtrar, agendar y seguir cada consulta. Si le queda grande, arrancá por una de sus piezas, la 07 Respuesta 24/7.</li>
+<li><strong>18 Radar de Clientes</strong>: salir a buscar pacientes nuevos.</li>
+</ul>
+</li>
+<li><strong>Después:</strong> el seguimiento mensual sigue igual (vuelve a P31).</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar en orden</strong></p>
+<ul>
+<li><strong>Cómo:</strong><ol>
+<li>Descargá el flujo (Download) y guardalo en el Drive del cliente.</li>
+<li>Apagá el workflow.</li>
+<li>Sacá tus accesos.</li>
+<li>Avisale qué deja de funcionar: los WhatsApp y los mails del sistema. Calendly sigue funcionando.</li>
+</ol>
+</li>
+<li><strong>Las cuentas ya son suyas:</strong> él decide si las da de baja.</li>
+</ul>
+<hr />
+<h2>3. Listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup y del primer mes · Día 0</li>
+<li>☐ Datos del consultorio (P3) y horario de la llamada · Día 0</li>
+<li>☐ Gmail del sistema con verificación en dos pasos · Día 1, en la llamada</li>
+<li>☐ Tarjeta para Calendly, n8n y Meta · Día 1</li>
+<li>☐ Portfolio de Meta y sumarte como administrador · Día 1</li>
+<li>☐ Google Calendar compartido e inicio de sesión para Calendly · Día 1</li>
+<li>☐ Chip de avisos sin WhatsApp · Día 1</li>
+<li>☐ Aprobación de textos y horarios · Día 6</li>
+<li>☐ Publicar el link y que la secretaria cargue los turnos telefónicos · Día 7</li>
+<li>☐ Marcar ausencias en Calendly · todo el mes</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Link de reserva en español, conectado a su calendario ⭐</li>
+<li>☐ 3 plantillas de WhatsApp aprobadas</li>
+<li>☐ Confirmación y 2 recordatorios por WhatsApp y mail</li>
+<li>☐ Link para cambiar o cancelar en cada mensaje</li>
+<li>☐ Resumen diario de turnos</li>
+<li>☐ Guía de una página para la secretaria</li>
+<li>☐ Reporte del primer mes</li>
+</ul>
+<p><strong>El calendario</strong> (2 horas por día; cada puerta puede correrlo)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>P1–P2: pago y bienvenida</td>
+</tr>
+<tr>
+<td>1</td>
+<td>P3–P5: datos y llamada de cuentas</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P7–P10: Calendly, ⭐ link, Meta y plantillas enviadas</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P11–P14</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P15–P17</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P18–P23: resumen diario y pruebas (si Meta ya aprobó)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P24–P27: correcciones y demo</td>
+</tr>
+<tr>
+<td>7</td>
+<td>P28–P30: lanzamiento</td>
+</tr>
+<tr>
+<td>8–30</td>
+<td>P31: dos revisiones por semana</td>
+</tr>
+<tr>
+<td>30</td>
+<td>P32: reporte y P33: renovación</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes listos</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Recibí el pago, gracias 🙌 Arrancamos con el sistema de turnos de [Consultorio].
+Para empezar necesito:
+1) Que completes este documento: [link]
+2) Una llamada de 45 min para crear las cuentas juntos. ¿Te queda bien [día/hora]?
+3) Un chip que no tenga WhatsApp, para los avisos.
+Con todo eso listo, en 5 a 7 días hábiles queda funcionando. Te voy contando por acá.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir con los turnos me falta solo:
+• [lo que falta]
+• [lo que falta]
+Apenas lo tenga, sigo. ¡Gracias!</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Desde hoy el sistema de turnos está funcionando 🎉
+Tu link: [link]
+Cada paciente que reserve recibe la confirmación y dos recordatorios, con un link para cambiar el turno. Vos recibís el resumen del día a las [hora].
+Tres cosas: ponelo en Instagram y en Google, que [secretaria] cargue por el link los turnos que da por teléfono, y marquen en Calendly a quien falte.
+Los turnos que ya estaban agendados de antes no reciben avisos.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el resumen del primer mes:
+• Turnos reservados por el link: [X]
+• Confirmaciones y recordatorios enviados: [X]
+• Ausencias marcadas: [X] (antes calculabas [X] por semana)
+• Errores: [X], y qué se arregló: [detalle]
+Para el mes que viene propongo [ajuste]. ¿Lo charlamos 15 minutos?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p03">← Volver a la ficha 03</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

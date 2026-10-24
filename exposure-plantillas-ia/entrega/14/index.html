@@ -1,0 +1,753 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Rayos X de Ventas · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Rayos X de Ventas, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Rayos X de Ventas">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 14 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Rayos X de Ventas</h1>
+  <p class="bajada">Análisis de llamadas y conversaciones de venta. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Equipos de venta por teléfono</span><span class="chip">Setup USD 1.500–2.000</span><span class="chip">2–3 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar: confirmá cómo llaman</h2>
+<p><strong>Fathom graba videollamadas</strong> de Google Meet, Zoom o Microsoft Teams. <strong>No graba llamadas de teléfono común ni llamadas de WhatsApp.</strong></p>
+<p>Como tu cliente vende por teléfono, armé todo con este supuesto:</p>
+<ul>
+<li>Las llamadas que quieren analizar se hacen por videollamada y entran solas con Fathom.</li>
+<li>Los chats de WhatsApp y los mails los pega el vendedor en un formulario.</li>
+</ul>
+<p>Si venden 100% por teléfono común, Fathom no les sirve tal cual. Tenés dos caminos:</p>
+<ul>
+<li>Arrancar solo con el formulario.</li>
+<li>Sumar una telefonía que grabe y transcriba. Eso queda <strong>POR DEFINIR</strong> y se cotiza aparte.</li>
+</ul>
+<p><strong>Confirmalo antes de cobrar.</strong> Es una pregunta por WhatsApp: «¿Las llamadas de venta las hacen por Meet, Zoom o Teams, o por teléfono?». Si me decís que es teléfono, te rearmo los pasos P5 y P17 a P19.</p>
+<p><strong>Cómo se conectan las dos plantillas.</strong> El flujo principal (plantilla 17937) analiza cada conversación y la escribe en una planilla de Google. El reporte semanal (plantilla 14931) lee esa misma planilla los lunes. La planilla es el cable que las une. Por eso se instala primero el flujo principal y el reporte después, cuando ya hay datos reales.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Rayos X de Ventas" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Qué garantizás y qué no:</strong></p>
+<ul>
+<li><strong>Garantizás</strong> que cada conversación grabada o pegada tenga su ficha, que llegue la alerta de lead caliente y que el reporte salga cada lunes.</li>
+<li><strong>No garantizás</strong> más ventas. Eso depende del equipo.</li>
+<li><strong>El sistema no le escribe a nadie.</strong> El mensaje de seguimiento que sugiere la IA lo manda el vendedor a mano. Por eso no hay plantillas de WhatsApp ni opción de baja en juego.</li>
+</ul>
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup y aprobar alcance</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás el setup y dejás el alcance por escrito.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandale el link de pago por el mismo medio que la primera vez.</li>
+<li>Monto: USD 1.500–2.000 de setup más USD 300–500 por mes. El número exacto es <strong>POR DEFINIR</strong>.</li>
+<li>Pegá abajo el alcance en 5 líneas:<ol>
+<li>Qué entra: videollamadas grabadas con Fathom, más chats y mails que pega el vendedor.</li>
+<li>Qué recibe: una ficha por conversación, una alerta por mail de cada lead caliente y un reporte por vendedor los lunes.</li>
+<li>Qué no hace: no decide nada, no le escribe a ningún cliente y no graba teléfono común.</li>
+<li>Plazo: 2 a 3 semanas.</li>
+<li>Datos: las conversaciones pasan por Claude, la IA de Anthropic, y quedan en una planilla de Google del negocio.</li>
+</ol>
+</li>
+<li>Definí quién paga el consumo de Claude, que se cobra por uso (<strong>POR DEFINIR</strong>). Sugerido: lo incluís en la mensualidad.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> el pago y un «dale» al alcance.</li>
+<li><strong>Qué le entregás:</strong> el alcance por escrito.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada y tenés el «dale» escrito.</li>
+<li><strong>Si sale mal:</strong> paga pero no contesta el alcance. No arranques sin ese OK: es lo que te cubre si después pide cosas de más.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás el mensaje de bienvenida con todo lo que necesitás.</li>
+<li><strong>Cómo:</strong> copiá el mensaje 1 de la sección 4. Proponé dos horarios concretos para la charla de P3.</li>
+<li><strong>Qué le pedís:</strong> lo de la lista del mensaje.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el mensaje salió y hay horario para P3.</li>
+<li><strong>Si sale mal:</strong> no contesta en 24 horas. Mandá un audio corto: suele responder más rápido que al texto.</li>
+</ul>
+<p><strong>P3 · Definir con el dueño qué es un lead caliente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> una charla de 30 minutos por Meet para escribir qué significa «lead caliente» en ese negocio. Lead es una persona interesada.</li>
+<li><strong>Cómo:</strong> hacele estas 4 preguntas y anotá las respuestas en un documento:<ol>
+<li>¿Qué dice o pide un cliente justo antes de comprar? Por ejemplo: pidió precio, propuesta o fecha de arranque.</li>
+<li>¿Por dónde son las llamadas de venta?</li>
+<li>¿Quién recibe las alertas? ¿El dueño o un jefe de ventas?</li>
+<li>¿Los vendedores avisan al cliente que la llamada se graba? Tiene que ser que sí.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> los 30 minutos y ejemplos reales de ventas que cerró.</li>
+<li><strong>Qué le entregás:</strong> la definición escrita, para que la apruebe.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos más 15 para pasarlo en limpio.</li>
+<li><strong>Listo cuando:</strong> la definición entra en 2 o 3 oraciones y el dueño dijo «sí, es eso».</li>
+<li><strong>Si sale mal:</strong> dice «todos son calientes». Pedile las últimas 3 ventas cerradas y qué había dicho cada cliente justo antes de comprar. Ahí sale la definición.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P4 · Mandar vendedores, mails y canal de llamadas</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> recibís los datos para configurar.</li>
+<li><strong>Cómo:</strong> armá una nota con:<ul>
+<li>nombre y mail de cada vendedor;</li>
+<li>mail que recibe las alertas y el reporte;</li>
+<li>nombre del negocio como quiere que figure;</li>
+<li>canal de las llamadas.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> eso mismo.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días, según el cliente.</li>
+<li><strong>Listo cuando:</strong> la nota está completa, sin huecos.</li>
+<li><strong>Si sale mal:</strong> te pasa el mail personal de un vendedor en vez del mail con el que hace las videollamadas. Pedí el mail con el que entra a Meet o Zoom: Fathom se engancha a ese.</li>
+</ul>
+<p><strong>P5 · Crear cuenta de Fathom cada vendedor</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cada vendedor se crea su cuenta en Fathom, el programa que graba y transcribe las videollamadas. Transcribir es pasar a texto lo que se dijo.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Cada uno entra a fathom.video y se registra con el mail de sus videollamadas.</li>
+<li>Conecta su calendario.</li>
+<li>La cuenta gratis alcanza para el webhook, según la plantilla 9549.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que todos los vendedores lo hagan, y 10 minutos de pantalla compartida con cada uno para P17. No le pidas contraseñas.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos por vendedor, en 1 a 2 días.</li>
+<li><strong>Listo cuando:</strong> cada vendedor te mandó captura de su cuenta creada.</li>
+<li><strong>Si sale mal:</strong> uno no la crea. Arrancá con los que están y sumalo después: sus llamadas simplemente no entran hasta que la tenga.</li>
+</ul>
+<p><strong>P6 · ¿Está todo lo pedido?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás la lista del día 2 de la sección 3.</li>
+<li><strong>Cómo:</strong> marcá cada casilla.</li>
+<li><strong>Listo cuando:</strong> está todo tildado. <strong>SÍ</strong> → P8. <strong>NO</strong> → P7.</li>
+<li><strong>Si sale mal:</strong> te tienta empezar igual. Podés adelantar P8 mientras esperás, pero no pases de P13 sin la definición de lead caliente.</li>
+</ul>
+<p><strong>P7 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pedís solo lo que falta y volvés a P4.</li>
+<li><strong>Cómo:</strong> mensaje 2 de la sección 4, con la lista exacta de lo que falta.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> llegó lo que faltaba.</li>
+<li><strong>Si sale mal:</strong> pasan 3 días sin respuesta. Llamalo directamente; en una llamada de 5 minutos se destraba.</li>
+</ul>
+<h3>Etapa 3 · Instalación en micropasos</h3>
+<p>Una palabra que vas a ver mucho: <strong>nodo</strong> es cada cajita del flujo en n8n. Cada una hace una sola cosa.</p>
+<p><strong>P8 · Preparar cuentas de n8n, Anthropic y Google</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás listas las tres cuentas que usa el sistema.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>n8n:</strong> usá la cuenta del sistema que ya le instalaste. ¿Es tuya o del cliente? <strong>POR DEFINIR</strong>. Tiene que ser n8n 2.x, en n8n Cloud o en servidor propio. Fijate la versión en la configuración.</li>
+<li><strong>Anthropic:</strong><ul>
+<li>Entrá a console.anthropic.com y cargá créditos.</li>
+<li>Andá a API Keys → Create Key y copiá la clave en un lugar seguro.</li>
+<li>Una <strong>API</strong> es la puerta por la que un programa usa a otro. La <strong>API key</strong> es la llave de esa puerta.</li>
+</ul>
+</li>
+<li><strong>Google:</strong><ul>
+<li>En n8n, entrá a Credentials y creá una credencial de Google Sheets (OAuth2) y otra de Gmail (OAuth2).</li>
+<li>OAuth es el botón de «Iniciar sesión con Google» que le da permiso a n8n.</li>
+<li>En n8n Cloud es un clic.</li>
+<li>En servidor propio tenés que crear el acceso en Google Cloud. Si lo dejás en modo <em>Testing</em>, el permiso vence cada 7 días.</li>
+<li>Usá la cuenta de Google del negocio, o compartile la planilla al dueño con permiso de edición.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> si va en su Google, que te dé acceso o que haga el clic de conexión con vos al lado.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> en Credentials ves las tres credenciales (Anthropic, Sheets y Gmail) creadas y sin error.</li>
+<li><strong>Si sale mal:</strong> a la semana Gmail deja de mandar. Es el modo <em>Testing</em> de Google Cloud: pasá la app a producción o reconectá.</li>
+</ul>
+<p><strong>P9 · Importar plantilla y arreglar las dos entradas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla y la dejás arrancando bien.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí https://n8n.io/workflows/17937, copiá la plantilla y pegala en un flujo nuevo de n8n.</li>
+<li>Borrá <strong>solo</strong> el nodo «Respond with JSON Structure».</li>
+<li>En «POST Analyze Conversation Webhook», cambiá <strong>Respond</strong> a «Immediately».<ul>
+<li>Un <strong>webhook</strong> es una dirección web donde otro programa avisa «llegó algo nuevo».</li>
+<li>Hacé los pasos 2 y 3 juntos. Si hacés uno solo, el webhook da error.</li>
+</ul>
+</li>
+<li><strong>No borres</strong> «Check API Source». Es el que manda a «Display Results Page» solo lo que entra por el formulario.</li>
+<li>En el mismo nodo del webhook, cambiá el Path «analyze-conversation» por algo largo y al azar, por ejemplo 30 letras y números mezclados. Esa dirección no pide clave: lo largo es la protección.</li>
+</ol>
+</li>
+<li><strong>Por qué hace falta:</strong> tal como viene, el formulario no abre en n8n 2.x y Fathom se quedaría esperando a Claude.</li>
+<li><strong>Resultado:</strong> las llamadas entran solas por el webhook, y el formulario queda para que el vendedor pegue un chat de WhatsApp o un mail.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> el formulario abre con su Test URL (la dirección de prueba) y ningún nodo está en rojo.</li>
+<li><strong>Si sale mal:</strong> el webhook da error. Revisá que hiciste los dos cambios, no uno solo.</li>
+</ul>
+<p><strong>P10 · Reemplazar el código de Normalize Conversation Data</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás el código que ordena lo que llega de Fathom.</li>
+<li><strong>Cómo:</strong> abrí «Normalize Conversation Data», borrá todo el código y pegá este, tal cual:</li>
+</ul>
+<pre><code class="language-javascript">const raw = $input.first().json;
+const b = raw.body || raw;
+const t = b.transcript || b.Transcript || '';
+const transcript = Array.isArray(t)
+  ? t.map(x =&gt; (x.speaker?.display_name || '') + ': ' + (x.text || '')).join('\n')
+  : String(t);
+if (!transcript.trim()) return [];
+const channel = String(b.channel || b.Channel || (Array.isArray(t) ? 'call' : 'unknown')).toLowerCase();
+const source = raw.body ? 'api' : 'form';
+const vendedor = b.vendedor || b.recorded_by?.name || '';
+return [{ json: { received_at: $now.toISO(), source, channel, transcript, vendedor } }];
+</code></pre>
+<pre><code>- Qué hace: arma el diálogo con la lista de frases que manda Fathom. Tal como venía, a Claude le llegaba «[object Object]» en vez del texto.
+- También guarda quién grabó la llamada y frena si no llegó transcripción.
+- En el nodo del formulario (Form Trigger), agregá un campo con Field Name **vendedor**. Así el código también levanta quién pegó el chat.
+</code></pre>
+<ul>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> corrés ese nodo con un chat de prueba y la salida muestra el texto como «Nombre: frase», no «[object Object]».</li>
+<li><strong>Si sale mal:</strong> aparece un error de sintaxis, que es un error de escritura en el código. Se te cortó o cambió algo al pegar: borrá todo y pegalo de nuevo entero.</li>
+</ul>
+<p><strong>P11 · Traducir prompt y cargar lead caliente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le das a Claude las instrucciones en castellano. El <strong>prompt</strong> son las instrucciones que le escribís a la IA.</li>
+<li>
+<p><strong>Cómo:</strong></p>
+<ol>
+<li>En «Process with Claude AI», pasá el prompt al castellano.</li>
+<li>Pedí que <em>summary</em>, <em>needs</em>, <em>objections</em>, <em>next_action</em> y <em>follow_up_message</em> salgan en español rioplatense.</li>
+<li>Mantené la orden de devolver <strong>solo JSON</strong>. JSON es un formato ordenado de «nombre: valor» que las máquinas leen fácil.</li>
+<li>Dejá en inglés las claves y los valores fijos:<ul>
+<li>intent: buying, exploring, support o unclear;</li>
+<li>urgency: high, medium o low.</li>
+<li>El motivo: «Check Urgency Status» compara contra 'high'.</li>
+</ul>
+</li>
+<li>Agregá este texto, completando la definición de P3:<blockquote>
+<p>«En este negocio un lead caliente es: [DEFINICIÓN DE P3 — POR DEFINIR]. Poné urgency en high solo si es un lead caliente. Un reclamo de soporte, aunque sea urgente, nunca es high.»</p>
+</blockquote>
+</li>
+</ol>
+<p>Sin eso, un reclamo urgente también dispara el aviso.
+6. En la pestaña <strong>Settings</strong> de ese nodo, activá «Retry On Fail». Como el webhook responde al instante, Fathom no vuelve a mandar la llamada si Claude falla justo en ese momento.
+7. Cargá tu API key de Anthropic en «Claude Sonnet Model». Ya viene con Claude Sonnet 4.6: no cambies el modelo.
+- <strong>Cuánto tarda:</strong> 45 minutos.
+- <strong>Listo cuando:</strong> el prompt está en castellano, tiene la definición y Retry On Fail está prendido.
+- <strong>Si sale mal:</strong> te llegan mails con «AI parse failed, review manually». Subí Maximum Number of Tokens de 2048 a 4096 en las Options de ese nodo. Los tokens son el largo máximo de la respuesta.</p>
+</li>
+</ul>
+<p><strong>P12 · Armar planilla y mapear columnas nuevas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la planilla donde queda cada ficha.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá una Google Sheet con una pestaña llamada <strong>Conversations</strong>.</li>
+<li>Poné estas columnas en la fila 1, en este orden: timestamp, channel, source, contact, company, intent, urgency, budget, timeline, summary, next_action, objections, vendedor, Date, seguimiento, resultado.</li>
+<li>En «Append to Conversation Records», elegí el documento. Si no aparecen las columnas nuevas, refrescá la lista de columnas.</li>
+<li>Mapeá estas tres columnas (mapear es decirle qué dato va en cada columna):<ul>
+<li>objections con <code>{{ $('Parse and Structure Output').item.json.objections }}</code></li>
+<li>vendedor con <code>{{ $('Parse and Structure Output').item.json.vendedor }}</code></li>
+<li>Date con <code>{{ $now.toFormat('yyyy-MM-dd') }}</code></li>
+</ul>
+</li>
+<li>En Options → Cell Format, elegí «Let n8n format».<ul>
+<li>Así la fecha queda como texto, que es como la compara el reporte de 14931.</li>
+<li>Y un chat que empiece con «=» no se toma como fórmula.</li>
+</ul>
+</li>
+<li>Agregá un consejo propio: en Google Sheets, menú Datos → Validación de datos, poné menú desplegable en <em>seguimiento</em> (sí, no) y en <em>resultado</em> (cerrada, perdida). Así nadie escribe «Cerrado» y el reporte cuenta bien.</li>
+</ol>
+</li>
+<li><strong>Por qué importa objections:</strong> la plantilla saca las objeciones pero no las guarda. Sin esa columna, la planilla no muestra por qué se caen las ventas.</li>
+<li><strong>seguimiento y resultado</strong> las completa el vendedor a mano.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> una corrida de prueba agrega una fila con todo lleno, menos seguimiento y resultado.</li>
+<li><strong>Si sale mal:</strong> una columna queda vacía. Revisá el mapeo de esa columna, letra por letra.</li>
+</ul>
+<p><strong>P13 · Configurar alerta por Gmail en castellano</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás listo el mail que avisa cada lead caliente.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Set Alert Recipient Field», cambiá you@example.com por el mail de P4.</li>
+<li>Conectá Gmail en «Send Urgent Alert via Gmail».</li>
+<li>Cambiá el asunto «Urgent follow-up: …» por «Lead caliente: …».</li>
+<li>Si querés, apagá «Append n8n Attribution» en Options.</li>
+<li>En «Parse and Structure Output», traducí los rótulos del texto <em>readable</em>:<ul>
+<li>CONVERSATION SUMMARY → RESUMEN DE LA CONVERSACIÓN</li>
+<li>Contact → Contacto</li>
+<li>Intent → Intención</li>
+<li>NEXT ACTION → PRÓXIMO PASO</li>
+<li>SUGGESTED FOLLOW-UP → MENSAJE SUGERIDO</li>
+<li>Traducí solo el texto entre comillas. No toques las variables.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el mail de prueba llega al destinatario correcto y entero en castellano.</li>
+<li><strong>Si sale mal:</strong> el código se rompe después de traducir. Borraste una comilla o una llave: volvé atrás con Ctrl+Z y traducí de a un rótulo.</li>
+</ul>
+<h3>Etapa 4 · Prueba con datos de prueba</h3>
+<p><strong>P14 · Probar formulario con chats inventados</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pegás 4 conversaciones inventadas en el formulario, nunca de clientes reales.</li>
+<li><strong>Cómo:</strong> con la Test URL del formulario, cargá estos 4 casos:<ol>
+<li>Uno que pide precio y fecha de arranque. Tiene que salir high y mandar el mail.</li>
+<li>Uno que solo averigua. Tiene que salir medium o low, sin mail.</li>
+<li>Un reclamo urgente de soporte. Tiene que salir sin high y sin mail.</li>
+<li>Uno que empiece con «=». Tiene que quedar como texto.</li>
+</ol>
+</li>
+</ul>
+<p>En todos, completá el campo <em>vendedor</em>.
+- <strong>Cuánto tarda:</strong> 1 hora.
+- <strong>Listo cuando:</strong> corriste los 4 casos.
+- <strong>Si sale mal:</strong> no sale nada. Mirá Executions, el historial de corridas de n8n: ahí ves en qué nodo frenó.</p>
+<p><strong>P15 · ¿Planilla y alerta salen bien?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás que:<ul>
+<li>hay 4 filas nuevas;</li>
+<li>intent y urgency están en inglés;</li>
+<li>los textos están en castellano;</li>
+<li>objections está lleno;</li>
+<li>Date aparece como 2025-…, en texto;</li>
+<li>llegó un solo mail, el del caso 1;</li>
+<li>el formulario mostró el resultado en pantalla.</li>
+</ul>
+</li>
+<li><strong>SÍ</strong> → P17. <strong>NO</strong> → P16.</li>
+</ul>
+<p><strong>P16 · Corregir el nodo que falló</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás según el síntoma y volvés a P14.</li>
+<li><strong>Cómo:</strong></li>
+</ul>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Síntoma</th>
+<th>Qué revisar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>«[object Object]»</td>
+<td>P10</td>
+</tr>
+<tr>
+<td>Textos en inglés</td>
+<td>P11</td>
+</tr>
+<tr>
+<td>Mail en los casos 2 o 3</td>
+<td>La definición en P11</td>
+</tr>
+<tr>
+<td>«AI parse failed»</td>
+<td>Subir los tokens a 4096</td>
+</tr>
+<tr>
+<td>Columna vacía</td>
+<td>El mapeo en P12</td>
+</tr>
+<tr>
+<td>Fecha como número</td>
+<td>Cell Format en P12</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Cuánto tarda:</strong> 30 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> el caso que falló ahora sale bien.</li>
+<li><strong>Si sale mal:</strong> el mismo error vuelve. Probá el nodo solo, con «Execute step», para ver qué recibe y qué devuelve.</li>
+</ul>
+<p><strong>P17 · Publicar flujo y conectar Fathom</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> prendés el flujo para el uso real y conectás Fathom.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Tocá <strong>Publish</strong>.</li>
+<li>En el webhook, copiá la <strong>Production URL</strong>, que es la dirección real. No uses la Test URL: esa solo anda mientras mirás la pantalla. La Production URL solo funciona con el flujo publicado.</li>
+<li>Con cada vendedor, en pantalla compartida: en Fathom, Settings → API Access → Add.</li>
+<li>Pegá la Production URL y marcá que incluya <strong>Transcript</strong>.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> 10 minutos con cada vendedor.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos por vendedor.</li>
+<li><strong>Listo cuando:</strong> todos los vendedores tienen la URL cargada con Transcript tildado.</li>
+<li><strong>Si sale mal:</strong> pegaste la Test URL. Cambiala por la Production URL.</li>
+</ul>
+<p><strong>P18 · Hacer videollamada de prueba con un vendedor</strong> (lo hace el cliente con vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> una videollamada de 5 minutos donde vos hacés de cliente que pide precio y fecha.</li>
+<li><strong>Cómo:</strong> el vendedor la arma en Meet o Zoom con Fathom grabando. Al cortar, Fathom tarda unos minutos en procesarla.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> Fathom muestra la grabación con su transcripción.</li>
+<li><strong>Si sale mal:</strong> Fathom no entró a la llamada. Revisá que el calendario del vendedor esté conectado o que la grabación se haya activado.</li>
+</ul>
+<p><strong>P19 · ¿La llamada llegó a la planilla?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> buscás una fila con channel «call», source «api», el nombre del vendedor y el diálogo con nombres. También tiene que haber llegado el mail de alerta.</li>
+<li><strong>SÍ</strong> → P20. <strong>NO</strong> → P17.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>En Executions no hay nada: la URL está mal pegada en Fathom, el flujo no está publicado o falta tildar Transcript.</li>
+<li>Hay una ejecución pero no hay fila: la llamada llegó sin transcripción y el código frenó a propósito.</li>
+</ul>
+</li>
+</ul>
+<h3>Etapa 5 · Demo al dueño</h3>
+<p><strong>P20 · Mostrar la demo al dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> 20 minutos por Meet.</li>
+<li><strong>Cómo:</strong> mostrale en este orden:<ol>
+<li>pegás un chat en el formulario y aparece la ficha;</li>
+<li>la fila en la planilla;</li>
+<li>el mail de lead caliente;</li>
+<li>la llamada de prueba de P18.</li>
+</ol>
+</li>
+</ul>
+<p>Explicale qué tienen que completar los vendedores y qué <strong>no</strong> hace el sistema: no decide y no le escribe a nadie.
+- <strong>Qué le pedís:</strong> que diga «aprobado» o qué cambiaría.
+- <strong>Qué le entregás:</strong> el link de la planilla.
+- <strong>Cuánto tarda:</strong> 20 minutos.
+- <strong>Listo cuando:</strong> dio su respuesta.
+- <strong>Si sale mal:</strong> pide cosas nuevas, como conectarlo a un CRM (el programa donde se registran los clientes). Anotalas como «para después». No entran en este alcance.</p>
+<p><strong>P21 · ¿El dueño aprueba?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> → P23. <strong>NO</strong> → P22.</li>
+</ul>
+<p><strong>P22 · Ajustar definición, textos o destinatarios</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás lo que pidió dentro del alcance y volvés a P20.</li>
+<li><strong>Cómo:</strong> suele ser la definición de lead caliente (P11), quién recibe el mail (P13) o el asunto del mail. Le mostrás el cambio con una captura por WhatsApp: no hace falta otra reunión.</li>
+<li><strong>Cuánto tarda:</strong> 30 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> te responde «ahora sí».</li>
+<li><strong>Si sale mal:</strong> cambia la definición todas las semanas. Fijala por un mes y revisala con los datos reales en P30.</li>
+</ul>
+<h3>Etapa 6 · Lanzamiento con datos reales</h3>
+<p><strong>P23 · Grabar llamadas reales y pegar chats</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el equipo empieza a usarlo de verdad.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandá el mensaje 3 de la sección 4, con el link de producción del formulario y el de la planilla.</li>
+<li>Grabá un video de 3 minutos para los vendedores: cómo grabar, cómo pegar un chat y qué completar.</li>
+<li>Los vendedores avisan siempre al cliente que la llamada se graba.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que todos graben sus videollamadas de venta.</li>
+<li><strong>Qué le entregás:</strong> los dos links y el video.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora de tu parte.</li>
+<li><strong>Listo cuando:</strong> cada vendedor grabó una llamada o pegó un chat.</li>
+<li><strong>Si sale mal:</strong> se olvidan de grabar. Revisá en la configuración de Fathom que se una solo a las reuniones del calendario.</li>
+</ul>
+<p><strong>P24 · Analizar cada conversación y cargar planilla</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Cada conversación pasa por Claude, queda como fila en la planilla y, si es high, sale el mail.</li>
+<li><strong>Cómo:</strong> la primera semana, mirá Executions 5 minutos por día.</li>
+<li><strong>Listo cuando:</strong> las ejecuciones salen en verde.</li>
+<li><strong>Si sale mal:</strong> hay ejecuciones en rojo en el nodo de Claude. Casi siempre son créditos de Anthropic agotados: cargá más.</li>
+</ul>
+<p><strong>P25 · ⭐ Entregar primeras fichas y alerta caliente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás al dueño la primera conversación real analizada.</li>
+<li><strong>Cómo:</strong> mandale una captura de la fila con el resumen y las objeciones: «Mirá, esta es la primera llamada real». Si ya hubo un lead caliente, mostrale también el mail.</li>
+<li><strong>Qué le entregás:</strong> la prueba de que funciona.</li>
+<li><strong>Cuánto tarda:</strong> el mismo día del lanzamiento o el siguiente.</li>
+<li><strong>Listo cuando:</strong> el dueño vio al menos una ficha real.</li>
+<li><strong>Si sale mal:</strong> todavía no hay ningún lead caliente. No fuerces nada: la ficha alcanza como primer resultado.</li>
+</ul>
+<h3>Etapa 7 · Reporte semanal por vendedor</h3>
+<p><strong>P26 · Instalar y adaptar el reporte semanal</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> sumás la plantilla 14931, que arma el reporte de los lunes.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá https://n8n.io/workflows/14931.</li>
+<li>Borrá «Fetch Last Week Data». Lee la misma hoja entera y haría salir el reporte dos veces.</li>
+<li>En «Fetch This Week Data», elegí tu planilla y la pestaña Conversations.</li>
+<li>En «Log Report Run», elegí la misma planilla y creá la pestaña <strong>Report Log</strong> con Date, Week Covered, Business, Status y Summary. Otra opción: borrá ese nodo.</li>
+<li>En «Claude Sonnet», volvé a elegir el modelo de la lista. Viene guardado de una forma que el nodo no lee y frena con «Could not get parameter».</li>
+<li>En «Configure Report Settings» poné:<ul>
+<li>el nombre del negocio (<strong>POR DEFINIR</strong>, de P4);</li>
+<li>el mail;</li>
+<li>qué es cada columna. Por ejemplo: urgency high = lead caliente; seguimiento = sí si el vendedor ya volvió a escribir; resultado = cerrada o perdida.</li>
+</ul>
+</li>
+<li>En «Analyse with Claude», pegá:<blockquote>
+<p>«Escribí el reporte en castellano rioplatense, corto y claro. Para cada vendedor: cantidad de conversaciones de la semana, leads calientes (urgency = high), ventas cerradas (resultado = cerrada) y las 3 objeciones que más se repiten. Al final, la lista de leads calientes con seguimiento vacío: contacto, empresa, vendedor, fecha y próximo paso. No inventes datos: si una columna está vacía, decilo.»</p>
+</blockquote>
+</li>
+<li>Conectá Google Sheets, Gmail y Anthropic. La misma API key sirve.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas, repartidas en 1 o 2 días.</li>
+<li><strong>Listo cuando:</strong> todo está configurado y sin nodos en rojo.</li>
+<li><strong>Si sale mal:</strong> no ves la pestaña en la lista. Refrescá la lista de pestañas o revisá que el nombre coincida exacto.</li>
+</ul>
+<p><strong>P27 · ¿El reporte de prueba sale bien?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> lo corrés a mano con «Execute workflow» sobre los datos reales de la semana.</li>
+<li><strong>Listo cuando:</strong><ul>
+<li>llega un solo mail, en castellano;</li>
+<li>los números de cada vendedor coinciden con la planilla (contalos con un filtro);</li>
+<li>aparece la lista de leads calientes sin seguimiento.</li>
+</ul>
+</li>
+<li><strong>SÍ</strong> → P28. <strong>NO</strong> → P26.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Llegan dos mails: no borraste «Fetch Last Week Data».</li>
+<li>Da 0 en todo: la columna Date quedó como número y no como texto. Revisá P12.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P28 · Completar seguimiento y resultado en la planilla</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> los vendedores anotan qué pasó con cada lead.</li>
+<li><strong>Cómo:</strong> cuando vuelven a contactar a alguien, ponen «sí» en <em>seguimiento</em>. Cuando se cierra o se pierde, eligen «cerrada» o «perdida».</li>
+<li><strong>Qué le pedís:</strong> que el dueño lo controle.</li>
+<li><strong>Cuánto tarda:</strong> 1 minuto por lead, todo el tiempo.</li>
+<li><strong>Listo cuando:</strong> las filas de la semana tienen esas columnas al día.</li>
+<li><strong>Si sale mal:</strong> no lo completan. El reporte va a mostrar 0 ventas y a todos los leads calientes «sin seguimiento». Mostrale eso al dueño: es su palanca para exigirlo.</li>
+</ul>
+<p><strong>P29 · Enviar reporte cada lunes a las 7</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> publicás el flujo del reporte y queda andando.</li>
+<li><strong>Cómo:</strong> tocá Publish. En la configuración del flujo, revisá que la zona horaria sea la del cliente.</li>
+<li><strong>Qué le entregás:</strong> el reporte semanal por vendedor.</li>
+<li><strong>Listo cuando:</strong> llegó el primer lunes.</li>
+<li><strong>Si sale mal:</strong> no llega o llega a otra hora. El flujo no está publicado o la zona horaria está mal.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento y ajustes</h3>
+<p><strong>P30 · Revisar fichas y ajustar prompt semanalmente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> 30 minutos por semana de control de calidad.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Elegí 5 fichas al azar y compará cada una con su grabación en Fathom. ¿El resumen está bien? ¿Marcó bien si era caliente?</li>
+<li>Si se equivoca, ajustá la definición en P11.</li>
+<li>Revisá Executions buscando errores.</li>
+<li>Mirá cuánto gastaste en Anthropic.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> las fichas que revisás coinciden con lo que se habló.</li>
+<li><strong>Si sale mal:</strong> marca como caliente a gente que no lo es. Agregá al prompt un ejemplo de «esto NO es caliente».</li>
+</ul>
+<p><strong>P31 · Entregar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> un resumen al cumplir 30 días.</li>
+<li><strong>Cómo:</strong> mensaje 4 de la sección 4, con los números de la planilla. Contá lo que pasó; no le atribuyas ventas al sistema.</li>
+<li><strong>Qué le entregás:</strong> el reporte y una propuesta de ajuste para el mes 2.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo recibió y lo charlaron 15 minutos.</li>
+<li><strong>Si sale mal:</strong> hay pocos datos porque grabaron poco. Decilo tal cual y proponé la meta de grabar todas las llamadas el mes 2.</li>
+</ul>
+<h3>Etapa 9 · Renovación o salida</h3>
+<p><strong>P32 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> → P33. <strong>NO</strong> → P34.</li>
+</ul>
+<p><strong>P33 · Seguir ajustando y ofrecer Negocio Integrado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> seguís con P30 cada semana y presentás el próximo paso.</li>
+<li><strong>Cómo:</strong><ul>
+<li>El siguiente servicio es el <strong>20 · Negocio Integrado</strong>.</li>
+<li>La regla es venderlo cuando el cliente ya vio funcionar dos o tres sistemas tuyos. Con este ya tiene dos.</li>
+<li>Presentalo como hoja de ruta, no como venta inmediata.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> quedó agendada la charla.</li>
+</ul>
+<p><strong>P34 · Entregar planilla, flujo y apagar ordenado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> te vas dejando todo en regla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La planilla es del cliente: confirmá que la tenga.</li>
+<li>Exportá los dos flujos como archivo y entregáselos.</li>
+<li>Sacá la URL del webhook de cada cuenta de Fathom.</li>
+<li>Despublicá los flujos.</li>
+<li>Si eran tuyas, borrá tu API key y tus credenciales de Google.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> la planilla, los flujos y una página con «qué queda andando y qué no».</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no queda ningún acceso tuyo activo.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup — día 1</li>
+<li>☐ OK escrito al alcance — día 1</li>
+<li>☐ Quién paga el consumo de Claude (<strong>POR DEFINIR</strong>) — día 1</li>
+<li>☐ 30 minutos para definir el lead caliente — día 2</li>
+<li>☐ Nombre y mail de cada vendedor — día 2</li>
+<li>☐ Mail que recibe alertas y reporte — día 2</li>
+<li>☐ Nombre del negocio para el reporte — día 2</li>
+<li>☐ Canal de las llamadas: Meet, Zoom, Teams o teléfono — día 2</li>
+<li>☐ Confirmación de que avisan que graban — día 2</li>
+<li>☐ Cuenta de Fathom de cada vendedor — días 2 a 4</li>
+<li>☐ 10 minutos de pantalla compartida con cada vendedor — día 7</li>
+<li>☐ Un vendedor 20 minutos para la llamada de prueba — día 7</li>
+<li>☐ 20 minutos para la demo — día 8</li>
+<li>☐ Seguimiento y resultado completos en la planilla — desde el día 9</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Alcance por escrito</li>
+<li>☐ Flujo de análisis publicado, con Fathom y formulario</li>
+<li>☐ Planilla Conversations con una ficha por conversación</li>
+<li>☐ Formulario para pegar chats y mails</li>
+<li>☐ Alerta por mail de cada lead caliente</li>
+<li>☐ Video de 3 minutos para vendedores</li>
+<li>☐ Reporte por vendedor los lunes a las 7, con la lista de leads calientes sin seguimiento</li>
+<li>☐ Reporte del primer mes</li>
+</ul>
+<p><strong>El calendario</strong> (2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>P1–P2: pago y bienvenida</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P3: charla de 30 minutos. El cliente arranca P4–P5</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P8: cuentas</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P9–P10</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P11–P12</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P13–P16: alerta y pruebas</td>
+</tr>
+<tr>
+<td>7</td>
+<td>P17–P19: publicar, Fathom y llamada de prueba</td>
+</tr>
+<tr>
+<td>8</td>
+<td>P20–P22: demo y ajustes</td>
+</tr>
+<tr>
+<td>9</td>
+<td>P23: lanzamiento</td>
+</tr>
+<tr>
+<td>9–10</td>
+<td>⭐ P25: primeras fichas reales</td>
+</tr>
+<tr>
+<td>10–14</td>
+<td>P26–P27: reporte semanal instalado y probado</td>
+</tr>
+<tr>
+<td>Primer lunes después del día 14</td>
+<td>P29: primer reporte por vendedor</td>
+</tr>
+<tr>
+<td>Cada semana</td>
+<td>P30: revisión de 30 minutos</td>
+</tr>
+<tr>
+<td>30</td>
+<td>P31: reporte del primer mes. P32: renovación</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, gracias 🙌 Arrancamos con Rayos X de Ventas. Para empezar necesito:
+1. Nombre y mail de cada vendedor
+2. El mail donde querés los avisos de leads calientes y el reporte de los lunes
+3. Por dónde hacen las llamadas de venta: Meet, Zoom, Teams o teléfono
+4. 30 min para definir juntos qué es un lead caliente para ustedes. ¿Te va [día] a las [hora]?</p>
+<p>Y que cada vendedor cree su cuenta gratis en fathom.video con el mail que usa para las videollamadas. Con eso arranco.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir me falta: [lo que falta]. Apenas lo tengo, en [X] días te muestro la primera prueba andando. Si te sirve, se lo pido directo a [vendedor].</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está andando! 🚀 Desde hoy cada videollamada que graben con Fathom se analiza sola. Queda la ficha acá: [link planilla]. Si es un lead caliente, te llega un mail al toque.
+Los chats de WhatsApp o los mails los pegan acá: [link formulario].
+Lo único que les pido: que completen «seguimiento» y «resultado» en la planilla. El primer reporte por vendedor te llega el lunes a las 7.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el primer mes de Rayos X:
+• Conversaciones analizadas: [N]
+• Leads calientes detectados: [N]
+• Calientes con seguimiento: [N] de [N]
+• Objeciones que más se repiten: [1], [2], [3]
+• Ajustes que hice: [ajuste]</p>
+<p>Para el mes que viene propongo: [próximo paso]. ¿Lo charlamos 15 min esta semana?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p14">← Volver a la ficha 14</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

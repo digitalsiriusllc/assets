@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Lead al Instante · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Lead al Instante, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Lead al Instante">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 02 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Lead al Instante</h1>
+  <p class="bajada">Del formulario al WhatsApp en un minuto. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Inmobiliarias</span><span class="chip">Setup USD 300–700</span><span class="chip">3–5 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p>Los pasos de instalación salen de «Cómo dejarla lista» y «Qué cuentas necesitás» de la ficha. Doy por hecho que la inmobiliaria tiene web, Instagram o ambos, y que los anuncios de Meta son opcionales. Lo que no sé del negocio figura como <strong>POR DEFINIR</strong>.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Lead al Instante" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<blockquote>
+<p><strong>Ojo con el orden real.</strong> La aprobación de Meta (P8) puede tardar horas. Mientras esperás, avanzá con P10, P11 y P12, que no necesitan las plantillas. Recién a partir de P13 hace falta tenerlas aprobadas.</p>
+</blockquote>
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Cobrar setup y primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás el setup y la primera mensualidad antes de tocar nada.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Le mandás un link de Mercado Pago o tus datos de transferencia, con el monto que acordaron.</li>
+<li>Cuando se acredita, le mandás el comprobante o la factura.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> el comprobante.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada en tu cuenta, no cuando te dice «ya te transferí».</li>
+<li><strong>Si sale mal:</strong> si te dice «te pago la semana que viene», respondele con amabilidad que arrancás el día que se acredite. Aclarale que el plazo de entrega corre desde ese momento.</li>
+</ul>
+<p><strong>P2 · Enviar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás la bienvenida con todo lo que necesitás y coordinan una llamada de 45 minutos.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Copiás el <strong>Mensaje 1</strong> de abajo y lo mandás por WhatsApp.</li>
+<li>Proponés dos horarios para la llamada, dentro de los próximos 2 días.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> la lista completa (está en «Lo que le tenés que pedir») y un horario para la llamada.</li>
+<li><strong>Qué le entregás:</strong> el mensaje con la lista y la fecha de entrega.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el cliente respondió y la llamada tiene día y hora.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, le mandás el <strong>Mensaje 2</strong>.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Completar datos y compartir accesos</strong> <em>(lo hace el cliente)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente te pasa los datos y te da acceso a sus cuentas. Vos lo guiás.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Meta Business</strong> (el panel de empresa de Facebook, Instagram y WhatsApp): el dueño entra a business.facebook.com. Después va a Configuración → Usuarios → Personas → Agregar, pone tu mail y te da control total. Si no tiene una cuenta de empresa, la crean juntos en la llamada de P6.</li>
+<li><strong>El número de WhatsApp.</strong> Este punto es clave:<ul>
+<li>Un número conectado a la API de WhatsApp no se puede usar al mismo tiempo en la app del celular. «API» es la puerta para que un programa mande WhatsApp sin un celular.</li>
+<li>Las respuestas a ese número no se ven en ningún teléfono.</li>
+<li><strong>Opción recomendada para tu primer cliente:</strong> un chip nuevo, exclusivo para el sistema. El mensaje automático le dice al lead que lo contacta el vendedor desde su propio WhatsApp.</li>
+<li><strong>Alternativa:</strong> algunos proveedores oficiales de Meta permiten conectar el número que ya usan en la app WhatsApp Business sin perder la app. Meta lo llama «coexistencia». Hay que confirmar si está disponible para su país y su número: <strong>POR DEFINIR</strong>.</li>
+</ul>
+</li>
+<li><strong>Datos que tiene que pasarte:</strong><ul>
+<li>Nombre del vendedor que recibe los avisos.</li>
+<li>Mail del vendedor. Pueden ser varios.</li>
+<li>WhatsApp del vendedor, para el texto del mensaje.</li>
+<li>Dónde se va a publicar el formulario: web, bio de Instagram o anuncios.</li>
+<li>Quién le edita la web: <strong>POR DEFINIR</strong>.</li>
+</ul>
+</li>
+<li><strong>Tarjeta:</strong> la carga él en Meta. Meta cobra por cada plantilla que se envía y eso lo paga el cliente directo a Meta. El costo por mensaje depende del país: <strong>POR DEFINIR</strong>.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo de arriba.</li>
+<li><strong>Cuánto tarda:</strong> 1 o 2 días del lado del cliente. A vos te lleva 15 minutos ir revisando.</li>
+<li><strong>Listo cuando:</strong> tenés cada ítem de la lista tildado.</li>
+<li><strong>Si sale mal:</strong> si el dueño no encuentra dónde agregarte en Meta, no le expliques por chat. Lo hacen en la llamada de P6, compartiendo pantalla.</li>
+</ul>
+<p><strong>P4 · ¿Está todo lo de la lista?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> repasás la lista de pedidos ítem por ítem.</li>
+<li><strong>Cómo:</strong> abrís tu nota con las casillas ☐ y verificás que cada acceso funciona de verdad. Por ejemplo, entrás a business.facebook.com y ves el negocio del cliente.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> está todo. Si la respuesta es SÍ, pasás a P6. <strong>Desde acá corren los 5 días hábiles de entrega.</strong></li>
+<li><strong>Si sale mal:</strong> si falta algo, la respuesta es NO y vas a P5.</li>
+</ul>
+<p><strong>P5 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, sin repetir toda la lista.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Usás el <strong>Mensaje 2</strong>.</li>
+<li>Lo mandás una vez cada 24 horas, hasta 3 veces.</li>
+<li>Si después de 3 recordatorios sigue sin aparecer, lo llamás.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> lo que falta.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> el cliente manda lo que faltaba. Volvés a P3.</li>
+<li><strong>Si sale mal:</strong> si se queja de la demora, recordale con amabilidad que el plazo arranca cuando está todo. Ya lo dijiste en la bienvenida.</li>
+</ul>
+<h3>3 · WhatsApp y plantillas de Meta</h3>
+<p><strong>P6 · Dar de alta el número en llamada</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> en una videollamada con el dueño, dejás el número listo para que lo use un programa.</li>
+<li><strong>Cómo</strong> (compartís pantalla y lo hacen juntos):<ol>
+<li>Entrás a developers.facebook.com → Mis apps → Crear app. Elegís el tipo «Empresa» o «Business» y la vinculás a la cuenta de empresa del cliente.</li>
+<li>Dentro de la app agregás el producto <strong>WhatsApp</strong>. Después vas a Configuración de la API → Agregar número de teléfono.</li>
+<li>Cargás el nombre visible (el nombre de la inmobiliaria), la categoría y el número. El número se verifica con un código por SMS o por llamada de voz al chip.</li>
+<li>En WhatsApp Manager → Método de pago, el dueño carga su tarjeta.</li>
+<li>Creás un <strong>token permanente</strong>. Un token es una contraseña larga que le da permiso a n8n para mandar mensajes. Para crearlo vas a Configuración del negocio → Usuarios del sistema → Agregar, con rol administrador. Después le asignás la app y generás el token con los permisos <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>.</li>
+<li>Copiás y guardás en un lugar seguro tres datos: el token, el <strong>WhatsApp Business Account ID</strong> y el <strong>Phone Number ID</strong>. Los dos ID aparecen en Configuración de la API.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> su presencia en la llamada, el chip en la mano y la tarjeta.</li>
+<li><strong>Cuánto tarda:</strong> 45 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> el número figura como conectado en WhatsApp Manager, el pago está cargado y tenés el token permanente guardado.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>El error más común es usar el token temporal que muestra la pantalla de inicio. Ese token <strong>vence a las 24 horas</strong> y al otro día todo deja de andar. Usá siempre el del usuario del sistema.</li>
+<li>Si el número ya está en la app de WhatsApp, Meta no te deja sumarlo. Volvé a la decisión de P3.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P7 · Enviar dos plantillas a aprobación de Meta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás los dos mensajes que Meta tiene que aprobar antes de que puedas escribirle primero a alguien.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Entrás a WhatsApp Manager → Plantillas de mensajes → Crear plantilla. Elegís la categoría «Utilidad» y el idioma Español.</li>
+<li><strong>Plantilla <code>bienvenida_lead</code>:</strong> «Hola {{1}}, gracias por contactar a [Inmobiliaria]. Recibimos tu consulta sobre {{2}}. Hoy te escribe [Nombre del vendedor] desde su WhatsApp. ¿Te llamamos hoy?»</li>
+<li><strong>Plantilla <code>seguimiento_lead</code>:</strong> «Hola {{1}}, ¿pudiste ver nuestro mensaje? Si te sirve, te llamamos hoy.»</li>
+<li>En cada variable cargás un ejemplo. Por ejemplo, «Juan» y «alquiler de 2 ambientes».</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos. Podés hacerlo al final de la llamada de P6.</li>
+<li><strong>Listo cuando:</strong> las dos plantillas figuran como «En revisión».</li>
+<li><strong>Si sale mal:</strong> Meta rechaza las plantillas que <strong>empiezan o terminan con una variable</strong>. Por eso la de seguimiento arranca con «Hola» y no con {{1}}, como en la ficha original.</li>
+</ul>
+<p><strong>P8 · ¿Meta aprobó número y plantillas?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> revisás el estado en WhatsApp Manager.</li>
+<li><strong>Cómo:</strong> mirás que las dos plantillas digan «Activa» y que el nombre visible esté aprobado.</li>
+<li><strong>Cuánto tarda:</strong> de minutos a 24 horas. Mientras tanto avanzás con P10 a P12.</li>
+<li><strong>Listo cuando:</strong> está todo aprobado. Si es SÍ, pasás a P10 en adelante.</li>
+<li><strong>Si sale mal:</strong> si alguna plantilla fue rechazada, la respuesta es NO y vas a P9.</li>
+<li><strong>Ojo:</strong> Meta puede cambiar la categoría a «Marketing». Igual funciona, porque el formulario pide permiso. Lo único que cambia es que cuesta un poco más por mensaje.</li>
+</ul>
+<p><strong>P9 · Corregir el texto y reenviar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> leés el motivo del rechazo y corregís la plantilla.</li>
+<li><strong>Cómo:</strong> el motivo aparece al lado de la plantilla. Los más comunes son estos:<ul>
+<li>una variable al principio o al final;</li>
+<li>falta el ejemplo de alguna variable;</li>
+<li>el texto suena a publicidad, con palabras como «oferta» u «oportunidad única».</li>
+</ul>
+</li>
+</ul>
+<p>Lo corregís y lo reenviás. Volvés a P7.
+- <strong>Cuánto tarda:</strong> 15 minutos más la nueva espera.
+- <strong>Listo cuando:</strong> la reenviaste.
+- <strong>Si sale mal:</strong> si te rechaza dos veces el mismo texto, creá una plantilla nueva con otro nombre en vez de editar la vieja.</p>
+<h3>4 · Instalación de la plantilla</h3>
+<p><strong>P10 · Crear n8n e importar la plantilla</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> abrís n8n, cargás la plantilla y guardás las llaves de acceso.</li>
+<li><strong>Qué es n8n:</strong> un programa que conecta aplicaciones y corre tareas solo. Cada cajita del flujo se llama <strong>nodo</strong>.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá una cuenta en n8n.io (n8n Cloud). Para tu primer cliente, que esté a tu nombre y que el costo esté incluido en la mensualidad. El plan es <strong>POR DEFINIR</strong>: revisá los precios vigentes.</li>
+<li>Entrá a n8n.io/workflows/19003 → «Use for free» → copiá la plantilla. En n8n creá un flujo nuevo y pegala con Ctrl+V.</li>
+<li>Abrí el nodo «Config (edit me)» y mirá qué datos pide.</li>
+<li>Creá las <strong>credenciales</strong>, que son las llaves guardadas dentro de n8n:<ul>
+<li>«WhatsApp API», con el Access Token y el Business Account ID de P6.</li>
+<li>«Google Sheets» y «Gmail», con «Sign in with Google».</li>
+</ul>
+</li>
+<li>Para Gmail te sugiero crear una cuenta nueva solo para el sistema, del tipo <code>avisos.[inmobiliaria]@gmail.com</code>. La cuenta es del cliente y la manejás vos.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> la plantilla está en tu n8n y las tres credenciales aparecen en verde.</li>
+<li><strong>Si sale mal:</strong> si Google te muestra el aviso «app no verificada», está bien. Es la conexión de n8n y podés aceptarla.</li>
+</ul>
+<p><strong>P11 · Armar planilla y conectar Log the Lead</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la planilla donde queda cada contacto y la conectás.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá un Google Sheets llamado «Leads – [Inmobiliaria]» con una pestaña «leads».</li>
+<li>En la fila 1 escribí, en minúscula y en este orden: <code>name</code>, <code>email</code>, <code>phone</code>, <code>request</code>, <code>first_touch</code>, <code>received_at</code>, <code>origen</code>, <code>respondio</code>.</li>
+<li>En el nodo «Log the Lead» elegí de la lista esa planilla y esa pestaña.</li>
+<li>Mapeá origen = <code>{{ $('Lead Form').item.json.origen }}</code>.</li>
+<li>Cambiá <code>'SMS'</code> por <code>'WhatsApp'</code> en first_touch.</li>
+<li>En Options → Cell Format elegí «Let n8n format».</li>
+<li>Compartí la planilla con el dueño y el vendedor, con permiso de editor.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la planilla está creada, conectada y compartida.</li>
+<li><strong>Si sale mal:</strong> si el teléfono aparece como <code>#ERROR!</code> o como un número raro, te faltó elegir «Let n8n format».</li>
+</ul>
+<p><strong>P12 · Traducir formulario y sumar consentimiento</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás el formulario en español, con el permiso para escribir por WhatsApp y con el origen.</li>
+<li><strong>Cómo:</strong> en el nodo «Lead Form»:<ol>
+<li>Traducí el título y la descripción. Por ejemplo: «Contanos qué buscás y te escribimos en minutos».</li>
+<li>Cambiá cada «Label»: Nombre, Email, «WhatsApp con código de país (ej. +54 9 11 2233 4455)» y «¿Qué necesitás?».</li>
+<li>En «Custom Field Name» <strong>dejá los nombres originales</strong>: <code>Name</code>, <code>Email</code>, <code>Phone</code>, <code>What do you need help with?</code>.</li>
+<li>Marcá «Required Field» en el campo del WhatsApp.</li>
+<li>Sumá un «Checkboxes» obligatorio con la opción «Acepto que me escriban por WhatsApp».</li>
+<li>Sumá un «Hidden Field» (campo oculto) con Custom Field Name <code>origen</code>.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> abrís la vista previa y ves el formulario en español, con la casilla de permiso.</li>
+<li><strong>Si sale mal:</strong> si traducís el «Custom Field Name», se rompe el resto del flujo. Ese campo va siempre en inglés.</li>
+</ul>
+<p><strong>P13 · Cambiar SMS por WhatsApp de bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> reemplazás el SMS por el WhatsApp con la plantilla aprobada.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá el nodo «Text the Lead Back».</li>
+<li>En la salida <em>true</em> de «Has a Phone Number?» agregá «WhatsApp Business Cloud» → Send Template.</li>
+<li>Sender: el número del cliente.</li>
+<li>Recipient: <code>{{ $('Lead Form').item.json.Phone.replace(/[^0-9]/g, '') }}</code>.</li>
+<li>Template: <code>bienvenida_lead</code>.</li>
+<li>En Components → Body sumá dos parámetros de texto:<ul>
+<li><code>{{ $('Lead Form').item.json.Name }}</code></li>
+<li><code>{{ $('Lead Form').item.json['What do you need help with?'].replace(/\s+/g, ' ').slice(0, 60) }}</code></li>
+</ul>
+</li>
+<li>En Settings del nodo poné On Error → <strong>Continue</strong>.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo está conectado y sin alertas rojas.</li>
+<li><strong>Si sale mal:</strong> si no encontrás la plantilla en la lista, todavía no está aprobada. Volvé a P8.</li>
+</ul>
+<p><strong>P14 · Cambiar alerta SMS por mail al vendedor</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el vendedor recibe un mail con los datos de cada lead.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá «Alert the Rep by SMS».</li>
+<li>Entre el WhatsApp y «Log the Lead» poné «Gmail» → Send.</li>
+<li>To: el mail del vendedor. Si son varios, separalos con coma.</li>
+<li>Subject: <code>Nuevo lead: {{ $('Lead Form').item.json.Name }}</code>.</li>
+<li>Message: el WhatsApp, lo que pidió y el origen, con las expresiones de la ficha.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo está conectado entre los dos nodos correctos.</li>
+<li><strong>Si sale mal:</strong> si el mail le llega al vendedor como spam, pedile que lo marque como «No es spam» y que agende la casilla de avisos como contacto.</li>
+</ul>
+<p><strong>P15 · Armar segundo intento a 24 horas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> si nadie marcó que el lead respondió, sale un segundo y último WhatsApp.</li>
+<li><strong>Cómo:</strong> a la salida de «Log the Lead» agregás estos cuatro nodos en fila:<ol>
+<li>«Wait» → After Time Interval → 24 Hours.</li>
+<li>«Google Sheets» → Get Row(s), con el filtro phone = <code>{{ $('Lead Form').item.json.Phone }}</code> y la opción «Return only First Matching Row» prendida.</li>
+<li>«If»: sigue solo si <code>{{ $json.respondio }}</code> is empty.</li>
+<li>Una copia del nodo de WhatsApp, con la plantilla <code>seguimiento_lead</code> y solo el parámetro del nombre.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> los cuatro nodos están en fila y conectados.</li>
+<li><strong>Si sale mal:</strong> si te olvidás de sacar el segundo parámetro en la copia, Meta rechaza el envío porque la cantidad de variables no coincide.</li>
+</ul>
+<p><strong>P16 · Conectar anuncios de Meta si hay</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> si la inmobiliaria hace anuncios con formulario en Facebook o Instagram, los conectás al mismo sistema.</li>
+<li><strong>Cómo:</strong> seguís el paso 6 de la ficha:<ol>
+<li>Duplicás el flujo.</li>
+<li>En la copia cambiás «Lead Form» por «Facebook Lead Ads Trigger».</li>
+<li>Detrás ponés un «Edit Fields (Set)» llamado «Lead Form», con los campos de la ficha y origen = <code>meta-ads</code>.</li>
+<li>Al formulario del anuncio le sumás la casilla de consentimiento para WhatsApp.</li>
+<li>Si la web tiene su propio formulario, usás un «Webhook» en lugar del trigger. Un webhook es una dirección de internet donde otra app avisa «llegó algo».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> acceso a la página de Facebook y al formulario del anuncio.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora. Si no hay anuncios, 0.</li>
+<li><strong>Listo cuando:</strong> el flujo de anuncios está armado o quedó decidido que no hay anuncios.</li>
+<li><strong>Si sale mal:</strong> si la credencial de Facebook Lead Ads te traba, <strong>no frenes la entrega</strong>. Lanzá con web e Instagram y conectá los anuncios en la segunda semana.</li>
+</ul>
+<h3>5 · Prueba</h3>
+<p><strong>P17 · Probar todo con tu número</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> te hacés pasar por un lead y verificás cada pieza.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Poné el «Wait» en <strong>2 minutos</strong>.</li>
+<li>Apretá «Execute workflow», abrí el link de prueba (Test URL) y completá el formulario con tu número.</li>
+<li>Hacé tres pruebas:<ul>
+<li><strong>Normal:</strong> sin tocar la columna respondio. Tiene que llegar el segundo intento.</li>
+<li><strong>Con respuesta:</strong> marcás «sí» en respondio antes de los 2 minutos. No tiene que llegar el segundo intento.</li>
+<li><strong>Con un número mal escrito:</strong> el mail y la fila tienen que salir igual.</li>
+</ul>
+</li>
+<li>En «¿Qué necesitás?» escribí un texto con un salto de línea, para probar que no falla.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> completaste las tres pruebas.</li>
+<li><strong>Si sale mal:</strong> si el segundo intento no llega en modo prueba, activá el flujo con la espera en 2 minutos y probá con el link de producción terminado en <code>?origen=prueba</code>.</li>
+</ul>
+<p><strong>P18 · ¿Llegaron WhatsApp, mail, fila y segundo intento?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás cuatro cosas:<ul>
+<li>el WhatsApp llegó en segundos;</li>
+<li>el mail llegó al vendedor;</li>
+<li>la fila tiene el origen correcto;</li>
+<li>el segundo intento llegó solo cuando correspondía.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> las cuatro cosas dan SÍ. Pasás a P20.</li>
+<li><strong>Si sale mal:</strong> si alguna falló, la respuesta es NO y vas a P19.</li>
+</ul>
+<p><strong>P19 · Revisar la ejecución y corregir el nodo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> buscás qué nodo falló y por qué.</li>
+<li><strong>Cómo:</strong> en el flujo vas a la pestaña «Executions», abrís la ejecución en rojo y hacés clic en el nodo rojo para leer el error. Los errores típicos son estos:<ul>
+<li><strong>El token venció</strong> (error 190): generá el token permanente, como en P6.</li>
+<li><strong>La plantilla no existe</strong> (132001): revisá que el nombre y el idioma sean exactos.</li>
+<li><strong>No coincide la cantidad de parámetros</strong> (132000): revisá cuántas variables cargaste.</li>
+<li><strong>No llega el mensaje a un número de Argentina o México:</strong> probá con y sin el 9 (en Argentina) o el 1 (en México) después del código de país.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 15 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> corregiste el nodo. Volvés a P17.</li>
+<li><strong>Si sale mal:</strong> si no entendés el error, copiá el mensaje completo y pegalo en Claude junto con la configuración del nodo.</li>
+</ul>
+<h3>6 · Demo al cliente</h3>
+<p><strong>P20 · Mostrar demo de 20 minutos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño ve el sistema funcionando con su propio celular.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En una videollamada le pasás el link y él completa el formulario.</li>
+<li>Ven juntos cómo le llega el WhatsApp, cómo le llega el mail al vendedor y cómo aparece la fila en la planilla.</li>
+<li>Le mostrás dónde se marca «sí» en respondio (o «baja», si alguien pide que no le escriban más).</li>
+<li>Le explicás que el segundo intento sale a las 24 horas, una sola vez.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> 20 minutos y su celular.</li>
+<li><strong>Qué le entregás:</strong> la demo y la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos con la preparación.</li>
+<li><strong>Listo cuando:</strong> vio las tres cosas con sus ojos.</li>
+<li><strong>Si sale mal:</strong> si algo falla en vivo, no lo arregles delante de él. Decile «lo reviso y te aviso hoy» y volvé a P19.</li>
+</ul>
+<p><strong>P21 · ¿El cliente aprueba?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le preguntás directo: «¿Lo dejamos así y lo publicamos?».</li>
+<li><strong>Listo cuando:</strong> dice que sí. Pasás a P23.</li>
+<li><strong>Si sale mal:</strong> si pide cambios, la respuesta es NO y vas a P22.</li>
+</ul>
+<p><strong>P22 · Anotar cambios y aplicarlos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> aplicás los cambios que pidió el cliente.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Anotás los cambios en una lista y se la mandás por WhatsApp para que la confirme.</li>
+<li>Si el cambio es en un texto de WhatsApp, eso implica una plantilla nueva y otra espera de aprobación.</li>
+<li>Después de aplicar los cambios, volvés a P17.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 30 minutos a 1 día.</li>
+<li><strong>Listo cuando:</strong> aplicaste los cambios y volviste a probar.</li>
+<li><strong>Si sale mal:</strong> si pide algo que no está en el servicio, como un bot que conteste preguntas, decile que es otro servicio y anotalo para P34.</li>
+</ul>
+<h3>7 · Lanzamiento</h3>
+<p><strong>P23 · Volver la espera a 24 horas y activar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás el sistema prendido de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Ponés el «Wait» en 24 Hours y guardás.</li>
+<li>Activás el flujo. En las versiones nuevas de n8n el botón se llama «Publish».</li>
+<li>Copiás el <strong>link de producción</strong> del formulario (Production URL), no el de prueba.</li>
+<li>Borrás las filas de prueba de la planilla.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el flujo figura como activo y tenés el link de producción.</li>
+<li><strong>Si sale mal:</strong> el error típico es dejar la espera en 2 minutos. Revisalo dos veces.</li>
+</ul>
+<p><strong>P24 · Publicar links con origen en cada canal</strong> <em>(lo hace el cliente o quien le maneja la web)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás los links listos y el cliente los pone en cada canal.</li>
+<li><strong>Cómo:</strong> le pasás tres links:<ul>
+<li><code>[link]?origen=web</code> para el botón «Consultá» de la web.</li>
+<li><code>[link]?origen=instagram</code> para la bio de Instagram.</li>
+<li><code>[link]?origen=anuncio</code> para los anuncios.</li>
+</ul>
+</li>
+</ul>
+<p>Los leads que llegan desde portales inmobiliarios <strong>no entran en este flujo</strong>. Queda <strong>POR DEFINIR</strong> para más adelante.
+- <strong>Qué le pedís:</strong> que los publique y te mande una captura de cada uno.
+- <strong>Cuánto tarda:</strong> de 1 hora a 1 día, según quién le maneje la web.
+- <strong>Listo cuando:</strong> tenés las capturas y probaste cada link desde tu celular.
+- <strong>Si sale mal:</strong> si el que le hace la web tarda, arrancá con la bio de Instagram, que la puede cambiar el dueño en 2 minutos.</p>
+<p><strong>P25 · Responder cada lead en segundos</strong> <em>(pasa solo)</em></p>
+<ul>
+<li><strong>Qué pasa:</strong> cada formulario dispara el WhatsApp, el mail al vendedor y la fila en la planilla, de día, de noche y el fin de semana.</li>
+<li><strong>Listo cuando:</strong> está corriendo sin que nadie lo toque.</li>
+</ul>
+<p><strong>P26 · ⭐ Ver primer lead real respondido al instante</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> detectás el primer lead real y se lo mostrás al dueño.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Executions» mirás la hora en que entró y la duración de la ejecución.</li>
+<li>Le mandás al dueño: «Entró [Nombre] a las [hora] por [origen] y en [X] segundos ya tenía tu WhatsApp».</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> la prueba de que el sistema está trabajando.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño lo vio.</li>
+<li><strong>Si sale mal:</strong> si en 72 horas no entró nadie:<ol>
+<li>Revisá que los links estén publicados.</li>
+<li>Completá un formulario desde cada canal.</li>
+<li>Si todo anda, lo que falta es tráfico. Eso no depende de vos y no lo prometiste.</li>
+</ol>
+</li>
+</ul>
+<h3>8 · Seguimiento, ajustes y reporte</h3>
+<p><strong>P27 · Marcar sí en la columna respondio</strong> <em>(lo hace el vendedor)</em></p>
+<ul>
+<li><strong>Qué hace:</strong> cuando un lead le contesta, el vendedor escribe «sí» en la columna respondio. Si el lead pide que no le escriban, escribe «baja». Con cualquiera de las dos, no sale nada más.</li>
+<li><strong>Qué le pedís:</strong> que lo haga siempre. De esa columna sale el porcentaje de respuesta del reporte.</li>
+<li><strong>Listo cuando:</strong> se vuelve un hábito.</li>
+<li><strong>Si sale mal:</strong> si el vendedor no marca nada, el lead recibe un segundo mensaje innecesario. Recordáselo en tu revisión semanal.</li>
+</ul>
+<p><strong>P28 · Mandar segundo intento si no respondió</strong> <em>(pasa solo)</em></p>
+<ul>
+<li><strong>Qué pasa:</strong> a las 24 horas, si respondio está vacío, sale la plantilla de seguimiento. Sale una sola vez por lead. El sistema nunca le escribe a alguien más de dos veces.</li>
+</ul>
+<p><strong>P29 · Revisar ejecuciones dos veces por semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que nada se haya roto.</li>
+<li><strong>Cómo:</strong> lunes y jueves, durante 15 minutos:<ul>
+<li>Entrás a «Executions» y mirás si hay ejecuciones en rojo.</li>
+<li>Mirás la planilla para ver si hay filas sin origen.</li>
+<li>Revisás en WhatsApp Manager que el número y las plantillas sigan activos.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos por revisión.</li>
+<li><strong>Listo cuando:</strong> revisaste las tres cosas.</li>
+<li><strong>Si sale mal:</strong> si ves errores en rojo, pasás a P30 con NO.</li>
+</ul>
+<p><strong>P30 · ¿Funciona todo sin ajustes?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Listo cuando:</strong> no hay errores ni pedidos del cliente. Si es SÍ, al cumplirse el mes vas a P32.</li>
+<li><strong>Si sale mal:</strong> si hay un error o un pedido de cambio, la respuesta es NO y vas a P31.</li>
+</ul>
+<p><strong>P31 · Ajustar textos, plantillas o campos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís lo que haga falta y volvés a P29.</li>
+<li><strong>Cuánto tarda:</strong> de 15 minutos a 1 hora.</li>
+<li><strong>Si sale mal:</strong> nunca toques el flujo activo sin probar antes. Desactivalo 5 minutos, probá y volvé a activarlo.</li>
+</ul>
+<p><strong>P32 · Enviar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás los números del mes.</li>
+<li><strong>Cómo:</strong> en la planilla calculás tres cosas. Ojo: en Sheets en español, los argumentos se separan con punto y coma.<ul>
+<li><strong>Leads por origen:</strong> <code>=CONTAR.SI(G2:G;"web")</code>, y lo mismo con instagram y anuncio.</li>
+<li><strong>Porcentaje que respondió:</strong> <code>=CONTAR.SI(H2:H;"sí")/CONTARA(A2:A)</code>.</li>
+<li><strong>Tiempo hasta el primer contacto:</strong> segundos, según la duración en «Executions».</li>
+</ul>
+</li>
+</ul>
+<p>Usás el <strong>Mensaje 4</strong>.
+- <strong>Qué le entregás:</strong> el reporte.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> lo envió y lo leyó.
+- <strong>Si sale mal:</strong> si los números son bajos, no los maquilles. El reporte muestra lo que controla el sistema: velocidad y registro. Las ventas dependen del equipo.</p>
+<h3>9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> junto con el reporte, cobrás el segundo mes.</li>
+<li><strong>Listo cuando:</strong> se acredita el pago. Si es SÍ, vas a P34. Si es NO, vas a P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer Respuesta 24/7 o Filtro de Oro</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le proponés el siguiente servicio, apoyado en los datos de la planilla.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Si le entran más de unas 50 consultas por mes, ofrecé <strong>07 Respuesta 24/7</strong>, para que la IA también conteste las preguntas.</li>
+<li>Si el vendedor se queja de que muchos leads «no son serios», ofrecé <strong>08 Filtro de Oro</strong>.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> una charla de 20 minutos.</li>
+<li><strong>Listo cuando:</strong> le hiciste la propuesta.</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar ordenado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo, sin dejar nada colgado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Exportás el flujo de n8n (menú ⋯ → Download) y se lo mandás.</li>
+<li>Desactivás el flujo.</li>
+<li>Le avisás que debe cambiar los links de la web y la bio.</li>
+<li>Te sacás de su cuenta de empresa de Meta.</li>
+<li>La planilla queda en su Drive.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> el archivo del flujo, la planilla y la lista de cuentas.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> ya no tenés acceso a nada suyo y él tiene todo.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup y del primer mes · día 0</li>
+<li>☐ Horario para la llamada de 45 minutos · día 0</li>
+<li>☐ Acceso de administrador a su cuenta de empresa de Meta · día 0</li>
+<li>☐ Chip nuevo para el sistema, o decisión sobre la coexistencia · día 0</li>
+<li>☐ Nombre, mail y WhatsApp del vendedor que recibe avisos · día 0</li>
+<li>☐ Canales donde va el link y quién le edita la web · día 0</li>
+<li>☐ Si hay anuncios: acceso a la página y al formulario · día 0</li>
+<li>☐ Tarjeta cargada en WhatsApp Manager · día 2, en la llamada</li>
+<li>☐ Captura de cada link publicado · día 6</li>
+<li>☐ Que el vendedor marque «sí» o «baja» en la planilla · desde el día 6, siempre</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Número de WhatsApp conectado y dos plantillas aprobadas</li>
+<li>☐ Formulario en español con consentimiento y origen</li>
+<li>☐ WhatsApp automático en segundos, más el segundo intento a las 24 horas</li>
+<li>☐ Aviso por mail al vendedor</li>
+<li>☐ Planilla con cada contacto y su origen</li>
+<li>☐ Links listos por canal</li>
+<li>☐ Demo y explicación de cómo usar la planilla</li>
+<li>☐ Reporte del primer mes</li>
+</ul>
+<p><strong>El calendario</strong> (con 2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>P1 cobro · P2 bienvenida</td>
+</tr>
+<tr>
+<td>1</td>
+<td>P3 el cliente junta los accesos · vos abrís n8n (P10)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P4 está todo: <strong>arranca el plazo</strong> · llamada P6 + P7 plantillas enviadas</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P10, P11 y P12 mientras Meta aprueba (P8)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P13, P14 y P15</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P16 si hay anuncios · P17 a P19 pruebas</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P20 demo · P23 activar · P24 links publicados</td>
+</tr>
+<tr>
+<td>7 a 10</td>
+<td>P26 ⭐ primer lead real (depende de su tráfico)</td>
+</tr>
+<tr>
+<td>Semanas 2 a 4</td>
+<td>P27 a P31 · revisión los lunes y los jueves</td>
+</tr>
+<tr>
+<td>Día 30</td>
+<td>P32 reporte · P33 cobro del segundo mes</td>
+</tr>
+</tbody>
+</table></div>
+<p>Al cliente prometele <strong>5 días hábiles desde que tenés todos los accesos</strong>, sujeto a la aprobación de Meta.</p>
+<hr />
+<h2>4. Mensajes listos para copiar</h2>
+<p><strong>Mensaje 1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, gracias por la confianza 🙌
+Arrancamos con Lead al Instante. Cada persona que deje sus datos en tu web, en Instagram o en tus anuncios va a recibir un WhatsApp en segundos. A [vendedor] le va a llegar un mail con sus datos.
+Para arrancar necesito:
+1. Que me sumes como administrador en tu cuenta de Meta (te paso cómo).
+2. Un chip nuevo solo para el sistema.
+3. Nombre, mail y WhatsApp de quien recibe los avisos.
+4. Dónde querés el formulario: ¿web, Instagram, anuncios?</p>
+<p>Y armamos una llamada de 45 minutos para dejar el WhatsApp configurado. ¿Te queda bien [día] a las [hora] o [día] a las [hora]?
+Desde que tengo todo, en 5 días hábiles lo tenés andando.</p>
+</blockquote>
+<p><strong>Mensaje 2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir con el sistema me falta solo esto:
+• [lo que falta]</p>
+<p>Apenas lo tenga, sigo. Los 5 días arrancan desde ahí 👍</p>
+</blockquote>
+<p><strong>Mensaje 3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está andando! 🚀
+Desde ahora, cada persona que complete el formulario recibe tu WhatsApp en segundos, a cualquier hora. A [vendedor] le llega el mail con sus datos.
+Te paso los links para publicar:
+Web: [link]?origen=web
+Instagram (bio): [link]?origen=instagram
+Anuncios: [link]?origen=anuncio</p>
+<p>Un pedido importante: cuando alguien conteste, que [vendedor] ponga «sí» en la planilla. Si alguien pide que no le escriban, que ponga «baja». Te aviso cuando entre el primero.</p>
+</blockquote>
+<p><strong>Mensaje 4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el resumen del primer mes de Lead al Instante 📊
+• Formularios recibidos: [X] (web [X] · Instagram [X] · anuncios [X])
+• Tiempo hasta el primer WhatsApp: [X] segundos
+• Respondieron: [X]% (según lo marcado en la planilla)
+• Errores del sistema: [ninguno / X, ya resueltos]</p>
+<p>Lo que veo: [una observación concreta, por ejemplo: «Instagram trae el doble que la web»].
+Esta semana te cobro el segundo mes. Si querés, charlamos 15 minutos sobre el próximo paso.</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p02">← Volver a la ficha 02</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Propuesta el Mismo Día · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Propuesta el Mismo Día, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Propuesta el Mismo Día">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 10 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Propuesta el Mismo Día</h1>
+  <p class="bajada">Propuestas y presupuestos automáticos. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Agencias</span><span class="chip">Setup USD 1.200–2.000</span><span class="chip">2–3 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Antes de empezar.</strong> La instalación sigue «Cómo dejarla lista» de la ficha. Lo que depende del cliente figura como <strong>POR DEFINIR</strong>.</p>
+<p><strong>Cómo se conectan las piezas.</strong> Son dos flujos de n8n. n8n es la herramienta donde armás automatizaciones, y un flujo es una cadena de pasos que se ejecutan solos.</p>
+<ul>
+<li><strong>Flujo A (plantilla 12211):</strong> genera la propuesta y la manda cuando el dueño la aprueba.</li>
+<li><strong>Flujo B (plantilla 16975):</strong> lee la misma planilla y hace el seguimiento por mail.</li>
+</ul>
+<p>Primero se instala el A y después el B, porque el B depende de las columnas que escribe el A.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Propuesta el Mismo Día" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Confirmar pago y mandar bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás que entró el setup y le mandás el mensaje de bienvenida.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Entrás a tu Mercado Pago o banco y buscás el monto.</li>
+<li>Creás en tu Drive una carpeta «[Agencia] · Propuesta el Mismo Día» para tus notas.</li>
+<li>Mandás el mensaje 1 (sección 4) por el mismo chat que usaron en el sistema anterior.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo de la lista, que ya va en el mensaje.</li>
+<li><strong>Qué le entregás:</strong> el mensaje con lo que sigue y las fechas.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el pago está acreditado y el mensaje, enviado.</li>
+<li><strong>Si sale mal:</strong> si el pago figura «pendiente», no arrancás. Le avisás con buena onda que lo estás esperando.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P2 · Mandar propuestas viejas, logo y precios</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> juntás el material para que las propuestas suenen a su agencia.</li>
+<li><strong>Cómo:</strong> le pedís por WhatsApp y guardás todo en tu carpeta.</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>2 o 3 propuestas reales recientes, ideal de las que le aceptaron (PDF o Doc).</li>
+<li>Su logo y sus colores.</li>
+<li>Su lista de servicios con rangos de precio. Es solo para que entiendas el negocio: el precio de cada propuesta lo escribe siempre él en el formulario.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> lo que tarde él. Normalmente, 1 o 2 días.</li>
+<li><strong>Listo cuando:</strong> tenés al menos 2 propuestas y el logo.</li>
+<li><strong>Si sale mal:</strong> si te dice «no tengo propuestas armadas, las mando por mail», pedile el texto de 2 de esos mails. Sirve igual.</li>
+</ul>
+<p><strong>P3 · Responder las cinco decisiones del sistema</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás con él cinco definiciones que cambian la instalación.</li>
+<li><strong>Cómo:</strong> se las mandás numeradas, cada una con la respuesta sugerida, para que conteste «1 sí, 2 sí…».<ol>
+<li><strong>Quién llena el formulario después de cada reunión.</strong> Sugerido: el dueño. Es POR DEFINIR si tiene un vendedor.</li>
+<li><strong>Quién revisa y aprueba cada propuesta.</strong> Sugerido: el dueño. El precio y el alcance los aprueba siempre una persona.</li>
+<li><strong>Si cobra con link de pago.</strong> Sugerido: si hoy cobra por transferencia, va sin link.</li>
+<li><strong>Desde qué mail salen las propuestas.</strong> Sugerido: el Gmail o Google Workspace con el que ya habla con sus clientes, así las respuestas le llegan a él.</li>
+<li><strong>De quién es la cuenta de OpenAI</strong> (la empresa de ChatGPT). Sugerido: la de él, con su tarjeta. El costo es bajo y queda a su nombre. La alternativa es la tuya, incluida en la mensualidad.
+- Además le pedís el nombre, la firma y el teléfono que van en los mails.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos de él.</li>
+<li><strong>Listo cuando:</strong> tenés las cinco respuestas por escrito.</li>
+<li><strong>Si sale mal:</strong> si dice «lo que vos digas», anotá las sugeridas y mandale un resumen para que confirme con un «ok».</li>
+</ul>
+<p><strong>P4 · Autorizar su Google en videollamada corta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> en 15 minutos, él le da permiso a n8n para usar su Google y copia la planilla y la plantilla en su Drive.</li>
+<li><strong>Cómo, antes de la llamada:</strong><ul>
+<li>Entrá a la misma instancia de n8n donde corre su sistema de entrada. Es POR DEFINIR si es tuya o de él.</li>
+<li>Abrí la plantilla 12211 en n8n.io y copiá dos links del lienzo: el de la planilla (recuadro «SHEETS DATABASE ATTACHED») y el de una de las plantillas de Slides (recuadro «FREE PROPOSAL TEMPLATES»).</li>
+<li>Si tu n8n está instalado por tu cuenta y no es n8n Cloud: creá en Google Cloud un cliente OAuth con las API de Sheets, Drive, Gmail <strong>y Slides</strong> habilitadas. Sumá su mail como «usuario de prueba». Una API es la puerta por la que un programa habla con otro.</li>
+</ul>
+</li>
+<li><strong>Cómo, durante la llamada:</strong><ul>
+<li>Le das control de tu pantalla (con AnyDesk, o con Zoom → «Dar control»).</li>
+<li>En n8n → Credentials → Create, creás las 5 credenciales: Google Sheets Trigger, Google Sheets, Google Drive, Google Slides y Gmail, todas OAuth2. Una credencial es un permiso guardado.</li>
+<li>En cada una, él toca «Sign in with Google», elige su cuenta y acepta. OAuth es eso: dar permiso sin pasar la contraseña. Vos nunca la ves.</li>
+<li>Él crea en su Drive una carpeta «Propuestas», hace Archivo → Hacer una copia de la planilla y de la plantilla de Slides dentro de esa carpeta, y te comparte la carpeta como Editor.</li>
+<li>Si eligió OpenAI propia: entra a platform.openai.com → API keys → Create new secret key, carga saldo y pega la clave directo en la credencial de OpenAI. La clave es una contraseña larga para que n8n use la IA.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> 15 minutos y estar frente a la compu.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos de preparación y 15 de llamada.</li>
+<li><strong>Listo cuando:</strong> las 5 credenciales dicen «Connection tested successfully» y tenés acceso de Editor a la carpeta.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si Google dice «app bloqueada», su Google Workspace no deja conectar apps externas. Que el administrador habilite n8n.</li>
+<li>Si dice «app no verificada» en tu n8n propio, revisá que su mail esté como usuario de prueba.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P5 · ¿Está todo lo necesario?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás esta lista antes de instalar:<ul>
+<li>☐ 2 propuestas reales</li>
+<li>☐ logo</li>
+<li>☐ las 5 decisiones</li>
+<li>☐ 5 credenciales de Google en verde</li>
+<li>☐ clave de IA</li>
+<li>☐ carpeta compartida con la planilla y los Slides copiados</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> todo está tildado. Pasás a P7.</li>
+<li><strong>Si sale mal:</strong> falta algo → P6.</li>
+</ul>
+<p><strong>P6 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le recordás solo lo que falta.</li>
+<li><strong>Cómo:</strong> mandás el mensaje 2 a las 48 horas sin respuesta. Mientras esperás, podés adelantar la traducción de los Slides con <strong>POR DEFINIR</strong> donde van sus datos.</li>
+<li><strong>Qué le pedís:</strong> lo pendiente, y nada más.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> llega lo que faltaba. Volvés a P2 y a la puerta.</li>
+<li><strong>Si sale mal:</strong> si pasan 5 días sin respuesta, proponele 10 minutos de llamada para resolverlo juntos. No instales con datos inventados.</li>
+</ul>
+<h3>3 · Instalación del generador (flujo A)</h3>
+<p><strong>P7 · Importar plantilla 12211 y cargar credenciales</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla a tu n8n y la conectás a sus cuentas.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En n8n.io/workflows/12211 tocás «Use for free» y copiás el flujo.</li>
+<li>En tu n8n creás un flujo nuevo y lo pegás con Ctrl+V.</li>
+<li>Lo nombrás «Propuestas · [Agencia]».</li>
+<li>Abrís cada nodo de Google y de OpenAI (cada caja del lienzo es un nodo) y en «Credential» elegís la del cliente.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> ningún nodo muestra el aviso rojo de credencial faltante.</li>
+<li><strong>Si sale mal:</strong> si no aparece la credencial en la lista, la creaste de otro tipo. Fijate que sea exactamente el que pide el nodo.</li>
+</ul>
+<p><strong>P8 · Armar las diapositivas con datos del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás la plantilla de Slides en español y con la cara de su agencia.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Abrís su copia de Slides y la traducís.</li>
+<li>Reemplazás dummycorp.example y «Atharva Jaiswal» por sus datos. Ponés su logo y sus colores.</li>
+<li><strong>No toques los marcadores</strong> {{title}}, {{client_name}}, {{problem}}, {{solution}}, {{scope}}, {{timeline}}, {{need}}, {{price}}, {{payment_link}} y {{date}}. Son los huecos que llena la IA.</li>
+<li>Si no cobra con link, borrá {{payment_link}}.</li>
+<li>Copiá el ID de la copia: es lo que está entre /d/ y /edit en el link. Pegalo en el nodo «Copy Template». La plantilla que viene cargada es privada del autor y no funciona.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> no queda texto en inglés ni de ejemplo, y el ID está pegado.</li>
+<li><strong>Si sale mal:</strong> si en la prueba aparece un marcador sin reemplazar, lo partiste al editarlo. Borralo y escribilo de nuevo de corrido, sin cambiarle el formato a la mitad.</li>
+</ul>
+<p><strong>P9 · Conectar planilla, columnas nuevas y carpeta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> preparás la planilla para el envío y para el seguimiento.</li>
+<li><strong>Cómo, en la planilla:</strong><ul>
+<li>Sumás las columnas quote_id, customer_name, customer_email, quote_amount, sent_date, status, followup_1, followup_2 y followup_3.</li>
+<li>En la columna Send Status armás un desplegable: Datos → Validación de datos → Desplegable con WAITING, READY y SENT.</li>
+</ul>
+</li>
+<li><strong>Cómo, en n8n:</strong><ul>
+<li>Elegís esa planilla y su pestaña en «Google Sheets Trigger», «Append In Database» y «Update Status». Si no aparecen las columnas nuevas, refrescá la lista.</li>
+<li>En «Append In Database» completás:<ul>
+<li>quote_id = <code>{{ $('Inject generated Text').item.json.presentationId }}</code></li>
+<li>customer_name = <code>{{ $('On form submission').first().json['Client Name'] }}</code></li>
+<li>customer_email = <code>{{ $('On form submission').first().json['Client Email'] }}</code></li>
+<li>quote_amount = <code>{{ $('On form submission').first().json.Price }}</code></li>
+</ul>
+</li>
+<li>En «Move to Folder» elegís su carpeta «Propuestas».</li>
+</ul>
+</li>
+<li><strong>Extra opcional, no viene en la ficha:</strong> una columna form_date con <code>{{ $now.toFormat('yyyy-MM-dd HH:mm') }}</code> en «Append In Database». Te sirve para medir si la propuesta salió el mismo día de la reunión.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> los tres nodos de Sheets muestran las columnas nuevas y la carpeta está elegida.</li>
+<li><strong>Si sale mal:</strong> si una columna no aparece en el nodo, revisá que esté escrita igual en la fila 1 de la planilla, sin espacios de más.</li>
+</ul>
+<p><strong>P10 · Ajustar el formulario que llena el vendedor</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás listo el formulario que el dueño completa apenas corta la reunión.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En «On form submission», marcás «Scope» como obligatorio. «Price» ya lo es.</li>
+<li>Si no cobra con link, le sacás lo obligatorio a «payment link».</li>
+<li>Traducís el título y la descripción del formulario.</li>
+<li>Si traducís una pregunta, cambiá el mismo nombre donde se lee: en «Generate Proposal Data» (por ejemplo <code>{{ $json.Problem }}</code>), en «Append In Database» y en las fórmulas de P9.</li>
+<li>Mi consejo para la primera vez: dejá los nombres de las preguntas en inglés y poné la traducción en la guía corta (P23). Así no rompés nada.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> precio y alcance son obligatorios y el formulario se ve en español arriba.</li>
+<li><strong>Si sale mal:</strong> si traducís una pregunta y te olvidás de un lugar, la propuesta sale con huecos vacíos. Buscá el nombre viejo en cada nodo.</li>
+</ul>
+<p><strong>P11 · Cambiar modelos y pasar prompts al español</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> ponés modelos de IA vigentes y le enseñás a escribir como su agencia. Un prompt es la instrucción escrita que le das a la IA.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En «Generate Email Draft» elegís un modelo vigente de la lista, por ejemplo gpt-4.1-mini. El que trae, chatgpt-4o-latest, ya está dado de baja. Hacés lo mismo en «Generate Proposal Data».</li>
+<li>Pasás los dos prompts al español rioplatense.</li>
+<li>En «Generate Proposal Data»:<ul>
+<li>Agregás Title a la lista «Return a single JSON object with these exact keys». JSON es el formato ordenado en que la IA devuelve los datos.</li>
+<li>Sumás la regla: «No inventes cifras, porcentajes ni resultados: usá solo lo que dice el formulario».</li>
+<li>Reemplazás el ejemplo del final, que es de otro negocio y trae un link de Wise, por una de sus propuestas reales. Cambiá el nombre de aquel cliente por «Cliente Ejemplo» para no filtrar sus datos.</li>
+</ul>
+</li>
+<li>En «Generate Email Draft», cambiás «Atharva from Dragomagte» por el nombre del dueño y de la agencia. Si no usa link de pago, sacás esa parte.</li>
+<li>Si preferís Claude: cambiás cada nodo de OpenAI por «Anthropic» → Message a Model, con el mismo nombre. Pasás el mensaje de sistema a Options → System Message. Reemplazás <code>output[0].content[0].text</code> por <code>content[0].text</code> en los dos nodos Code y en el prompt de «Generate Email Draft».</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media.</li>
+<li><strong>Listo cuando:</strong> los dos nodos tienen modelo vigente, prompts en español, la regla anti-cifras y un ejemplo propio.</li>
+<li><strong>Si sale mal:</strong> si el nodo da error de modelo, elegiste uno que la cuenta no tiene habilitado. Probá otro de la lista.</li>
+</ul>
+<p><strong>P12 · Corregir el envío y publicar el generador</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás tres detalles del envío y dejás el flujo prendido.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En «Send Email», ponés el Subject: <code>{{ $('Google Sheets Trigger').item.json['Subject Draft'] }}</code>.</li>
+<li>En Options apagás «Append n8n Attribution». Si no, al cliente le llega «This email was sent automatically with n8n».</li>
+<li>En «Update Status», cambiás «Column to match on» a <strong>Proposall Link</strong> (se escribe así) con valor <code>{{ $('Loop Over Items').item.json['Proposall Link'] }}</code>.</li>
+<li>En el mismo nodo agregás sent_date = <code>{{ $now.toFormat('yyyy-MM-dd') }}</code> y status = <code>open</code>.</li>
+<li>Tocás «Publish».</li>
+<li>En «On form submission» copiás la <strong>Production URL</strong>: es el link definitivo del formulario.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el flujo figura publicado y tenés la Production URL guardada.</li>
+<li><strong>Si sale mal:</strong> si usás la «Test URL», solo funciona con el lienzo abierto. Para el cliente, siempre la Production.</li>
+</ul>
+<h3>4 · Instalación del seguimiento (flujo B)</h3>
+<p><strong>P13 · Conectar flujo 16975 a la misma planilla</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés el flujo que manda los recordatorios.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Importás n8n.io/workflows/16975 igual que en P7.</li>
+<li>En «Read all quotes» y en «Stamp the sheet (sent)» elegís <strong>la misma planilla y pestaña</strong>.</li>
+<li>Cargás sus credenciales de Sheets y Gmail.</li>
+<li>En «⚙️ Your settings» completás el nombre, la firma y el teléfono de la agencia.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> los nodos leen la planilla sin error.</li>
+<li><strong>Si sale mal:</strong> si elegís otra pestaña, no encuentra las propuestas. Revisá el nombre exacto.</li>
+</ul>
+<p><strong>P14 · Traducir mails con opción de baja y publicar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás los tres mails en su tono, con salida, y prendés el flujo.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Traducís los tres mails.</li>
+<li>En el segundo, sacás «Our schedule for the coming weeks is starting to fill…» si no es verdad.</li>
+<li>En los tres dejás una salida: «si no es para vos, avisame y no te escribo más».</li>
+<li>En «Send the follow-up email» → Options, apagás «Append n8n Attribution».</li>
+<li>En Settings elegís la zona horaria de la agencia y publicás.</li>
+<li>Funciona así: manda mails a los 3, 7 y 14 días mientras status diga open.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> está publicado y los tres mails tienen opción de baja.</li>
+<li><strong>Si sale mal:</strong> si olvidás la zona horaria, los mails salen de madrugada.</li>
+</ul>
+<h3>5 · Prueba con datos de prueba</h3>
+<p><strong>P15 · Cargar una propuesta ficticia con tu mail</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás el flujo A con un cliente inventado.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Abrís la Production URL y llenás el formulario como «Estudio Prueba», con <strong>tu</strong> mail en Client Email, precio 100, un alcance y notas inventadas.</li>
+<li>Mandás una segunda con el mismo mail. Sirve para comprobar que el flujo marca la fila correcta.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> en la planilla aparecen dos filas en WAITING, con link a diapositivas y borrador de mail.</li>
+<li><strong>Si sale mal:</strong> si no aparece nada, entrá a la pestaña Executions del flujo y mirá qué nodo quedó en rojo (ver P19).</li>
+</ul>
+<p><strong>P16 · Pasar a READY y revisar el PDF</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés de dueño y aprobás una sola de las dos.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Abrís las diapositivas de la primera fila y revisás: todo en español, sin marcadores sueltos, sin cifras que no estaban en el formulario.</li>
+<li>Cambiás a mano una palabra en Subject Draft.</li>
+<li>Ponés READY en mayúsculas y esperás un minuto.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> se cumplen las cuatro cosas:<ul>
+<li>Te llega el mail con el PDF y el asunto que editaste.</li>
+<li>No dice nada de n8n.</li>
+<li><strong>Esa</strong> fila pasa a SENT con sent_date y status open.</li>
+<li>La otra sigue en WAITING.</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> si no pasa nada, casi siempre es «Ready» en minúscula. El filtro distingue mayúsculas.</li>
+</ul>
+<p><strong>P17 · Simular seguimiento con una fecha atrasada</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás el flujo B sin esperar 3 días.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En la fila SENT, cambiás sent_date a la fecha de hace 3 días, en formato año-mes-día.</li>
+<li>Abrís el flujo B y tocás «Execute workflow».</li>
+<li>Al terminar, ponés status = lost en todas las filas de prueba.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> te llega el primer seguimiento con la opción de baja y la columna followup_1 queda marcada.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si no manda nada, revisá que status diga exactamente open y la fecha esté en formato 2025-01-31.</li>
+<li>Si tu versión del flujo cuenta distinto, leé la nota del lienzo.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P18 · ¿Funciona todo de punta a punta?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás esta lista:<ul>
+<li>☐ propuesta generada</li>
+<li>☐ sin cifras inventadas</li>
+<li>☐ PDF enviado</li>
+<li>☐ asunto correcto</li>
+<li>☐ sin firma de n8n</li>
+<li>☐ fila correcta en SENT</li>
+<li>☐ sent_date y status cargados</li>
+<li>☐ seguimiento con baja</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> todo está tildado. Pasás a P20.</li>
+<li><strong>Si sale mal:</strong> algo falla → P19.</li>
+</ul>
+<p><strong>P19 · Corregir el nodo que falló</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás el error y lo arreglás.</li>
+<li><strong>Cómo:</strong> en Executions abrís la ejecución en rojo, hacés clic en el nodo rojo y leés el mensaje. Los errores típicos son:<ul>
+<li>modelo dado de baja</li>
+<li>nombre de columna distinto</li>
+<li>credencial vencida</li>
+<li>marcador partido en los Slides</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> corregiste el error. Volvés a P15 y repetís la prueba entera.</li>
+<li><strong>Si sale mal:</strong> si no entendés el error, copialo tal cual y pegáselo a Claude junto con el nombre del nodo.</li>
+</ul>
+<h3>6 · Demo y primer resultado</h3>
+<p><strong>P20 · ⭐ Generar en vivo una propuesta con sus datos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño ve su propia propuesta armada en minutos. Es el primer resultado visible y le confirma que la plata está bien puesta.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Videollamada de 20 minutos. Le pedís que tenga a mano las notas de una reunión real reciente.</li>
+<li>Él llena el formulario, pero con <strong>su propio mail</strong> en Client Email, para que no le llegue al cliente de verdad.</li>
+<li>Ven juntos la fila nueva y abren las diapositivas. Él corrige algo, pone READY y recibe el PDF.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> 20 minutos y las notas de una reunión.</li>
+<li><strong>Qué le entregás:</strong> su primera propuesta generada por el sistema.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> le llegó el PDF a su casilla.</li>
+<li><strong>Si sale mal:</strong> si el texto sale genérico, las notas eran muy pobres. Mostrale que cuanto más pega en «context if any», mejor sale.</li>
+</ul>
+<p><strong>P21 · ¿El dueño aprueba textos y diseño?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le preguntás si así la mandaría a un cliente.</li>
+<li><strong>Listo cuando:</strong> dice que sí. Pasás a P23.</li>
+<li><strong>Si sale mal:</strong> pide cambios → P22. Conviene acordar de entrada hasta dos rondas de cambios incluidas.</li>
+</ul>
+<p><strong>P22 · Ajustar plantilla o prompts con sus cambios</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> aplicás lo que pidió.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Los cambios de diseño van en los Slides.</li>
+<li>Los de tono o estructura van en los prompts de P11.</li>
+<li>Generás una propuesta nueva y se la mandás por WhatsApp. No hace falta otra llamada.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> la nueva versión está lista. Volvés a P20 y P21.</li>
+<li><strong>Si sale mal:</strong> si te pide «que la IA ponga el precio sola», explicale que no: el precio y el alcance los define siempre una persona.</li>
+</ul>
+<h3>7 · Lanzamiento con datos reales</h3>
+<p><strong>P23 · Entregar link del formulario y guía corta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le dejás todo para usarlo solo.</li>
+<li><strong>Cómo:</strong> armás un Google Doc de una página con estos pasos:<ol>
+<li>Al cortar la reunión, abrí este link. Guardalo en favoritos del celular.</li>
+<li>Completá el formulario. El precio y el alcance los escribís vos.</li>
+<li>En uno o dos minutos aparece en la planilla en WAITING.</li>
+<li>Revisá las diapositivas y el mail, y corregí lo que haga falta.</li>
+<li>Poné READY.</li>
+<li>Cuando el cliente conteste, poné won o lost. Si pide no recibir más mails, poné lost.
+- Sumás la traducción de cada campo del formulario.
+- Antes de entregar, chequeás que todas las filas de prueba estén en lost.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> el link del formulario, el link de la planilla y la guía.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> él confirma que guardó el link.</li>
+<li><strong>Si sale mal:</strong> si no lo encuentra el día de la reunión, mandale el link fijado en el chat.</li>
+</ul>
+<p><strong>P24 · Completar el formulario al cortar la reunión</strong></p>
+<ul>
+<li><strong>Qué hace él:</strong> llena el formulario apenas termina una reunión real.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos. La fecha depende de su agenda: POR DEFINIR.</li>
+<li><strong>Listo cuando:</strong> hay una fila real en WAITING.</li>
+<li><strong>Si sale mal:</strong> si lo llena días después, se pierde el «mismo día». Recordale el hábito, no es un problema del sistema.</li>
+</ul>
+<p><strong>P25 · Revisar, corregir y poner READY</strong></p>
+<ul>
+<li><strong>Qué hace él:</strong> revisa la propuesta, corrige y aprueba.</li>
+<li><strong>Cuánto tarda:</strong> de 10 a 15 minutos.</li>
+<li><strong>Listo cuando:</strong> la fila dice READY.</li>
+<li><strong>Si sale mal:</strong> si la deja en WAITING y se olvida, en tu revisión semanal le avisás.</li>
+</ul>
+<p><strong>P26 · Armar PDF, enviar y marcar SENT</strong></p>
+<ul>
+<li><strong>Qué pasa solo:</strong> en un minuto el flujo arma el PDF con sus cambios, lo manda desde su Gmail y marca SENT, con sent_date y status open.</li>
+<li><strong>Listo cuando:</strong> la fila dice SENT.</li>
+</ul>
+<p><strong>P27 · ¿Llegó bien la primera propuesta real?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás que en Executions la ejecución esté en verde y la fila en SENT. Le pedís que mire «Enviados» en su Gmail.</li>
+<li><strong>Listo cuando:</strong> sí. Pasás a P29.</li>
+<li><strong>Si sale mal:</strong> algo falló → P28.</li>
+</ul>
+<p><strong>P28 · Revisar la ejecución y corregir</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás el error como en P19.</li>
+<li><strong>Cómo:</strong> <strong>antes de pedirle que ponga READY de nuevo, fijate en sus «Enviados» si el mail ya salió.</strong> Así no le llega dos veces al cliente.</li>
+<li><strong>Cuánto tarda:</strong> de 30 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> está corregido. Volvés a P25.</li>
+<li><strong>Si sale mal:</strong> si ya salió duplicado, que el dueño mande una línea de disculpa. Es mejor que hacerse el distraído.</li>
+</ul>
+<p><strong>P29 · Mandar seguimientos a los 3, 7 y 14 días</strong></p>
+<ul>
+<li><strong>Qué pasa solo:</strong> el flujo B le escribe al prospecto mientras status diga open.</li>
+<li><strong>Listo cuando:</strong> se marcan followup_1, followup_2 y followup_3 a medida que salen.</li>
+</ul>
+<p><strong>P30 · Marcar won o lost cuando responde</strong></p>
+<ul>
+<li><strong>Qué hace él:</strong> cuando el prospecto contesta, cambia status a won o lost. Los mails se frenan.</li>
+<li><strong>Si sale mal:</strong> si se olvida, a alguien que ya dijo que sí le llega un «¿pudiste verla?». Que lo marque el mismo día. Vos lo controlás cada semana.</li>
+</ul>
+<h3>8 · Seguimiento, reporte y ajustes</h3>
+<p><strong>P31 · Revisar ejecuciones y ajustar prompts cada semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que todo ande y mejorás lo que él corrige siempre.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mirás Executions de los dos flujos y buscás errores.</li>
+<li>En la planilla buscás filas en WAITING de más de 24 horas y filas open de prospectos que ya respondieron.</li>
+<li>Revisás el saldo de OpenAI.</li>
+<li>Si el dueño corrige siempre lo mismo (una frase, el tono, el orden), lo pasás al prompt.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que te cuente qué corrige a mano.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> no hay errores sin resolver.</li>
+<li><strong>Si sale mal:</strong> si se quedó sin saldo, la IA deja de responder. Avisale que recargue.</li>
+</ul>
+<p><strong>P32 · Enviar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás los números del mes.</li>
+<li><strong>Cómo:</strong> contás en la planilla:<ul>
+<li>propuestas generadas</li>
+<li>propuestas enviadas</li>
+<li>cuántas salieron el mismo día (con form_date y sent_date)</li>
+<li>won, lost y open</li>
+<li>errores y arreglos</li>
+<li>Lo mandás con el mensaje 4.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el reporte. Es lo que garantizás: que el sistema funcione y que el reporte llegue. Si cierran o no, depende de él y del mercado.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo recibió.</li>
+<li><strong>Si sale mal:</strong> si generó pocas propuestas porque tuvo pocas reuniones, decilo tal cual. El sistema anduvo, faltó volumen.</li>
+</ul>
+<h3>9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Sigue con la mensualidad?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le preguntás si sigue, junto con el reporte.</li>
+<li><strong>Listo cuando:</strong> sí → P34. No → P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer Máquina de Conversión con datos reales</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el siguiente paso, cuando tenga 2 o 3 meses de datos.</li>
+<li><strong>Cómo:</strong> la 15 · Máquina de Conversión está hecha de las fichas 07, 08, 03, 10 y 09. Él ya tiene la 10 y una parte de la 09. Usá sus propios números para mostrarle dónde se le cae la venta antes de la propuesta.</li>
+<li><strong>Cuánto tarda:</strong> 1 conversación.</li>
+<li><strong>Listo cuando:</strong> se la ofreciste.</li>
+<li><strong>Si sale mal:</strong> si te dice «todavía no», agendá volver a hablarlo en 60 días.</li>
+</ul>
+<p><strong>P35 · Entregar todo y apagar flujos ordenadamente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo para que pueda volver.</li>
+<li><strong>Cómo:</strong><ul>
+<li>La planilla, los Slides y la carpeta ya son suyos.</li>
+<li>Exportás los dos flujos desde el menú del flujo → Download (es un archivo JSON) y se los entregás.</li>
+<li>Los despublicás y borrás sus credenciales de tu n8n.</li>
+<li>Le pedís que revoque el permiso en myaccount.google.com → Seguridad → apps con acceso a su cuenta.</li>
+<li>La clave de OpenAI la borra el dueño de la cuenta, sea él o vos.</li>
+<li>Le avisás que los seguimientos que estaban en open se cortan.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no queda nada suyo corriendo en tu cuenta.</li>
+<li><strong>Si sale mal:</strong> si apagás sin avisar, puede creer que el prospecto no le contestó. Avisá siempre antes.</li>
+</ul>
+<hr />
+<h2>3. Las tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ 2 o 3 propuestas reales recientes · día 0</li>
+<li>☐ Logo y colores · día 0</li>
+<li>☐ Servicios y rangos de precio, solo como referencia · día 0</li>
+<li>☐ Las 5 decisiones: quién llena, quién aprueba, link de pago, mail de envío, cuenta de IA · día 0</li>
+<li>☐ Nombre, firma y teléfono para los mails · día 0</li>
+<li>☐ 15 minutos de videollamada para autorizar Google y copiar planilla y Slides · día 1</li>
+<li>☐ Clave de OpenAI con saldo, si es su cuenta · día 1</li>
+<li>☐ Notas de una reunión real para la demo · día 6</li>
+<li>☐ Que te cuente qué corrige a mano · cada semana</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Plantilla de propuesta con su marca, en Slides</li>
+<li>☐ Formulario para cargar la reunión</li>
+<li>☐ Generador con IA, con aprobación por planilla (READY)</li>
+<li>☐ Envío automático del PDF desde su Gmail</li>
+<li>☐ Planilla de registro de propuestas enviadas</li>
+<li>☐ Seguimiento a los 3, 7 y 14 días, con opción de baja</li>
+<li>☐ Guía de una página</li>
+<li>☐ Reporte del primer mes</li>
+</ul>
+<p><strong>El calendario</strong> (con 2 horas por día, en días hábiles)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago y bienvenida (P1). Le pedís todo.</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Te manda el material, contesta las decisiones y hacen la videollamada de Google (P2 a P5).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Importás el flujo y armás los Slides (P7 y P8).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Planilla, columnas, carpeta y formulario (P9 y P10).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Modelos, prompts, envío y publicación (P11 y P12).</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Flujo de seguimiento (P13 y P14).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Pruebas completas (P15 a P19).</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>Demo ⭐</strong> (P20 y P21). Ajustes si hace falta.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Entregás el link y la guía (P23). Lanzamiento.</td>
+</tr>
+<tr>
+<td>Primera reunión real (POR DEFINIR)</td>
+<td>Primera propuesta real (P24 a P27).</td>
+</tr>
+<tr>
+<td>Semanas 2 a 4</td>
+<td>Revisión semanal de 30 minutos (P31).</td>
+</tr>
+<tr>
+<td>Día 30</td>
+<td>Reporte del primer mes y renovación (P32 y P33).</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes para WhatsApp</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, gracias por confiar de nuevo 🙌 Arrancamos con Propuesta el Mismo Día. Para empezar necesito:
+1. 2 o 3 propuestas que hayas mandado últimamente (mejor si son de las que te aceptaron)
+2. Tu logo y colores
+3. Que me contestes estas 5 cositas (te dejo lo que te sugiero):
+– ¿Quién carga la reunión? (sugiero: vos)
+– ¿Quién aprueba antes de enviar? (sugiero: vos)
+– ¿Cobrás con link de pago? (si no, va sin link)
+– ¿Desde qué mail salen? (sugiero: el que ya usás con clientes)
+– ¿La cuenta de IA va a tu nombre? (sugiero: sí, cuesta poco)
+4. Nombre, firma y teléfono para los mails</p>
+<p>Y 15 min de videollamada mañana para conectar tu Google. ¿Te va a las [hora]? En unos 7 días hábiles te muestro tu primera propuesta armada.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>[Nombre], ¿cómo va? Para seguir con las propuestas solo me falta: [lo que falta]. Apenas lo tengo, sigo. Si te resulta más fácil, lo vemos en 10 min por llamada 👍</p>
+</blockquote>
+<p><strong>3 · Aviso de lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [Nombre]! Ya está andando 🚀
+📝 Formulario (guardalo en favoritos): [link]
+📊 Planilla: [link]
+📄 Guía de 1 página: [link]</p>
+<p>Apenas cortás una reunión, completás el formulario. En 1-2 min la propuesta aparece en la planilla. La revisás, ponés READY y sale sola. El precio y el alcance los decidís siempre vos. Cuando el cliente responda, poné won o lost y se frenan los recordatorios. Cualquier cosa, escribime.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>[Nombre], va el resumen del primer mes de Propuesta el Mismo Día 📊
+• Propuestas generadas: [n]
+• Enviadas: [n] · el mismo día de la reunión: [n]
+• Aceptadas: [n] · perdidas: [n] · abiertas: [n]
+• Ajustes que hice: [ej: el tono del mail, el orden de las diapositivas]
+• Errores: [ninguno / cuál y cómo se resolvió]</p>
+<p>Para el mes que viene propongo [ajuste]. ¿Seguimos con la mensualidad así lo sigo cuidando?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p10">← Volver a la ficha 10</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

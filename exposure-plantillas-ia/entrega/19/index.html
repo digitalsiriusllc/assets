@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Oficina en Piloto Automático · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Oficina en Piloto Automático, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Oficina en Piloto Automático">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.71 .2 350)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 19 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Transformación</p>
+  <h1>Oficina en Piloto Automático</h1>
+  <p class="bajada">Contratos, arranque, cobros y equipo, ordenados. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Estudios contables y jurídicos</span><span class="chip">Setup USD 3.000–5.000</span><span class="chip">5–8 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos</strong> (cambialos si no coinciden):</p>
+<ul>
+<li><strong>Canal:</strong> cobros y renovaciones van por mail desde el Gmail del estudio. Si los querés por WhatsApp, cada mensaje necesita una plantilla aprobada por Meta.</li>
+<li><strong>Formulario:</strong> uso el formulario propio de n8n («n8n Form Trigger») en lugar de JotForm. Es una cuenta menos.</li>
+<li><strong>Cuentas:</strong> todas se abren a nombre del estudio.</li>
+<li><strong>Si ya le instalaste alguna de las piezas</strong> (04, 06, 12 o 13), salteá su caja y solo conectala a la planilla maestra.</li>
+</ul>
+<p><strong>Aviso:</strong> la pieza de contratos sigue «Cómo dejarla lista» de la ficha. Las partes de las fichas 04, 06, 12 y 13 van con pasos generales: para el detalle, seguí «Cómo dejarla lista» de cada una.</p>
+<p><strong>Cómo se conectan las piezas y en qué orden se instalan:</strong></p>
+<ol>
+<li><strong>Planilla maestra de clientes.</strong> Es el centro de todo.</li>
+<li><strong>Contratos (19).</strong> Cada contrato firmado escribe una fila en la planilla.</li>
+<li><strong>Cobros (04) y renovaciones (12).</strong> Leen esa planilla todos los días.</li>
+<li><strong>Bienvenida (06).</strong> Arranca con el link que va en el mail del contrato firmado.</li>
+<li><strong>Asistente del equipo (13).</strong> Funciona por separado, con su propia base.</li>
+</ol>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Oficina en Piloto Automático" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Palabras que vas a ver:</strong></p>
+<ul>
+<li><strong>n8n:</strong> la herramienta donde armás los flujos que conectan apps entre sí, como Zapier.</li>
+<li><strong>Nodo:</strong> cada cajita de un flujo de n8n.</li>
+<li><strong>Credencial:</strong> un permiso guardado en n8n para usar una cuenta.</li>
+<li><strong>API key:</strong> una clave que deja que un programa use una cuenta sin tu contraseña.</li>
+<li><strong>Webhook:</strong> un aviso automático que una app le manda a otra cuando pasa algo.</li>
+<li><strong>JSON:</strong> texto con formato de datos, lleno de comillas y llaves.</li>
+</ul>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Confirmar el pago del setup</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> verificás que entró el pago antes de tocar nada.</li>
+<li><strong>Cómo:</strong> mirá tu cuenta o Mercado Pago, mandá la factura y anotá fecha y monto.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el pago figura acreditado.</li>
+<li><strong>Si sale mal:</strong> si pagó solo una parte, acordá por escrito qué arranca con ese monto.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le avisás que arrancaste y le pedís todo de una sola vez.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandá el mensaje 1 por WhatsApp.</li>
+<li>Compartí un Google Doc con la lista de pedidos de la sección 3, con casillas y fechas.</li>
+<li>Proponé día y hora para la llamada.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> la lista de pedidos y la llamada agendada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> respondió y la llamada tiene fecha.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, llamalo. Por mensaje se cuelga.</li>
+</ul>
+<p><strong>P3 · Mapear la oficina en una llamada</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> entendés cómo se hacen hoy contratos, altas, cobros, renovaciones y consultas del equipo.</li>
+<li><strong>Cómo:</strong> videollamada de 45 minutos con estas preguntas:<ul>
+<li>¿Quién cierra un cliente nuevo? ¿Quién va a completar el formulario de cierre?</li>
+<li>¿Cómo cobran: abono mensual, por trabajo o convenio anual? ¿Por qué medio?</li>
+<li>¿Cuándo vencen los convenios?</li>
+<li>¿Qué documentación le piden a un cliente nuevo? ¿Dónde guardan sus carpetas?</li>
+<li>¿Qué le pregunta el equipo al dueño todos los días?</li>
+<li>¿Cuántas horas por semana se le van al dueño en todo esto?</li>
+<li>Al final, confirmá el orden de instalación: contratos, después cobros y renovaciones, después bienvenida y asistente.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong><ul>
+<li>Las horas por semana que hoy le dedica a la administración. Esta es la <strong>línea base</strong>: el número contra el que vas a comparar después.</li>
+<li>El nombre de quien completa el formulario de cierre.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> un «Mapa de la oficina» de una página, al día siguiente.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas, entre la llamada y el documento.</li>
+<li><strong>Listo cuando:</strong> el dueño confirma el mapa por escrito.</li>
+<li><strong>Si sale mal:</strong> si te pide extras, anotalos en una lista «para después». Te sirven en P33.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P4 · Pasar el contrato modelo revisado por su abogado</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> te comparte el contrato o convenio de honorarios en Google Docs, con las variables ya puestas.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandale la lista de variables y qué es cada una:<ul>
+<li>{{clientCompanyName}}: razón social del cliente.</li>
+<li>{{clientFullName}}: nombre de quien firma.</li>
+<li>{{clientNamePosition}}: su cargo.</li>
+<li>{{clientCompanyAddress}}: dirección de la empresa.</li>
+<li>{{agreementDate1}}: fecha larga.</li>
+<li>{{agreementDate2}}: fecha corta.</li>
+</ul>
+</li>
+<li>Mostrale el ejemplo de la nota «Sample Outputs» de la plantilla.</li>
+<li><strong>El texto legal no lo escribís vos.</strong> En un estudio jurídico lo revisa el propio dueño; en uno contable, su abogado.</li>
+<li>Pedile que confirme por escrito que la firma electrónica de SignWell le sirve para este contrato.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 a 5 días el cliente. Vos, 30 minutos para revisarlo.</li>
+<li><strong>Listo cuando:</strong> las 6 variables están escritas exactas y tenés el ok del abogado.</li>
+<li><strong>Si sale mal:</strong> si escriben una variable con un espacio o una mayúscula distinta, no se reemplaza. Corregí solo la variable, sin tocar el texto legal.</li>
+</ul>
+<p><strong>P5 · Compartir accesos y lista de clientes</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hace el cliente:</strong><ul>
+<li>Te da acceso a la cuenta de Google del estudio.</li>
+<li>Te pasa el mail del dueño para las aprobaciones.</li>
+<li>Te pasa la lista de clientes actuales con nombre, mail, razón social, monto, próximo vencimiento y fin del convenio.</li>
+<li>Te pasa el medio de cobro: link de pago o alias. <strong>POR DEFINIR.</strong></li>
+<li>Define quién paga n8n Cloud, SignWell y las claves de IA. <strong>POR DEFINIR.</strong></li>
+</ul>
+</li>
+<li><strong>Cómo:</strong> nunca pidas contraseñas por WhatsApp. El dueño inicia sesión con vos en una llamada de 15 minutos cuando conectes Google en P10.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 3 días.</li>
+<li><strong>Listo cuando:</strong> está todo lo de la lista.</li>
+<li><strong>Si sale mal:</strong> si la lista de clientes viene desordenada, aceptala igual. La ordenás vos en P8.</li>
+</ul>
+<p><strong>P6 · ¿Está todo lo pedido?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> repasás la lista de pedidos casilla por casilla.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> si está todo, pasás a P8. Si falta algo, vas a P7.</li>
+</ul>
+<p><strong>P7 · Reclamar lo que falta por WhatsApp</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> mandás el mensaje 2 cada 48 horas.</li>
+<li><strong>Cómo:</strong> mientras esperás el contrato, podés adelantar P8 con la lista de clientes.</li>
+<li><strong>Listo cuando:</strong> llega lo que faltaba. Volvés a P4 y P6.</li>
+<li><strong>Si sale mal:</strong> si en una semana no aparece el contrato, proponé 30 minutos en llamada para cerrarlo juntos.</li>
+</ul>
+<h3>Etapa 3 · Base común de clientes</h3>
+<p><strong>P8 · Armar la planilla maestra de clientes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás el lugar donde se juntan todas las piezas.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Creá un Google Sheet «Oficina – Clientes» en el Drive del estudio.</li>
+<li>En la pestaña «Clientes», poné estas columnas: ID, Nombre, Email, Empresa, Monto, Próximo vencimiento, Fin del convenio, Estado de pago (Pendiente o Pagado), Fecha de pago, Precio de renovación, Estado de renovación, Baja de avisos (Sí o No) y Origen.</li>
+<li>Cargá los clientes actuales.</li>
+<li>Poné todas las fechas en formato Fecha (DD/MM/AAAA).</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 a 5 horas.</li>
+<li><strong>Listo cuando:</strong> no hay filas vacías y todas las fechas son fechas de verdad, no texto.</li>
+<li><strong>Si sale mal:</strong> si una fecha quedó como texto («5/3»), n8n no puede calcular días. Cambiale el formato a Fecha.</li>
+</ul>
+<p><strong>P9 · Revisar y corregir los datos cargados</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> el dueño o su secretaria revisan montos, mails y vencimientos.</li>
+<li><strong>Qué le entregás:</strong> la planilla ordenada. Es lo primero que ve en orden, aunque todavía no sea el resultado del servicio.</li>
+<li><strong>Cuánto tarda:</strong> 1 o 2 días.</li>
+<li><strong>Listo cuando:</strong> responde «está bien».</li>
+<li><strong>Si sale mal:</strong> pintá en amarillo los mails dudosos. Ninguna fila sin confirmar va a recibir avisos.</li>
+</ul>
+<h3>Etapa 4 · Instalación de contratos</h3>
+<p><strong>P10 · Crear cuentas y credenciales en n8n</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> abrís las cuentas y le das a n8n los permisos que necesita.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí n8n Cloud a nombre del estudio. Ya trae una dirección pública y las Data Tables incluidas.</li>
+<li>En Credenciales, creá cuatro credenciales OAuth2: Gmail, Google Drive, Google Docs y Google Sheets. OAuth2 es la ventana «Iniciar sesión con Google» que le da permiso a n8n. La de Sheets es para la planilla maestra.</li>
+<li>Abrí SignWell con <strong>el mismo Gmail</strong> que conectaste en n8n.</li>
+<li>En SignWell, entrá a Settings → API y creá una API key.</li>
+<li>En n8n, creá una credencial nueva tipo Header Auth. Name: X-Api-Key. Value: la clave de SignWell.</li>
+<li>Si un día usás n8n en un servidor propio, publicá la app de Google. Si queda en modo Testing, los permisos vencen cada 7 días.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> 15 minutos para iniciar sesión con Google.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> cada credencial dice «Connection tested successfully».</li>
+<li><strong>Si sale mal:</strong> si SignWell quedó con otro mail, el aviso de firma nunca llega al Gmail que lee n8n. Cerrá esa cuenta y abrila con el mail correcto.</li>
+</ul>
+<p><strong>P11 · Apuntar la plantilla a contrato, carpetas y tabla</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que la plantilla use los archivos del estudio y no los del autor.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla desde n8n.io/workflows/9925.</li>
+<li>En Drive, creá dos carpetas: «Contratos – Borradores» y «Contratos – Firmados».</li>
+<li>En el nodo «Copy and Rename File», elegí el contrato y la carpeta de borradores.</li>
+<li>En «Upload PDF File», elegí la carpeta de borradores.</li>
+<li>En «Upload Completed Doc», elegí la carpeta de firmados.</li>
+<li>Creá la Data Table «Services Agreements». Una Data Table es una tabla interna de n8n. Ponele estas 15 columnas de texto: documentFileName, clientEmail, clientFullName, clientNamePosition, clientCompanyName, clientCompanyAddress, documentUrl, approvalStatus, sentDocumentPdfUrl, sentDate, signwellUrl, signwellDocID, docSigned, finalExecutedDocGDrive y finalExecutedDocSignwellUrl.</li>
+<li>Sumale dos columnas más: Monto y Fecha de vencimiento. Si en P3 surgió que tienen convenio anual, agregá también Fin del convenio.</li>
+<li>Elegí esa tabla en «Insert New Row», en los dos «Get Relevant Agreement Record» y en los tres «Update Row - …».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 a 3 horas.</li>
+<li><strong>Listo cuando:</strong> abrís cada nodo de Drive y de tabla, y todos apuntan a lo tuyo.</li>
+<li><strong>Si sale mal:</strong> si te aparece un error «not found», quedó algún nodo apuntando a un archivo del autor. Buscá el nodo con el triángulo de advertencia.</li>
+</ul>
+<p><strong>P12 · Armar el formulario de cierre de venta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás el formulario que completa quien cierra un cliente nuevo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Reemplazá «JotForm Trigger» por un «n8n Form Trigger» y conectalo a «Edit Fields».</li>
+<li>Poné estas preguntas en español: Empresa, Dirección de la empresa, Nombre completo, Cargo, Email, Monto y Fecha de vencimiento. Si en P3 surgió el convenio anual, sumá Fin del convenio.</li>
+<li>En «Edit Fields», escribí cada campo con la etiqueta exacta de su pregunta. Por ejemplo: clientFullName = {{ $json['Nombre completo'] }} y clientCompanyAddress = {{ $json['Dirección de la empresa'] }}.</li>
+<li>Sumá Monto y Fecha de vencimiento a «Edit Fields», a la tabla y a «Insert New Row». Los usan los sistemas 4 y 12.</li>
+<li>Si el estudio prefiere JotForm, respetá los tipos de campo «Nombre completo» y «Dirección». Con un campo de texto común, esos datos quedan vacíos sin ningún aviso.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media.</li>
+<li><strong>Listo cuando:</strong> completás el formulario con datos falsos y la fila nueva de la tabla tiene todos los campos llenos.</li>
+<li><strong>Si sale mal:</strong> si un campo queda vacío, la etiqueta no coincide por una tilde o una mayúscula. Copiala exacta desde el formulario.</li>
+</ul>
+<p><strong>P13 · Configurar la aprobación del dueño por mail</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> te asegurás de que ningún contrato salga sin el «Aprobado» del dueño.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Share Email Draft», cambiá YOUR_EMAIL_ADDRESS por el mail del dueño.</li>
+<li>En Gmail, creá la etiqueta _AGREEMENTS con dos subetiquetas: Agreement-Approvals y Agreement-Completed.</li>
+<li>Creá un filtro: Configuración → Filtros → Crear filtro → asunto «Approval Request: Draft» → aplicar la etiqueta Agreement-Approvals. El filtro del aviso de SignWell lo terminás en P16.</li>
+<li>En «Check for Email Approval», elegí la etiqueta Agreement-Approvals.</li>
+<li>En su búsqueda, cambiá from:@YOUR_EMAIL_DOMAIN por el mail completo del dueño y sacá "Approved".</li>
+<li>En «Check Email for Completed Notification», elegí la etiqueta Agreement-Completed.</li>
+<li>Entre ese trigger y «Get Relevant Agreement Record», sumá un nodo «If»:<ul>
+<li>Condición: <code>{{ ($json.snippet || '').trim().toLowerCase() }}</code> → String → starts with → <code>aprobado</code>.</li>
+<li>Conectá solo la salida true.</li>
+</ul>
+</li>
+<li>En «Get Relevant Agreement Record», agregá la condición approvalStatus → Is Empty. Poné Must Match en All Conditions.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que el dueño sepa que tiene que responder empezando con la palabra «Aprobado».</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong><ul>
+<li>«Aprobado, gracias» hace avanzar el contrato.</li>
+<li>«No aprobado» no lo hace avanzar.</li>
+<li>Una respuesta que solo cita el mail original no lo hace avanzar.</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> si el contrato sale sin aprobación, falta el «If» o conectaste la salida false.</li>
+</ul>
+<p><strong>P14 · Conectar SignWell y traducir todo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás la firma electrónica y dejás todo en español.</li>
+<li><strong>Cómo, SignWell:</strong><ol>
+<li>En «Create Document in Signwell» y en «Remove Completed Doc from Signwell», cargá la credencial Header Auth. Borrá el encabezado que dice YOUR_SIGNWELL_API_KEY.</li>
+<li>En el JSON de «Create Document in Signwell», sumá "language": "es" y cambiá "date_format" a "DD/MM/YYYY".</li>
+<li>Ajustá x, y y page de la firma y de la fecha. Abrí el PDF del contrato, buscá la página de firma y probá hasta que la firma caiga donde va.</li>
+<li>Dejá "test_mode": true. Es gratis y no tiene validez legal.</li>
+</ol>
+</li>
+<li><strong>Cómo, PDF privado:</strong> así el PDF nunca queda con un link público.<ol>
+<li>Entre «Download File as PDF» y «Upload PDF File», sumá un «Extract from File» con la operación Move File to Base64 String. Base64 es una forma de mandar el archivo como texto.</li>
+<li>Configuralo así: Input Binary Field: downloadedPdfFile. Destination Output Field: pdfBase64. En Options, Keep Source: Both.</li>
+<li>En el JSON, reemplazá la línea "file_url" por <code>"file_base64": "{{ $('Extract from File').item.json.pdfBase64 }}"</code>.</li>
+<li>Uní «Upload PDF File» directo con «Create Document in Signwell».</li>
+<li>Borrá «Grant Sharing Access to PDF File» y «Remove Sharing Access to PDF File».</li>
+</ol>
+</li>
+<li><strong>Cómo, traducción:</strong><ol>
+<li>Traducí los mails de «Share Email Draft», «Send Prepared Agreement to Client» y «Send Client Completed Agreement PDF».</li>
+<li>Cambiá «Your Agreement Composer», YOUR NAME y YOUR NAME OR COMPANY NAME por el nombre del estudio.</li>
+<li>Si traducís el asunto «Approval Request: Draft», cambiá la misma frase en la búsqueda de «Check for Email Approval» y en el filtro de Gmail.</li>
+<li>Si traducís «Digital Services Agreement» en «Copy and Rename File», cambiá el mismo texto en la expresión de «Get Relevant Agreement Record» y en la búsqueda de «Check Email for Completed Notification». El flujo encuentra cada contrato por esos textos.</li>
+<li>En «Update New File», reemplazá las dos fechas por <code>{{ $now.setLocale('es').format("d 'de' MMMM 'de' yyyy") }}</code> y <code>{{ $now.setLocale('es').format('dd/MM/yyyy') }}</code>. Las originales salen en inglés y, con el servidor en hora de Argentina, con un día menos.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que apruebe los textos de los tres mails. Los redactás vos y él los corrige.</li>
+<li><strong>Cuánto tarda:</strong> 3 horas.</li>
+<li><strong>Listo cuando:</strong> todo está en español y el PDF no tiene link público.</li>
+<li><strong>Si sale mal:</strong> si traducís una frase en un nodo y no en el otro, el flujo deja de encontrar el contrato. Buscá la frase vieja con Ctrl+F en todo el flujo.</li>
+</ul>
+<p><strong>P15 · Mandar firmados a la planilla y a la bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás los contratos firmados con el resto de la oficina.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Después de «Update Row - Completed Doc Details», sumá un nodo «Google Sheets» → Append Row.</li>
+<li>Que cargue en la planilla maestra: nombre, mail, empresa, monto y vencimiento. Agregá Origen = «Contrato firmado» y Estado de pago = «Pendiente».</li>
+<li>Dejá anotado que en P25 vas a poner el link de la bienvenida en el mail de «Send Client Completed Agreement PDF». Si la bienvenida arranca con «When Executed by Another Workflow», la llamás desde acá con un «Execute Sub-workflow».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> las columnas del nodo coinciden con los encabezados de la planilla.</li>
+<li><strong>Si sale mal:</strong> si un encabezado está escrito distinto, ese dato no se carga. Copialo exacto.</li>
+</ul>
+<p><strong>P16 · Probar un contrato completo en modo prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> te mandás un contrato a vos mismo y lo seguís de punta a punta.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Activá el flujo con la llave «Active». Los triggers de Gmail solo revisan el correo con el flujo activo.</li>
+<li>Completá el formulario con tu mail como si fueras el cliente.</li>
+<li>Coordiná con el dueño que responda «Aprobado» al mail de aprobación. Son 5 minutos.</li>
+<li>Firmá el contrato que te llega.</li>
+<li>Cuando te llegue el primer aviso de firma completa, copiá su remitente y su asunto exactos. Pegalos en la búsqueda de «Check Email for Completed Notification», donde hoy dice from:user@example.com, y en el filtro de Gmail.</li>
+<li>Si el link de firma no abre o SignWell dice que no es válido, cambiá "send_email": false por true y desactivá «Send Prepared Agreement to Client». Así SignWell le manda al cliente su propio mail para firmar.</li>
+<li>Abrí el PDF firmado en Drive. Si no trae la hoja de auditoría de la firma, desactivá «Remove Completed Doc from Signwell» para no perder esa constancia.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> 5 minutos del dueño para aprobar.</li>
+<li><strong>Cuánto tarda:</strong> 2 a 3 horas, porque vas a dar dos o tres vueltas.</li>
+<li><strong>Listo cuando:</strong> pasás la puerta P17.</li>
+<li><strong>Si sale mal:</strong> en n8n, entrá a Executions. El nodo en rojo es donde se cortó.</li>
+</ul>
+<p><strong>P17 · ¿Llega, se aprueba, se firma y se archiva?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> revisás cinco cosas, todas tienen que dar sí:<ul>
+<li>☐ Llegó el borrador al dueño.</li>
+<li>☐ Solo avanzó con «Aprobado».</li>
+<li>☐ Se pudo firmar.</li>
+<li>☐ El PDF firmado está en la carpeta de firmados.</li>
+<li>☐ Se cargó la fila en la planilla maestra.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> las cinco dan sí y pasás a P18.</li>
+<li><strong>Si sale mal:</strong> si alguna da no, volvé a P13. Ahí está la mayoría de las fallas. Si el problema fue la firma o el idioma, volvé a P14.</li>
+</ul>
+<h3>Etapa 5 · Demo y lanzamiento de contratos</h3>
+<p><strong>P18 · Mostrar la demo de contratos al dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás un caso en vivo, todavía en modo prueba.</li>
+<li><strong>Cómo:</strong> 20 minutos con el dueño y con quien completa el formulario. Hacé un caso completo delante de ellos y enseñales tres cosas:<ul>
+<li>Dónde está el formulario.</li>
+<li>Que la respuesta empieza con «Aprobado».</li>
+<li>Dónde quedan los contratos firmados.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el link del formulario y una guía de una página. Después va al manual.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora, con la preparación.</li>
+<li><strong>Listo cuando:</strong> dice que sí o te da cambios concretos.</li>
+<li><strong>Si sale mal:</strong> si no puede conectarse, grabá la demo y mandásela.</li>
+</ul>
+<p><strong>P19 · ¿El dueño aprueba los contratos?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás su respuesta.</li>
+<li><strong>Listo cuando:</strong> dice que sí y pasás a P20.</li>
+<li><strong>Si sale mal:</strong> si dice que no, volvés a P14 por textos, fechas o posición de firma. Si quiere cambiar el texto legal, lo cambia su abogado en el contrato modelo, no vos.</li>
+</ul>
+<p><strong>P20 · ⭐ Firmar el primer contrato real sin papel</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás a modo real y mandás el primer contrato de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Pasá "test_mode" a false.</li>
+<li>Fijate cuántos documentos por mes incluye el plan de SignWell que eligieron.</li>
+<li>Elegí con el dueño un contrato real pendiente: un cliente nuevo o la actualización del convenio de un cliente actual.</li>
+<li>Mirá la ejecución en vivo.</li>
+<li>Mandá el mensaje 3.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> el contrato firmado en Drive y cargado en la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora tuya. Lo que tarde el cliente final en firmar no depende de vos.</li>
+<li><strong>Listo cuando:</strong> el contrato está firmado, archivado y en la planilla.</li>
+<li><strong>Si sale mal:</strong> si el cliente final no encuentra el mail, está en spam. Que el estudio le avise por WhatsApp.</li>
+</ul>
+<h3>Etapa 6 · Cobros y renovaciones</h3>
+<p><strong>P21 · Instalar los recordatorios de cobro desde la planilla</strong> (ficha 04)</p>
+<ul>
+<li><strong>Qué hacés:</strong> instalás los recordatorios automáticos de cobro.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla n8n.io/workflows/20173. Usa Sheets y Gmail.</li>
+<li>Apuntala a la planilla maestra.</li>
+<li>Programala para que corra todos los días a las 9.</li>
+<li>Armá cuatro momentos:<ul>
+<li>3 días antes del vencimiento: recordatorio con el link de pago.</li>
+<li>El día del vencimiento: segundo aviso.</li>
+<li>3 días después: mensaje amable de seguimiento.</li>
+<li>7 días después: alerta <strong>al dueño</strong>, no al cliente.</li>
+</ul>
+</li>
+<li>Que solo escriba si Estado de pago = Pendiente y Baja de avisos = No.</li>
+<li>El reporte de antigüedad de deuda le llega al dueño una vez por semana. Ese reporte muestra cuánto hace que está vencida cada cuota.</li>
+<li>Definí quién marca «Pagado» y cómo pasa el vencimiento al mes siguiente. <strong>POR DEFINIR.</strong> Lo más simple: lo hace la secretaria en la planilla.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que apruebe los textos de los cuatro mensajes.</li>
+<li><strong>Cuánto tarda:</strong> 5 a 6 horas.</li>
+<li><strong>Listo cuando:</strong> corre a mano sobre clientes de prueba sin errores.</li>
+<li><strong>Si sale mal:</strong> el peor error es reclamarle a alguien que ya pagó. Por eso el flujo lee el Estado de pago justo antes de cada envío.</li>
+</ul>
+<p><strong>P22 · Instalar la escalera de avisos de renovación</strong> (ficha 12)</p>
+<ul>
+<li><strong>Qué hacés:</strong> instalás los avisos de renovación a 60, 30 y 7 días.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla n8n.io/workflows/19998. Usa GPT-4.1-mini, la IA de OpenAI. Necesitás una API key de OpenAI con saldo, en la cuenta del estudio.</li>
+<li>Cambiá Slack por un mail al dueño.</li>
+<li>Que lea la columna Fin del convenio y arme estos avisos:<ul>
+<li>A los 60 días: aviso interno al dueño para que defina las condiciones.</li>
+<li>A los 30 días: propuesta de renovación al cliente, con el precio que el dueño cargó en la planilla.</li>
+<li>A los 7 días: recordatorio.</li>
+<li>Si no responde: la IA le pregunta por qué y le avisa al dueño de los casos en riesgo.</li>
+</ul>
+</li>
+<li>Cada mail lleva una opción de baja: «Si no querés recibir estos avisos, respondé BAJA».</li>
+<li>A la IA le escribís esta instrucción: «Nunca ofrezcas precios, descuentos ni plazos. Si preguntan, decí que el estudio responde».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> los textos aprobados y el precio de renovación de cada cliente.</li>
+<li><strong>Cuánto tarda:</strong> 5 a 6 horas.</li>
+<li><strong>Listo cuando:</strong> corre con fechas de prueba sin errores.</li>
+<li><strong>Si sale mal:</strong> si la IA promete algo, reforzá la instrucción y volvé a probar.</li>
+</ul>
+<p><strong>P23 · ¿Salen bien y el dueño aprueba?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás los dos flujos con clientes falsos.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Cargá clientes falsos con tus propios mails y estas fechas: hoy +3, hoy, hoy −3, hoy −7, +60, +30 y +7.</li>
+<li>Sumá uno marcado «Pagado» y otro con Baja = Sí. Esos dos <strong>no</strong> tienen que recibir nada.</li>
+<li>Mandale los textos finales al dueño.</li>
+</ol>
+</li>
+<li><strong>Listo cuando:</strong> todo da bien y el dueño aprueba. Pasás a P24.</li>
+<li><strong>Si sale mal:</strong> volvés a P21.</li>
+</ul>
+<p><strong>P24 · Enviar avisos de cobro y renovación solos</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás los dos flujos andando solos.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá los clientes falsos.</li>
+<li>Activá los dos flujos.</li>
+<li>Durante la primera semana, revisá Executions todos los días.</li>
+<li>Conviene que el estudio les avise a sus clientes que van a empezar a recibir estos mails.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos por día durante una semana.</li>
+<li><strong>Listo cuando:</strong> pasan 5 días hábiles sin errores.</li>
+<li><strong>Si sale mal:</strong> si los mails caen en spam, mandalos desde la cuenta del estudio, con texto simple y un solo link.</li>
+</ul>
+<h3>Etapa 7 · Bienvenida y asistente del equipo</h3>
+<p><strong>P25 · Instalar la bienvenida automática del cliente</strong> (ficha 06)</p>
+<ul>
+<li><strong>Qué hacés:</strong> instalás el arranque automático de cada cliente nuevo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla n8n.io/workflows/13658. Usa Google Forms, GPT-4o, ClickUp y Gmail.</li>
+<li>Armá el formulario de alta con lo que el estudio pide a un cliente nuevo. <strong>POR DEFINIR,</strong> sale de P3. <strong>Nunca pidas claves fiscales ni contraseñas en el formulario:</strong> eso se sigue haciendo como el estudio ya lo hace.</li>
+<li>Sumá un nodo de Google Drive que cree la carpeta del cliente.</li>
+<li>Si usan ClickUp, las tareas van ahí. Si no, usá una pestaña «Tareas» en la planilla. <strong>POR DEFINIR.</strong></li>
+<li>GPT-4o arma el brief para el equipo con las respuestas del formulario.</li>
+<li>Poné el link del formulario en el mail «Send Client Completed Agreement PDF».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 6 a 8 horas.</li>
+<li><strong>Listo cuando:</strong> un alta falsa crea la carpeta, las tareas, el brief y el mail.</li>
+<li><strong>Si sale mal:</strong> si no se dispara, el trigger está apuntando a otro formulario o a otra planilla de respuestas.</li>
+</ul>
+<p><strong>P26 · Juntar procesos, precios y respuestas del estudio</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> junta lo que el equipo necesita saber. <strong>Se lo pedís el día 1 y vence en la semana 4.</strong></li>
+<li><strong>Cómo:</strong><ul>
+<li>Armá una planilla «Base del equipo» con cuatro columnas: Pregunta, Respuesta, Tema y Quién la validó.</li>
+<li>El mínimo son 40 preguntas.</li>
+<li>Truco: que el dueño anote durante una semana cada pregunta que le hace el equipo.</li>
+<li>Nada de datos de clientes concretos: hay secreto profesional.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 a 5 horas del dueño, repartidas. Vos, 2 horas para ordenarlo.</li>
+<li><strong>Listo cuando:</strong> hay 40 preguntas con respuesta validada.</li>
+<li><strong>Si sale mal:</strong> si no lo hace, ofrecele una entrevista grabada de una hora y lo pasás vos.</li>
+</ul>
+<p><strong>P27 · Cargar la base y abrir el asistente</strong> (ficha 13)</p>
+<ul>
+<li><strong>Qué hacés:</strong> armás el asistente que responde las consultas del equipo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla n8n.io/workflows/17826. Usa Gemini, la IA de Google, con una API key de Google AI Studio.</li>
+<li>Apuntala a la «Base del equipo».</li>
+<li>Creá una pestaña «Sin respuesta» donde se anotan las preguntas que no sabe.</li>
+<li>Instrucción para la IA: «Respondé solo con la base. Si no está, decí que se lo pasás al dueño».</li>
+<li>El canal es <strong>POR DEFINIR:</strong> un link de chat de n8n o lo que ya use el equipo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 4 horas.</li>
+<li><strong>Listo cuando:</strong> responde desde el canal elegido.</li>
+<li><strong>Si sale mal:</strong> si inventa respuestas, endurecé la instrucción y bajale la «temperatura» a 0. La temperatura regula cuánto improvisa la IA.</li>
+</ul>
+<p><strong>P28 · ¿Pasan la prueba con casos reales?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás el asistente y la bienvenida con casos reales.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Hacele 20 preguntas reales del equipo al asistente.</li>
+<li>Hacé un alta de prueba con la bienvenida.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> se cumplen las tres condiciones y pasás a P29:<ul>
+<li>18 de las 20 respuestas son correctas.</li>
+<li>Ninguna respuesta es inventada.</li>
+<li>El dueño aprueba.</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> volvés a P26 a completar respuestas.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento y ajustes</h3>
+<p><strong>P29 · Entregar el manual del equipo y el tablero</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> entregás el manual, el tablero y la capacitación.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Manual:</strong> un Google Doc de unas 5 páginas. Dice qué hace cada flujo, quién hace qué y qué hacer ante cada alerta.</li>
+<li><strong>Tablero:</strong> una pestaña «Resumen» en la planilla maestra con estos números:<ul>
+<li>Contratos enviados y firmados en el mes.</li>
+<li>Días hasta la firma.</li>
+<li>Cuotas pendientes y vencidas.</li>
+<li>Renovaciones de los próximos 60 días.</li>
+<li>Preguntas al asistente y preguntas sin respuesta.</li>
+</ul>
+</li>
+<li><strong>Capacitación:</strong> 30 minutos con el equipo, grabada.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el manual, el tablero y la grabación.</li>
+<li><strong>Cuánto tarda:</strong> 5 horas.</li>
+<li><strong>Listo cuando:</strong> cada persona del equipo hizo un caso sola.</li>
+<li><strong>Si sale mal:</strong> si alguien no participa, mandale la grabación y pedile que haga su caso igual.</li>
+</ul>
+<p><strong>P30 · Medir y mandar el reporte mensual</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> mandás el reporte del mes.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Copiá los números del tablero.</li>
+<li>Pedile al dueño cuántas horas por semana le dedica hoy a la administración y comparalo con la línea base. Es su estimación: no se garantiza.</li>
+<li>Mandá el mensaje 4 con un documento de una página.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora por mes.</li>
+<li><strong>Listo cuando:</strong> lo mandaste y lo leyó.</li>
+<li><strong>Si sale mal:</strong> si no lo lee, proponé 15 minutos de llamada para verlo juntos.</li>
+</ul>
+<p><strong>P31 · Ajustar los textos y reglas que pidió</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés los cambios que pidió el estudio.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Juntá los pedidos en una lista y hacelos en un solo bloque por semana.</li>
+<li>Lo que entra en la mensualidad es <strong>POR DEFINIR,</strong> según lo que acordaron.</li>
+<li>Los cambios en el texto legal los hace su abogado, no vos.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> la lista de pedidos queda vacía.</li>
+<li><strong>Si sale mal:</strong> si un pedido es un sistema nuevo, anotalo para P33.</li>
+</ul>
+<h3>Etapa 9 · Renovación o salida</h3>
+<p><strong>P32 · ¿Renueva la mensualidad?</strong></p>
+<ul>
+<li><strong>Listo cuando:</strong> si renueva, pasás a P33. Si no renueva, vas a P34.</li>
+</ul>
+<p><strong>P33 · Ofrecer el servicio 20 Negocio Integrado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le ofrecés el siguiente paso.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Ya cumple la condición: vio funcionar tres o más sistemas tuyos.</li>
+<li>Usá los números de los reportes y la lista «para después» de P3.</li>
+<li>El mes siguiente volvés a P30.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P34 · Entregar accesos y documentación de salida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás todo ordenado para que el estudio siga sin vos.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Las cuentas ya están a nombre del estudio.</li>
+<li>Exportá cada flujo con Download, que lo descarga como archivo JSON.</li>
+<li>Escribí un documento con qué hace cada flujo.</li>
+<li>Acordá con el dueño qué queda activo.</li>
+<li>Sacá tus accesos.
+- El plazo es <strong>POR DEFINIR,</strong> según el contrato.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> los flujos exportados, el documento y las cuentas sin tus accesos.</li>
+<li><strong>Listo cuando:</strong> el dueño confirma que tiene todo.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup · día 1</li>
+<li>☐ Horas semanales de administración, la línea base · día 1, en la llamada</li>
+<li>☐ Cómo cobra, cuándo vencen los convenios y quién cierra las ventas · día 1</li>
+<li>☐ Contrato modelo en Google Docs con las variables, revisado por su abogado · día 1, entrega día 3 a 5</li>
+<li>☐ Ok escrito de que la firma electrónica de SignWell le sirve · día 1</li>
+<li>☐ Acceso a Google del estudio y mail del dueño para aprobaciones · día 1</li>
+<li>☐ Lista de clientes con mail, monto, vencimiento y fin del convenio · día 1</li>
+<li>☐ Medio de cobro y quién paga n8n, SignWell y las claves de IA · día 1</li>
+<li>☐ Base del equipo, con 40 preguntas y respuestas · día 1, entrega semana 4</li>
+<li>☐ Qué documentación le pide el estudio a un cliente nuevo · día 1</li>
+<li>☐ Ok de la planilla maestra · día 5</li>
+<li>☐ Aprobación de los mails de contratos · semana 2</li>
+<li>☐ Textos de cobro y renovación, y precios de renovación · semana 3</li>
+<li>☐ 20 preguntas reales del equipo y 30 minutos para la capacitación · semana 6</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Mapa de la oficina</li>
+<li>☐ Planilla maestra de clientes</li>
+<li>☐ Flujo de contratos con formulario de cierre, aprobación, firma y archivo</li>
+<li>☐ Recordatorios de cobro con alerta de mora</li>
+<li>☐ Avisos de renovación con alerta de clientes en riesgo</li>
+<li>☐ Bienvenida automática con carpeta, tareas y brief</li>
+<li>☐ Asistente del equipo</li>
+<li>☐ Manual del equipo, tablero y capacitación grabada</li>
+<li>☐ Reporte mensual</li>
+</ul>
+<p><strong>El calendario</strong> (a 3 horas por día)</p>
+<ul>
+<li><strong>Día 1:</strong> pago, bienvenida y llamada de mapeo.</li>
+<li><strong>Días 2 a 4:</strong> accesos, contrato modelo y planilla maestra.</li>
+<li><strong>Día 5:</strong> el dueño revisa la planilla.</li>
+<li><strong>Días 6 a 10:</strong> instalación de contratos y pruebas (P10 a P17).</li>
+<li><strong>Días 11 a 15:</strong> demo, ajustes y ⭐ primer contrato real firmado.</li>
+<li><strong>Semanas 3 y 4:</strong> cobros y renovaciones, prueba y lanzamiento.</li>
+<li><strong>Día 30:</strong> primer reporte parcial, con contratos, cobros y renovaciones.</li>
+<li><strong>Semanas 5 y 6:</strong> bienvenida y asistente.</li>
+<li><strong>Semana 7:</strong> manual, capacitación y ajustes.</li>
+<li><strong>Día 60:</strong> primer reporte completo.</li>
+</ul>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¡gracias! Ya recibí el pago y arrancamos con la Oficina en Piloto Automático. Para empezar necesito tres cosas:
+1) El modelo de contrato en Google Docs, revisado por [ustedes / su abogado].
+2) La lista de clientes actuales con mail, monto, vencimiento y fin del convenio.
+3) 15 minutos para conectar la cuenta de Google del estudio.
+Te dejo todo detallado acá: [link]. ¿Te queda bien una llamada de 45 minutos el [día] a las [hora]?</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir me falta [lo que falta]. Con eso dejo listos los contratos esta semana. ¿Me lo pasás antes del [día]? Si te resulta más fácil, lo vemos en 10 minutos por llamada.</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>[Nombre], ¡ya está andando! Cuando cierren un cliente, completan este formulario: [link]. Te va a llegar el borrador por mail. Respondé empezando con «Aprobado» y el contrato sale solo para firma. El firmado queda en «Contratos – Firmados» y cargado en la planilla. Cualquier cosa rara, escribime. Lo próximo son los cobros y las renovaciones.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el resumen del mes:
+• Contratos: [X] enviados, [X] firmados, [X] días promedio hasta la firma.
+• Cobros: [X] recordatorios enviados, [X] cuotas vencidas hoy.
+• Renovaciones: [X] avisadas, [X] casos en riesgo.
+• Horas de administración por semana: antes [X], ahora [X] (según tu estimación).
+Ajustamos [esto]. El mes que viene sigue [esto]. El detalle está acá: [link]. ¿Lo vemos 15 minutos el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p19">← Volver a la ficha 19</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

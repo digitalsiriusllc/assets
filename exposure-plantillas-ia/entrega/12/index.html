@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Nadie se Va en Silencio · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Nadie se Va en Silencio, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Nadie se Va en Silencio">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 12 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Nadie se Va en Silencio</h1>
+  <p class="bajada">Retención y renovaciones. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Gimnasios</span><span class="chip">Setup USD 1.000–1.800</span><span class="chip">2 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Antes de arrancar:</strong></p>
+<ul>
+<li><strong>Ojo:</strong> la encuesta de salida (plantilla <strong>17797</strong>, paso P13) va con pasos generales: antes de instalarla, leé las notas que trae en n8n.</li>
+<li><strong>Planes mensuales afuera.</strong> La escalera de avisos a 60, 30 y 7 días sirve para planes trimestrales, semestrales y anuales. Un socio mensual siempre está a menos de 30 días de vencer, así que recibiría dos avisos por mes, todos los meses. Por eso los mensuales no entran en este sistema. Si el gimnasio es casi todo mensual, lo hablás en P3 antes de seguir.</li>
+<li><strong>Supuestos.</strong> Ya tenés tu n8n andando por el sistema anterior. Los mails salen desde la cuenta de Google del gimnasio. La clave de Claude es tuya y su costo va dentro de la mensualidad.</li>
+</ul>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Nadie se Va en Silencio" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Tres palabras que vas a ver mucho:</strong></p>
+<ul>
+<li><strong>n8n:</strong> la herramienta donde corre el flujo solo, todos los días.</li>
+<li><strong>Nodo:</strong> cada cajita del flujo dentro de n8n.</li>
+<li><strong>Credencial:</strong> el permiso guardado para que n8n entre a una cuenta, como Gmail o Sheets.</li>
+</ul>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar setup y primer mes</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás antes de tocar nada.</li>
+<li><strong>Cómo:</strong> le mandás el mismo link de pago que usaste en el sistema anterior. El monto es <strong>POR DEFINIR</strong>. La ficha marca USD 1.000–1.800 de setup y USD 300–500 por mes.</li>
+<li><strong>Qué le pedís al cliente:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> el comprobante o la factura.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si no paga en 48 horas, le mandás un mensaje corto. No arrancás sin pago, aunque ya te conozca.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le avisás que arrancaste y le pedís todo junto.</li>
+<li><strong>Cómo:</strong> usás el <strong>mensaje 1</strong> de abajo y le proponés día y hora para una charla de 30 minutos.</li>
+<li><strong>Qué le pedís al cliente:</strong> lo de la lista del mensaje 1.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> respondió y hay fecha para la charla.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, lo llamás. Los dueños de gimnasio viven en la sala y no miran el teléfono.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P3 · Acordar planes, alternativa y link de pago</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> definís con el dueño las reglas del sistema.</li>
+<li><strong>Cómo:</strong> charla de 30 minutos, por videollamada o en el gimnasio. Salís con estas respuestas por escrito:<ul>
+<li><strong>Qué planes entran.</strong> Sugerido: trimestral, semestral y anual. Los mensuales quedan afuera. Si casi todos los socios son mensuales, frená acá: lo que necesita es <em>04 Cobro sin Perseguir</em>.</li>
+<li><strong>Qué se le ofrece al socio que duda.</strong> Por ejemplo, un plan más barato o una pausa de un mes: <strong>POR DEFINIR</strong>. Lo decide él. La IA no inventa ofertas.</li>
+<li><strong>Link para renovar.</strong> Puede ser un link de pago o un link de WhatsApp del gimnasio (wa.me/…).</li>
+<li><strong>Visitas esperadas por mes</strong> para medir el uso. Sugerido: 12, o sea 3 por semana.</li>
+<li><strong>De dónde sale la asistencia:</strong> molinete, app de gestión o planilla. <strong>POR DEFINIR</strong>.</li>
+<li><strong>Quién llama a los socios en riesgo.</strong></li>
+<li><strong>Cifra base:</strong> cuántos de los planes que vencieron en los últimos 3 meses se renovaron, si lo sabe. Sirve para comparar en el reporte.</li>
+<li><strong>WhatsApp:</strong> si ya tiene WhatsApp Business Cloud de Meta y qué socios aceptaron recibir mensajes.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> las respuestas y un «ok» por escrito.</li>
+<li><strong>Qué le entregás:</strong> el resumen de lo acordado, por WhatsApp.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> confirmó el resumen.</li>
+<li><strong>Si sale mal:</strong> si no sabe qué alternativa ofrecer, seguís sin ella. En ese caso sacás esa regla del texto de la IA (P11) y la sumás antes de la demo.</li>
+</ul>
+<p><strong>P4 · Pasar socios, asistencia y acceso Google</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> recibís los datos y armás los accesos.</li>
+<li><strong>Cómo:</strong><ol>
+<li>El dueño te manda un Excel con número de socio, nombre, mail, teléfono, plan, precio y fecha de vencimiento. Solo de los planes que entran.</li>
+<li>Te manda las visitas del último mes de cada socio y la lista de reclamos abiertos.</li>
+<li>Para Google, <strong>no le pidas la contraseña</strong>. Hacen 15 minutos de pantalla compartida. Vos creás en n8n las tres credenciales (Google Sheets, Gmail y Google Calendar) y él inicia sesión con la cuenta del gimnasio y toca «Permitir».</li>
+<li>Si tu n8n corre en tu propio servidor, la app de Google Cloud tiene que estar publicada («In production»). En modo «Testing», Google corta el acceso cada 7 días.</li>
+<li>Le pedís acceso de editor a una planilla en su Drive.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> el archivo, la asistencia, los reclamos y los 15 minutos.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 días de él, 30 minutos tuyos.</li>
+<li><strong>Listo cuando:</strong> tenés el archivo y las tres credenciales probadas, sin error.</li>
+<li><strong>Si sale mal:</strong> si su sistema no exporta, le compartís una planilla vacía con esas columnas y la completa la recepción.</li>
+</ul>
+<p><strong>P5 · ¿Está todo?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás que no falte nada.</li>
+<li><strong>Cómo:</strong> tildás esta lista:<ul>
+<li>☐ La mayoría de los socios tiene mail y fecha.</li>
+<li>☐ Hay asistencia.</li>
+<li>☐ Hay link para renovar.</li>
+<li>☐ Hay alternativa, o se decidió no ofrecer ninguna.</li>
+<li>☐ Las tres credenciales funcionan.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> está todo tildado. SÍ → P7. NO → P6.</li>
+<li><strong>Si sale mal:</strong> si no hay forma de medir la asistencia, acordá por escrito cargar 50 a todos, que es un valor neutro. Con eso cuenta como SÍ.</li>
+</ul>
+<p><strong>P6 · Mandar recordatorio de lo que falta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, nombrándolo.</li>
+<li><strong>Cómo:</strong> usás el <strong>mensaje 2</strong>. Si hace falta, lo repetís cada 48 horas.</li>
+<li><strong>Qué le pedís al cliente:</strong> lo puntual que falta.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> llega lo que faltaba. Volvés a P4 y P5.</li>
+<li><strong>Si sale mal:</strong> si a los 5 días no aparece, lo llamás y le ofrecés completarlo juntos en 20 minutos.</li>
+</ul>
+<h3>Etapa 3 · Mapa de vencimientos</h3>
+<p><strong>P7 · Armar planilla con uso y reclamos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> armás la planilla que va a leer el flujo.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Primero la región.</strong> En Google Sheets, antes de pegar ninguna fecha, entrás a Archivo → Configuración y elegís tu país. Si queda Estados Unidos, el 5 de diciembre se lee como 12 de mayo y nadie te avisa.</li>
+<li><strong>Dos pestañas.</strong> Creás «Socios», con los datos reales, y «Renewals», <strong>solo con los encabezados</strong>. Así, cuando pruebes el flujo, no le escribe a ningún socio de verdad.</li>
+<li><strong>Encabezados en la fila 1 de las dos pestañas</strong>, escritos igual: <code>Customer ID</code>, <code>Customer Name</code>, <code>Email</code>, <code>Plan</code>, <code>Renewal Date</code>, <code>Contract Value</code>, <code>Usage Score</code>, <code>Open Tickets</code>, <code>Last Reminder Stage</code>, <code>Last Reminder Date</code>, <code>Risk Score</code>. Si va WhatsApp, sumás <code>Phone</code>.</li>
+<li><strong>Qué va en cada columna:</strong><ul>
+<li>Customer ID: el número de socio.</li>
+<li>Renewal Date: la fecha con formato dd/mm/aaaa.</li>
+<li>Contract Value: el precio del plan, solo el número.</li>
+<li>Open Tickets: la cantidad de reclamos abiertos, o 0 si no tiene.</li>
+<li>Last Reminder Stage, Last Reminder Date y Risk Score: vacías.</li>
+</ul>
+</li>
+<li><strong>Usage Score</strong>, de 0 a 100: <code>=MIN(100;REDONDEAR(visitas/12*100))</code>. El 12 es lo que acordaste en P3. Nunca lo dejes vacío: vacío cuenta como 0 y le suma 45 puntos de riesgo.</li>
+<li><strong>Limpieza.</strong> Datos → Limpieza de datos → Quitar duplicados. Las filas sin mail las anotás aparte, porque el flujo las saltea.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 2–4 horas.</li>
+<li><strong>Listo cuando:</strong> cada fila de «Socios» tiene ID, mail, fecha válida, Usage Score de 0 a 100 y Open Tickets con un número.</li>
+<li><strong>Si sale mal:</strong> si una fecha aparece pegada a la izquierda de la celda, es texto y no fecha. Formato → Número → Fecha, o la reescribís a mano.</li>
+</ul>
+<p><strong>P8 · ⭐ Entregar mapa de vencimientos al dueño</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás por primera vez cuánta plata vence y quién está flojo. <strong>Este es el primer resultado visible.</strong></li>
+<li><strong>Cómo:</strong> creás una pestaña «Mapa» con estos números:<ul>
+<li><strong>Planes que vencen en 0–7 días:</strong> <code>=CONTAR.SI.CONJUNTO(Socios!E:E;"&gt;="&amp;HOY();Socios!E:E;"&lt;="&amp;HOY()+7)</code>. Hacés lo mismo para 8–30 y 31–60 días.</li>
+<li><strong>Plata en juego en 60 días:</strong> <code>=SUMAR.SI.CONJUNTO(Socios!F:F;Socios!E:E;"&gt;="&amp;HOY();Socios!E:E;"&lt;="&amp;HOY()+60)</code>.</li>
+<li><strong>Socios con uso bajo:</strong> <code>=CONTAR.SI(Socios!G:G;"&lt;40")</code>.</li>
+<li><strong>Lista de socios sin mail.</strong></li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que la recepción consiga los mails que faltan.</li>
+<li><strong>Qué le entregás:</strong> el link a la planilla y un mensaje con tres números: cuántos vencen, cuánta plata hay en juego y cuántos están flojos.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo vio y te respondió.</li>
+<li><strong>Si sale mal:</strong> si los números dan raro, casi siempre son fechas mal leídas. Volvé al punto 1 de P7.</li>
+</ul>
+<h3>Etapa 4 · Instalación</h3>
+<p><strong>P9 · Importar plantilla y conectar la planilla</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla 19998 a tu n8n y la conectás a la planilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrís n8n.io/workflows/19998, tocás «Use for free» y la copiás a tu n8n.</li>
+<li>En los nodos «Read Renewal Sheet» y «Log Reminder Sent» elegís la credencial de Google Sheets. En Document elegís la planilla con «From list».</li>
+<li><strong>Volvés a elegir la pestaña «Renewals» en Sheet</strong>, porque al cambiar la planilla n8n la vacía.</li>
+<li>En «Log Reminder Sent», al elegir la pestaña se borra el mapeo (qué dato va a qué columna). En «Column to match on» ponés <code>Customer ID</code>. En «Values to Send» completás:<ul>
+<li>Customer ID = <code>{{ $('Loop Over Renewals').item.json.customerId }}</code></li>
+<li>Last Reminder Stage = <code>{{ $('Loop Over Renewals').item.json.stage }}</code></li>
+<li>Last Reminder Date = <code>{{ $('Loop Over Renewals').item.json.runDate }}</code></li>
+<li>Risk Score = <code>{{ $('Loop Over Renewals').item.json.riskScore }}</code></li>
+<li>Las demás quedan vacías: las vacías no se escriben.</li>
+</ul>
+</li>
+<li>En Settings de «Log Reminder Sent» y de «Send Renewal Email», pasás «On Error» de Continue a <strong>Stop Workflow</strong>. Así, si algo falla, la ejecución queda en rojo. No anota como enviado un mail que no salió ni lo repite al día siguiente.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> los dos nodos muestran la pestaña Renewals, el mapeo tiene 4 valores y los dos nodos están en Stop Workflow.</li>
+<li><strong>Si sale mal:</strong> si la pestaña aparece vacía, la volvés a elegir.</li>
+</ul>
+<p><strong>P10 · Pasar escalera a 60, 30 y 7</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> ajustás cuándo avisa el flujo y cuándo un socio cuenta como «en riesgo».</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el nodo «Score Risk and Pick Stage»:<ul>
+<li>Reemplazás LADDER por <code>[{ stage: 'T-60', from: 31, to: 60 }, { stage: 'T-30', from: 8, to: 30 }, { stage: 'T-7', from: 0, to: 7 }]</code>.</li>
+<li>Reemplazás ORDER por <code>{ '': 0, 'T-60': 1, 'T-30': 2, 'T-7': 3 }</code>.</li>
+<li>Cambiás <code>daysLeft &gt; 30</code> por <code>daysLeft &gt; 60</code>.</li>
+<li>Cambiás <code>risk &gt;= 70</code> por <code>risk &gt;= 50</code>.</li>
+<li>En <code>r.contractValue &gt;= 5000</code>, el 5000 pasa a ser el precio del plan más caro del gimnasio, en pesos.</li>
+</ul>
+</li>
+<li>En «High Risk Renewal?» cambiás 70 por 50.</li>
+<li>No traduzcas <code>Watch</code> ni <code>High risk</code>: el resumen y el texto de la IA dependen de esas palabras.</li>
+<li>En «Build Daily Digest»:<ul>
+<li>Cambiás <code>{ 'T-30': 0, 'T-7': 0, 'T-1': 0 }</code> por <code>{ 'T-60': 0, 'T-30': 0, 'T-7': 0 }</code>.</li>
+<li>Reemplazás la línea que empieza con <code>lines.push('30 days out: '</code> por <code>lines.push('A 60 días: ' + byStage['T-60'] + ' · A 30 días: ' + byStage['T-30'] + ' · A 7 días: ' + byStage['T-7']);</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> hiciste todos los cambios y guardaste.</li>
+<li><strong>Si sale mal:</strong> si aparece un error de código, falta una coma o una comilla. Copiá exacto.</li>
+</ul>
+<p><strong>P11 · Cambiar a Claude y escribir en español</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás la IA que redacta y le das las reglas del gimnasio.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Clave de Claude.</strong> Una clave de API es la contraseña con la que n8n usa a Claude. Entrás a console.anthropic.com → API Keys, creás una y cargás saldo.</li>
+<li><strong>Cambio de modelo.</strong> Borrás el nodo «Email Writing Model», que es OpenAI. A «Renewal Email Writer» le conectás un nodo «Anthropic Chat Model» con tu credencial.</li>
+<li><strong>System Message</strong> (las instrucciones fijas de la IA). Lo reescribís así, completando los corchetes:</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>Escribís los avisos de renovación de [NOMBRE DEL GIMNASIO]. Español rioplatense, con voseo, cálido y breve, máximo 120 palabras. Reglas: 1) Avisá que el plan vence en la fecha indicada; nunca digas que se renueva solo. 2) Cerrá con este link para renovar: [LINK]. 3) No menciones el puntaje de uso, el riesgo ni los reclamos. 4) Si Risk tier es Watch o High risk, ofrecé además esta alternativa: [ALTERNATIVA]. 5) En el aviso T-7, sumá: «Si no vas a renovar, contanos por qué en [URL DE LA ENCUESTA]». 6) No inventes precios, descuentos ni fechas. 7) Terminá con: «Si no querés recibir más estos avisos, respondé BAJA». Firmá como el equipo de [NOMBRE DEL GIMNASIO].</p>
+</blockquote>
+<pre><code>4. **Fecha.** En el campo Text cambiás la línea de la fecha por: `Renewal date: {{ DateTime.fromISO($json.renewalDate).toFormat('dd/MM/yyyy') }}`.
+</code></pre>
+<ul>
+<li><strong>Qué le pedís al cliente:</strong> nada nuevo. El link y la alternativa ya los acordaste en P3.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1–1,5 horas.</li>
+<li><strong>Listo cuando:</strong> Claude está conectado y el System Message tiene las 7 reglas.</li>
+<li><strong>Si sale mal:</strong> si el mail sale en inglés, quedó texto en inglés en el System Message. Borralo entero.</li>
+</ul>
+<p><strong>P12 · Conectar Gmail, resumen diario y Calendar</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> configurás por dónde salen los avisos y cómo se entera el dueño.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Mails a socios.</strong> En «Send Renewal Email» elegís la credencial de Gmail y ponés «Email Type» en <strong>Text</strong>. Si queda en HTML, el mail llega en un solo bloque.</li>
+<li><strong>Resumen diario.</strong> Borrás «Post Digest to Slack» y ponés un nodo «Gmail» → Send a message:<ul>
+<li>To: <strong>tu mail por ahora</strong>. En P22 lo cambiás por el del dueño.</li>
+<li>Asunto: «Renovaciones de hoy».</li>
+<li>Message: <code>{{ $json.summary }}</code>.</li>
+<li>Email Type: Text.</li>
+</ul>
+</li>
+<li><strong>Calendario.</strong> En «Book Owner Save Call» elegís la credencial de Calendar. En Calendar pasás el modo a «From list» y elegís el calendario del dueño. El evento cae el día del vencimiento a las 10:00.</li>
+<li><strong>Horario.</strong> En Settings del flujo ponés tu Timezone (tu zona horaria), así «Daily Renewal Scan» corre a las 9 de tu país.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> los tres nodos tienen credencial y el flujo tiene zona horaria.</li>
+<li><strong>Si sale mal:</strong> si Calendar da error, quedó el modo «name». Pasalo a «From list».</li>
+</ul>
+<p><strong>P13 · Sumar encuesta de salida al aviso T-7</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> instalás la plantilla 17797 para preguntarle al que se va por qué se va.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La importás igual que en P9.</li>
+<li>Cargás tu clave de Claude como credencial «Header Auth», un tipo de credencial que manda la clave en cada pedido.</li>
+<li>Copiás la <strong>URL de producción</strong> del formulario. Es la que anda con el flujo publicado; la de test solo anda con el editor abierto.</li>
+<li>La pegás en la regla 5 de P11.</li>
+<li>Lo que pide la plantilla por dentro está en las notas que trae en n8n.</li>
+<li><strong>Versión mínima:</strong> si estás corto de tiempo, lanzás sin la regla 5 y sumás la encuesta en la semana 2.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> la encuesta, más adelante, dentro del reporte.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 horas.</li>
+<li><strong>Listo cuando:</strong> respondés el formulario desde la URL de producción y la respuesta se guarda.</li>
+<li><strong>Si sale mal:</strong> si no guarda nada, pegaste la URL de test.</li>
+</ul>
+<p><strong>P14 · ¿Tiene WhatsApp Cloud y permiso?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si el WhatsApp entra ahora o queda para después.</li>
+<li><strong>Cómo:</strong> es SÍ solo si se cumplen las tres cosas:<ul>
+<li>El gimnasio ya tiene WhatsApp Business Cloud de Meta con número dado de alta.</li>
+<li>Tiene una plantilla de renovación aprobada en la categoría Utilidad.</li>
+<li>Sabe qué socios aceptaron recibir WhatsApp.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que confirme esas tres cosas.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> está decidido. SÍ → P15. NO → P16: seguís solo con mail y el WhatsApp queda como ajuste.</li>
+<li><strong>Si sale mal:</strong> si no lo sabe, es NO. No frenes la entrega por esto.</li>
+</ul>
+<p><strong>P15 · Agregar WhatsApp con plantilla aprobada</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> sumás el aviso por WhatsApp además del mail.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Columna Phone.</strong> Sumás la columna con código de país, sin + ni espacios. En Argentina, un celular empieza con 549.</li>
+<li><strong>Código.</strong> En «Normalize Renewal Rows», al lado de email, agregás <code>phone: String(r['Phone'] || '').trim(),</code>.</li>
+<li><strong>Nodo nuevo.</strong> Entre «Log Reminder Sent» y «High Risk Renewal?» ponés un nodo «WhatsApp Business Cloud» → Send Template:<ul>
+<li>Sender Phone Number: el número del gimnasio.</li>
+<li>Recipient's Phone Number: <code>{{ $('Loop Over Renewals').item.json.phone }}</code>.</li>
+<li>«On Error» en <strong>Continue</strong>, para que un número mal cargado no frene al resto.</li>
+</ul>
+</li>
+<li><strong>La plantilla de Meta</strong>, sin ofertas, porque si no deja de ser de Utilidad: «Hola {{1}}, te recordamos que tu plan en [GIMNASIO] vence el {{2}}. Si querés renovarlo, respondé este mensaje.»</li>
+<li>Cargás teléfono <strong>solo</strong> a los socios que aceptaron WhatsApp. El mail sigue haciendo falta: las filas sin mail se descartan.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> acceso a su cuenta de Meta Business y la lista de socios que aceptaron.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 horas, más la aprobación de Meta, que puede tardar horas o días. Pedila apenas termina P3.</li>
+<li><strong>Listo cuando:</strong> te llega el WhatsApp de prueba a tu número.</li>
+<li><strong>Si sale mal:</strong> si Meta rechaza la plantilla, sacale todo lo que suene a venta y volvé a mandarla.</li>
+</ul>
+<h3>Etapa 5 · Prueba</h3>
+<p><strong>P16 · Probar con mi mail dos veces</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> probás el flujo sin tocar a ningún socio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Renewals» cargás una fila con <strong>tu</strong> mail y vencimiento a 45 días.</li>
+<li>Tocás «Execute workflow» dos veces.</li>
+<li>La primera vez tiene que llegarte el mail y aparecer T-60 en «Last Reminder Stage». La segunda vez no tiene que llegarte nada.</li>
+<li>Extra: sumás una fila a 20 días y otra a 5 días, también con tu mail, para ver los textos de T-30 y T-7.</li>
+<li>Para ver un caso en riesgo, ponés una fila con Usage Score 10 y un reclamo abierto. Si no aparece en el calendario, bajá más el uso. Después borrás ese evento del calendario del dueño.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> se cumple la condición de P17.</li>
+<li><strong>Si sale mal:</strong> mirá P18.</li>
+</ul>
+<p><strong>P17 · ¿Llegó una sola vez y anotó T-60?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> verificás que la prueba salió bien.</li>
+<li><strong>Cómo:</strong> tiene que cumplirse todo esto:<ul>
+<li>Llegó un solo mail por fila.</li>
+<li>Está en español.</li>
+<li>La fecha está en formato dd/mm/aaaa.</li>
+<li>El texto está separado en párrafos.</li>
+<li>El resumen dice «A 60 días: 1…» y no «undefined».</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> se cumple todo. SÍ → P19. NO → P18.</li>
+<li><strong>Si sale mal:</strong> si una sola cosa falla, es NO.</li>
+</ul>
+<p><strong>P18 · Corregir mapeo y configuración</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás lo que falló y volvés a probar.</li>
+<li><strong>Cómo:</strong> según lo que viste:<ul>
+<li><strong>Llegó dos veces:</strong> revisá el mapeo de P9.</li>
+<li><strong>El resumen dice «undefined»:</strong> revisá la línea <code>lines.push</code> de P10.</li>
+<li><strong>La fecha está corrida:</strong> revisá la región de la planilla (P7).</li>
+<li><strong>El mail llegó en un bloque:</strong> poné Email Type en Text.</li>
+<li><strong>Siempre, antes de volver a probar:</strong> borrá «Last Reminder Stage» de las filas de prueba. Si no, no vuelve a mandar.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30–60 minutos.</li>
+<li><strong>Listo cuando:</strong> volviste a P16.</li>
+<li><strong>Si sale mal:</strong> abrí Executions (el historial de corridas de n8n) y mirá en qué nodo se pone rojo.</li>
+</ul>
+<h3>Etapa 6 · Demo al dueño</h3>
+<p><strong>P19 · Mostrar mails y resumen al dueño</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás cómo va a funcionar, con ejemplos reales.</li>
+<li><strong>Cómo:</strong> 30 minutos con pantalla compartida o en el gimnasio. Le mostrás:<ul>
+<li>Los mails T-60, T-30 y T-7.</li>
+<li>El mail que lleva la alternativa.</li>
+<li>El resumen diario.</li>
+<li>El evento en el calendario.</li>
+<li>Qué tiene que hacer la recepción (P26).</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que mire cada texto con atención.</li>
+<li><strong>Qué le entregás:</strong> el instructivo de una página para la recepción.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> vio todo.</li>
+<li><strong>Si sale mal:</strong> si no tiene tiempo, le mandás capturas y un audio de 2 minutos.</li>
+</ul>
+<p><strong>P20 · ¿Aprueba textos y alternativa?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> pedís el visto bueno.</li>
+<li><strong>Cómo:</strong> tiene que aprobar el tono, el link, la alternativa y la firma.</li>
+<li><strong>Qué le pedís al cliente:</strong> un «sí» por escrito.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> aprobó. SÍ → P22. NO → P21.</li>
+<li><strong>Si sale mal:</strong> si pide cambios de fondo, como otra escalera o avisos a los mensuales, eso es otro alcance y se cotiza aparte.</li>
+</ul>
+<p><strong>P21 · Ajustar textos con sus comentarios</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás lo que pidió.</li>
+<li><strong>Cómo:</strong> editás el System Message, borrás «Last Reminder Stage» de las filas de prueba y volvés a probar.</li>
+<li><strong>Qué le pedís al cliente:</strong> los cambios, todos juntos.</li>
+<li><strong>Qué le entregás:</strong> los mails nuevos de ejemplo.</li>
+<li><strong>Cuánto tarda:</strong> 30–60 minutos.</li>
+<li><strong>Listo cuando:</strong> volvés a P19. Como mucho, dos rondas.</li>
+<li><strong>Si sale mal:</strong> si pide «que suene más vendedor», recordale que los avisos de WhatsApp tienen que ser de utilidad, no promoción.</li>
+</ul>
+<h3>Etapa 7 · Lanzamiento con socios reales</h3>
+<p><strong>P22 · Cargar socios reales y publicar</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás de la prueba a los socios de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrás las filas de prueba.</li>
+<li>Cambiás el destinatario del resumen al mail del dueño.</li>
+<li>Copiás «Socios» en «Renewals» pegando solo valores: Ctrl+Shift+V.</li>
+<li>Revisás tres fechas al azar.</li>
+<li>Tocás <strong>Publish</strong>.</li>
+<li>Lanzás de lunes a miércoles, nunca un viernes.</li>
+<li>Le avisás al dueño con el <strong>mensaje 3</strong>. Ojo: la primera mañana salen juntos todos los avisos de los socios que ya están dentro de los 60 días.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que la recepción esté atenta a las respuestas, que llegan a la casilla de Gmail del gimnasio.</li>
+<li><strong>Qué le entregás:</strong> el sistema funcionando.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> el flujo figura como publicado.</li>
+<li><strong>Si sale mal:</strong> si te olvidaste de borrar una fila de prueba, la borrás antes de las 9 del día siguiente.</li>
+</ul>
+<p><strong>P23 · Escanear a las 9 y mandar avisos</strong> (sistema)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Pasa solo.</li>
+<li><strong>Cómo:</strong> todos los días a las 9, el flujo hace esto:<ol>
+<li>Lee la planilla.</li>
+<li>Calcula cuántos días le faltan a cada socio y su riesgo.</li>
+<li>Claude redacta el aviso que corresponde.</li>
+<li>Lo manda.</li>
+<li>Lo anota en la planilla.</li>
+</ol>
+</li>
+<li>Durante la primera semana, vos mirás Executions cada mañana, 10 minutos.</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> todos los días, automático.</li>
+<li><strong>Listo cuando:</strong> la primera corrida terminó en verde.</li>
+<li><strong>Si sale mal:</strong> si la corrida queda en rojo, el flujo paró a propósito y no anotó nada. Corregís y volvés a ejecutar.</li>
+</ul>
+<p><strong>P24 · Mandar resumen y agendar casos en riesgo</strong> (sistema)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Pasa solo.</li>
+<li><strong>Cómo:</strong><ul>
+<li>El dueño recibe todos los días el mail «Renovaciones de hoy».</li>
+<li>Cada socio con riesgo de 50 o más le aparece como evento en su calendario.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que lea el resumen.</li>
+<li><strong>Qué le entregás:</strong> las alertas de socios en riesgo.</li>
+<li><strong>Cuánto tarda:</strong> automático.</li>
+<li><strong>Listo cuando:</strong> te confirma que recibió el primer resumen.</li>
+<li><strong>Si sale mal:</strong> si no le llega, mirá su carpeta de spam y marcalo como «No es spam».</li>
+</ul>
+<p><strong>P25 · Llamar a los socios en riesgo</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño o quien él eligió llama a los socios en riesgo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Llama esa misma semana, sin esperar al día del evento.</li>
+<li>Guion sugerido: «Hola [nombre], te llamo de [gimnasio]. Vi que tu plan vence el [fecha]. ¿Cómo venís con el entrenamiento? ¿Hay algo que podamos mejorar?»</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> las llamadas.</li>
+<li><strong>Qué le entregás:</strong> el guion.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos por socio.</li>
+<li><strong>Listo cuando:</strong> anota el resultado en la planilla. Sugerido: una columna «Nota llamada» al final.</li>
+<li><strong>Si sale mal:</strong> si no llama, lo hablás en la revisión semanal. El sistema avisa; la conversación es de él.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento y ajustes</h3>
+<p><strong>P26 · Anotar renovaciones y borrar etapa</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> la recepción mantiene la planilla al día.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Cuando un socio renueva:</strong> pone la nueva «Renewal Date» y <strong>borra «Last Reminder Stage»</strong>. Si no la borra, el sistema no le vuelve a escribir en el próximo vencimiento.</li>
+<li><strong>Cuando entra un socio nuevo de 3 meses o más:</strong> suma una fila.</li>
+<li><strong>Cuando alguien responde BAJA:</strong> borra su fila.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que lo haga siempre, en el momento.</li>
+<li><strong>Qué le entregás:</strong> el instructivo de una página.</li>
+<li><strong>Cuánto tarda:</strong> 1 minuto por socio.</li>
+<li><strong>Listo cuando:</strong> la planilla coincide con los pagos de la semana.</li>
+<li><strong>Si sale mal:</strong> si un socio que ya renovó sigue recibiendo avisos, es que no se anotó. Lo detectás en P27.</li>
+</ul>
+<p><strong>P27 · Revisar ejecuciones y planilla cada semana</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que todo siga funcionando.</li>
+<li><strong>Cómo:</strong> 30 minutos por semana:<ul>
+<li>¿Hay corridas en rojo?</li>
+<li>¿Hay filas sin mail?</li>
+<li>¿Hay renovaciones sin anotar? Las comparás con los pagos.</li>
+<li>¿Qué respuestas llegaron a la encuesta?</li>
+<li>Una vez por mes, actualizás el Usage Score con la asistencia nueva.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> la asistencia del mes.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> completaste la revisión.</li>
+<li><strong>Si sale mal:</strong> si no te pasa la asistencia, dejás el último valor, nunca vacío.</li>
+</ul>
+<p><strong>P28 · ¿Corrió todo sin errores?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si hay que corregir algo.</li>
+<li><strong>Cómo:</strong> es SÍ si no hay corridas en rojo, no hay filas rotas y no hubo quejas.</li>
+<li><strong>Qué le pedís al cliente:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> está decidido. SÍ → seguís, y a los 30 días del lanzamiento vas a P30. NO → P29.</li>
+<li><strong>Si sale mal:</strong> ante la duda, es NO.</li>
+</ul>
+<p><strong>P29 · Corregir filas o ajustar textos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás lo que encontraste.</li>
+<li><strong>Cómo:</strong> corregís fechas o mails, ajustás el texto que generó dudas y sumás WhatsApp o la encuesta si habían quedado pendientes.</li>
+<li><strong>Qué le pedís al cliente:</strong> el dato correcto, si hace falta.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30–60 minutos.</li>
+<li><strong>Listo cuando:</strong> volvés a P27.</li>
+<li><strong>Si sale mal:</strong> si el mismo error se repite dos semanas seguidas, el problema es el proceso de la recepción. Repasá el instructivo con ellos.</li>
+</ul>
+<h3>Etapa 9 · Reporte, renovación o salida</h3>
+<p><strong>P30 · Entregar reporte del primer mes</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás qué pasó en el mes.</li>
+<li><strong>Cómo:</strong> armás el reporte con estos datos:<ul>
+<li>Avisos enviados por etapa. Los contás en Executions o en la carpeta Enviados de Gmail.</li>
+<li>Planes que vencían y cuántos renovaron.</li>
+<li>Plata renovada: la suma de Contract Value de los que renovaron.</li>
+<li>Casos en riesgo y cuántos se llamaron.</li>
+<li>Qué dijo la encuesta.</li>
+<li>La comparación con la cifra base de P3, si la hay.</li>
+<li>No atribuyas renovaciones al sistema ni prometas porcentajes. Lo que garantizás es que el sistema corrió y avisó a tiempo.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> 20 minutos para verlo juntos.</li>
+<li><strong>Qué le entregás:</strong> el reporte y el <strong>mensaje 4</strong>.</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> lo leyó.</li>
+<li><strong>Si sale mal:</strong> si en el mes vencieron pocos planes, decilo así, sin inflar los números.</li>
+</ul>
+<p><strong>P31 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás si sigue.</li>
+<li><strong>Cómo:</strong> se lo preguntás en la reunión del reporte.</li>
+<li><strong>Qué le pedís al cliente:</strong> que confirme.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> en la misma reunión.</li>
+<li><strong>Listo cuando:</strong> confirma. SÍ → P32. NO → P33.</li>
+<li><strong>Si sale mal:</strong> si duda, ofrecele un mes más con un ajuste concreto.</li>
+</ul>
+<p><strong>P32 · Ofrecer 16 Plata Dormida</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le proponés el próximo servicio.</li>
+<li><strong>Cómo:</strong> los socios que no renovaron y los motivos de la encuesta son la base para <em>16 Plata Dormida</em>, que es reactivar ex socios. Si tiene muchos mensuales, la otra opción es <em>04 Cobro sin Perseguir</em>.</li>
+<li><strong>Qué le pedís al cliente:</strong> una charla para verlo.</li>
+<li><strong>Qué le entregás:</strong> una propuesta corta.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> hay una fecha para hablarlo.</li>
+<li><strong>Si sale mal:</strong> si no es el momento, lo retomás en el reporte del mes 3.</li>
+</ul>
+<p><strong>P33 · Entregar planilla y apagar ordenado</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo, sin dejar nada colgado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La planilla queda en su Drive.</li>
+<li>Despublicás el flujo.</li>
+<li>Borrás sus credenciales de tu n8n.</li>
+<li>Le pedís que revoque el acceso: en su cuenta de Google, Seguridad → Apps de terceros.</li>
+<li>Le pasás los textos y, si lo pide, el flujo exportado.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que revoque el acceso.</li>
+<li><strong>Qué le entregás:</strong> la planilla, los textos y el flujo.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no tenés acceso a nada suyo.</li>
+<li><strong>Si sale mal:</strong> si se olvida de revocar, borrar las credenciales de tu lado ya corta el acceso.</li>
+</ul>
+<hr />
+<h2>3. Las tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago de setup y primer mes (día 0)</li>
+<li>☐ Charla de 30 minutos: planes, alternativa, link, visitas esperadas, quién llama, cifra base (día 1)</li>
+<li>☐ Excel de socios de 3 meses o más: número, nombre, mail, teléfono, plan, precio, vencimiento (día 1)</li>
+<li>☐ Asistencia del último mes (día 1)</li>
+<li>☐ Reclamos abiertos (día 1)</li>
+<li>☐ Link para renovar (día 1)</li>
+<li>☐ Si va WhatsApp: acceso a Meta Business y lista de socios que aceptaron (día 1)</li>
+<li>☐ 15 minutos de pantalla compartida para los accesos de Google y edición de la planilla (días 2–3)</li>
+<li>☐ Mails que faltan, según el mapa (día 4)</li>
+<li>☐ Aprobación de textos (días 11–12)</li>
+<li>☐ Nombre de quién en recepción anota las renovaciones (día 12)</li>
+<li>☐ Asistencia del mes, todos los meses (desde la semana 4)</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Mapa de vencimientos con plata en juego ⭐</li>
+<li>☐ Avisos de renovación a 60, 30 y 7 días por mail, y por WhatsApp si corresponde</li>
+<li>☐ Alternativa automática para el socio que duda</li>
+<li>☐ Encuesta de salida con IA en el aviso de 7 días</li>
+<li>☐ Resumen diario al dueño y eventos en su calendario para los socios en riesgo</li>
+<li>☐ Instructivo de una página para la recepción</li>
+<li>☐ Reporte mensual</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, con tus 2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago y bienvenida (P1–P2)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Charla de 30 minutos (P3). Si va WhatsApp, pedir la plantilla a Meta hoy</td>
+</tr>
+<tr>
+<td>2–3</td>
+<td>El dueño pasa datos y accesos (P4–P6)</td>
+</tr>
+<tr>
+<td>3–4</td>
+<td>Planilla (P7)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>⭐ Mapa de vencimientos (P8)</td>
+</tr>
+<tr>
+<td>5–9</td>
+<td>Instalación (P9–P15), un paso por día</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Prueba (P16–P18)</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Demo (P19–P20)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Ajustes (P21)</td>
+</tr>
+<tr>
+<td>13 (lunes a miércoles)</td>
+<td>Lanzamiento (P22)</td>
+</tr>
+<tr>
+<td>14, 9 hs</td>
+<td>Primeros avisos y primer resumen (P23–P24)</td>
+</tr>
+<tr>
+<td>14–20</td>
+<td>Revisión diaria de 10 minutos</td>
+</tr>
+<tr>
+<td>Semanas 4–7</td>
+<td>Revisión semanal (P27)</td>
+</tr>
+<tr>
+<td>Día 30 del lanzamiento</td>
+<td>Reporte del primer mes (P30)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, arrancamos 💪 Para armar lo de las renovaciones necesito:
+1) Un Excel de los socios con plan trimestral, semestral o anual: número de socio, nombre, mail, teléfono, plan, precio y fecha de vencimiento.
+2) La asistencia del último mes de cada uno: lo que tengas, sea molinete, app o planilla.
+3) Los reclamos que tengas abiertos.
+4) El link con el que renuevan, de pago o de WhatsApp.
+Y 30 min para definir qué le ofrecemos al que duda. ¿Te va el [día] a las [hora]?</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir me falta solo esto: [lo que falta]. Con eso, en un par de días te muestro cuántos planes vencen en los próximos 60 días y cuánta plata hay en juego. ¿Me lo pasás hoy o mañana?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>[Nombre], ¡quedó andando! 🎉 Desde mañana a las 9, el sistema les avisa solo a los socios cuando les faltan 60, 30 y 7 días para vencer. Mañana salen varios juntos, así que puede que te escriban más que de costumbre. Todos los días te llega un mail «Renovaciones de hoy». Si alguien está en riesgo, te aparece en el calendario para que lo llames. Lo único que te pido: cuando alguien renueva, en recepción cambian la fecha y borran la etapa (está en el instructivo). Cualquier cosa rara, escribime.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>[Nombre], va el resumen del primer mes 👇
+• Avisos enviados: [N]
+• Planes que vencían: [N] · Renovaron: [N] ([%])
+• Plata renovada: $[N]
+• Socios en riesgo detectados: [N] · Llamados: [N]
+• Por qué se van los que no renuevan: [resumen de la encuesta]
+Para el mes que viene te propongo [ajuste]. ¿Tenés 20 min esta semana para verlo juntos?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p12">← Volver a la ficha 12</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

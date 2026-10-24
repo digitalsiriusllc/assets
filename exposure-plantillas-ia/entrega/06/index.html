@@ -1,0 +1,667 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Bienvenida Automática · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Bienvenida Automática, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Bienvenida Automática">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 06 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Bienvenida Automática</h1>
+  <p class="bajada">Arranque de clientes nuevos. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Agencias</span><span class="chip">Setup USD 600–1.000</span><span class="chip">7–10 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<blockquote>
+<p>⚠️ El mail de bienvenida manda al cliente a un cuestionario que usa <strong>otra plantilla, la 8122</strong> (cuestionario de Typeform y brief con IA). Esa parte va con menos detalle: antes de instalarla, leé las notas que trae en n8n.</p>
+</blockquote>
+<p><strong>Dos palabras para no confundirnos:</strong></p>
+<ul>
+<li><strong>La agencia</strong> es tu cliente, el que te paga.</li>
+<li><strong>El cliente nuevo</strong> es el cliente de la agencia. A él le llega la bienvenida automática.</li>
+</ul>
+<p><strong>Lo que doy por hecho</strong>, y conviene confirmar en la llamada de arranque:</p>
+<ul>
+<li>La agencia usa Gmail y Google Drive.</li>
+<li>La agencia usa ClickUp. Si no lo usa, crea una cuenta gratis; si usa otra herramienta, esa parte queda <strong>POR DEFINIR</strong>.</li>
+<li>Todo el sistema manda mails, no WhatsApp. Por eso no hacen falta plantillas aprobadas por Meta. El mail de bienvenida es de servicio, no de marketing, así que tampoco lleva opción de baja.</li>
+</ul>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Bienvenida Automática" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Mini glosario para cuando aparezcan estas palabras:</strong></p>
+<ul>
+<li><strong>n8n</strong>: el programa donde vive el flujo, que es la cadena de pasos automáticos.</li>
+<li><strong>Nodo</strong>: cada cajita del flujo en n8n.</li>
+<li><strong>API</strong>: la puerta por donde un programa le habla a otro.</li>
+<li><strong>Token o clave de API</strong>: una contraseña larga para esa puerta.</li>
+<li><strong>OAuth</strong>: el botón «Iniciar sesión con Google». Da permiso sin pasarte la contraseña.</li>
+</ul>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup del servicio</strong> (la agencia)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Confirmás que entró el pago del setup y que quedó por escrito qué incluye.</li>
+<li><strong>Cómo:</strong> Le mandás un acuerdo de una página con estos datos:<ul>
+<li>Qué se entrega: las listas del final.</li>
+<li>El plazo: 10 días hábiles, contados desde que está todo lo pedido (P6).</li>
+<li>El monto de la mensualidad.</li>
+<li>Qué cubre la mensualidad: revisión semanal, ajustes y reporte mensual.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> El pago y el «ok» al acuerdo, por mail o WhatsApp.</li>
+<li><strong>Qué le entregás:</strong> El acuerdo y el recibo.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> Ves la plata acreditada.</li>
+<li><strong>Si sale mal:</strong> Si el plazo no queda atado a los accesos, después te reclaman demoras que no son tuyas. Escribilo así: «el plazo corre desde que tengo todo lo de la lista».</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con la lista de pedidos</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le escribís el mismo día con todo lo que necesitás y le proponés horario para la llamada.</li>
+<li><strong>Cómo:</strong> Usás el mensaje 1 de la sección 4. Le adjuntás la lista de la sección 3.</li>
+<li><strong>Qué le pedís al cliente:</strong> Un horario para la llamada de arranque.</li>
+<li><strong>Qué le entregás:</strong> La lista de pedidos.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> La llamada quedó agendada.</li>
+<li><strong>Si sale mal:</strong> Si no contesta en 24 horas, le escribís una vez más con dos horarios concretos.</li>
+</ul>
+<p><strong>P3 · Hacer la llamada de arranque</strong> (vos, 45 minutos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Entendés cómo arrancan hoy a un cliente nuevo y dejás todo lo pendiente asignado.</li>
+<li><strong>Cómo:</strong> Por videollamada le preguntás esto, y anotás todo:<ul>
+<li>¿Qué pasos hacen hoy cuando entra un cliente? Así sale la lista de tareas para la IA.</li>
+<li>¿Quién cierra las ventas? Esa persona va a usar el formulario.</li>
+<li>¿A quién se le asignan las tareas en ClickUp?</li>
+<li>¿En qué zona horaria trabajan?</li>
+<li>¿Qué tono usan con los clientes?</li>
+<li>¿Qué quieren saber del cliente nuevo? Así salen las preguntas del cuestionario.</li>
+<li><strong>La línea de base</strong>, o sea, el número de hoy para comparar después: ¿cuántas horas les lleva arrancar a un cliente? ¿Cuántos días pasan hasta la primera entrega? Si no lo saben, queda <strong>POR DEFINIR</strong> y lo empiezan a anotar desde hoy.</li>
+<li>Avisales que el PDF de cada propuesta lo va a leer una IA, Claude, para armar las tareas. Que estén de acuerdo.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> Que cree las cuentas de P4 en los próximos 2 días.</li>
+<li><strong>Qué le entregás:</strong> Un resumen por escrito de lo que acordaron.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos de llamada y 15 de resumen.</li>
+<li><strong>Listo cuando:</strong> Tenés la lista de pasos de arranque, aunque sea en borrador, y quién hace qué.</li>
+<li><strong>Si sale mal:</strong> Si no tienen ningún proceso definido, no inventes. Armá con ellos una lista mínima de 8 a 12 pasos y marcala como versión 1.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P4 · Crear cuentas y compartir los accesos</strong> (la agencia)</p>
+<ul>
+<li><strong>Qué hacés:</strong> La agencia crea las cuentas a su nombre. Así, si algún día se van, todo queda de ellos.</li>
+<li><strong>Cómo:</strong> Le pedís estas cuentas:<ul>
+<li><strong>n8n Cloud:</strong> la crean con un mail de la agencia y su tarjeta. Revisá el precio vigente. Te pasan el acceso por un medio privado, nunca en un grupo.</li>
+<li><strong>ClickUp:</strong> el dueño entra a su avatar → Settings → Apps → API Token → Generate. Es un código que empieza con <code>pk_</code>. Te lo pasa por privado.</li>
+<li><strong>Anthropic (Claude):</strong> en console.anthropic.com crean la cuenta, cargan crédito y crean una clave en «API Keys».</li>
+<li><strong>Calendly</strong> u otra agenda: te pasan el link para la llamada de arranque con el cliente nuevo.</li>
+<li><strong>Typeform:</strong> crean la cuenta y te invitan. Revisen el límite de respuestas del plan gratis.</li>
+<li><strong>Google:</strong> no hace falta que te pasen la contraseña. La conexión la hacen ellos en 15 minutos con vos (ver P8).</li>
+</ul>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> Todo lo de la lista.</li>
+<li><strong>Qué le entregás:</strong> —</li>
+<li><strong>Cuánto tarda:</strong> 1 o 2 días de la agencia. A vos te lleva 15 minutos ir revisando.</li>
+<li><strong>Listo cuando:</strong> Podés entrar a n8n, tenés el token de ClickUp, la clave de Anthropic, el link de agenda y el acceso a Typeform.</li>
+<li><strong>Si sale mal:</strong> Lo más común es que la clave de Anthropic no funcione porque no cargaron crédito. Pediles que lo revisen en «Billing».</li>
+</ul>
+<p><strong>P5 · Mandar checklist de arranque y PDF de ejemplo</strong> (la agencia)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Recibís la lista final de pasos de arranque y una propuesta de ejemplo.</li>
+<li><strong>Cómo:</strong> El PDF puede ser una propuesta vieja. Tiene que ser <strong>un PDF con texto</strong>: abrilo y probá seleccionar una palabra con el mouse. Si no se puede, es un escaneo y no sirve.</li>
+<li><strong>Qué le pedís al cliente:</strong><ul>
+<li>La checklist.</li>
+<li>El PDF.</li>
+<li>El nombre y el mail de quien cierra las ventas.</li>
+<li>La firma que quieren en el mail.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> —</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> Tenés las cuatro cosas.</li>
+<li><strong>Si sale mal:</strong> Si mandan un escaneo, pediles que exporten la propuesta desde Word, Docs o Canva como PDF.</li>
+</ul>
+<p><strong>P6 · ¿Está todo lo pedido?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Tachás la lista de la sección 3.</li>
+<li><strong>Listo cuando:</strong> Está todo tachado. <strong>SÍ</strong> → P8, y desde hoy corre el plazo. <strong>NO</strong> → P7.</li>
+<li><strong>Si sale mal:</strong> No arranques «con lo que hay». Te vas a trabar en la mitad.</li>
+</ul>
+<p><strong>P7 · Mandar recordatorio con lo que falta</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le escribís solo lo que falta, sin repetir toda la lista.</li>
+<li><strong>Cómo:</strong> Usás el mensaje 2 de la sección 4.</li>
+<li><strong>Qué le pedís al cliente:</strong> Lo pendiente.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> Te responde. Volvés a P4.</li>
+<li><strong>Si sale mal:</strong> Si a los 3 días sigue trabado, ofrecele 20 minutos por videollamada para hacerlo juntos.</li>
+</ul>
+<h3>Etapa 3 · Instalación de la plantilla</h3>
+<p><strong>P8 · Importar la plantilla y conectar Google</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Traés la plantilla a la cuenta de n8n de la agencia y la conectás con su Gmail y su Drive.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrá a n8n.io/workflows/13658 y tocá el botón para usar la plantilla. Elegí la cuenta de la agencia o copiala y pegala con Ctrl+V en un flujo nuevo.</li>
+<li>Ponele de nombre «Bienvenida automática · [Agencia]».</li>
+<li>Coordiná 15 minutos por videollamada con el dueño, con tu pantalla compartida.</li>
+<li>En «Credentials» → «Create credential», creá «Google Drive OAuth2» y después «Gmail OAuth2».</li>
+<li>En cada una, el dueño toca «Sign in with Google» con la cuenta del negocio y acepta los permisos.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> Esos 15 minutos.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Las dos credenciales aparecen en verde.</li>
+<li><strong>Si sale mal:</strong> Si Google dice «app no verificada», n8n no es Cloud sino instalado. Seguí el punto de Google Cloud de «Qué cuentas necesitás» y pasá la app a producción. Si la dejás en modo prueba, la conexión se corta a los 7 días.</li>
+</ul>
+<p><strong>P9 · Ajustar el formulario y protegerlo con clave</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás el formulario de alta en español, seguro y aceptando solo PDF. Lo completa quien cierra la venta.</li>
+<li><strong>Cómo:</strong> Abrí el nodo «Receive Onboarding Form»:<ol>
+<li>Traducí el título, por ejemplo «Alta de cliente nuevo», y los textos de ayuda (Placeholder).</li>
+<li><strong>No toques las etiquetas</strong> Name, Email, Company Name, Website ni Proposal/Scope Document. Los demás nodos buscan cada dato por ese nombre exacto.</li>
+<li>En «Proposal/Scope Document», poné <code>.pdf</code> en Accepted File Types, donde hoy dice «drop the proposal here».</li>
+<li>En ese mismo campo, apagá Multiple Files.</li>
+<li>En «Email», cambiá Element Type a Email.</li>
+<li>En Authentication, elegí Basic Auth y creá una credencial con un usuario y una clave.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> El usuario y la clave, más adelante en P24, solo a quien cierra la venta.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Abrís la vista previa del formulario y te pide clave, acepta solo PDF y valida el mail.</li>
+<li><strong>Si sale mal:</strong> Si traducís las etiquetas, el flujo se rompe más adelante sin aviso claro. Dejalas en inglés.</li>
+</ul>
+<p><strong>P10 · Apuntar la carpeta de Drive y compartirla</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que cada cliente nuevo tenga su carpeta dentro de «Clientes» y que pueda abrirla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el Drive de la agencia, creá la carpeta «Clientes» si no existe.</li>
+<li>En el nodo «Create Google Drive Folder», elegí la credencial y, en Parent Folder, elegí «Clientes». Hoy apunta a «Lead Magnets», que es del autor de la plantilla.</li>
+<li>Tocá el «+» de la flecha que une «Set Drive Folder ID» con «Create ClickUp Folder» y agregá un nodo <strong>Google Drive</strong>.</li>
+<li>Configuralo así:<ul>
+<li>Resource: Folder.</li>
+<li>Operation: Share.</li>
+<li>Folder: By ID, pasá el campo a modo Expression y pegá <code>{{ $('Create Google Drive Folder').item.json.id }}</code>.</li>
+<li>En Permissions: Role «Writer», Type «User».</li>
+<li>Email Address, en modo Expression: <code>{{ $('Receive Onboarding Form').item.json.Email }}</code>.</li>
+</ul>
+</li>
+<li>Renombralo «Compartir carpeta con el cliente». «Writer» quiere decir que el cliente puede subir archivos.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Los dos nodos están configurados y sin alertas rojas.</li>
+<li><strong>Si sale mal:</strong> Si te salteás el nodo de compartir, el cliente recibe un link que no puede abrir. Es el error más visible de todos.</li>
+</ul>
+<p><strong>P11 · Conectar ClickUp al espacio de la agencia</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que la carpeta, la lista y las tareas se creen en el ClickUp de la agencia.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá una credencial de ClickUp con el token <code>pk_</code>.</li>
+<li>En «Create ClickUp Folder», «Create ClickUp List» y «Create ClickUp Task», elegí de la lista el Team y el Space de la agencia. Hoy tienen fijos 90131253945 y 90135217093, que son del autor.</li>
+<li>En «Create ClickUp Task», cambiá el asignado 138170684 por la persona que te dijeron en P3, o borralo.</li>
+<li>En los Settings de «Create ClickUp Folder», pasá On Error de «Continue» a «Stop Workflow». Así, si ClickUp falla, lo ves ahí mismo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Los tres nodos muestran el espacio de la agencia y ningún número del autor.</li>
+<li><strong>Si sale mal:</strong> Si la lista de Team aparece vacía, el token está mal copiado. Pedilo de nuevo.</li>
+</ul>
+<p><strong>P12 · Pasar la IA a Claude y ajustar prompt</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que la IA arme, en español y con fechas futuras, solo las tareas reales de la agencia. El prompt son las instrucciones que le das a la IA.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá «OpenAI Chat Model».</li>
+<li>Conectá un «Anthropic Chat Model» al conector de modelo de «Generate Onboarding Tasks». Usá la clave de Anthropic y elegí el modelo Sonnet más nuevo.</li>
+<li>Arriba de todo del System Message, agregá: <code>Hoy es {{ $now.toFormat('MM/dd/yyyy') }}</code>.</li>
+<li>En los Settings del flujo, elegí la Timezone de la agencia (<strong>POR DEFINIR</strong>, por ejemplo America/Argentina/Buenos_Aires). Poné esa misma zona en el prompt en lugar de «US Central Time».</li>
+<li>Pedí que los títulos y las descripciones salgan en español.</li>
+<li>Reemplazá «20 a 30 tareas» por la checklist real de P5. Pegala tal cual.</li>
+<li>Dejá las fechas en MM/DD/YYYY, con el mes primero. Así las lee «Create ClickUp Task».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El prompt tiene la fecha, la zona horaria, el español y la checklist de la agencia.</li>
+<li><strong>Si sale mal:</strong> Si no le das la fecha, la IA inventa fechas de 2025 que ya pasaron. Revisá el paso 3.</li>
+</ul>
+<p><strong>P13 · Traducir y arreglar el mail de bienvenida</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás un solo mail, en español, con links que funcionan.</li>
+<li><strong>Cómo:</strong> Abrí el nodo «Send Welcome Email»:<ol>
+<li>En Settings, activá <strong>Execute Once</strong>. Si no, el cliente recibe un mail por cada tarea.</li>
+<li>Escribí el asunto y el mail en español, con el tono de la agencia.</li>
+<li>Reemplazá YOUR_CALENDLY_LINK, YOUR_NAME y YOUR_COMPANY.</li>
+<li>Sacá ClickUp de la lista de invitaciones, porque el flujo no invita al cliente.</li>
+<li>Cambiá el renglón <code>[Google Drive Folder](…)</code> por el link solo: <code>https://drive.google.com/drive/folders/{{ $('Create Google Drive Folder').item.json.id }}</code>.</li>
+<li>En los próximos pasos, dejá el texto <code>LINK_CUESTIONARIO</code>. Lo reemplazás en P21.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Execute Once está activado y el mail no tiene textos del autor ni corchetes.</li>
+<li><strong>Si sale mal:</strong> Si dejás el formato con corchetes, el cliente ve el código crudo. El mail sale como texto común.</li>
+</ul>
+<h3>Etapa 4 · Prueba con datos de prueba</h3>
+<p><strong>P14 · Correr la prueba con PDF y mail propio</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Simulás un cliente nuevo de punta a punta.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Tocá «Execute workflow» o «Test». Se abre el formulario de prueba.</li>
+<li>Completalo con una empresa inventada y <strong>un mail tuyo que no sea el de la agencia</strong>. Así ves lo mismo que vería el cliente.</li>
+<li>Subí el PDF de ejemplo de P5.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> El flujo terminó, en verde o en rojo, y podés revisar.</li>
+<li><strong>Si sale mal:</strong> Lo vas a ver en P15.</li>
+</ul>
+<p><strong>P15 · ¿Carpeta compartida, tareas futuras y un mail?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Revisás cuatro cosas:<ul>
+<li>En «Clientes» hay una carpeta nueva compartida con tu mail.</li>
+<li>En ClickUp aparecen la carpeta, la lista y las tareas, en español y con fechas a futuro.</li>
+<li>Te llegó <strong>un solo</strong> mail.</li>
+<li>Los links del mail abren.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> Las cuatro dan bien. <strong>SÍ</strong> → P17. <strong>NO</strong> → P16.</li>
+<li><strong>Si sale mal:</strong> Si algo falla, no lo «arreglés a ojo». Andá a P16.</li>
+</ul>
+<p><strong>P16 · Leer el error y corregir el nodo</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Encontrás qué nodo falló y lo corregís.</li>
+<li><strong>Cómo:</strong> Entrá a la pestaña «Executions», abrí la última y buscá el nodo en rojo. Leé el mensaje. Los errores más comunes son:<ul>
+<li>Una credencial vencida.</li>
+<li>Una etiqueta del formulario traducida.</li>
+<li>Fechas con el día primero en vez del mes.</li>
+<li>Un PDF escaneado.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> Corregiste y volvés a P14.</li>
+<li><strong>Si sale mal:</strong> Si a la tercera vuelta sigue fallando, copiá el mensaje de error exacto en Claude y pedile que te lo explique.</li>
+</ul>
+<h3>Etapa 5 · Demo a la agencia</h3>
+<p><strong>P17 · Hacer la demo en vivo</strong> (vos, 30 minutos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mostrás el sistema andando con su propio mail.</li>
+<li><strong>Cómo:</strong> Por videollamada, con tu pantalla compartida y el flujo en modo prueba:<ol>
+<li>Quien cierra las ventas completa el formulario con su mail <strong>personal</strong> y el PDF de ejemplo.</li>
+<li>Mientras corre, le contás qué hace cada parte.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> Que esté quien cierra las ventas.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> Terminó de correr frente a ellos.</li>
+<li><strong>Si sale mal:</strong> Si algo falla en vivo, no improvises. Decí «lo reviso y te lo muestro mañana» y volvé a P16.</li>
+</ul>
+<p><strong>P18 · ⭐ Recibir carpeta, tareas y mail de prueba</strong> (entrega · primer resultado visible)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Ellos ven, en su bandeja y en su ClickUp, lo que antes les llevaba horas.</li>
+<li><strong>Cómo:</strong> Que abran el mail, entren a la carpeta y miren las tareas con fechas.</li>
+<li><strong>Qué le entregás:</strong> La prueba de que funciona, alrededor del día 7.</li>
+<li><strong>Listo cuando:</strong> Lo vieron con sus propios ojos.</li>
+<li><strong>Si sale mal:</strong> Si no les llegó el mail, revisen la carpeta de spam. Anotalo para la guía de uso.</li>
+</ul>
+<p><strong>P19 · ¿La agencia aprueba?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Les preguntás tres cosas: si el texto del mail está bien, si la lista de tareas está bien y si el nombre de la carpeta está bien.</li>
+<li><strong>Listo cuando:</strong> Dicen que sí por escrito. <strong>SÍ</strong> → P21. <strong>NO</strong> → P20.</li>
+</ul>
+<p><strong>P20 · Anotar los cambios y aplicarlos</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés solo los cambios que pidieron y volvés a probar en P14.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> Aplicaste todo y la prueba da bien.</li>
+<li><strong>Si sale mal:</strong> Si piden cosas que no estaban en el acuerdo, como mandar WhatsApp o sumar otra herramienta, anotalas como «próxima etapa» y no las hagas ahora.</li>
+</ul>
+<h3>Etapa 6 · Cuestionario y brief</h3>
+<p><strong>P21 · Armar el cuestionario en Typeform</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Creás el formulario que completa el cliente nuevo para que la agencia arranque a trabajar.</li>
+<li><strong>Cómo:</strong> En el Typeform de la agencia, creá un formulario nuevo:<ol>
+<li><strong>Las dos primeras preguntas</strong> son el nombre de la empresa y el mail. Así el brief se une con la carpeta correcta.</li>
+<li>Las demás preguntas salen de P3 y quedan <strong>POR DEFINIR</strong>. Sugeridas, para que la agencia las valide: objetivo principal, a quién le venden, qué no quieren, accesos que van a compartir, referencias que les gustan, persona de contacto.</li>
+<li>Publicá el formulario y copiá el link.</li>
+<li>En P13, reemplazá <code>LINK_CUESTIONARIO</code> por ese link.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> La aprobación de las preguntas.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El cuestionario está publicado y el link está en el mail de bienvenida.</li>
+<li><strong>Si sale mal:</strong> Si ponen 30 preguntas, nadie lo completa. Que no pase de 10.</li>
+</ul>
+<p><strong>P22 · Instalar la plantilla 8122 y conectar Typeform</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Instalás el segundo flujo, que lee las respuestas y arma el brief con IA. Un brief es el resumen para el equipo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá la plantilla 8122 igual que en P8.</li>
+<li>Creá la credencial de Typeform: en Typeform, Settings → Personal tokens.</li>
+<li>Elegí el formulario de P21.</li>
+<li>Conectá Claude igual que en P12 y pedí el brief en español.</li>
+<li>Definí a dónde va el brief: mail a la agencia o documento en la carpeta del cliente (<strong>POR DEFINIR</strong> con la agencia).</li>
+<li>El resto de los ajustes depende de la ficha de la 8122. Pegala y te lo detallo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> El flujo corre con una respuesta de prueba.</li>
+<li><strong>Si sale mal:</strong> Si el brief llega sin el nombre del cliente, falta mapear la pregunta de la empresa.</li>
+</ul>
+<p><strong>P23 · ¿El brief de prueba sale bien?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Contestás el Typeform como cliente inventado y revisás el brief: que esté en español, que tenga el nombre correcto, que llegue a donde acordaron y que no invente datos.</li>
+<li><strong>Listo cuando:</strong> Todo da bien. <strong>SÍ</strong> → P24. <strong>NO</strong> → P22.</li>
+</ul>
+<h3>Etapa 7 · Lanzamiento con datos reales</h3>
+<p><strong>P24 · Publicar los flujos y pasar el link</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás los dos flujos activos para clientes reales.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá la nota «Contact &amp; Attribution». Es publicidad del autor.</li>
+<li>Tocá <strong>Publish</strong> en los dos flujos.</li>
+<li>Copiá la <strong>URL de producción</strong> del formulario, no la de prueba.</li>
+<li>Mandásela a quien cierra las ventas. El usuario y la clave van por separado y por privado.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> El link del formulario, el usuario y la clave.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> El link de producción abre y pide clave.</li>
+<li><strong>Si sale mal:</strong> Si pasás el link de prueba, solo funciona mientras vos tenés n8n abierto.</li>
+</ul>
+<p><strong>P25 · Entregar guía de uso y video corto</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le dejás a la agencia cómo usarlo sin depender de vos.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Una guía de una página con esto: cuándo se completa el formulario (después de cobrar), que el PDF tiene que tener texto, qué recibe el cliente, que revise el spam y a quién avisar si algo falla.</li>
+<li>Un video de 3 a 5 minutos, grabado con Loom o con el celular, completando el formulario.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> La guía y el video. Con esto va el mensaje 3 de la sección 4.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Confirman que los recibieron.</li>
+<li><strong>Si sale mal:</strong> —</li>
+</ul>
+<p><strong>P26 · Cargar el primer cliente real</strong> (la agencia)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Esperás a que la agencia cierre una venta y complete el formulario.</li>
+<li><strong>Cómo:</strong> Les pedís que te avisen cuando lo carguen, así lo mirás en el momento.</li>
+<li><strong>Qué le pedís al cliente:</strong> Ese aviso.</li>
+<li><strong>Cuánto tarda:</strong> Depende de cuándo vendan. No lo controlás vos. La fecha queda <strong>POR DEFINIR</strong>.</li>
+<li><strong>Listo cuando:</strong> Llegó el primer formulario real.</li>
+<li><strong>Si sale mal:</strong> Si en 2 semanas no hay ventas nuevas, pueden cargar a un cliente que arrancó hace poco y todavía no tiene carpeta.</li>
+</ul>
+<p><strong>P27 · Crear carpeta, tareas, mail y brief solos</strong> (sistema)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Nada. El sistema crea la carpeta compartida y las tareas, y manda el mail. Cuando el cliente nuevo contesta el cuestionario, sale el brief.</li>
+<li><strong>Cuánto tarda:</strong> Unos minutos. El brief sale cuando el cliente contesta.</li>
+<li><strong>Listo cuando:</strong> Ves la ejecución en verde.</li>
+</ul>
+<p><strong>P28 · ¿Salió completo el primer cliente real?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Revisás la ejecución y le preguntás a la agencia si el cliente recibió el mail y pudo abrir la carpeta.</li>
+<li><strong>Listo cuando:</strong> Está todo bien. <strong>SÍ</strong> → P30. <strong>NO</strong> → P29.</li>
+</ul>
+<p><strong>P29 · Completar a mano y corregir el nodo</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Primero salvás a ese cliente y después arreglás el flujo.</li>
+<li><strong>Cómo:</strong> Completás a mano lo que faltó. Por ejemplo, compartís la carpeta o mandás el mail. Así el cliente no se entera. Después corregís el nodo como en P16.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El cliente está atendido y la corrección está probada. Esperás el próximo cliente real (P26).</li>
+<li><strong>Si sale mal:</strong> Si el error fue del PDF, que era un escaneo, reforzá ese punto en la guía.</li>
+</ul>
+<h3>Etapa 8 · Seguimiento, reporte y ajustes</h3>
+<p><strong>P30 · Revisar las ejecuciones cada semana</strong> (vos, 15 minutos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Te asegurás de que nada se rompió en silencio.</li>
+<li><strong>Cómo:</strong> Cada lunes revisás cuatro cosas:<ul>
+<li>En «Executions», si hay errores en rojo.</li>
+<li>En Anthropic, si queda crédito.</li>
+<li>Si las credenciales de Google siguen en verde.</li>
+<li>Cuántos clientes pasaron por el sistema. Anotalo en una planilla.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> Está todo en verde y anotado.</li>
+<li><strong>Si sale mal:</strong> Si se acaba el crédito de Anthropic, se cae la parte de las tareas. Avisales antes de que pase.</li>
+</ul>
+<p><strong>P31 · Mandar el reporte del primer mes</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le contás qué hizo el sistema en el mes.</li>
+<li><strong>Cómo:</strong> Usás el mensaje 4 de la sección 4. Incluye:<ul>
+<li>Cuántos clientes se arrancaron con el sistema.</li>
+<li>Qué errores hubo y cómo se resolvieron.</li>
+<li>Horas y días de arranque comparados con la línea de base de P3, solo si la agencia lo midió.</li>
+<li>Una o dos mejoras propuestas.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> El reporte.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Lo mandaste el día acordado.</li>
+<li><strong>Si sale mal:</strong> No inventes ahorro de horas si no hay número de antes. Poné <strong>POR DEFINIR</strong> y proponé medirlo desde ahora.</li>
+</ul>
+<p><strong>P32 · Ajustar prompt, mail y preguntas</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Aplicás lo que aprendieron en el mes. Por ejemplo, tareas que sobran, una pregunta que nadie entiende o un texto del mail.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas por mes.</li>
+<li><strong>Listo cuando:</strong> Los cambios están probados igual que en P14.</li>
+<li><strong>Si sale mal:</strong> Si cambiás algo sin probarlo, rompés lo que andaba. Siempre probá antes.</li>
+</ul>
+<h3>Etapa 9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Junto con el reporte, confirmás si sigue el mes que viene.</li>
+<li><strong>Listo cuando:</strong> Te responde. <strong>SÍ</strong> → P34. <strong>NO</strong> → P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer el próximo servicio</strong> (vos)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Si el sistema anduvo, le mostrás el paso natural que sigue.</li>
+<li><strong>Cómo:</strong> Tenés dos opciones:<ul>
+<li><strong>13 El Cerebro del Equipo:</strong> que el equipo le pregunte a un asistente y no al dueño.</li>
+<li><strong>19 Oficina en Piloto Automático:</strong> ya incluye esta bienvenida y le suma cobros, renovaciones y contratos.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos en el mensaje del reporte. Después, cada mes volvés a P30.</li>
+<li><strong>Listo cuando:</strong> Se lo ofreciste. Si dice que ahora no, seguís con la mensualidad igual.</li>
+</ul>
+<p><strong>P35 · Entregar flujos y accesos ordenados</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Te vas bien, para que te recomienden.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Descargá los dos flujos: en cada uno, el menú «…» → Download.</li>
+<li>Entregá una lista de todas las cuentas, que ya están a nombre de la agencia.</li>
+<li>Entregá la guía actualizada.</li>
+<li>Pedí que te saquen el acceso a n8n.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Confirman que recibieron todo.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Día 0 · Pago del setup y «ok» al acuerdo.</li>
+<li>☐ Día 0 · Horario para la llamada de arranque.</li>
+<li>☐ Día 1 · Lista de pasos que hacen hoy al arrancar un cliente.</li>
+<li>☐ Día 1 · Horas y días que les lleva hoy arrancar un cliente (línea de base).</li>
+<li>☐ Día 1 · Nombre y mail de quien cierra ventas, y a quién asignar las tareas.</li>
+<li>☐ Día 1 · Zona horaria, tono y firma del mail.</li>
+<li>☐ Día 1–2 · Cuenta de n8n Cloud a nombre de la agencia, con tu acceso.</li>
+<li>☐ Día 1–2 · Token de API de ClickUp (<code>pk_…</code>).</li>
+<li>☐ Día 1–2 · Clave de API de Anthropic, con crédito cargado.</li>
+<li>☐ Día 1–2 · Link de Calendly para la llamada con el cliente nuevo.</li>
+<li>☐ Día 1–2 · Acceso a Typeform.</li>
+<li>☐ Día 2 · PDF de una propuesta, con texto.</li>
+<li>☐ Día 3 · 15 minutos para conectar Google.</li>
+<li>☐ Día 7 · Presencia en la demo y aprobación por escrito.</li>
+<li>☐ Día 8 · Aprobación de las preguntas del cuestionario.</li>
+<li>☐ Día 10 en adelante · Aviso cuando carguen el primer cliente real.</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Acuerdo de una página.</li>
+<li>☐ Formulario de alta en español, protegido con usuario y clave.</li>
+<li>☐ Carpeta «Clientes» en Drive, con una carpeta compartida por cada cliente nuevo.</li>
+<li>☐ Carpeta, lista y tareas con fechas en ClickUp por cada cliente.</li>
+<li>☐ Mail de bienvenida en español, con Drive, agenda y cuestionario.</li>
+<li>☐ Cuestionario de arranque en Typeform.</li>
+<li>☐ Brief automático para el equipo.</li>
+<li>☐ Guía de uso de una página y video de 3 a 5 minutos.</li>
+<li>☐ Revisión semanal y reporte mensual.</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, a 2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago (P1) y bienvenida (P2)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Llamada de arranque (P3). La agencia crea las cuentas (P4)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Checklist y PDF (P5). Puerta (P6). Si falta algo, recordatorio (P7)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Importar y conectar Google (P8), formulario (P9)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Drive (P10) y ClickUp (P11)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>IA (P12) y mail (P13)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Prueba y correcciones (P14–P16)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Demo ⭐ (P17–P19)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Cambios (P20) y cuestionario (P21)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Plantilla 8122 y prueba del brief (P22–P23)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Publicación, guía y video (P24–P25)</td>
+</tr>
+<tr>
+<td>10 en adelante</td>
+<td>Primer cliente real, cuando la agencia venda (P26–P29)</td>
+</tr>
+<tr>
+<td>Semanas 2 a 4</td>
+<td>Revisión de los lunes (P30)</td>
+</tr>
+<tr>
+<td>Día 30</td>
+<td>Reporte del primer mes, ajustes y renovación (P31–P34)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Lo que garantizás es que el sistema funcione en 10 días hábiles desde que tenés todo, y que el reporte llegue cada mes. No garantizás menos días de arranque ni más ventas: eso depende de la agencia.</p>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, arrancamos 🙌
+En 10 días hábiles tienen funcionando la bienvenida automática de clientes. Los días se cuentan desde que tengo todo lo de abajo.
+Para arrancar necesito:
+1) 45 min para una llamada. ¿Te queda [opción 1] o [opción 2]?
+2) Que creen estas cuentas, te paso la guía en un PDF: n8n, Anthropic y Typeform, más el token de ClickUp.
+3) La lista de pasos que hacen hoy cuando entra un cliente.
+4) Una propuesta en PDF de ejemplo.
+Cualquier duda, escribime por acá.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya tengo casi todo 👌 Me faltan solo estas cosas:
+– [lo que falta]
+– [lo que falta]
+Con eso arranco con la instalación. Si te resulta más fácil, lo hacemos juntos en 20 min por videollamada. ¿Te sirve hoy o mañana?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está en marcha! 🚀
+Desde hoy, cuando cierren una venta, completan este formulario: [link]. El usuario y la clave te los paso por privado.
+Solo con eso, el cliente recibe su carpeta compartida, el mail de bienvenida con la agenda y el cuestionario. Ustedes reciben las tareas en ClickUp.
+Te dejo la guía de una página y un video de 4 minutos.
+Avisame cuando carguen el primer cliente así lo miro en el momento.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Te paso el resumen del primer mes 📊
+– Clientes arrancados con el sistema: [número]
+– Errores: [cantidad]. Resueltos: [cómo]
+– Tiempo de arranque: antes [POR DEFINIR], ahora [número]
+– Mejoras para este mes: [1 o 2]
+¿Seguimos el mes que viene? Te cuento también una idea para que el equipo deje de preguntarte todo a vos 😉</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p06">← Volver a la ficha 06</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

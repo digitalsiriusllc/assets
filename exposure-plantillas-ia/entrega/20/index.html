@@ -1,0 +1,655 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Negocio Integrado · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Negocio Integrado, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Negocio Integrado">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.71 .2 350)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 20 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Transformación</p>
+  <h1>Negocio Integrado</h1>
+  <p class="bajada">Captación, venta y operación conectadas en un solo tablero. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Negocios de 10 a 50 personas</span><span class="chip">Setup USD 4.500–5.000+</span><span class="chip">8–12 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p>La instalación sigue «Cómo dejarla lista» y las cuentas de la ficha, de P7 a P13.</p>
+<p>Antes de arrancar, cuatro cosas que no sé y quedaron como <strong>POR DEFINIR</strong>:</p>
+<ul>
+<li>el rubro exacto del cliente;</li>
+<li>cuáles son los 2 o 3 sistemas que ya le instalaste;</li>
+<li>dónde corre tu n8n;</li>
+<li>el país, para la zona horaria.</li>
+</ul>
+<p>Te aviso algo de entrada para que no te agarre de sorpresa. Con 3 horas por día y solo, en 12 semanas entran la columna central, la auditoría y una o dos oleadas de sistemas nuevos. Lo que falte pasa al acompañamiento mensual. Acordalo por escrito con el cliente en P25.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Negocio Integrado" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<h3>Cómo se conectan las fichas (orden de instalación)</h3>
+<div class="diagrama"><img src="diagrama-2.png" alt="Diagrama de la entrega de Negocio Integrado" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama-2.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Por qué este orden.</strong> La planilla central es la columna vertebral, así que va primero, con lo que ya funciona enchufado.</p>
+<ul>
+<li><strong>15 va antes</strong> porque es donde hoy se pierde plata y porque llena la pestaña «Leads».</li>
+<li><strong>19 va segundo</strong> porque arranca con lo que cae en «Clients».</li>
+<li><strong>16 va tercero</strong> porque necesita la base limpia y el seguimiento que trae la 15.</li>
+<li><strong>14 va último</strong> porque necesita volumen de llamadas para servir.</li>
+</ul>
+<p>Si alguno de los sistemas que ya instalaste es parte de una de estas fichas (por ejemplo, 03 Cero Ausencias es parte de la 15), esa oleada solo suma lo que falta.</p>
+<p><strong>Por qué la auditoría va después del lanzamiento.</strong> La plantilla trae las etapas fijas y vos ya conocés los sistemas que tiene el cliente. Por eso podés levantar la columna central en días y dejar la auditoría para después. Así el dueño ve su tablero en la semana 2, y vos auditás con números en vez de sensaciones.</p>
+<hr />
+<h2>2. El paso a paso</h2>
+<p>Antes de empezar, cuatro palabras que se repiten:</p>
+<ul>
+<li><strong>n8n</strong>: la herramienta donde viven los flujos automáticos.</li>
+<li><strong>Nodo</strong>: cada cajita de un flujo de n8n.</li>
+<li><strong>Webhook</strong>: una dirección web que se queda esperando que otra app le avise algo.</li>
+<li><strong>API</strong>: la puerta por la que dos programas se hablan.</li>
+</ul>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup acordado</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Confirmás que el pago del setup entró de verdad.</li>
+<li><strong>Cómo:</strong> Mirás tu cuenta o Mercado Pago, no el «ya te transferí». Le mandás el recibo o la factura.</li>
+<li><strong>Qué le pedís:</strong> El pago según lo acordado. Si es por hitos, el primero.</li>
+<li><strong>Qué le entregás:</strong> El comprobante.</li>
+<li><strong>Cuánto tarda:</strong> De 0 a 2 días.</li>
+<li><strong>Listo cuando:</strong> La plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> No arranques horas de trabajo. Mandá un mensaje cordial preguntando si hubo algún problema con la transferencia.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con pedido de accesos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mandás el mensaje 1 (abajo de todo) y un documento con lo que necesitás.</li>
+<li><strong>Cómo:</strong> Armá un Google Doc «Negocio Integrado · [Negocio]» con tres partes: qué pasa en las primeras 2 semanas, la lista de accesos de la sección 3 y la fecha de la reunión de P4. Compartilo como «puede comentar».</li>
+<li><strong>Qué le pedís:</strong> Que lea el doc y elija horario para la reunión de P4.</li>
+<li><strong>Qué le entregás:</strong> El doc de arranque.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El cliente respondió y la reunión de P4 tiene fecha.</li>
+<li><strong>Si sale mal:</strong> Si no contesta en 24 horas, llamalo. Ya hay confianza: una llamada de 3 minutos destraba más que tres mensajes.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Dar accesos y nombrar un responsable interno</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Recibís los accesos y el nombre de la persona que te contesta en el día.</li>
+<li><strong>Cómo:</strong> Pedí siempre que las cuentas estén a nombre del negocio y que te inviten como usuario. Así la salida ordenada de P35 es fácil. Nunca recibas contraseñas por WhatsApp. Si no hay forma de invitarte, usen un gestor de contraseñas compartido (por ejemplo, Bitwarden, que es gratis).</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>cuenta de Google del negocio, con Sheets, Gmail y Looker Studio;</li>
+<li>n8n en internet;</li>
+<li>Cal.com o Calendly;</li>
+<li>el CRM, si tiene (CRM es el sistema donde se anotan los clientes y las ventas);</li>
+<li>el proveedor de WhatsApp;</li>
+<li>una clave de la API de Anthropic, con la tarjeta del negocio, para la IA de Claude;</li>
+<li>un responsable interno.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> De 1 a 3 días.</li>
+<li><strong>Listo cuando:</strong> Tenés cada acceso de la lista.</li>
+<li><strong>Si sale mal:</strong> El clásico es «no sé cuál es la cuenta de Google del negocio». Que la cree nueva a nombre del negocio, y vos la usás para todo.</li>
+</ul>
+<p><strong>P4 · Definir etapas y fuentes con el dueño</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Acordás con el dueño qué significa cada palabra de la planilla.</li>
+<li><strong>Cómo:</strong> Hacé una videollamada de 45 minutos y anotá en el doc:<ul>
+<li><strong>Meeting Booked</strong>: reservó una reunión.</li>
+<li><strong>Awaiting Proposal</strong>: espera presupuesto.</li>
+<li><strong>Won</strong>: pagó o firmó, según qué cuente como venta en este negocio (POR DEFINIR).</li>
+<li><strong>Delivered</strong>: qué es «entregado» en su rubro (POR DEFINIR).</li>
+<li>La lista de fuentes del contacto (Instagram, web, referido, base vieja…).</li>
+<li>Quiénes son los vendedores.</li>
+<li>El nombre que firma los mails.</li>
+<li>El link de agenda.</li>
+<li>El plazo real en que manda propuestas.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> 45 minutos y esas definiciones.</li>
+<li><strong>Qué le entregás:</strong> El resumen escrito en el doc.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos de reunión y 30 de pasar en limpio.</li>
+<li><strong>Listo cuando:</strong> El dueño responde «de acuerdo» por escrito.</li>
+<li><strong>Si sale mal:</strong> Si quiere 10 etapas, explicale que la plantilla compara esos textos exactos. Arrancan con 3 y las otras van al mapa de P23.</li>
+</ul>
+<p><strong>P5 · ¿Está todo?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Revisás cada acceso entrando de verdad, no solo mirando que llegó la invitación.</li>
+<li><strong>Cómo:</strong> Hacé una planilla de control con una fila por acceso: «pedido / recibido / probado».</li>
+<li><strong>Qué le pedís:</strong> Nada.</li>
+<li><strong>Qué le entregás:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> Todas las filas dicen «probado». SÍ → P7. NO → P6.</li>
+<li><strong>Si sale mal:</strong> Un acceso «a medias», por ejemplo de solo lectura, cuenta como NO.</li>
+</ul>
+<p><strong>P6 · Mandar recordatorio con lo que falta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mandás el mensaje 2 con lo que falta y cómo dártelo.</li>
+<li><strong>Cómo:</strong> Le escribís al responsable interno, a las 48 horas, con instrucciones de un renglón por acceso.</li>
+<li><strong>Qué le pedís:</strong> Lo que falta.</li>
+<li><strong>Qué le entregás:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> Llegó lo que faltaba. Volvés a P3.</li>
+<li><strong>Si sale mal:</strong> Después de dos recordatorios, hacé una llamada de 10 minutos. Dejá por escrito que el plazo corre desde que está todo.</li>
+</ul>
+<h3>3 · Columna central: instalación</h3>
+<p><strong>P7 · Crear planilla central con encabezados exactos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Armás la planilla que va a ser el corazón de todo el negocio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En la cuenta de Google del negocio creá «Negocio Integrado · Central» con dos pestañas.</li>
+<li>En <strong>Leads</strong> escribí en la fila 1: A Name, B Date Updated, C Client Email, D Lead Source, E Stage, F Asignee, G Discovery Call URL, H Qualified?.</li>
+<li>En <strong>Clients</strong> escribí: A Name, B Client Type, C Client Email, D Project Status, E Tenure, F Start Date &amp; Time, G End Date &amp; Time, H Time to Deliver.</li>
+<li>Dejá todo en inglés y tal cual, sin espacios de más.</li>
+<li>En H de Leads: seleccioná la columna → Insertar → Casilla de verificación.</li>
+<li>En Stage: Datos → Validación de datos → Menú desplegable, con Meeting Booked, Awaiting Proposal y Won.</li>
+<li>En Project Status armá otro menú desplegable que incluya Delivered (por ejemplo, In Progress y Delivered).</li>
+<li>Inmovilizá la fila 1.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Nada.</li>
+<li><strong>Qué le entregás:</strong> Nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Las dos pestañas tienen los 8 encabezados exactos y los desplegables andan.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si traducís algo, el flujo deja de encontrarlo. O traducís también en los nodos «If», «IF: Stage == Won», «IF: Delivered?» y «GS: Leads Update Stage to Meeting Booked», o lo dejás en inglés.</li>
+<li>No agregues etapas nuevas, como «Lost», sin revisar en n8n qué mail sale cuando cambia la etapa. Un cliente perdido podría recibir un mail raro.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P8 · Importar plantilla y conectar Google y Gmail</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Traés la plantilla a n8n y le das permiso para usar la planilla y el Gmail del negocio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí n8n.io/workflows/7514 y copiá la plantilla. En tu n8n: nuevo flujo → pegá (o importá desde URL).</li>
+<li>Renombralo «Central · [Negocio]».</li>
+<li>Creá dos credenciales con la cuenta del negocio: Google Sheets OAuth2 y Gmail OAuth2. Una credencial es el permiso guardado. OAuth es el «Iniciar sesión con Google».</li>
+<li>En «GS: Clients Append (On Won)», «GS: Clients Lookup by Email» y «GS: Clients Update End &amp; Duration» elegí de la lista tu planilla y la pestaña Clients.</li>
+<li>En «GS: Leads Update Stage to Meeting Booked» elegí la pestaña Leads. Vienen con {{GOOGLE_SHEETS_DOC_ID}}, que no sirve.</li>
+<li>Conectá Gmail en «Gmail: Send Cal.com Invite» y en «Gmail: Send Stage-Change Email».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Que esté disponible 5 minutos por si Google le pide confirmar el inicio de sesión.</li>
+<li><strong>Qué le entregás:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> Ningún nodo muestra el triángulo rojo de credencial faltante.</li>
+<li><strong>Si sale mal:</strong> Si tu n8n no es Cloud sino un servidor propio, conectar Google pide crear un «cliente OAuth» en Google Cloud. Buscá «Google OAuth2 credentials» en la documentación de n8n y seguila paso a paso (POR DEFINIR según dónde corra tu n8n).</li>
+</ul>
+<p><strong>P9 · Pegar Apps Script y activar el disparador</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Instalás el programita que le avisa a n8n cada vez que alguien edita la planilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Copiá el código de la nota «The App Script Needed» que viene en la plantilla. Apps Script es la parte de Google Sheets donde se pegan programitas.</li>
+<li>En la planilla: Extensiones → Apps Script → borrá lo que hay → pegá.</li>
+<li>Cambiá {{YOUR_N8N_DOMAIN}} por el dominio de tu n8n en las <strong>tres</strong> URLs.</li>
+<li>Guardá. Elegí la función createInstallableTrigger y tocá Ejecutar una vez.</li>
+<li>Aceptá los permisos. Si aparece «Google no verificó esta app»: Configuración avanzada → Ir a… (es tu propio script).</li>
+<li>Aunque el script diga «OPTIONAL», este paso es obligatorio. El disparador simple no tiene permiso para llamar a n8n.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> En Apps Script → Activadores (el relojito) aparece un activador «Al editar».</li>
+<li><strong>Si sale mal:</strong> Si tu n8n corre en tu compu, Google no llega a esas URLs. Necesitás n8n Cloud o un servidor en internet.</li>
+</ul>
+<p><strong>P10 · Ajustar mails, fechas y zona horaria</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás los mails en castellano, con firma y link, y las fechas bien escritas.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En los dos nodos de Gmail cambiá {{SENDER_NAME}} por el nombre del negocio.</li>
+<li>En «Gmail: Send Cal.com Invite» cambiá {{CAL_COM_BOOKING_URL}} por el link de agenda de P4.</li>
+<li>Traducí asuntos y textos.</li>
+<li>En el aviso de propuesta cambiá «next 2-3 hours» por el plazo real que dijo el dueño.</li>
+<li>En «Format Start Timestamp» y «Format End Timestamp» poné el formato <code>DD/MM/YYYY [a las] HH:mm</code>.</li>
+<li>En Settings del flujo elegí la zona horaria del país del negocio (POR DEFINIR, por ejemplo America/Argentina/Buenos_Aires).</li>
+<li>Publicá o activá el flujo para que funcionen las direcciones de producción, que son las que se usan de verdad.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Que apruebe los textos de los mails (mandale captura).</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> El flujo está activo y los textos aprobados.</li>
+<li><strong>Si sale mal:</strong> Si dejás los marcadores {{ }}, n8n los manda vacíos: sale la firma en blanco y el botón sin link.</li>
+</ul>
+<p><strong>P11 · Conectar la agenda a la planilla</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que, cuando alguien reserva, su etapa pase sola a Meeting Booked.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Con Cal.com:</strong> Settings → Developer → Webhooks → nuevo. En la dirección, la URL de «Webhook: Meeting Booked», que termina en <code>/webhook/cal-booked</code>. Evento: Booking Created.</li>
+<li><strong>Con Calendly:</strong> reemplazá ese webhook por el nodo «Calendly Trigger» con el evento Event Created. En «GS: Leads Update Stage to Meeting Booked» poné <code>{{ $json.payload.email }}</code> en Client Email. Ojo: en Calendly esta conexión suele pedir plan pago, verificalo.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> Que el equipo sepa que el lead tiene que reservar con <strong>el mismo mail</strong> que está en la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El webhook figura activo en Cal.com, o el trigger de Calendly en n8n.</li>
+<li><strong>Si sale mal:</strong> Si la etapa no cambia, casi siempre es porque el mail de la reserva no coincide con el de la fila.</li>
+</ul>
+<p><strong>P12 · Enchufar los sistemas que ya funcionan</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés que los 2 o 3 sistemas que ya le instalaste escriban en la planilla central.</li>
+<li><strong>Cómo:</strong> Por cada sistema (POR DEFINIR cuáles):<ul>
+<li><strong>Si crea contactos:</strong> agregale al final un nodo Google Sheets «Append row» en Leads, con Name, Date Updated, Client Email, Lead Source y Stage.</li>
+<li><strong>Si cambia una etapa:</strong> sumá un nodo «HTTP Request» con método POST a <code>/webhook/lead-stage-changed</code> y el cuerpo <code>name</code>, <code>email</code>, <code>stage</code>. POST es mandarle datos a una dirección web.</li>
+<li><strong>Si tilda Qualified?:</strong> POST a <code>/webhook/lead-qualified</code> con <code>name</code>, <code>email</code>, <code>qualified: true</code>.</li>
+<li><strong>Si es parte de la 19,</strong> como la Bienvenida 06: que arranque con un «Google Sheets Trigger» de fila nueva en Clients.</li>
+</ul>
+</li>
+</ul>
+<p>Esto es necesario porque lo que cambia un flujo por su cuenta no dispara el Apps Script. Solo lo disparan las ediciones de personas.
+- <strong>Qué le pedís:</strong> Que te confirme que la central pasa a ser la planilla oficial, para no tener dos.
+- <strong>Cuánto tarda:</strong> 3 a 6 horas, en 1 o 2 días.
+- <strong>Listo cuando:</strong> Cada sistema viejo escribe o avisa en la central.
+- <strong>Si sale mal:</strong> Lo más común son contactos duplicados, porque el sistema viejo también escribe en su planilla anterior. Elegí una sola fuente y apagá la otra escritura.</p>
+<p><strong>P13 · Armar tablero único en Looker Studio</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Armás el tablero que el dueño va a mirar. Looker Studio es la herramienta gratis de Google para hacer tableros.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrá a lookerstudio.google.com con la cuenta del negocio → Crear → Fuente de datos → Hojas de cálculo de Google → la central, pestaña Leads. Agregá también Clients.</li>
+<li>Armá 4 páginas:<ul>
+<li><strong>Embudo:</strong> cantidad por Stage.</li>
+<li><strong>Canales:</strong> por Lead Source.</li>
+<li><strong>Vendedores:</strong> por Asignee.</li>
+<li><strong>Entregas:</strong> tabla de Clients con Time to Deliver.</li>
+</ul>
+</li>
+<li>Si ya tiene el 11 Tablero del Dueño, sumá la central como fuente ahí en vez de crear otro.</li>
+<li>Opcional: Date Updated marca la última modificación, no cuándo entró el contacto. Si querés contar consultas nuevas por semana, agregá una columna I «Created» <strong>al final</strong>, nunca en el medio, porque el script lee por posición.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> Nada.</li>
+<li><strong>Cuánto tarda:</strong> 4 a 6 horas.</li>
+<li><strong>Listo cuando:</strong> Las 4 páginas muestran los datos de prueba.</li>
+<li><strong>Si sale mal:</strong> Si Time to Deliver aparece como texto y no se puede promediar, mostralo en tabla y no lo fuerces.</li>
+</ul>
+<h3>4 · Prueba</h3>
+<p><strong>P14 · Probar todo con datos de prueba</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Recorrés el camino entero con contactos inventados. QA es el nombre en inglés de esta revisión.</li>
+<li><strong>Cómo:</strong> Usá tus propios mails con alias, como tunombre+prueba1@gmail.com, y hacé estas 7 pruebas:<ol>
+<li>Fila nueva en Leads, tildar Qualified? → te llega el mail con el link de agenda.</li>
+<li>Reservar con ese mail → Stage pasa sola a Meeting Booked.</li>
+<li>Cambiar a Awaiting Proposal → llega el aviso con el plazo correcto.</li>
+<li>Cambiar a Won → aparece la fila en Clients con fecha «dd/mm/aaaa a las hh:mm».</li>
+<li>Poner Delivered → se llenan End Date &amp; Time y Time to Deliver.</li>
+<li>Un sistema viejo carga un contacto → aparece con su Lead Source.</li>
+<li>El tablero muestra todo.</li>
+</ol>
+</li>
+</ul>
+<p>Después de cada prueba mirá en n8n la pestaña Executions (el historial de ejecuciones).
+- <strong>Cuánto tarda:</strong> 3 horas.
+- <strong>Listo cuando:</strong> Las 7 pruebas salen bien.
+- <strong>Si sale mal:</strong> Mirá la ejecución en rojo y abrí el nodo que falló.</p>
+<p><strong>P15 · ¿Funciona todo?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Decidís si está para mostrar.</li>
+<li><strong>Cómo:</strong> Repetí las 7 pruebas una segunda vez seguida.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> Pasan las 7 dos veces sin ninguna ejecución en rojo. SÍ → P16. NO → corregís y volvés a P14.</li>
+<li><strong>Si sale mal:</strong> Los 5 culpables de siempre:<ul>
+<li>el flujo no está activo, así que la dirección da error 404 (no encontrada);</li>
+<li>el dominio está mal en el script;</li>
+<li>un encabezado tiene un espacio de más;</li>
+<li>un texto del desplegable es distinto, por ejemplo «Won » con espacio;</li>
+<li>la zona horaria está mal.</li>
+</ul>
+</li>
+</ul>
+<h3>5 · Demo al dueño</h3>
+<p><strong>P16 · Mostrar flujo y tablero al dueño</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le mostrás el sistema funcionando en vivo.</li>
+<li><strong>Cómo:</strong> Videollamada de 45 minutos con el dueño y el responsable interno, compartiendo pantalla.<ol>
+<li>Cargá un lead con el mail del dueño, para que vea llegar el mail en su celular.</li>
+<li>Mostrá el tablero.</li>
+<li>Explicá las únicas tres cosas que el equipo hace a mano: cambiar Stage, tildar Qualified? y marcar Delivered.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> 45 minutos con el responsable presente.</li>
+<li><strong>Qué le entregás:</strong> La demo.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos y 15 de preparación.</li>
+<li><strong>Listo cuando:</strong> Terminó la demo y tenés anotados sus comentarios.</li>
+<li><strong>Si sale mal:</strong> Si algo falla en vivo, decilo tranquilo, mostrá la ejecución de la prueba anterior y anotalo para P18.</li>
+</ul>
+<p><strong>P17 · ¿El dueño aprueba?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Pedís el visto bueno.</li>
+<li><strong>Cómo:</strong> Por escrito, por WhatsApp: «¿Lanzamos el [día]?».</li>
+<li><strong>Qué le pedís:</strong> Un «dale» por escrito.</li>
+<li><strong>Cuánto tarda:</strong> 0 a 1 día.</li>
+<li><strong>Listo cuando:</strong> Hay OK escrito. SÍ → P19. NO → P18.</li>
+<li><strong>Si sale mal:</strong> El «lo veo y te digo» que no vuelve. Recordale en 24 horas con una fecha concreta de lanzamiento.</li>
+</ul>
+<p><strong>P18 · Hacer los cambios que pidió</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Ajustás lo que pidió y volvés a probar.</li>
+<li><strong>Cómo:</strong> Separá en dos listas:<ul>
+<li><strong>ajustes</strong>: textos, nombres, plazos. Los hacés ya;</li>
+<li><strong>cosas nuevas</strong>: un sistema más, una etapa más. Van al mapa de P23, no ahora.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 a 4 horas.</li>
+<li><strong>Listo cuando:</strong> Los ajustes están hechos. Volvés a P14.</li>
+<li><strong>Si sale mal:</strong> Si cada demo trae pedidos nuevos, el lanzamiento no llega nunca. Mostrale la lista de «cosas nuevas» y que sepa que quedan anotadas.</li>
+</ul>
+<h3>6 · Lanzamiento</h3>
+<p><strong>P19 · Borrar pruebas y cargar datos reales</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás la planilla con los contactos y clientes reales.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Primero desactivá el flujo en n8n.</strong> Pegar filas a mano cuenta como edición: dispara el script y podría mandarle mails a clientes reales.</li>
+<li>Borrá las filas de prueba.</li>
+<li>Pegá los leads abiertos y los clientes en curso que vengan del CRM o de sus planillas.</li>
+<li>Revisá que Stage y Project Status usen los textos exactos.</li>
+<li>Volvé a activar el flujo.</li>
+<li>Avisale al equipo con el mensaje 3.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> La exportación de sus contactos y clientes actuales.</li>
+<li><strong>Cuánto tarda:</strong> 2 a 3 horas.</li>
+<li><strong>Listo cuando:</strong> La planilla tiene solo datos reales y el flujo está activo.</li>
+<li><strong>Si sale mal:</strong> Si activaste antes de pegar y salieron mails, avisale al dueño enseguida y desactivá. Por eso el orden importa.</li>
+</ul>
+<p><strong>P20 · Mover etapas y mandar avisos solo</strong> (sistema)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Nada: el sistema trabaja. Vos vigilás.</li>
+<li><strong>Cómo:</strong> Durante los primeros 7 días, mirá Executions 10 minutos por día.</li>
+<li><strong>Qué le pedís:</strong> Que el equipo use la planilla, no el chat, para cambiar etapas.</li>
+<li><strong>Cuánto tarda:</strong> Corre todo el tiempo.</li>
+<li><strong>Listo cuando:</strong> Hay ejecuciones reales en verde.</li>
+<li><strong>Si sale mal:</strong> Si nadie cambia etapas, no pasa nada y el tablero queda vacío. Hablá con el responsable interno.</li>
+</ul>
+<p><strong>P21 · ⭐ Entregar tablero único con datos reales</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le das al dueño su primer resultado visible: todo el negocio en una pantalla.</li>
+<li><strong>Cómo:</strong> Compartile el tablero como «lector». Grabá un video de pantalla de 3 minutos explicando qué mirar.</li>
+<li><strong>Qué le entregás:</strong> El link del tablero y el video.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> El dueño lo abrió y vio sus números reales (preguntale qué le llamó la atención).</li>
+<li><strong>Si sale mal:</strong> Si dice «estos números están mal», casi siempre faltan datos por cargar, no es un error del sistema. Revisá P19.</li>
+</ul>
+<h3>7 · Auditoría y mapa del negocio</h3>
+<p><strong>P22 · Entrevistar al dueño y responsables de área</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Entendés cómo funciona el negocio entero, de la consulta a la entrega.</li>
+<li><strong>Cómo:</strong> 90 minutos con el dueño, y 30 a 45 minutos con quien lleva ventas, administración y operación. Preguntas:<ul>
+<li>¿Cómo llega un cliente hasta que paga y se le entrega?</li>
+<li>¿Dónde se traba?</li>
+<li>¿Qué hace el dueño que nadie más sabe hacer?</li>
+<li>¿Qué planillas y chats usan?</li>
+</ul>
+</li>
+</ul>
+<p>Llevá el tablero abierto.
+- <strong>Qué le pedís:</strong> Agenda con cada responsable.
+- <strong>Cuánto tarda:</strong> 4 a 5 horas, repartidas en una semana.
+- <strong>Listo cuando:</strong> Tenés notas de cada área.
+- <strong>Si sale mal:</strong> Si un responsable no tiene tiempo, alcanza con que te responda 5 preguntas por audio de WhatsApp.</p>
+<p><strong>P23 · Dibujar mapa con fugas y oleadas</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Armás una página con el camino del negocio, dónde se pierde plata y qué se instala en qué orden.</li>
+<li><strong>Cómo:</strong> En una diapositiva o en un dibujo de Google:<ol>
+<li>Dibujá la cadena captación → venta → operación.</li>
+<li>Marcá en rojo las fugas.</li>
+<li>Marcá en verde lo que ya funciona.</li>
+<li>Propone las oleadas: 15, 19, 16, 14, salvo que la auditoría muestre otra cosa.</li>
+<li>Indicá qué entra en las 12 semanas y qué pasa al acompañamiento.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 4 a 6 horas.</li>
+<li><strong>Listo cuando:</strong> Cabe en una página y un desconocido lo entiende.</li>
+<li><strong>Si sale mal:</strong> Si querés meter todo, no entra en tus 3 horas por día. Recortá.</li>
+</ul>
+<p><strong>P24 · Entregar mapa del negocio y plan</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le presentás el mapa y el plan.</li>
+<li><strong>Cómo:</strong> Reunión de 45 minutos y el documento en PDF.</li>
+<li><strong>Qué le entregás:</strong> El mapa y el plan de oleadas con fechas estimadas.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> Lo presentaste.</li>
+<li><strong>Si sale mal:</strong> Si el dueño discute fechas, mostrale cuántas horas lleva cada oleada.</li>
+</ul>
+<p><strong>P25 · ¿Aprueba el plan de oleadas?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Pedís el OK al orden y al alcance.</li>
+<li><strong>Cómo:</strong> Por escrito, incluyendo qué queda para el acompañamiento mensual.</li>
+<li><strong>Cuánto tarda:</strong> 0 a 2 días.</li>
+<li><strong>Listo cuando:</strong> Hay OK escrito. SÍ → P26. NO → vuelve a P23.</li>
+<li><strong>Si sale mal:</strong> Si quiere cambiar el orden, está bien, salvo que rompa dependencias. La 19 sin nada que llene Clients no tiene con qué arrancar.</li>
+</ul>
+<h3>8 · Oleadas de sistemas</h3>
+<p><strong>P26 · Instalar oleada, orden 15 19 16 14</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Instalás el próximo sistema del plan, reusando lo que ya existe.</li>
+<li><strong>Cómo:</strong> Para cada oleada, corré <strong>este mismo prompt</strong> con la ficha de ese sistema, para tener su diagrama detallado. Dos reglas fijas:<ul>
+<li>Lo que crea contactos escribe en Leads.</li>
+<li>Lo que cambia una etapa manda el POST de P12.</li>
+</ul>
+</li>
+</ul>
+<p>Reglas de cada plataforma:
+    - <strong>15</strong>: WhatsApp exige plantillas aprobadas por Meta para escribir primero o pasadas 24 horas sin respuesta. El segundo intento necesita plantilla.
+    - <strong>16</strong>: solo contactos que tuvieron relación con el negocio, con permiso para mensajes de marketing y opción de baja en cada mensaje.
+    - <strong>14</strong>: avisar al inicio de cada llamada que se graba.
+- <strong>Qué le pedís:</strong> Lo que pida esa ficha.
+- <strong>Cuánto tarda:</strong> 2 a 4 semanas por oleada, a 3 horas por día.
+- <strong>Listo cuando:</strong> El sistema está instalado y probado por separado.
+- <strong>Si sale mal:</strong> Si una oleada se estira, avisá antes de que se venza la fecha, no después.</p>
+<p><strong>P27 · ¿Funciona y alimenta la planilla central?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Probás de punta a punta, no solo el sistema nuevo.</li>
+<li><strong>Cómo:</strong> Un lead de prueba entra por WhatsApp → aparece en Leads → reserva → Meeting Booked → Won → aparece en Clients → arranca la bienvenida de la 19 → se ve en el tablero.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> Llega al tablero sin tocar nada a mano. SÍ → P28. NO → P26.</li>
+<li><strong>Si sale mal:</strong> El error típico es que el sistema nuevo cambia la etapa pero no manda el POST, entonces no salen los mails.</li>
+</ul>
+<p><strong>P28 · Capacitar al equipo y entregar manual</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Le enseñás al equipo qué cambia para ellos.</li>
+<li><strong>Cómo:</strong> Una llamada grabada de 30 a 45 minutos y un manual de 1 o 2 páginas por sistema, con tres partes: qué hace solo, qué hacés vos y a quién avisar si falla.</li>
+<li><strong>Qué le pedís:</strong> Al equipo presente.</li>
+<li><strong>Qué le entregás:</strong> El manual y la grabación.</li>
+<li><strong>Cuánto tarda:</strong> 2 a 3 horas.</li>
+<li><strong>Listo cuando:</strong> Cada persona hizo una vez su parte frente a vos.</li>
+<li><strong>Si sale mal:</strong> Si alguien no vino, mandale la grabación y pedile que haga su parte con un dato de prueba.</li>
+</ul>
+<p><strong>P29 · ¿Quedan sistemas por instalar?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Mirás el plan de P25.</li>
+<li><strong>Cómo:</strong> Tachás la oleada terminada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ → P26 con la próxima oleada. NO → P30.</li>
+<li><strong>Si sale mal:</strong> Si llegaste a la semana 12 y quedan oleadas, pasan al acompañamiento, como quedó acordado en P25.</li>
+</ul>
+<h3>9 · Seguimiento, reporte y ajustes</h3>
+<p><strong>P30 · Mandar resumen semanal escrito por IA</strong> (sistema)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Cada lunes al dueño le llega un resumen de la semana.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Si ya tiene el 11, se usa ese.</li>
+<li>Si no: un flujo con disparador programado los lunes a las 8 → lee Leads y Clients → Claude, con la clave de Anthropic, resume → Gmail al dueño.</li>
+<li>En las instrucciones a Claude poné: «Usá solo estos números. No inventes causas».</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> Corre solo. Vos lo revisás 15 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> Llegó el primer lunes después del lanzamiento.</li>
+<li><strong>Si sale mal:</strong> Si la IA «interpreta» de más, acortale las instrucciones a: números, cambios y 3 cosas para mirar.</li>
+</ul>
+<p><strong>P31 · Entregar reporte y revisión mensual</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Una vez por mes le mostrás qué pasó y qué sigue.</li>
+<li><strong>Cómo:</strong> Reunión de 60 minutos con el tablero abierto. Mostrás:<ul>
+<li>consultas por canal;</li>
+<li>cantidades por etapa;</li>
+<li>tiempo de entrega;</li>
+<li>ejecuciones fallidas y cómo se resolvieron;</li>
+<li>lo que se instaló;</li>
+<li>lo que viene.</li>
+</ul>
+</li>
+</ul>
+<p>Mostrás números, no prometés ventas.
+- <strong>Qué le entregás:</strong> El reporte (mensaje 4 y PDF).
+- <strong>Cuánto tarda:</strong> 2 horas en total.
+- <strong>Listo cuando:</strong> Se hizo la reunión.
+- <strong>Si sale mal:</strong> Si el dueño no viene, mandá el reporte igual y un audio de 2 minutos.</p>
+<p><strong>P32 · Ajustar lo que marca el reporte</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Hacés como máximo 3 mejoras por mes.</li>
+<li><strong>Cómo:</strong> Elegí las que tapan más fuga, por ejemplo una etapa donde se acumulan leads.</li>
+<li><strong>Cuánto tarda:</strong> 3 a 6 horas por mes.</li>
+<li><strong>Listo cuando:</strong> Las 3 están hechas y probadas.</li>
+<li><strong>Si sale mal:</strong> Si el dueño pide 10, priorizá con él. El resto queda para el mes siguiente.</li>
+</ul>
+<h3>10 · Renovación o salida</h3>
+<p><strong>P33 · ¿Sigue el acompañamiento?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Confirmás la mensualidad del período siguiente.</li>
+<li><strong>Cómo:</strong> Lo hablás en la revisión mensual. El acompañamiento es de 6 a 12 meses.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> Hay una respuesta. SÍ → P34. NO → P35.</li>
+<li><strong>Si sale mal:</strong> Un «lo pienso» que se alarga. Ponele una fecha de respuesta.</li>
+</ul>
+<p><strong>P34 · Ofrecer el próximo sistema, 17 o 18</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Proponés el sistema que el tablero muestra que falta.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Si casi todo entra por referidos → 18 Radar de Clientes.</li>
+<li>Si Instagram o el contenido trae consultas pero se publica poco → 17 Motor de Contenido.</li>
+</ul>
+</li>
+</ul>
+<p>Los dos se enchufan a la central y al tablero.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> Lo propusiste con el número del tablero que lo justifica. Volvés a P30 al mes siguiente.
+- <strong>Si sale mal:</strong> Si no hay un número que lo justifique, no lo ofrezcas todavía.</p>
+<p><strong>P35 · Entregar accesos y salida ordenada</strong> (entrega)</p>
+<ul>
+<li><strong>Qué hacés:</strong> Dejás todo funcionando en manos del cliente.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Lista de cuentas y flujos.</li>
+<li>Exportación de cada flujo de n8n (archivo JSON).</li>
+<li>Pasar a su nombre lo que esté a tu nombre.</li>
+<li>Apagar con él lo que no quiera pagar, como WhatsApp o la API de Claude.</li>
+<li>Quitar tus accesos.</li>
+<li>Llamada de cierre.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> El manual completo, los exportes y la lista de cuentas.</li>
+<li><strong>Cuánto tarda:</strong> 3 a 4 horas.</li>
+<li><strong>Listo cuando:</strong> Ya no tenés acceso a nada y el cliente confirma que todo sigue andando.</li>
+<li><strong>Si sale mal:</strong> Si algo estaba en tu cuenta personal, recién ahí se nota por qué P3 pedía todo a su nombre.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup (día 1)</li>
+<li>☐ Cuenta de Google del negocio con Sheets, Gmail y Looker Studio (día 1)</li>
+<li>☐ Acceso a n8n en internet, o confirmar el que ya usamos (día 1)</li>
+<li>☐ Cal.com o Calendly (día 1)</li>
+<li>☐ CRM y proveedor de WhatsApp, si tiene (día 1)</li>
+<li>☐ Clave de la API de Anthropic con tarjeta del negocio (día 1)</li>
+<li>☐ Nombre del responsable interno (día 1)</li>
+<li>☐ Definiciones de etapas, fuentes, vendedores, firma y plazo de propuesta (día 2 o 3, en la reunión)</li>
+<li>☐ Exportación de contactos y clientes actuales (día 3)</li>
+<li>☐ OK escrito a los textos de los mails (semana 2)</li>
+<li>☐ OK escrito al lanzamiento (semana 2)</li>
+<li>☐ Agenda con cada responsable de área (semana 3)</li>
+<li>☐ OK escrito al plan de oleadas (semana 4)</li>
+<li>☐ Lo que pida cada ficha de cada oleada (al empezar cada una)</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Doc de arranque</li>
+<li>☐ Planilla central funcionando</li>
+<li>☐ Mails automáticos en castellano</li>
+<li>☐ Agenda conectada</li>
+<li>☐ ⭐ Tablero único con datos reales y video de 3 minutos</li>
+<li>☐ Mapa del negocio y plan de oleadas</li>
+<li>☐ Cada sistema de cada oleada, conectado</li>
+<li>☐ Manual del equipo y grabaciones de capacitación</li>
+<li>☐ Resumen semanal automático</li>
+<li>☐ Reporte y revisión mensual</li>
+<li>☐ Al salir: exportes, lista de cuentas y accesos transferidos</li>
+</ul>
+<p><strong>El calendario</strong> (a 3 horas por día, en días hábiles)</p>
+<ul>
+<li><strong>Día 1:</strong> pago y bienvenida (P1–P2).</li>
+<li><strong>Días 1 a 3:</strong> accesos y reunión de definiciones (P3–P6).</li>
+<li><strong>Días 4 a 8:</strong> columna central (P7–P13).</li>
+<li><strong>Día 9:</strong> pruebas (P14–P15).</li>
+<li><strong>Día 10:</strong> demo y aprobación (P16–P18).</li>
+<li><strong>Días 11 y 12:</strong> lanzamiento y ⭐ tablero único (P19–P21).</li>
+<li><strong>Lunes siguiente:</strong> primer resumen semanal (P30).</li>
+<li><strong>Semana 3 y comienzo de la 4:</strong> auditoría, mapa y aprobación del plan (P22–P25).</li>
+<li><strong>Semanas 4 a 7:</strong> oleada 1, la 15 o lo que falte de ella.</li>
+<li><strong>Semana 6 o 7:</strong> primer reporte y revisión mensual (P31), un mes después del lanzamiento.</li>
+<li><strong>Semanas 8 a 12:</strong> oleada 2, la 19. La 16 y la 14 pasan al acompañamiento (POR DEFINIR según lo que ya esté instalado).</li>
+</ul>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Arrancamos con el Negocio Integrado 🙌 Te dejo acá el doc con todo: [link]. Para empezar necesito tres cosas: que me invites a la cuenta de Google del negocio, el acceso a la agenda y quién de tu equipo va a ser mi contacto para el día a día. ¿Te queda bien el [día] a las [hora] para una charla de 45 minutos? La idea es que en unas dos semanas ya veas todo el negocio en un tablero.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para seguir me falta solo esto: [acceso que falta]. Se hace así: [instrucción de un renglón]. Apenas lo tenga sigo con la instalación. Los plazos corren desde que está todo, así que cuanto antes, mejor 😉</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [Nombre]! Desde hoy está funcionando la planilla central 🚀 Para el equipo cambian solo tres cosas: cambiar la etapa del contacto en la planilla, tildar «Qualified?» cuando alguien califica y marcar «Delivered» cuando se entrega. Lo demás sale solo. Acá tenés tu tablero: [link]. Te dejo también un video de 3 minutos de qué mirar: [link]. Cualquier cosa rara, avisame por acá.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el resumen del primer mes 📊 Entraron [X] consultas: [X] por [canal 1], [X] por [canal 2]. Hay [X] en reunión, [X] esperando propuesta y [X] ganadas. El tiempo promedio de entrega fue de [X]. El sistema corrió [X] veces. Hubo [X] fallas, ya resueltas. Este mes instalé [lo que se hizo] y el próximo sigue [próxima oleada]. ¿Lo vemos juntos el [día] a las [hora]? El reporte completo está acá: [link].</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p20">← Volver a la ficha 20</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

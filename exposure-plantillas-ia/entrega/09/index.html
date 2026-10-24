@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Seguimiento Constante · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Seguimiento Constante, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Seguimiento Constante">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 09 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Seguimiento Constante</h1>
+  <p class="bajada">Seguimiento automático después de la reunión. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Servicios de ticket alto</span><span class="chip">Setup USD 1.200–2.000</span><span class="chip">2–3 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Lo que asumí</strong> (si algo no va, decime y lo ajusto):</p>
+<ul>
+<li><strong>Canal:</strong> el negocio manda sus presupuestos por mail, desde la casilla de Gmail del vendedor. Si los manda por WhatsApp, la instalación cambia, porque WhatsApp exige plantillas aprobadas por Meta para escribirle primero a alguien.</li>
+<li><strong>n8n:</strong> usás el mismo n8n Cloud donde corre el sistema que ya le instalaste. Si no tenés, creá una cuenta en n8n.io antes de la llamada de arranque.</li>
+<li><strong>Versión mínima:</strong> una sola secuencia, la que sale después del presupuesto. La que sale después de la reunión queda como ajuste para más adelante.</li>
+</ul>
+<p><strong>Cómo se conectan las dos plantillas.</strong> La <strong>2137</strong> manda el presupuesto y los seguimientos, y frena sola cuando el cliente responde. La <strong>16289</strong> lee esa respuesta con Claude, arma un borrador de contestación y le avisa al vendedor. Se instala primero la 2137, porque es la que da el primer resultado. La 16289 se suma después, mientras la secuencia ya está corriendo.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Seguimiento Constante" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Tres palabras que vas a ver mucho:</strong></p>
+<ul>
+<li><strong>n8n:</strong> la herramienta donde armás los flujos. Un <strong>flujo</strong> es una cadena de pasos automáticos. Cada paso es un <strong>nodo</strong>: una cajita con nombre, como «Send new message».</li>
+<li><strong>Credencial:</strong> el permiso guardado en n8n para usar una cuenta, como el Gmail del vendedor.</li>
+<li><strong>Ejecución:</strong> cada vez que un flujo corre. En n8n las ves en la pestaña Executions.</li>
+</ul>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Confirmar pago y mandar bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró el pago y le mandás la bienvenida con lo que necesitás.</li>
+<li><strong>Cómo:</strong> fijate que la plata esté en tu cuenta. Mandale el mensaje 1 de la sección 4 con el link a un Google Doc que tenga la lista del P2. Proponele dos horarios para una videollamada de 30 minutos en los próximos dos días hábiles.</li>
+<li><strong>Qué le pedís:</strong> que complete el doc y que elija el horario.</li>
+<li><strong>Qué le entregás:</strong> el mensaje de bienvenida con el doc.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos. El doc te sirve para los próximos clientes.</li>
+<li><strong>Listo cuando:</strong> el cliente confirmó el horario de la videollamada.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, mandale un audio corto. Por audio se responde más rápido que por texto.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P2 · Completar la lista de datos del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente te da la información para escribir los mensajes.</li>
+<li><strong>Cómo:</strong> el doc tiene estas preguntas:<ul>
+<li>Nombre del negocio.</li>
+<li>Nombre del vendedor tal como lo ve el cliente.</li>
+<li>Casilla de Gmail desde la que manda los presupuestos.</li>
+<li>Cómo los manda hoy: PDF adjunto, link de Drive u otra forma.</li>
+<li>Dos presupuestos recientes de ejemplo.</li>
+<li>Las 5 dudas u objeciones que más escucha.</li>
+<li>Si trata a sus clientes de vos o de usted.</li>
+<li>Qué vende, en dos líneas.</li>
+<li>País y zona horaria.</li>
+<li>Si el vendedor usa Slack.</li>
+<li>Quién va a cargar la planilla.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo de arriba. Lo que no sepa, que lo deje en blanco y lo marcás <strong>POR DEFINIR</strong>.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos del cliente. Dale 48 horas como máximo.</li>
+<li><strong>Listo cuando:</strong> están completos el nombre del vendedor, la casilla, el tono y los dos presupuestos de ejemplo.</li>
+<li><strong>Si sale mal:</strong> si te dice «no tengo tiempo», hacé las preguntas en voz alta durante la videollamada del P3 y completalo vos.</li>
+</ul>
+<p><strong>P3 · Conectar su Gmail en videollamada</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente le da permiso a n8n para mandar y leer mails desde su casilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En tu n8n, entrá a Credentials → Add credential → Gmail OAuth2 → Sign in with Google. «OAuth2» es la forma de dar permiso sin pasar la contraseña.</li>
+<li>Para que la ventana de Google aparezca en la pantalla del cliente, dale el control de tu compu con Chrome Remote Desktop, que es gratis, o hacelo en persona.</li>
+<li>Él escribe su contraseña y acepta los permisos. Vos no la ves ni la anotás.</li>
+<li>Ponele a la credencial el nombre «Gmail – [negocio]».</li>
+<li>Avisale que en los próximos días va a ver en su casilla algunos mails de prueba.</li>
+</ol>
+</li>
+</ul>
+<p>Google Sheets lo conectás con <strong>tu</strong> cuenta de Google, porque la planilla la vas a crear vos. Es más simple y no hace falta otro login del cliente.
+- <strong>Qué le pedís:</strong> 30 minutos y que inicie sesión él mismo.
+- <strong>Qué le entregás:</strong> nada.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> la credencial de Gmail aparece en n8n sin error.
+- <strong>Si sale mal:</strong> si usa Google Workspace (Gmail con dominio propio) y aparece «app bloqueada por el administrador», el que administra el dominio tiene que permitir a n8n. Eso queda como tarea del cliente. Nunca le pidas la contraseña por WhatsApp.</p>
+<p><strong>P4 · ¿Están todos los datos y el Gmail?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás si podés empezar a instalar.</li>
+<li><strong>Cómo:</strong> revisás el doc del P2 y la credencial del P3.</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ, si están los datos mínimos del P2 y el Gmail conectado. Si es NO, vas al P5.</li>
+<li><strong>Si sale mal:</strong> no arranques «con lo que hay». Si escribís los textos sin los ejemplos, después los vas a tener que rehacer.</li>
+</ul>
+<p><strong>P5 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís lo que falta, con una lista concreta.</li>
+<li><strong>Cómo:</strong> usá el mensaje 2 de la sección 4, con lo que falta enumerado.</li>
+<li><strong>Qué le pedís:</strong> solo lo que falta.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos. Esperás hasta 48 horas y volvés al P2.</li>
+<li><strong>Listo cuando:</strong> te mandó lo pendiente.</li>
+<li><strong>Si sale mal:</strong> si pasan 4 días sin respuesta, ofrecele 10 minutos por llamada para completarlo juntos.</li>
+</ul>
+<h3>3 · Instalación de la secuencia (plantilla 2137)</h3>
+<p><strong>P6 · Importar la plantilla 2137 en n8n</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla a tu n8n.</li>
+<li><strong>Cómo:</strong> abrí https://n8n.io/workflows/2137, tocá «Use for free» y copiala a tu n8n. Renombrá el flujo como «[Negocio] – Seguimiento presupuestos».</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> ves el flujo abierto con sus nodos: Every hour, Settings, Email sequence, etcétera.</li>
+<li><strong>Si sale mal:</strong> si no te deja importar, descargá el archivo y usá «Import from file» en n8n.</li>
+</ul>
+<p><strong>P7 · Copiar la planilla y armar columnas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la planilla donde el vendedor carga cada presupuesto.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí el link de la nota «Try me out» del flujo.</li>
+<li>Andá a Archivo → Hacer una copia, con tu cuenta. Borrá las 3 filas de ejemplo.</li>
+<li>Dejá las columnas <code>email</code> y <code>first_emailed</code>. La segunda va vacía: la llena el flujo.</li>
+<li>Sumá <code>nombre</code>, <code>pedido</code>, <code>monto</code> y <code>link</code>. En <code>link</code> va el enlace al PDF del presupuesto en Drive. Usá nombres sin tildes, ñ ni espacios.</li>
+<li>Seleccioná la columna <code>email</code> y andá a Datos → Validación de datos → «El texto es un correo electrónico válido» → Rechazar entrada.</li>
+<li>Pegá la URL de tu copia en el nodo «Settings», campo <code>sheet_url</code>. Tal como viene, apunta a la planilla del autor.</li>
+<li>Compartí la planilla como editor con el vendedor.</li>
+<li>Creá un <strong>archivo aparte</strong> llamado «Presupuestos cerrados», con las mismas columnas más <code>resultado</code> (ganado / perdido / sin respuesta) y <code>fecha_cierre</code>. Ahí el vendedor mueve las filas que terminaron. Al sacar una fila de la planilla principal, la secuencia de esa persona se corta. Es un archivo aparte para que el flujo nunca lo lea.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la planilla tiene las 6 columnas, la validación anda (probá escribir «hola» en email: lo tiene que rechazar) y <code>sheet_url</code> apunta a tu copia.</li>
+<li><strong>Si sale mal:</strong> si en algún nombre de columna quedó una tilde o un espacio, la variable sale vacía en el mail. Revisá los encabezados letra por letra.</li>
+</ul>
+<p><strong>P8 · Completar asunto, vendedor y número de secuencia</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> configurás los datos fijos de la secuencia.</li>
+<li><strong>Cómo:</strong> en el nodo «Settings» completá:<ul>
+<li><code>subject</code>: «Tu presupuesto de [negocio]».</li>
+<li><code>sender_name</code>: el nombre del vendedor tal como lo va a ver el cliente.</li>
+<li><code>mail_id</code>: un número propio de esta secuencia, por ejemplo 1.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada, ya está en el P2.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> los tres campos tienen datos reales.</li>
+<li><strong>Si sale mal:</strong> si después cambiás el asunto, los hilos viejos dejan de reconocerse. Elegilo bien ahora.</li>
+</ul>
+<p><strong>P9 · Escribir los siete mensajes en español</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> reemplazás los 3 mensajes de ejemplo del nodo «Email sequence» por la secuencia en español.</li>
+<li><strong>Cómo:</strong> pegá esto y adaptalo al tono del P2. Cambiá [Nombre del vendedor] por el nombre real, porque no es una variable.<ul>
+<li>El mail del día 0 <strong>es el envío del presupuesto</strong>: sale en la corrida siguiente a cargar la fila, en menos de una hora.</li>
+<li><code>send_on_day</code> cuenta desde el primer mail, no desde el anterior.</li>
+<li>Los saltos de línea van con <code>&lt;br /&gt;</code>.</li>
+<li>No uses comillas dobles dentro del texto: usá « ».</li>
+<li>Usá solo variables que existan como columnas.</li>
+</ul>
+</li>
+</ul>
+<pre><code>[
+{&quot;message&quot;: &quot;Hola {nombre}, ¿cómo estás?&lt;br /&gt;&lt;br /&gt;Como quedamos, te paso el presupuesto de {pedido} por {monto}. Lo podés ver acá: {link}&lt;br /&gt;&lt;br /&gt;Cualquier duda, respondé este mail y lo vemos.&lt;br /&gt;&lt;br /&gt;Saludos,&lt;br /&gt;[Nombre del vendedor]&quot;, &quot;send_on_day&quot;: 0},
+{&quot;message&quot;: &quot;Hola {nombre}, te escribo para saber si te llegó bien el presupuesto de {pedido} y si pudiste mirarlo. Si querés, lo repasamos juntos en una llamada corta.&lt;br /&gt;&lt;br /&gt;Si preferís que no te escriba más, respondeme y listo.&quot;, &quot;send_on_day&quot;: 2},
+{&quot;message&quot;: &quot;Hola {nombre}, cuando uno mira un presupuesto con calma suelen aparecer dudas sobre plazos o forma de pago. Si te surgió alguna sobre {pedido}, contestame acá.&lt;br /&gt;&lt;br /&gt;Si preferís que no te escriba más, respondeme y listo.&quot;, &quot;send_on_day&quot;: 5},
+{&quot;message&quot;: &quot;Hola {nombre}, ¿seguís con la idea de avanzar con {pedido}? Si algo del presupuesto no te cierra, contame qué y vemos si hay otra forma de armarlo.&lt;br /&gt;&lt;br /&gt;Si preferís que no te escriba más, respondeme y listo.&quot;, &quot;send_on_day&quot;: 9},
+{&quot;message&quot;: &quot;Hola {nombre}, no quiero llenarte la casilla. Si te sirve retomarlo más adelante, decime una fecha y te escribo ese día.&lt;br /&gt;&lt;br /&gt;Si preferís que no te escriba más, respondeme y listo.&quot;, &quot;send_on_day&quot;: 14},
+{&quot;message&quot;: &quot;Hola {nombre}, te dejo de nuevo el link del presupuesto de {pedido} por si lo necesitás a mano: {link}&lt;br /&gt;&lt;br /&gt;Si preferís que no te escriba más, respondeme y listo.&quot;, &quot;send_on_day&quot;: 21},
+{&quot;message&quot;: &quot;Hola {nombre}, este es mi último mensaje sobre {pedido}. Si en algún momento querés retomarlo, respondé este mail y lo vemos. ¡Gracias por tenernos en cuenta!&quot;, &quot;send_on_day&quot;: 30}
+]
+</code></pre>
+<p>Dos cosas más que conviene saber:
+    - Los valores se toman cuando sale el primer mail. Si después cambian el monto en la planilla, los seguimientos siguen con el viejo.
+    - La salida «respondeme y listo» funciona porque cualquier respuesta frena la secuencia.
+- <strong>Qué le pedís:</strong> nada todavía. Lo aprueba en el P15.
+- <strong>Qué le entregás:</strong> nada todavía.
+- <strong>Cuánto tarda:</strong> 1 hora y media.
+- <strong>Listo cuando:</strong> están los 7 mensajes, sin comillas dobles adentro y solo con <code>{nombre}</code>, <code>{pedido}</code>, <code>{monto}</code> y <code>{link}</code>.
+- <strong>Si sale mal:</strong> si el nodo marca error de formato, casi siempre es una comilla doble dentro de un texto o una coma de más después del último <code>}</code>.</p>
+<p><strong>P10 · Aplicar los cinco arreglos de una línea</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís los errores que trae la plantilla.</li>
+<li><strong>Cómo:</strong> abrí cada nodo y cambiá exactamente esto:<ul>
+<li><strong>(a) Obligatorio.</strong> En «Classify threads», cambiá <code>$('Get thread details').item.json.messages[0].internalDate</code> por <code>item.json.messages[0].internalDate</code>.</li>
+<li><strong>(b) Obligatorio.</strong> En «Reply to message» → Options → Sender Name, cambiá «David Roberts» por <code>{{ $json.sender_name }}</code>.</li>
+<li><strong>(c)</strong> En «Compose message», cambiá <code>{{ JSON.stringify($json.placeholders) }}</code> por <code>{{ JSON.stringify($json.placeholders).replaceAll("'", "&amp;#39;") }}</code>.</li>
+<li><strong>(d)</strong> En «Get previous message threads» → Filters → Search, dejá <code>subject:"{{ $json.subject }}" after:{{ $now.minus({'days': $json.emails.last().send_on_day+1}).toFormat('yyyy/MM/dd') }}</code>.</li>
+<li><strong>(e)</strong> En «Send new message» → Settings → On Error, elegí «Continue».</li>
+</ul>
+</li>
+</ul>
+<p>Los dos primeros son obligatorios. Sin ellos, el flujo calcula mal los días y corta la secuencia en el segundo mail. Los otros tres evitan fallas.
+- <strong>Qué le pedís:</strong> nada.
+- <strong>Qué le entregás:</strong> nada.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> hiciste los cinco cambios y guardaste.
+- <strong>Si sale mal:</strong> copiá y pegá en vez de tipear. Un espacio o una comilla de más rompe la línea.</p>
+<p><strong>P11 · Asignar cuentas y elegir zona horaria</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís a cada nodo qué cuenta usar.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En «Get emails» y «Update last contacted time», elegí tu credencial de Google Sheets.</li>
+<li>En «Get previous message threads», «Get thread details», «Send new message» y «Reply to message», elegí «Gmail – [negocio]».</li>
+<li>En la configuración del flujo (Settings → Timezone), elegí la zona del negocio. Por ejemplo, America/Argentina/Buenos_Aires. Si no la sabés, es <strong>POR DEFINIR</strong> según el P2.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> ningún nodo muestra el triángulo rojo de credencial faltante.</li>
+<li><strong>Si sale mal:</strong> si usás n8n instalado en tu propio servidor, el acceso de Google tiene que estar «In production» en Google Cloud. En «Testing», Google lo vence a los 7 días y la secuencia deja de mandar sin avisar.</li>
+</ul>
+<h3>4 · Prueba de la secuencia</h3>
+<p><strong>P12 · Probar con casilla propia y días en cero</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> comprobás que manda, que encadena y que frena.</li>
+<li><strong>Cómo:</strong> hacelo un día hábil, porque los fines de semana el nodo «Don't email on weekends» frena todo.<ol>
+<li>Poné <code>send_on_day</code> en 0 en los 7 mensajes.</li>
+<li>Cargá una fila con otra casilla tuya, con nombre «Prueba D'Angelo». El apóstrofo prueba el arreglo (c).</li>
+<li>Guardá y ejecutá a mano desde «Every hour». Te tiene que llegar el mail 1, que sale desde el Gmail del cliente.</li>
+<li>Ejecutalo otra vez: te tiene que llegar el mail 2 <strong>en el mismo hilo</strong>.</li>
+<li>Respondé desde tu casilla y ejecutalo de nuevo: no tiene que salir el tercero.</li>
+<li>Cargá una segunda fila de prueba, ejecutá una vez, moví esa fila al archivo «Presupuestos cerrados» y ejecutá de nuevo: no tiene que salir nada.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada. Ya le avisaste en el P3 que vería mails de prueba.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> se cumplieron las cuatro cosas: llegó el mail 1, llegó el 2 en el mismo hilo, frenó al responder y frenó al mover la fila.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si el mail 2 llega en un hilo aparte, o no llega, revisá los arreglos (a) y (d).</li>
+<li>Si llega firmado por «David Roberts», revisá el (b).</li>
+<li>Si la fila del apóstrofo frena todo, revisá el (c).</li>
+</ul>
+</li>
+</ul>
+<p><strong>P13 · ¿Llegan dos mails y frena al responder?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si la secuencia está lista para mostrarse.</li>
+<li><strong>Cómo:</strong> mirá el resultado del P12.</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ, si las cuatro comprobaciones salieron bien. Si es NO, volvé al P10, revisá cada arreglo y las credenciales, y repetí el P12.</li>
+<li><strong>Si sale mal:</strong> abrí en Executions la ejecución en rojo. El nodo que falló está marcado y te dice el motivo.</li>
+</ul>
+<h3>5 · Demo y aprobación</h3>
+<p><strong>P14 · Mostrar la demo y mandar los textos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás al cliente cómo funciona y le das los textos para que los lea.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Hacé una videollamada de 20 minutos, todavía con los días en 0.</li>
+<li>Que te pase un mail personal suyo, no el del negocio. Cargá una fila en vivo.</li>
+<li>Ejecutá dos veces y que vea los dos mails llegar en el mismo hilo. Que responda y mostrale que frena.</li>
+<li>Mostrale cómo se mueve una fila a «Cerrados».</li>
+<li>Después de la llamada, mandale un Google Doc con los 7 textos y los días en que sale cada uno.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> que lea los textos y te diga «aprobado» o qué cambiar.</li>
+<li><strong>Qué le entregás:</strong> el doc con la secuencia.</li>
+<li><strong>Cuánto tarda:</strong> 40 minutos en total.</li>
+<li><strong>Listo cuando:</strong> vio la demo y tiene el doc.</li>
+<li><strong>Si sale mal:</strong> si en la llamada algo no anda, no improvises. Decile «lo reviso y te lo muestro mañana» y volvé al P12.</li>
+</ul>
+<p><strong>P15 · ¿El cliente aprueba los textos?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás su visto bueno por escrito.</li>
+<li><strong>Cómo:</strong> por WhatsApp. Dale 48 horas.</li>
+<li><strong>Qué le pedís:</strong> un «aprobado» explícito.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> hasta 48 horas.</li>
+<li><strong>Listo cuando:</strong> SÍ, si escribió «aprobado» o algo equivalente. Si pide cambios, vas al P16.</li>
+<li><strong>Si sale mal:</strong> si no responde, recordale que no lanzás sin su aprobación. Los textos salen con el nombre de su vendedor.</li>
+</ul>
+<p><strong>P16 · Corregir lo pedido y volver a probar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> aplicás sus cambios.</li>
+<li><strong>Cómo:</strong> editá «Email sequence», guardá y repetí una ejecución de prueba para ver que el formato no se rompió. Mandale el doc actualizado.</li>
+<li><strong>Qué le pedís:</strong> nada nuevo.</li>
+<li><strong>Qué le entregás:</strong> el doc corregido.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la prueba anda con los textos nuevos. Volvés al P14, solo con el doc, sin otra llamada.</li>
+<li><strong>Si sale mal:</strong> si pide algo que el flujo no hace, como adjuntar el PDF, explicale la alternativa del link en una línea.</li>
+</ul>
+<h3>6 · Lanzamiento</h3>
+<p><strong>P17 · Poner días reales y publicar el flujo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás la secuencia andando de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá <strong>todas</strong> las filas de prueba de la planilla. Si quedan, la secuencia les sigue escribiendo.</li>
+<li>Volvé a poner los días 0, 2, 5, 9, 14, 21 y 30.</li>
+<li>Guardá y publicá el flujo. Desde ahí corre cada hora.</li>
+<li>Después de cualquier cambio futuro: guardá y volvé a publicar.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el flujo figura como publicado y la planilla está vacía, salvo los encabezados.</li>
+<li><strong>Si sale mal:</strong> si olvidaste volver los días a 0, 2, 5…, el cliente real recibe los 7 mails en 7 horas. Revisalo dos veces antes de publicar.</li>
+</ul>
+<p><strong>P18 · Entregar guía y capacitar al vendedor</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le enseñás al vendedor la única tarea que depende de él: cargar la fila.</li>
+<li><strong>Cómo:</strong> armá una guía de una página con estas reglas y repasala en 30 minutos por videollamada:<ul>
+<li>Cada vez que tenés un presupuesto, subí el PDF a Drive con «cualquier persona con el enlace puede ver» y cargá una fila. <strong>No mandes el mail a mano:</strong> el sistema lo manda en menos de una hora.</li>
+<li>No edites filas ya cargadas.</li>
+<li>Cuando el cliente compra o dice que no, mové la fila a «Cerrados» y completá <code>resultado</code>.</li>
+<li>Lo que cargás viernes a la tarde o el fin de semana sale el lunes.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> 30 minutos del vendedor.</li>
+<li><strong>Qué le entregás:</strong> la guía en PDF y el link a la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora, contando la guía.</li>
+<li><strong>Listo cuando:</strong> el vendedor explica con sus palabras cuándo carga y cuándo mueve una fila.</li>
+<li><strong>Si sale mal:</strong> si te dice «yo lo mando a mano y después lo cargo», explicale que así el cliente recibe dos mails y la secuencia queda en otro hilo.</li>
+</ul>
+<p><strong>P19 · Cargar el primer presupuesto real</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el vendedor carga su primer caso real.</li>
+<li><strong>Cómo:</strong> idealmente al final de la llamada del P18, en vivo, con un presupuesto que tenga que mandar ese día.</li>
+<li><strong>Qué le pedís:</strong> que cargue la fila completa.</li>
+<li><strong>Qué le entregás:</strong> el mensaje 3 de la sección 4.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> en menos de una hora, la columna <code>first_emailed</code> de esa fila tiene fecha.</li>
+<li><strong>Si sale mal:</strong> si no aparece la fecha, mirá Executions. Lo más común: es fin de semana, o el mail quedó mal escrito. En ese caso, el arreglo (e) anota la fila igual: corregí el mail y borrá su <code>first_emailed</code>.</li>
+</ul>
+<p><strong>P20 · ⭐ Sale solo el primer seguimiento real</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Lo hace el sistema a los 2 días.</li>
+<li><strong>Cómo:</strong> ese día, entrá a la planilla o pedile al vendedor una captura de «Enviados». Ahí se ve el seguimiento que salió sin que nadie lo tocara. Mandásela al dueño: «Mirá, esto salió solo».</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> la prueba de que funciona, con una captura.</li>
+<li><strong>Cuánto tarda:</strong> 2 días hábiles después del P19.</li>
+<li><strong>Listo cuando:</strong> el mail 2 está en el mismo hilo que el presupuesto.</li>
+<li><strong>Si sale mal:</strong> si no salió, el problema casi siempre está en el arreglo (a). Revisalo y volvé a publicar.</li>
+</ul>
+<h3>7 · Lectura de respuestas con IA (plantilla 16289)</h3>
+<p><strong>P21 · Importar la 16289 y conectar Claude</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> sumás el flujo que lee las respuestas con Claude.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Importá https://n8n.io/workflows/16289 como en el P6.</li>
+<li>Creá una clave de API en console.anthropic.com → API Keys → Create Key. Una <strong>clave de API</strong> es una contraseña larga que deja que n8n use Claude. Cargale saldo en Billing.</li>
+<li>En n8n, creá la credencial de Anthropic con esa clave y elegila en «Anthropic Chat Model».</li>
+<li>En los nodos de Gmail, elegí «Gmail – [negocio]».</li>
+</ol>
+</li>
+</ul>
+<p>Quién paga el consumo de Claude es <strong>POR DEFINIR</strong>. Lo sugerido es que vaya incluido en tu mensualidad.
+- <strong>Qué le pedís:</strong> nada.
+- <strong>Qué le entregás:</strong> nada.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> no queda ningún nodo con la credencial faltante.
+- <strong>Si sale mal:</strong> si Claude responde «credit balance too low», la cuenta de Anthropic no tiene saldo.</p>
+<p><strong>P22 · Aplicar los cuatro arreglos de la 16289</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís lo que trae mal la plantilla.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>(1)</strong> En «New Email Reply» → Filters → Search, poné <code>subject:"Tu presupuesto de [negocio]" -from:me</code>. Así Claude lee solo las respuestas de los clientes y no cada mail de la casilla.</li>
+<li><strong>(2)</strong> En el prompt de «Classify Reply + Draft Response» (el texto con las instrucciones para Claude), cambiá <code>{{ $('New Email Reply').item.json.snippet }}</code> por <code>{{ $('New Email Reply').item.json.text }}</code>. Cambiá también <code>{{ $('New Email Reply').item.json.from }}</code> por <code>{{ $('New Email Reply').item.json.from.text }}</code>. Tal como viene, Claude clasifica sin leer el mail.</li>
+<li><strong>(3)</strong> En «Create Gmail Draft», poné en Message <code>{{ $('Classify Reply + Draft Response').item.json.output.suggested_reply }}</code>. En Options → Send To, poné <code>{{ $('New Email Reply').item.json.from.value[0].address }}</code>. Tal como viene, falla con «Invalid email address» y el borrador sale vacío.</li>
+<li><strong>(4)</strong> En «Config (edit me)» → <code>offer_context</code>, escribí: «Somos [negocio]. Ofrecemos POR DEFINIR. Tono cercano, de vos. Respondé siempre en español rioplatense, breve, sin prometer precios ni plazos que no estén en el presupuesto».</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 40 minutos.</li>
+<li><strong>Listo cuando:</strong> guardaste los cuatro cambios.</li>
+<li><strong>Si sale mal:</strong> si el asunto del filtro no es idéntico al de <code>subject</code> del P8, Claude no ve ninguna respuesta. Copialo de ahí.</li>
+</ul>
+<p><strong>P23 · Armar aviso al vendedor y lista caliente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que el vendedor se entere y que quede registro de cada interesado.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Si usa Slack:</strong> poné su canal en «Config (edit me)» → <code>slack_channel</code>. En «Notify Slack», cambiá <code>from</code> por <code>from.text</code>, igual que en el P22.</li>
+<li><strong>Si no usa Slack:</strong> reemplazá «Notify Slack» por un nodo Gmail → Send a la casilla del vendedor. Asunto: «Cliente interesado». Mensaje: <code>{{ $('New Email Reply').item.json.from.text }}</code> y <code>{{ $('Classify Reply + Draft Response').item.json.output.summary }}</code>. Dejalo conectado a «Create Gmail Draft».</li>
+<li><strong>Etiquetas:</strong> creá en Gmail las que vayas a usar y elegilas en cada nodo «Label…» (Label Names or IDs, modo Fixed). Borrá los nodos «Label…» que no uses: con REPLACE_WITH_… fallan.</li>
+<li><strong>Lista caliente:</strong> creá un archivo «Leads calientes» con las columnas <code>fecha</code>, <code>email</code>, <code>resumen</code>, <code>confianza</code> y <code>atendido</code>. Conectá a la salida Interested de «Route by Category» un nodo Google Sheets → Append Row con la fecha, <code>{{ $('New Email Reply').item.json.from.value[0].address }}</code>, <code>{{ $json.output.summary }}</code> y <code>{{ $json.output.confidence }}</code>. La columna <code>atendido</code> la completa el vendedor.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> la salida Interested tiene el aviso y el registro conectados.</li>
+<li><strong>Si sale mal:</strong> si te quedó algún nodo «Label…» con REPLACE_WITH, el flujo se frena ahí. Borralo o configuralo.</li>
+</ul>
+<p><strong>P24 · Probar con una respuesta de interés</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> simulás que un cliente responde.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Avisale al cliente que vas a hacer una prueba en su casilla.</li>
+<li>Desde tu casilla, mandá a su Gmail un mail con asunto «Re: Tu presupuesto de [negocio]» y el texto «Me interesa, ¿cuándo podemos arrancar?».</li>
+<li>Ejecutá el flujo a mano.</li>
+<li>Repetí con «Por ahora no, gracias».</li>
+<li>Al terminar, <strong>borrá los borradores de prueba</strong>, así nadie los manda por error.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> permiso para probar en su casilla.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> se cumplen las dos condiciones del P25.</li>
+<li><strong>Si sale mal:</strong> si clasifica todo igual, revisá el arreglo (2). Si el borrador está vacío, revisá el (3).</li>
+</ul>
+<p><strong>P25 · ¿Llegan borrador, aviso y fila nueva?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si se activa la lectura con IA.</li>
+<li><strong>Cómo:</strong> revisá dos cosas:<ul>
+<li>Con «me interesa»: hay un borrador con contestación, llegó el aviso y apareció una fila en «Leads calientes».</li>
+<li>Con «no, gracias»: no se sumó ninguna fila.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ, si salieron bien las dos pruebas. Entonces publicás la 16289. Si es NO, volvés al P22.</li>
+<li><strong>Si sale mal:</strong> mirá Executions de la 16289 y buscá el nodo en rojo.</li>
+</ul>
+<h3>8 · Seguimiento y reporte</h3>
+<p><strong>P26 · Leer cada respuesta y avisar al vendedor</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. El sistema revisa Gmail cada minuto.</li>
+<li><strong>Cómo:</strong> cuando un cliente responde pasan dos cosas solas:<ul>
+<li>La 2137 frena su secuencia.</li>
+<li>La 16289 clasifica la respuesta. Si hay interés, deja un borrador, avisa al vendedor y anota la fila.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Nada se manda solo:</strong> el borrador lo revisa y lo envía una persona.
+- <strong>Qué le pedís:</strong> nada.
+- <strong>Qué le entregás:</strong> el aviso de lanzamiento completo. Usá el mensaje 3 actualizado.
+- <strong>Cuánto tarda:</strong> continuo.
+- <strong>Listo cuando:</strong> ves ejecuciones verdes en las dos plantillas.
+- <strong>Si sale mal:</strong> si un cliente cerró por teléfono y nunca respondió el mail, la secuencia sigue. Por eso el vendedor tiene que mover la fila a «Cerrados».</p>
+<p><strong>P27 · Atender cada lead caliente del aviso</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el vendedor entra en la charla cuando el sistema le avisa.</li>
+<li><strong>Cómo:</strong> abre el aviso, va a «Borradores» en Gmail, corrige el texto si hace falta y lo manda. Después pone «sí» en <code>atendido</code>. La meta es cero calientes sin atender.</li>
+<li><strong>Qué le pedís:</strong> responder cada aviso en el día.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> lo que tarde en contestar.</li>
+<li><strong>Listo cuando:</strong> cada fila de «Leads calientes» tiene <code>atendido</code> = sí.</li>
+<li><strong>Si sale mal:</strong> si se acumulan avisos sin atender, avisale al dueño en el reporte con el número exacto. No lo retes: mostrá el número.</li>
+</ul>
+<p><strong>P28 · Revisar ejecuciones y planilla dos veces por semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que todo corra.</li>
+<li><strong>Cómo:</strong> martes y viernes, 20 minutos:<ul>
+<li>En n8n → Executions, buscá ejecuciones en rojo en los dos flujos.</li>
+<li>En la planilla, buscá filas con <code>first_emailed</code> y mail mal escrito.</li>
+<li>Fijate que la credencial de Gmail siga conectada.</li>
+<li>Revisá el saldo de Anthropic.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 40 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> no hay errores sin resolver.</li>
+<li><strong>Si sale mal:</strong> si el cliente cambió la contraseña de Google, la credencial se cae y no sale nada. Hacé otra videollamada corta como la del P3.</li>
+</ul>
+<p><strong>P29 · ¿El vendedor carga cada presupuesto?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> verificás lo que más rompe este servicio: que no carguen las filas.</li>
+<li><strong>Cómo:</strong> cada viernes del primer mes, preguntale al vendedor cuántos presupuestos mandó en la semana y comparalo con las filas nuevas.</li>
+<li><strong>Qué le pedís:</strong> ese número.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ, si coinciden. Si es NO, volvés al P18: averiguá por qué no carga y simplificá. Por ejemplo, que cargue solo nombre, mail y pedido.</li>
+<li><strong>Si sale mal:</strong> si el dueño no le pide al vendedor que cargue, decíselo claro: sin fila no hay seguimiento, y no es algo que puedas arreglar desde n8n.</li>
+</ul>
+<p><strong>P30 · Entregar el reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás al dueño lo que hizo el sistema.</li>
+<li><strong>Cómo:</strong> a los 30 días del lanzamiento, armá una página con:<ul>
+<li>Presupuestos cargados.</li>
+<li>Seguimientos enviados (contalos en Executions o en Enviados).</li>
+<li>Respuestas recibidas.</li>
+<li>Avisos de interesados y cuántos quedaron sin atender.</li>
+<li>Cerrados ganados sobre el total cerrado, con lo que marcó el vendedor.</li>
+</ul>
+</li>
+</ul>
+<p>Mostrá solo números reales y no atribuyas ventas al sistema.
+- <strong>Qué le pedís:</strong> 15 minutos para repasarlo.
+- <strong>Qué le entregás:</strong> el reporte y el mensaje 4.
+- <strong>Cuánto tarda:</strong> 1 hora y media.
+- <strong>Listo cuando:</strong> el dueño lo leyó y acordaron los ajustes.
+- <strong>Si sale mal:</strong> si el vendedor no marcó <code>resultado</code>, el porcentaje de cierre queda <strong>POR DEFINIR</strong>. Pedile que lo complete para el próximo mes.</p>
+<h3>9 · Ajustes</h3>
+<p><strong>P31 · Ajustar textos y días según respuestas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> mejorás la secuencia con lo que viste.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Fijate en qué mensaje responde más gente. Reforzá ese y recortá los que nadie responde.</li>
+<li>Si el cliente lo pide, sumá la secuencia de después de la reunión: duplicá el flujo y cambiá <code>subject</code>, <code>mail_id</code> y planilla.</li>
+<li>Guardá y volvé a publicar.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que apruebe los textos nuevos.</li>
+<li><strong>Qué le entregás:</strong> el doc de la secuencia actualizado.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> el cambio está publicado y aprobado.</li>
+<li><strong>Si sale mal:</strong> no cambies el asunto de la secuencia que ya corre, porque se pierden los hilos abiertos.</li>
+</ul>
+<h3>10 · Renovación o salida</h3>
+<p><strong>P32 · ¿Sigue con la mensualidad?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás si continúa.</li>
+<li><strong>Cómo:</strong> junto con el reporte, recordale la fecha de cobro.</li>
+<li><strong>Qué le pedís:</strong> su decisión.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> SÍ, si paga, y vas al P33. Si es NO, vas al P34.</li>
+<li><strong>Si sale mal:</strong> si duda, preguntale qué le falta ver. No bajes el precio en el momento.</li>
+</ul>
+<p><strong>P33 · Cobrar mensualidad y repetir el ciclo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás y seguís con revisiones y reporte mensual.</li>
+<li><strong>Cómo:</strong> usá el mismo medio de cobro del primer sistema. Cada mes volvés al P28.</li>
+<li><strong>Qué le pedís:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> el reporte mensual.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> el pago entró.</li>
+<li><strong>Si sale mal:</strong> si se atrasa más de 7 días, mandale un aviso amable y una fecha de pausa. Nunca cortes sin avisar.</li>
+</ul>
+<p><strong>P34 · Entregar flujos, planilla y accesos ordenados</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás bien para que se lleve todo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Avisale con 15 días.</li>
+<li>Descargá los dos flujos desde n8n (menú ⋯ → Download) y mandáselos.</li>
+<li>Transferile la propiedad de las tres planillas.</li>
+<li>Despublicá los flujos y borrá la credencial de su Gmail.</li>
+<li>Pedile que revoque el acceso en myaccount.google.com → Seguridad → Apps con acceso.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> que revoque el acceso.</li>
+<li><strong>Qué le entregás:</strong> los flujos, las planillas y la guía.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no queda nada suyo corriendo en tu n8n.</li>
+<li><strong>Si sale mal:</strong> si te olvidás de despublicar, sus clientes siguen recibiendo mails. Despublicá primero.</li>
+</ul>
+<h3>11 · Próximo servicio</h3>
+<p><strong>P35 · Ofrecer Plata Dormida o Máquina de Conversión</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> proponés el siguiente paso con sus propios números.</li>
+<li><strong>Cómo:</strong> hay dos caminos según lo que muestren los números.<ul>
+<li><strong>16 Plata Dormida, en versión chica:</strong> la planilla «Cerrados» va a juntar presupuestos «sin respuesta». Son contactos que ya tuvieron relación con el negocio, ideales para reactivar.</li>
+<li><strong>15 Máquina de Conversión:</strong> si el cuello de botella es antes del presupuesto (consultas sin responder, sin filtrar o sin agendar).</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> 20 minutos para mostrarle la idea.</li>
+<li><strong>Qué le entregás:</strong> una propuesta corta.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te dijo sí, no o «en X meses».</li>
+<li><strong>Si sale mal:</strong> si no hay números claros todavía, esperá al segundo reporte.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ <strong>Día 0:</strong> completar el doc de datos: negocio, nombre del vendedor, casilla, tono, qué vende, dudas frecuentes, zona horaria, si usa Slack y quién carga la planilla.</li>
+<li>☐ <strong>Día 0:</strong> dos presupuestos recientes de ejemplo.</li>
+<li>☐ <strong>Día 1–2:</strong> 30 minutos de videollamada para conectar su Gmail.</li>
+<li>☐ <strong>Día 5:</strong> permiso para mandar mails de prueba desde su casilla.</li>
+<li>☐ <strong>Día 6:</strong> 20 minutos para la demo.</li>
+<li>☐ <strong>Día 6–8:</strong> aprobación escrita de los textos.</li>
+<li>☐ <strong>Día 8:</strong> 30 minutos del vendedor para la capacitación.</li>
+<li>☐ <strong>Desde el lanzamiento:</strong> cargar cada presupuesto, mover los cerrados con su resultado y marcar los calientes atendidos.</li>
+<li>☐ <strong>Cada viernes del primer mes:</strong> cuántos presupuestos mandó.</li>
+<li>☐ <strong>Día 30 del lanzamiento:</strong> 15 minutos para el reporte y el pago de la mensualidad.</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Secuencia de 7 mails, desde el presupuesto hasta el día 30, aprobada y funcionando.</li>
+<li>☐ Planilla de presupuestos con validación, más «Presupuestos cerrados».</li>
+<li>☐ Lectura de respuestas con IA y borrador listo para revisar.</li>
+<li>☐ Aviso al vendedor por Slack o mail.</li>
+<li>☐ Lista diaria de leads calientes.</li>
+<li>☐ Guía de una página para el vendedor.</li>
+<li>☐ Reporte mensual.</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles; con 2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago y bienvenida (P1). El cliente completa el doc (P2).</td>
+</tr>
+<tr>
+<td>1–2</td>
+<td>Videollamada y Gmail conectado (P3–P4). Importás y armás la planilla (P6–P7).</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Settings y los 7 mensajes (P8–P9).</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Arreglos y cuentas (P10–P11).</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Prueba completa (P12–P13).</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Demo y textos al cliente (P14).</td>
+</tr>
+<tr>
+<td>7–8</td>
+<td>Aprobación, lanzamiento, capacitación y primer presupuesto real (P15–P19).</td>
+</tr>
+<tr>
+<td>9–12</td>
+<td>Instalación y prueba de la lectura con IA (P21–P25).</td>
+</tr>
+<tr>
+<td>10</td>
+<td>⭐ Sale solo el primer seguimiento real (P20).</td>
+</tr>
+<tr>
+<td>13 en adelante</td>
+<td>Todo corriendo. Revisiones martes y viernes, control de carga cada viernes (P26–P29).</td>
+</tr>
+<tr>
+<td>30 días después del lanzamiento</td>
+<td>Primer reporte, ajustes y renovación (P30–P33).</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes para copiar (WhatsApp)</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Recibí el pago, gracias 🙌 Arrancamos con el seguimiento automático de presupuestos. Para empezar necesito 3 cosas:
+1. Que completes este doc (20 min): [link]
+2. Dos presupuestos que hayas mandado hace poco, de ejemplo
+3. 30 min de videollamada para conectar tu Gmail. Vos ponés tu clave, yo nunca la veo. ¿Te va el [día] a las [hora] o el [día] a las [hora]?</p>
+<p>Con eso, en unos 6 días hábiles te muestro la secuencia andando.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [nombre], ¿cómo va? Para seguir con la instalación me falta: [lo que falta]. Apenas lo tenga, sigo. Si te resulta más fácil, lo hacemos en 10 min por llamada hoy o mañana.</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [nombre]! Desde hoy el seguimiento está prendido ✅
+Cómo se usa: cada vez que tengas un presupuesto, cargás una fila acá [link planilla] con nombre, mail, qué pidió, monto y link al PDF. En menos de una hora sale el mail, y después los seguimientos solos.
+Si el cliente responde, la secuencia frena y te llega un aviso con un borrador listo para revisar. Cuando cierres o te digan que no, pasá la fila a «Cerrados».
+Ojo: los fines de semana no sale nada, arranca el lunes.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Te paso el resumen del primer mes del seguimiento:
+• Presupuestos cargados: [X]
+• Seguimientos que salieron solos: [X]
+• Clientes que respondieron: [X]
+• Avisos de interesados: [X] (sin atender: [X])
+• Cerrados como venta: [X] de [X] marcados</p>
+<p>El sistema funcionó todos los días hábiles [o: tuvo X cortes, ya resueltos]. Para el mes que viene propongo [ajuste]. ¿Lo charlamos 15 min el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p09">← Volver a la ficha 09</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

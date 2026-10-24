@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Radar de Clientes · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Radar de Clientes, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Radar de Clientes">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.71 .2 350)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 18 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Transformación</p>
+  <h1>Radar de Clientes</h1>
+  <p class="bajada">Prospección saliente asistida con IA. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Servicios entre empresas</span><span class="chip">Setup USD 3.000–4.500</span><span class="chip">4–6 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos para no frenarte.</strong> Si alguno no aplica, decímelo y lo ajusto.</p>
+<ul>
+<li>Los sistemas anteriores <strong>no</strong> son Cero Ausencias (03) ni Tablero del Dueño (11). Si alguno ya está instalado, en P6 y P14 lo reusás en vez de crearlo.</li>
+<li>El canal de prospección es <strong>mail</strong>. No automatices LinkedIn porque sus reglas prohíben los bots. Tampoco escribas en frío por WhatsApp, porque exige permiso previo de la persona.</li>
+<li>Las cuentas que se pagan (Google Cloud, Claude) quedan <strong>a nombre del cliente</strong>. Quién paga el consumo de Claude queda <strong>POR DEFINIR</strong> en la mensualidad.</li>
+</ul>
+<p><strong>Qué garantizás y qué no.</strong> Garantizás que el sistema esté funcionando en el plazo acordado, que salgan los mails de lunes a viernes y que el reporte llegue. No garantizás cantidad de respuestas, reuniones ni ventas, porque eso depende del mercado y del equipo del cliente.</p>
+<hr />
+<h2>1 · El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Radar de Clientes" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Cómo se conectan las tres fichas.</strong> Se instalan en este orden: agenda (03), después el motor de prospección, después las respuestas (08) y al final el tablero (11). Cuando todo funciona, el recorrido de un prospecto es este:</p>
+<ol>
+<li>El motor le manda el mail con el link de agenda.</li>
+<li>Si responde, el lector de respuestas lo clasifica y avisa al vendedor.</li>
+<li>Cuando reserva, la agenda confirma y recuerda la reunión.</li>
+<li>El tablero cuenta todo cada lunes.</li>
+</ol>
+<hr />
+<h2>2 · El paso a paso</h2>
+<p>Algunas palabras que vas a ver:</p>
+<ul>
+<li><strong>Workflow</strong> es el flujo armado en n8n.</li>
+<li><strong>Nodo</strong> es cada cajita del flujo.</li>
+<li><strong>API</strong> es la puerta por la que un programa le habla a otro.</li>
+<li><strong>API key</strong> es la contraseña de esa puerta.</li>
+</ul>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Confirmar pago y mandar bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró la plata y le mandás la bienvenida con todo lo que necesitás.</li>
+<li><strong>Cómo:</strong> verificás el pago en tu cuenta. Mandás el mensaje 1 de abajo. Proponés dos horarios concretos para la reunión de P2.</li>
+<li><strong>Qué le pedís:</strong> todo lo de la lista del final, más la reunión.</li>
+<li><strong>Qué le entregás:</strong> el mensaje con el calendario estimado.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el pago está confirmado y la reunión de P2 tiene fecha.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, lo llamás. Hay confianza, así que una llamada corta resuelve más que tres mensajes.</li>
+</ul>
+<p><strong>P2 · Definir cliente ideal con el dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> definís con él a quién le van a escribir y qué cuenta como «interesado».</li>
+<li><strong>Cómo:</strong> hacés una videollamada de 60 minutos. Le preguntás:<ol>
+<li>¿A qué rubros le vende?</li>
+<li>¿En qué ciudades?</li>
+<li>¿Qué tamaño tienen esos negocios y quién decide la compra?</li>
+<li>¿Qué resultado da su servicio, en una frase y sin cifras inventadas?</li>
+<li>¿Qué señal visible en la web o en Google muestra que un negocio lo necesita?</li>
+<li>¿A quién NO quiere como cliente?</li>
+<li>¿Qué tiene que tener alguien para valer una reunión?</li>
+<li>¿Quién recibe los interesados?</li>
+</ol>
+</li>
+</ul>
+<p>Con esas respuestas elegís entre 3 y 5 rubros y entre 2 y 4 ciudades. Las dos cantidades no tienen que tener un divisor común, por ejemplo 4 y 3. Escribís todo en un Google Doc de una página. Todo dato que no tengas va como <strong>POR DEFINIR</strong>.
+- <strong>Qué le pedís:</strong> que te nombre 3 clientes actuales que sean «el cliente bueno». Son para entender el perfil, no para escribirles.
+- <strong>Qué le entregás:</strong> la ficha de cliente ideal.
+- <strong>Cuánto tarda:</strong> 1 hora de reunión y 1 hora para escribir la ficha.
+- <strong>Listo cuando:</strong> el dueño te responde «ok» por escrito a la ficha.
+- <strong>Si sale mal:</strong> si dice «le vendo a todos», empezá por el rubro de sus 3 mejores clientes. Si no puede elegir ni así, eso es consultoría y no un sistema. Frená ahí.</p>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Pasar casilla, agenda y cuentas pagas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás y ayudás a que el cliente te pase los accesos.</li>
+<li><strong>Cómo:</strong> el cliente tiene que:<ul>
+<li>Crear una casilla para prospectar, por ejemplo comercial@sudominio, y activarle la verificación en dos pasos.</li>
+<li>Generar una «contraseña de aplicación», que es una clave especial para que n8n pueda mandar mails desde esa casilla.</li>
+<li>Crear un proyecto en Google Cloud con su tarjeta e invitarte como editor.</li>
+<li>Crear una cuenta de Anthropic, la empresa de Claude, si la paga él (<strong>POR DEFINIR</strong>).</li>
+<li>Darte acceso a su Calendly o Cal.com.</li>
+<li>Darte acceso a n8n. Si ya tiene la instancia de los sistemas anteriores, usás esa.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo anterior, más el mail o canal donde el vendedor va a recibir los avisos (<strong>POR DEFINIR</strong>) y el país, para chequear la ley de comunicaciones comerciales (<strong>POR DEFINIR</strong>).</li>
+<li><strong>Cuánto tarda:</strong> de 1 a 3 días del lado del cliente.</li>
+<li><strong>Listo cuando:</strong> entraste vos a cada cuenta y viste que funciona.</li>
+<li><strong>Si sale mal:</strong> casi siempre se traba con la contraseña de aplicación. Hacelo con él compartiendo pantalla, en 15 minutos.</li>
+</ul>
+<p><strong>P4 · ¿Está todo y la casilla autenticada?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás la lista de accesos y que la casilla esté «autenticada». Eso significa que el dominio tiene cargados tres registros (SPF, DKIM y DMARC) que le dicen a Gmail y a Outlook que esa casilla es legítima y no un impostor.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Mandá un mail desde la casilla a una cuenta Gmail tuya.</li>
+<li>Abrilo, tocá los tres puntitos y elegí «Mostrar original».</li>
+<li>Tenés que ver PASS en SPF, DKIM y DMARC.</li>
+<li>Confirmá con el dueño que en su país se puede escribir a mails comerciales públicos con remitente identificado y opción de baja.</li>
+</ol>
+</li>
+<li><strong>Listo cuando:</strong> SÍ en todo. Recién ahí corre el plazo de entrega.</li>
+<li><strong>Si sale mal:</strong> NO te lleva a P5. Si falla la autenticación, la tiene que cargar quien maneja el dominio, por ejemplo su proveedor de hosting (<strong>POR DEFINIR</strong>). Vos le pasás los valores exactos.</li>
+</ul>
+<p><strong>P5 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le avisás qué falta, con nombre y apellido.</li>
+<li><strong>Cómo:</strong> mandás el mensaje 2 de abajo y ofrecés hacerlo juntos.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> te manda lo que faltaba. Ahí volvés a P3.</li>
+<li><strong>Si sale mal:</strong> si pasan 3 días hábiles sin respuesta, lo llamás. Le recordás que el plazo de entrega corre desde que está todo.</li>
+</ul>
+<h3>3a · Agenda (ficha 03)</h3>
+<p><strong>P6 · Crear evento exclusivo de prospección</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás un tipo de reunión que se usa solo en estos mails. Así cada reserva cuenta como resultado del Radar.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el Calendly o Cal.com del cliente, creás un evento nuevo, por ejemplo «Primera charla», de 20 a 30 minutos.</li>
+<li>Lo conectás al Google Calendar del vendedor.</li>
+<li>Le ponés tres preguntas al reservar: empresa, cargo y qué necesita. Es el filtro mínimo de la ficha 08.</li>
+<li>Activás la confirmación por mail y los recordatorios 24 horas y 2 horas antes.</li>
+<li>Si ya tiene instalada Cero Ausencias, conectás este evento a esos recordatorios.</li>
+</ol>
+</li>
+<li><strong>Ojo:</strong> recordatorios por WhatsApp solo si la persona dejó su número y aceptó recibirlos, y con plantilla aprobada por Meta.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> reservás un turno de prueba con tu mail, te llega la confirmación, el turno aparece en el calendario y después lo cancelás.</li>
+<li><strong>Si sale mal:</strong> Calendly gratis permite un solo tipo de evento y no manda recordatorios. En ese caso usás Cal.com o un plan pago (<strong>POR DEFINIR</strong>).</li>
+</ul>
+<h3>3b · Motor de prospección (plantilla de n8n)</h3>
+<p><strong>P7 · Importar plantilla y preparar registro</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla y armás la tabla donde queda anotado a quién se le escribió.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n entrás a Workflows, luego «Import from URL», y pegás https://n8n.io/workflows/16940.</li>
+<li>Creás la Data Table «outreach_contacts». Una Data Table es una planilla interna de n8n. Le ponés las columnas email, businessName, status y timestamp. Sumale una columna <strong>asunto</strong>, que la vas a usar en P13.</li>
+<li>En «Extract Email from Website», agregás "contacto@", "ventas@", "hola@" y "consultas@" a la lista pref.</li>
+<li>En «Log Email Contact», dejás businessName <strong>vacío</strong>, porque Google no permite guardar nombres de negocios. Ahí mismo mapeás el asunto del mail.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media.</li>
+<li><strong>Listo cuando:</strong> la tabla existe y «Filter Contacted Leads» apunta a ella sin errores en rojo.</li>
+<li><strong>Si sale mal:</strong> si no aparece la opción de Data Tables, tu n8n está viejo. Actualizalo o usá n8n Cloud.</li>
+</ul>
+<p><strong>P8 · Cargar rubros, ciudades y remitente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís al flujo a quién buscar y de parte de quién escribe.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Set Campaign Parameters», en niche, reemplazás los 20 rubros en inglés por los de la ficha de P2, escritos como los buscaría alguien en Google, por ejemplo "estudios contables".</li>
+<li>En location ponés las ciudades con el país, por ejemplo "Rosario, Argentina". Son <strong>POR DEFINIR</strong> hasta P2.</li>
+<li>Cambiás el % 20 y el % 5 por la cantidad de rubros y de ciudades que pusiste.</li>
+<li>Completás senderName, senderCompany, companyType, senderEmail, senderAddress, senderCity, serviceArea, websiteUrl y websiteLabel.</li>
+<li>El dailyCap final va entre 10 y 15, pero por ahora dejalo así: lo bajás a 5 en el lanzamiento.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> ejecutás solo ese nodo y ves los valores en español, sin ningún «undefined».</li>
+<li><strong>Si sale mal:</strong> si aparece «undefined», no cambiaste los números del %.</li>
+</ul>
+<p><strong>P9 · Conectar Google Places y ajustar búsqueda</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás el buscador de negocios de Google Maps.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En console.cloud.google.com, dentro del proyecto del cliente, entrás a «APIs y servicios», luego «Biblioteca», buscás «Places API (New)» y tocás Habilitar.</li>
+<li>En «Credenciales», creás una API key y la restringís a esa API.</li>
+<li>En «Facturación», luego «Presupuestos y alertas», ponés un tope con alerta (<strong>POR DEFINIR</strong> el monto). A este volumen el costo es bajo, pero que nadie se lleve sorpresas.</li>
+<li>En n8n creás una credencial «Header Auth» con Name X-Goog-Api-Key y la key en Value. La elegís en «Search Google Places for Businesses».</li>
+<li>En el body de ese nodo cambiás «in» por «en».</li>
+<li>Si la señal de compra de P2 se ve en Google, por ejemplo pocas reseñas, sumás ,places.rating,places.userRatingCount al X-Goog-FieldMask. Después agregás un nodo «Filter» luego de «Split Business Results» que deje pasar solo a los que muestran esa señal.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media.</li>
+<li><strong>Listo cuando:</strong> ejecutás el flujo hasta «Split Business Results» y ves negocios reales de su ciudad.</li>
+<li><strong>Si sale mal:</strong> un error 403 significa que falta la facturación, que la API no está habilitada o que la key quedó restringida a otra API.</li>
+</ul>
+<p><strong>P10 · Conectar Claude y reescribir el mensaje</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás la IA que escribe los mails y le das las instrucciones (el «prompt») del negocio del cliente.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En console.anthropic.com entrás a «API Keys» y creás una.</li>
+<li>En n8n borrás «OpenAI GPT-5 Mini Model», agregás «Anthropic Chat Model» con esa key y lo conectás al «AI Email Writer Agent».</li>
+<li>Reescribís el prompt en español con esta base:</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>«Escribís un primer mail breve, de parte de [senderName] de [senderCompany], que ofrece [qué vende, POR DEFINIR] a [rubros]. El resultado que da es [resultado, POR DEFINIR]. Usá una observación concreta y verdadera sacada de la web del negocio. Si no hay nada concreto, no la inventes. Máximo 90 palabras. No prometas resultados. Cerrá con una pregunta corta y este link para agendar: [link de P6]. Devolvé solo subject y body, sin firma.»</p>
+</blockquote>
+<pre><code>4. En «Build Email Content» traducís el asunto de respaldo «Quick idea for your business» a «Una idea para tu negocio».
+</code></pre>
+<ul>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> corrés el flujo con un negocio y el mail sale en español, con una observación real, con el link y sin firma.</li>
+<li><strong>Si sale mal:</strong> si inventa datos, reforzá en el prompt «solo usá lo que está en la web» y sumá un ejemplo de mail bueno.</li>
+</ul>
+<p><strong>P11 · Conectar casilla, link de baja y horario</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás la casilla que manda los mails, traducís la baja y ajustás el horario.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Send Personalized Cold Email» creás una credencial SMTP, que es la forma estándar en que un programa manda mails. Con Gmail los datos son: host smtp.gmail.com, puerto 465, SSL activado, la casilla como usuario y la contraseña de aplicación.</li>
+<li>Otra opción es usar el nodo Gmail «Send» con el mismo HTML y «Append n8n Attribution» apagado.</li>
+<li>Traducís la firma y el pie a: «Te escribo porque tu negocio figura en [ciudad]. Si no querés que te escriba más, hacé clic acá y te saco de la lista».<ul>
+<li>Le saqué «una sola vez» porque vas a mandar un seguimiento en P13.</li>
+<li>Dejá la expresión que pone la ciudad.</li>
+<li><strong>No borres el link de baja.</strong> Fijate a dónde apunta, porque esas bajas las tiene que registrar P12.</li>
+</ul>
+</li>
+<li>En el disparador «Every Morning at 9am» elegís «Custom (Cron)» y escribís 0 9 * * 1-5, que significa a las 9, de lunes a viernes.</li>
+<li>En Settings del workflow ponés la zona horaria del negocio.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y media.</li>
+<li><strong>Listo cuando:</strong> la credencial se guarda sin error, el cron está guardado y la zona horaria es la correcta.</li>
+<li><strong>Si sale mal:</strong> «Invalid login» significa que la contraseña de aplicación se copió mal o que falta la verificación en dos pasos.</li>
+</ul>
+<h3>3c · Respuestas (ficha 08)</h3>
+<p><strong>P12 · Armar lector de respuestas con Claude</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás un segundo flujo que lee las respuestas, las clasifica y avisa a una persona. <strong>Nunca contesta solo.</strong></li>
+<li><strong>Cómo:</strong><ol>
+<li>Creás un workflow nuevo, «Radar · Respuestas».</li>
+<li>El disparador es «Gmail Trigger» o «Email Trigger (IMAP)» sobre la casilla, revisando cada 10 minutos.</li>
+<li>Ponés un filtro: solo pasan los mails cuyo remitente esté en la Data Table.</li>
+<li>Los rebotes, que son los mails que vuelven porque la dirección no existe y llegan de «Mail Delivery Subsystem», se marcan con status «rebote».</li>
+<li>Claude clasifica cada respuesta en INTERESADO, MÁS ADELANTE, NO, BAJA u OTRO. Agrega una línea de resumen y un «¿encaja con el cliente ideal?», usando los criterios de P2.</li>
+<li>Siempre se actualiza el status en la Data Table, así el seguimiento de P13 no le vuelve a escribir.</li>
+<li>INTERESADO, MÁS ADELANTE y OTRO generan un aviso al vendedor con el resumen.</li>
+<li>NO y BAJA pasan a status «baja».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 horas.</li>
+<li><strong>Listo cuando:</strong> se prueba en P16.</li>
+<li><strong>Si sale mal:</strong> si clasifica mal, sumá al prompt 2 o 3 ejemplos reales de cada tipo de respuesta.</li>
+</ul>
+<p><strong>P13 · Armar un único seguimiento a 7 días</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás un tercer flujo que manda un solo recordatorio corto a quien no respondió.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creás el workflow «Radar · Seguimiento», con cron 0 10 * * 1-5.</li>
+<li>Lee de la Data Table las filas con el status que escribe «Log Email Contact» (fijate qué valor pone, por ejemplo «contacted») y con timestamp de hace más de 7 días.</li>
+<li>Limita la cantidad al dailyCap.</li>
+<li>Manda «Re: {{asunto}}» con dos líneas: «Te escribí la semana pasada sobre [tema]. Si no es el momento, no hay problema». Lleva el mismo pie de baja.</li>
+<li>Cambia el status a «seguimiento». Nunca se manda más de uno.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 horas.</li>
+<li><strong>Listo cuando:</strong> se prueba en P16.</li>
+<li><strong>Si sale mal:</strong> si le escribe a alguien que ya respondió, el lector no actualizó el status. Revisá que el mail se compare en minúsculas.</li>
+</ul>
+<h3>3d · Números (ficha 11)</h3>
+<p><strong>P14 · Sumar pestaña de prospección al tablero</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás el conteo semanal y el resumen para el dueño.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Usás un Google Sheet nuevo, o una pestaña «Prospección» si ya tiene Tablero del Dueño.</li>
+<li>Ponés las columnas: semana, enviados, seguimientos, respuestas, interesados, reuniones agendadas, bajas y rebotes.</li>
+<li>Creás el workflow «Radar · Tablero», que corre los lunes a las 8.</li>
+<li>Cuenta las filas de la Data Table por status y fecha.</li>
+<li>Cuenta en Google Calendar los eventos «Primera charla».</li>
+<li>Escribe una fila nueva en el Sheet.</li>
+<li>Claude redacta 5 líneas de resumen que le llegan al dueño por mail.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> una corrida manual escribe números que coinciden con lo que contás a mano.</li>
+<li><strong>Si sale mal:</strong> si cuenta reuniones que no vienen del Radar, es porque el evento no es exclusivo. Volvé a P6.</li>
+</ul>
+<h3>4 · Prueba</h3>
+<p><strong>P15 · Probar envío a tu mail con tope 1</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que el primer mail te llegue a vos y no a un negocio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Ponés dailyCap en 1.</li>
+<li>Anotás la expresión del «To Email» de «Send Personalized Cold Email» y la reemplazás por tu mail.</li>
+<li>Tocás «Execute workflow».</li>
+<li>Revisás el mail: que esté en español, que tenga una observación real, el link de agenda, la firma y el pie con la baja, y que llegue a la bandeja principal y no a spam.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> el mail llega bien.</li>
+<li><strong>Si sale mal:</strong> si el envío falla, el nodo sigue de largo y anota al negocio como contactado igual. Mirá el error en «Executions» y <strong>borrá esa fila</strong> de la Data Table.</li>
+</ul>
+<p><strong>P16 · Simular respuesta, baja, seguimiento y reserva</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás los otros tres flujos con casos de mentira.</li>
+<li><strong>Cómo:</strong> cargás a mano en la Data Table un mail tuyo con status «contacted» y probás estos casos:<ul>
+<li><strong>(a)</strong> Respondés «me interesa». Tiene que llegar el aviso, por ahora a vos.</li>
+<li><strong>(b)</strong> Respondés «no me escriban más». Tiene que quedar status «baja».</li>
+<li><strong>(c)</strong> Hacés clic en el link de baja. Tiene que quedar status «baja».</li>
+<li><strong>(d)</strong> Cargás otra fila con fecha de hace 8 días. Tiene que salir un seguimiento y uno solo.</li>
+<li><strong>(e)</strong> Reservás en el link y corrés el tablero. La reunión tiene que aparecer contada.</li>
+</ul>
+</li>
+</ul>
+<p>Al final, borrás todas las filas de prueba.
+- <strong>Cuánto tarda:</strong> 1 hora y media.
+- <strong>Listo cuando:</strong> los 5 casos dan lo esperado.
+- <strong>Si sale mal:</strong> si falla un caso, andá a P18.</p>
+<p><strong>P17 · ¿Funciona todo?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si se puede pasar a la demo.</li>
+<li><strong>Cómo:</strong> respondés SÍ solo si P15 y los 5 casos de P16 salieron bien.</li>
+<li><strong>Listo cuando:</strong> es SÍ. Si es NO, vas a P18.</li>
+<li><strong>Si sale mal:</strong> «casi todo anda» es NO.</li>
+</ul>
+<p><strong>P18 · Corregir el paso que falló</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás el nodo roto y lo arreglás.</li>
+<li><strong>Cómo:</strong> en «Executions» abrís la corrida, buscás el nodo en rojo, leés el error y lo corregís. Después volvés a P15 y repetís <strong>todo</strong>, no solo lo que estaba roto.</li>
+<li><strong>Cuánto tarda:</strong> de 30 minutos a 2 horas.</li>
+<li><strong>Listo cuando:</strong> P17 da SÍ.</li>
+<li><strong>Si sale mal:</strong> si no entendés el error, pegalo en Claude o en el foro de n8n con una captura del nodo.</li>
+</ul>
+<h3>5 · Demo al cliente</h3>
+<p><strong>P19 · Mostrar 10 mails de muestra al dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás a quién le escribiría el sistema y qué le diría.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Con «To Email» todavía apuntando a tu mail, ponés dailyCap en 10 y corrés el flujo.</li>
+<li>Armás un Doc con cada mail, el rubro, la ciudad y el link a la web del negocio.</li>
+<li>Se lo mandás con un audio, o lo ven juntos en 20 minutos.</li>
+<li><strong>Después borrás esas 10 filas de la Data Table.</strong> Si no, esos negocios quedan como contactados y nunca les llega el mail real.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> que marque cuáles mandaría tal cual.</li>
+<li><strong>Qué le entregás:</strong> el Doc de muestra.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora y 20 minutos.</li>
+<li><strong>Listo cuando:</strong> te devuelve los 10 marcados.</li>
+<li><strong>Si sale mal:</strong> si tarda en responder, le pedís solo un «sí» o «no» a cada mail.</li>
+</ul>
+<p><strong>P20 · ¿Aprueba tono y tipo de negocios?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si se puede lanzar.</li>
+<li><strong>Cómo:</strong> respondés SÍ si mandaría tal cual al menos 8 de los 10 mails y si los negocios son del tipo que busca.</li>
+<li><strong>Listo cuando:</strong> te da el SÍ por escrito.</li>
+<li><strong>Si sale mal:</strong> NO te lleva a P21.</li>
+</ul>
+<p><strong>P21 · Ajustar mensaje, rubros o ciudades</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís lo que no le gustó.</li>
+<li><strong>Cómo:</strong> si el problema es el tono, tocás el prompt de P10. Si son los negocios equivocados, tocás P8 o el filtro de P9. Después volvés a P19 con 10 mails nuevos.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> P20 da SÍ.</li>
+<li><strong>Si sale mal:</strong> si va por la tercera vuelta, escribí con él un mail ideal en 30 minutos y pegalo como ejemplo en el prompt.</li>
+</ul>
+<h3>6 · Lanzamiento y primer resultado</h3>
+<p><strong>P22 · Activar todo con tope de 5 diarios</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás de prueba a real, despacio.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Volvés a poner la expresión original del «To Email».</li>
+<li>Revisás que la Data Table esté vacía de filas de prueba.</li>
+<li>Ponés dailyCap en 5. Es poco a propósito: una casilla nueva tiene que «calentar», es decir, ganar confianza de Gmail y Outlook de a poco.</li>
+<li>Activás los 4 workflows con el interruptor «Active».</li>
+<li>Configurás un «Error Workflow», un flujo que te avisa por mail si algo falla.</li>
+<li>Mandás el mensaje 3.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> los 4 workflows figuran como activos.</li>
+<li><strong>Si sale mal:</strong> el error típico es dejar tu mail en «To Email». Revisalo dos veces.</li>
+</ul>
+<p><strong>P23 · Buscar, escribir y enviar mails cada mañana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Lo hace el sistema.</li>
+<li><strong>Cómo:</strong> cada día hábil a las 9 el sistema:<ol>
+<li>Busca negocios de un rubro y una ciudad.</li>
+<li>Descarta los que ya contactó y los que pidieron la baja.</li>
+<li>Saca el mail de la web.</li>
+<li>Claude escribe el mensaje.</li>
+<li>Lo manda y lo anota.</li>
+</ol>
+</li>
+</ul>
+<p>A las 10 sale el seguimiento a quien corresponda.
+- <strong>Qué hacés vos:</strong> la primera semana mirás «Executions» todas las mañanas, en 5 minutos.
+- <strong>Listo cuando:</strong> ves una corrida en verde cada mañana.
+- <strong>Si sale mal:</strong> si salen menos de 5 mails, es porque ese día hubo pocos negocios con mail. Sumá rubros o ciudades.</p>
+<p><strong>P24 · ⭐ Mandar al dueño los primeros envíos reales</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás que el sistema ya está trabajando.</li>
+<li><strong>Cómo:</strong> el día siguiente a la activación, entrás a «Enviados» de la casilla, sacás capturas de los mails de esa mañana y se las mandás con dos líneas. No le prometés respuestas. Le contás que salieron y cómo se ven.</li>
+<li><strong>Qué le entregás:</strong> las capturas de los primeros mails.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño los vio.</li>
+<li><strong>Si sale mal:</strong> si no salió ninguno, revisá «Executions» antes de escribirle.</li>
+</ul>
+<h3>7 · Respuestas y reuniones</h3>
+<p><strong>P25 · Clasificar respuestas y avisar al vendedor</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> lo hace el sistema. Las dos primeras semanas vos leés cada aviso.</li>
+<li><strong>Cómo:</strong> comparás lo que dijo el prospecto con la clasificación que hizo Claude.</li>
+<li><strong>Listo cuando:</strong> el vendedor recibe el aviso minutos después de la respuesta.</li>
+<li><strong>Si sale mal:</strong> si no llega el aviso, revisá el disparador de P12. Si clasifica mal, sumá ejemplos al prompt.</li>
+</ul>
+<p><strong>P26 · Contestar al interesado con link de agenda</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> lo hace el vendedor del cliente. Muchos prospectos van a reservar directo desde el primer mail. Este paso es para los que responden en vez de reservar.</li>
+<li><strong>Cómo:</strong> el vendedor contesta en el mismo hilo, desde la casilla, y pega el link de agenda.</li>
+<li><strong>Qué le pedís:</strong> el compromiso de responder dentro de las 24 horas hábiles. Quién responde queda <strong>POR DEFINIR</strong>.</li>
+<li><strong>Listo cuando:</strong> sale la respuesta.</li>
+<li><strong>Si sale mal:</strong> si nadie contesta, el interesado se enfría. Lo marcás en P28 y se lo avisás al dueño.</li>
+</ul>
+<p><strong>P27 · Confirmar y recordar la reunión</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> lo hace la agenda que armaste en P6.</li>
+<li><strong>Cómo:</strong> manda la confirmación y los recordatorios por mail.</li>
+<li><strong>Listo cuando:</strong> la reunión está en el calendario del vendedor.</li>
+<li><strong>Si sale mal:</strong> si hay muchas ausencias, sumá un recordatorio que pida confirmar asistencia.</li>
+</ul>
+<h3>8 · Seguimiento, reporte y ajustes</h3>
+<p><strong>P28 · Revisar rebotes, bajas y respuestas cada semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás la salud del sistema todos los lunes.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Leés el resumen del tablero.</li>
+<li>Mirás «Executions».</li>
+<li>Contás los rebotes y las bajas.</li>
+<li>Buscás interesados que nadie contestó.</li>
+<li>Una vez por mes, mandás un mail de la casilla a mail-tester.com, que te dice del 1 al 10 qué tan probable es que llegue a la bandeja principal.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> tenés los números de la semana.</li>
+<li><strong>Si sale mal:</strong> si los números no coinciden con la casilla, revisá que P12 esté marcando bien los status.</li>
+</ul>
+<p><strong>P29 · ¿La casilla está sana?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís si se puede subir el volumen o hay que frenar.</li>
+<li><strong>Cómo:</strong> respondés SÍ si se cumple todo esto:<ul>
+<li>Rebotan menos del 3% de los mails.</li>
+<li>Nadie lo marcó como spam.</li>
+<li>Google no mandó avisos de bloqueo.</li>
+<li>mail-tester da 8 o más.</li>
+<li>Las bajas son menos de 1 de cada 10 mails.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> tenés la respuesta.</li>
+<li><strong>Si sale mal:</strong> NO te lleva a P30.</li>
+</ul>
+<p><strong>P30 · Frenar envíos y corregir la casilla</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cuidás la reputación de la casilla, que es la confianza que le tienen Gmail y Outlook.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Desactivás el Radar y el Seguimiento. El lector de respuestas sigue prendido.</li>
+<li>Buscás la causa: autenticación rota (volvé al chequeo de P4), mails sacados de webs abandonadas (sumá filtros) o un mensaje que parece spam (simplificalo y dejá un solo link).</li>
+<li>Reactivás con tope de 5.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> de 1 a 3 horas.</li>
+<li><strong>Listo cuando:</strong> pasa una semana limpia y vuelve a dar SÍ en P29.</li>
+<li><strong>Si sale mal:</strong> si Google bloqueó la casilla, frená una semana entera antes de volver.</li>
+</ul>
+<p><strong>P31 · Subir tope hasta 15 y ajustar mensaje</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> crecés de a poco y mejorás una sola cosa por vez.</li>
+<li><strong>Cómo:</strong> pasás el dailyCap de 5 a 10, y de 10 a 15, con una semana sana entre cada salto. Nunca más de 15. Cada semana cambiás <strong>un solo</strong> elemento (el asunto, el rubro o la ciudad) para saber qué funcionó.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> el tope está en 15 y estable.</li>
+<li><strong>Si sale mal:</strong> si un rubro no responde nunca, lo reemplazás por otro de la ficha de P2.</li>
+</ul>
+<p><strong>P32 · Entregar reporte mensual de prospección</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el mes en números.</li>
+<li><strong>Cómo:</strong> armás un Doc de una página con enviados, seguimientos, respuestas, interesados, reuniones, bajas y rebotes. Sumás qué ajustaste y qué vas a probar el mes que viene. Mandás el mensaje 4 y, si quiere, lo charlan en 20 minutos.</li>
+<li><strong>Qué le entregás:</strong> el reporte.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te confirma que lo recibió.</li>
+<li><strong>Si sale mal:</strong> si hay pocas reuniones, mostrá dónde se cae el recorrido: si es en las respuestas, en el vendedor o en la reserva.</li>
+</ul>
+<h3>9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás si sigue al mes siguiente. La mensualidad de esta ficha es de USD 600 a 900.</li>
+<li><strong>Cómo:</strong> se lo preguntás en la charla del reporte.</li>
+<li><strong>Listo cuando:</strong> tenés la respuesta.</li>
+<li><strong>Si sale mal:</strong> si duda, proponé un mes más con un ajuste concreto.</li>
+</ul>
+<p><strong>P34 · Ofrecer Negocio Integrado, ficha 20</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le proponés el siguiente paso. Con este Radar más los 2 o 3 sistemas anteriores, este cliente encaja justo con el perfil de la ficha 20.</li>
+<li><strong>Cómo:</strong> después de 2 o 3 reportes mensuales, le proponés una auditoría completa del negocio. Mientras tanto, el Radar sigue su ciclo semanal desde P28.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te dice sí o no a la auditoría.</li>
+<li><strong>Si sale mal:</strong> si no es el momento, lo volvés a ofrecer en 3 meses.</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar todo ordenado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás sin dejar nada colgado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Desactivás el Radar y el Seguimiento.</li>
+<li>Dejás el lector de respuestas una semana más, para captar las respuestas tardías.</li>
+<li>Le exportás la Data Table, con la lista de bajas aparte. Si sigue por su cuenta, tiene que respetarlas.</li>
+<li>Le entregás un documento de «cómo reactivarlo».</li>
+<li>Borrás tu acceso y regenerás las API keys.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> el export, la lista de bajas y el documento.</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> ya no tenés acceso a nada suyo.</li>
+<li><strong>Si sale mal:</strong> si quedan claves activas a tu nombre, regeneralas antes de cerrar.</li>
+</ul>
+<hr />
+<h2>3 · Las tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Reunión de cliente ideal de 60 minutos (día 1)</li>
+<li>☐ 3 ejemplos de «cliente bueno» (día 1)</li>
+<li>☐ Casilla para prospectar, con verificación en dos pasos y contraseña de aplicación (día 1)</li>
+<li>☐ Registros SPF, DKIM y DMARC cargados en el dominio (día 1, con su proveedor)</li>
+<li>☐ Google Cloud con tarjeta y tu acceso de editor (día 1)</li>
+<li>☐ Cuenta de Anthropic, si la paga él (día 1, <strong>POR DEFINIR</strong>)</li>
+<li>☐ Acceso a Calendly o Cal.com y al Google Calendar del vendedor (día 1)</li>
+<li>☐ Acceso a n8n (día 1)</li>
+<li>☐ Quién recibe los avisos y por qué canal (día 1)</li>
+<li>☐ Confirmación de que en su país se puede escribir a mails comerciales públicos (día 2)</li>
+<li>☐ Aprobación de la ficha de cliente ideal (día 2)</li>
+<li>☐ Aprobación de los 10 mails de muestra (día 10)</li>
+<li>☐ Compromiso de contestar a los interesados en 24 horas hábiles (día 11)</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Ficha de cliente ideal</li>
+<li>☐ Evento de agenda exclusivo con confirmación y recordatorios</li>
+<li>☐ Motor de prospección: búsqueda, mail personalizado y registro</li>
+<li>☐ Lector de respuestas con avisos al vendedor</li>
+<li>☐ Un seguimiento automático por prospecto</li>
+<li>☐ Pestaña de prospección en el tablero y resumen de los lunes</li>
+<li>☐ Doc con los 10 mails de muestra</li>
+<li>☐ ⭐ Capturas de los primeros envíos reales</li>
+<li>☐ Reporte mensual</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, con 3 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Cuándo</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Día 1</td>
+<td>P1 y P2: pago, bienvenida, pedido de accesos y reunión de cliente ideal</td>
+</tr>
+<tr>
+<td>Días 2 y 3</td>
+<td>P3 a P5: accesos. El plazo corre desde que P4 da SÍ</td>
+</tr>
+<tr>
+<td>Día 3</td>
+<td>P6 y P7: agenda y plantilla</td>
+</tr>
+<tr>
+<td>Día 4</td>
+<td>P8 y P9: rubros, ciudades y Google Places</td>
+</tr>
+<tr>
+<td>Día 5</td>
+<td>P10: Claude y el mensaje</td>
+</tr>
+<tr>
+<td>Día 6</td>
+<td>P11 y arranque de P12</td>
+</tr>
+<tr>
+<td>Días 7 y 8</td>
+<td>P12 a P14: respuestas, seguimiento y tablero</td>
+</tr>
+<tr>
+<td>Día 9</td>
+<td>P15 a P18: pruebas</td>
+</tr>
+<tr>
+<td>Día 10</td>
+<td>P19 a P21: demo y aprobación</td>
+</tr>
+<tr>
+<td>Día 11</td>
+<td>P22: lanzamiento con 5 mails por día</td>
+</tr>
+<tr>
+<td>Día 12</td>
+<td>Primeros envíos reales y ⭐ P24</td>
+</tr>
+<tr>
+<td>Lunes siguiente</td>
+<td>Primer resumen semanal y P28</td>
+</tr>
+<tr>
+<td>Semana 4</td>
+<td>Tope de 10 si la casilla está sana</td>
+</tr>
+<tr>
+<td>Semana 5</td>
+<td>Tope de 15</td>
+</tr>
+<tr>
+<td>Unas 4 semanas después del lanzamiento</td>
+<td>P32: primer reporte mensual</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4 · Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Me llegó el pago, gracias por confiar otra vez 🙌 Arrancamos con el Radar de Clientes. Necesito:
+1) Una charla de 1 hora para definir a quién le escribimos. ¿Te queda bien [día y hora] o [día y hora]?
+2) Una casilla para prospectar, por ejemplo comercial@[tudominio], con la verificación en dos pasos activa.
+3) Acceso a Google Cloud con tu tarjeta cargada (te paso un instructivo de 5 minutos).
+4) Acceso a tu Calendly o Cal.com.
+5) Quién recibe los avisos cuando alguien se interesa.
+Con esto completo, en unas dos semanas salen los primeros mails.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>[Nombre], ¿cómo va? Para seguir con el Radar solo me falta: [lo que falta]. Si querés lo hacemos juntos en 15 minutos compartiendo pantalla. ¿Te viene bien hoy o mañana?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [Nombre]! El Radar quedó activado 🚀 Desde mañana, de lunes a viernes a las 9, salen 5 mails a [rubros] en [ciudades]. Arrancamos con pocos para cuidar la casilla y vamos subiendo hasta 15. Si alguien responde con interés, a [vendedor] le llega un aviso: la idea es contestarle en el día. Mañana te mando los primeros mails que salieron.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>[Nombre], te paso el primer mes del Radar 📊
+• Enviados: [X] · seguimientos: [X]
+• Respuestas: [X] · interesados: [X]
+• Reuniones agendadas: [X]
+• Bajas: [X] · rebotes: [X]
+Lo que ajusté: [ajuste]. Lo que pruebo este mes: [prueba]. El detalle está acá: [link al tablero]. ¿Lo charlamos 20 minutos el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p18">← Volver a la ficha 18</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

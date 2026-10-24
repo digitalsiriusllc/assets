@@ -1,0 +1,786 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Respuestas de Memoria · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Respuestas de Memoria, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Respuestas de Memoria">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 05 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Respuestas de Memoria</h1>
+  <p class="bajada">Asistente de preguntas frecuentes. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Comercios</span><span class="chip">Setup USD 500–1.000</span><span class="chip">5–10 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos.</strong> Si alguno no va, cambialo:</p>
+<ul>
+<li><strong>Canal:</strong> solo WhatsApp, porque la plantilla es de WhatsApp. Instagram y la web quedan para un servicio posterior.</li>
+<li><strong>Dónde corre:</strong> n8n Cloud. Te ahorra el servidor y ya trae el candado de seguridad (HTTPS) que Meta exige.</li>
+<li><strong>Rubro exacto del comercio:</strong> POR DEFINIR.</li>
+</ul>
+<p>Los pasos de instalación salen de «Cómo dejarla lista» y «Qué cuentas necesitás» de la ficha. Están en P8, P9, P13 a P18 y P31.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Respuestas de Memoria" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<p>Cuatro palabras que vas a ver todo el tiempo:</p>
+<ul>
+<li><strong>n8n:</strong> el programa donde armás el asistente. Se arma uniendo cajitas.</li>
+<li><strong>Nodo:</strong> cada una de esas cajitas.</li>
+<li><strong>Credencial:</strong> una llave que guardás una vez para que n8n entre a otra app.</li>
+<li><strong>API:</strong> la puerta por la que dos programas se hablan sin que nadie toque nada.</li>
+</ul>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar setup y primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró la plata antes de tocar nada.</li>
+<li><strong>Cómo:</strong> mirás tu Mercado Pago o tu banco y le mandás el recibo o la factura. El medio de cobro y la factura son POR DEFINIR.</li>
+<li><strong>Qué le pedís:</strong> el setup (el monto que acordaron, dentro de USD 500–1.000) y la primera mensualidad.</li>
+<li><strong>Qué le entregás:</strong> el comprobante.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si te dice «te pago cuando ande», ofrecele 50% ahora y 50% cuando apruebe la demo. Nunca arranques en cero.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás el mensaje de bienvenida con todo lo que necesitás de una sola vez.</li>
+<li><strong>Cómo:</strong> copiás el mensaje 1 de la sección 4 y le adjuntás el cuestionario de P3. Le aclarás que puede contestarte por audio y que vos lo pasás a texto. Eso baja muchísimo la fricción.</li>
+<li><strong>Qué le pedís:</strong> el cuestionario, el número a usar y el acceso a Meta. Le das 48 horas.</li>
+<li><strong>Qué le entregás:</strong> el cuestionario y la fecha estimada de la demo.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> te confirmó que lo leyó y hay fecha de entrega.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, llamalo. Por chat se pierde.</li>
+<li><strong>Ojo:</strong> dejá por escrito que el plazo corre desde que tenés todo. No desde el pago.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Completar cuestionario de respuestas del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> juntás las respuestas reales del comercio. Es la materia prima del asistente.</li>
+<li><strong>Cómo:</strong> el cuestionario lleva estas preguntas:<ul>
+<li>Nombre del negocio, tal como lo dice él.</li>
+<li>Dirección, referencias para llegar y si hay estacionamiento.</li>
+<li>Horarios, incluidos sábados, domingos y feriados.</li>
+<li>Medios de pago, cuotas y recargos.</li>
+<li>Precios o rangos de lo más consultado.</li>
+<li>Envíos o retiro: zonas, costos y plazos.</li>
+<li>Cambios y devoluciones.</li>
+<li>Si reservan o apartan productos.</li>
+<li>Promociones vigentes.</li>
+<li>Cómo trata a los clientes: vos, tú o usted.</li>
+<li>Qué NO tiene que responder nunca el asistente.</li>
+<li>Mail donde quiere recibir los avisos.</li>
+<li><strong>Las 10 preguntas que más le hacen.</strong> Pedile que mire sus chats o que te mande capturas.</li>
+<li><strong>Stock:</strong> el asistente no ve el stock, así que esa pregunta siempre va a pasar a una persona.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo anterior.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 días de calendario, aunque a él le lleva 1 hora.</li>
+<li><strong>Listo cuando:</strong> cada pregunta tiene respuesta o un «no aplica».</li>
+<li><strong>Si sale mal:</strong> si contesta «depende» o «consultar», agendá una llamada de 20 minutos, preguntale vos y grabala.</li>
+</ul>
+<p><strong>P4 · Elegir número y modo de conexión</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís con él en qué número va a contestar el asistente. Es la decisión más importante de toda la entrega.</li>
+<li><strong>Cómo:</strong> le explicás tres opciones.<ul>
+<li><strong>A. Mismo número con coexistencia.</strong> Es el modo de Meta para usar el mismo número en la app del celular y en la API a la vez. Él sigue usando su celular y el asistente contesta en el mismo chat. Hoy la coexistencia se activa durante el alta del número con el registro de Meta, y no siempre está disponible desde una app propia. <strong>Averigualo antes de prometerla.</strong></li>
+<li><strong>B. Mismo número pasado a la API sin coexistencia.</strong> El número deja de andar en su celular y él ya no ve esos chats ahí. No la recomiendo para un comercio que vive del celular.</li>
+<li><strong>C. Número nuevo, un chip aparte, solo para consultas.</strong> Es lo más simple para tu primer cliente. Su número de siempre sigue igual.</li>
+</ul>
+</li>
+<li><strong>Sugerido:</strong> intentá A. Si no está disponible, andá con C.</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>Qué número quiere usar.</li>
+<li>Si hoy está en la app WhatsApp Business.</li>
+<li>Si el número puede recibir un SMS o una llamada para verificarlo.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> la explicación de las opciones, por escrito.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la opción elegida está confirmada por escrito.</li>
+<li><strong>Si sale mal:</strong> si elige B sin entender, decíselo claro: «vas a dejar de ver esos chats en tu celular».</li>
+</ul>
+<p><strong>P5 · Sumarme como admin en Meta Business</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conseguís entrar a su cuenta de empresa de Meta, que es donde vive el WhatsApp oficial.</li>
+<li><strong>Cómo:</strong> él entra a business.facebook.com → Configuración → Personas → Agregar. Pone tu mail y te da acceso total. Si no tiene cuenta de Meta Business, la crea en 10 minutos con su Facebook.</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>El acceso.</li>
+<li>Los datos del perfil: nombre visible, dirección y web o Instagram.</li>
+<li>Si tiene política de privacidad publicada. Si no tiene, POR DEFINIR quién la arma.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> ves su negocio en tu business.facebook.com.</li>
+<li><strong>Si sale mal:</strong> si no encuentra dónde tocar, hacé una videollamada compartiendo pantalla.</li>
+</ul>
+<p><strong>P6 · ¿Tengo respuestas, número y acceso?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P8.</li>
+<li><strong>NO:</strong> vas a P7.</li>
+<li><strong>Listo cuando:</strong> tenés el cuestionario completo, el número decidido y el acceso a Meta.</li>
+<li><strong>Tip:</strong> P8 y P9 no dependen del cliente. Si te sobra tiempo el día 1, adelantalos.</li>
+</ul>
+<p><strong>P7 · Mandar recordatorio de lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, sin repetir todo.</li>
+<li><strong>Cómo:</strong> usás el mensaje 2 y volvés a P3.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> te manda lo que faltaba.</li>
+<li><strong>Si sale mal:</strong> después de dos recordatorios sin respuesta, llamalo y reprogramá la fecha de entrega por escrito.</li>
+</ul>
+<h3>3 · Cuentas y base de conocimiento</h3>
+<p><strong>P8 · Abrir n8n Cloud, Google y Anthropic</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás las cuentas donde va a vivir el asistente.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>n8n Cloud:</strong> te registrás en n8n.io. Tiene costo mensual, revisá el precio vigente. Ya viene con HTTPS.</li>
+<li><strong>Anthropic:</strong> entrás a console.anthropic.com, creás la cuenta, cargás crédito, vas a API Keys → Create Key y copiás la clave. Solo se ve una vez: guardala.</li>
+<li><strong>Google:</strong> usás una cuenta para el Doc, la planilla y el Gmail. Puede ser la de tu agencia o la del cliente (POR DEFINIR). En n8n Cloud suele alcanzar con el botón «Sign in with Google». Lo de publicar la app de Google «En producción» es solo si usás un n8n propio.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> tenés las tres cuentas y la clave guardada en un lugar seguro.</li>
+<li><strong>Si sale mal:</strong> si la clave de Anthropic da error, casi siempre falta cargar crédito.</li>
+</ul>
+<p><strong>P9 · Crear app de Meta y token permanente</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás la conexión oficial con WhatsApp.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrás a developers.facebook.com → Mis apps → Crear app. Elegís el caso de uso de WhatsApp y la vinculás al negocio del cliente.</li>
+<li>En WhatsApp → Configuración de la API, Meta te da un <strong>número de prueba</strong>. Anotá el <strong>ID de la cuenta de WhatsApp Business</strong>.</li>
+<li>Agregá tu celular como destinatario de prueba.</li>
+<li>En Configuración → Básica, copiá el <strong>App ID</strong> y el <strong>App Secret</strong>, y cargá la URL de política de privacidad.</li>
+<li>Para el token, entrás a business.facebook.com → Configuración del negocio → Usuarios del sistema → Agregar, con rol administrador. El <strong>token</strong> es una contraseña larga para que n8n mande mensajes.</li>
+<li>En «Asignar activos», le das control total sobre la app y sobre la cuenta de WhatsApp.</li>
+<li>Tocás «Generar token». Elegís la app, vencimiento <strong>Nunca</strong> y los permisos <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>.</li>
+</ol>
+</li>
+<li><strong>Una app por cliente:</strong> n8n acepta un solo disparador de WhatsApp por app.</li>
+<li><strong>Qué le pedís:</strong> nada, ya tenés el acceso.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> tenés App ID, App Secret, token permanente, ID de la cuenta de WhatsApp Business y número de prueba.</li>
+<li><strong>Si sale mal:</strong> si el token dice que vence en 24 horas, es el temporal. Generá el del usuario del sistema.</li>
+</ul>
+<p><strong>P10 · Escribir el Doc con sus respuestas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás la base de conocimiento, que es todo lo que el asistente sabe.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Creás un Google Doc nuevo llamado «Base [negocio]».</li>
+<li>Ponés <strong>todo en la primera pestaña, en párrafos o listas, sin tablas.</strong> El nodo de n8n se saltea las tablas y no ve otras pestañas.</li>
+<li>Hacés un título por tema: Horarios, Cómo llegar, Medios de pago, Envíos, Cambios, Precios, Promociones.</li>
+<li>Escribís como habla el dueño, con datos concretos.</li>
+<li>Agregás esta línea: «El stock no lo confirmamos por acá: lo confirma una persona del equipo».</li>
+<li>Lo que no sabés, no lo pongas. El asistente lo va a derivar.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 horas.</li>
+<li><strong>Listo cuando:</strong> está cada respuesta del cuestionario, sin tablas y en una sola pestaña.</li>
+<li><strong>Si sale mal:</strong> si te tienta poner una tabla de precios, pasala a lista: «Producto X: $… ».</li>
+</ul>
+<p><strong>P11 · Revisar y corregir el Doc</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño valida que todo sea verdad.</li>
+<li><strong>Cómo:</strong> compartís el Doc con permiso de comentarista y le pedís que marque lo que esté mal.</li>
+<li><strong>Qué le pedís:</strong> la revisión en 24 horas.</li>
+<li><strong>Qué le entregás:</strong> el Doc.</li>
+<li><strong>Cuánto tarda:</strong> 1 día de calendario.</li>
+<li><strong>Listo cuando:</strong> te escribe «está bien» o te deja los comentarios.</li>
+<li><strong>Si sale mal:</strong> si no lo lee, mandale 5 preguntas puntuales por WhatsApp. Por ejemplo: «¿Abrís los feriados?».</li>
+</ul>
+<p><strong>P12 · ¿El dueño aprobó el Doc?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P13.</li>
+<li><strong>NO:</strong> volvés a P10 con sus comentarios.</li>
+<li><strong>Listo cuando:</strong> dio el OK por escrito.</li>
+</ul>
+<h3>4 · Instalación de la plantilla</h3>
+<p><strong>P13 · Importar plantilla y conectar el Doc</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla a tu n8n y la apuntás a tu Doc.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n.io/workflows/4966 tocás «Use for free» y elegís tu n8n. Si no se abre ahí, copiala al portapapeles y pegala con Ctrl+V en un workflow vacío.</li>
+<li>Abrís el nodo «company's knowledge» y creás la credencial de Google Docs.</li>
+<li>En «Doc ID or URL» pegás el link de tu Doc. Viene apuntando al Doc del autor.</li>
+<li>Tocás «Execute step».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo muestra el texto completo de tu Doc.</li>
+<li><strong>Si sale mal:</strong> si sale vacío o incompleto, hay tablas o texto en otra pestaña.</li>
+</ul>
+<p><strong>P14 · Conectar WhatsApp con número de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que los mensajes entren y salgan, todavía con el número de prueba de Meta.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «when message received» creás la credencial «WhatsApp OAuth API» con el App ID (Client ID) y el App Secret (Client Secret).<ul>
+<li>Este nodo recibe un <strong>webhook</strong>: el aviso automático que Meta le manda a n8n cada vez que llega un mensaje.</li>
+</ul>
+</li>
+<li>En «Send AI Agent's Answer» creás la credencial «WhatsApp API» con el token permanente y el ID de la cuenta de WhatsApp Business.</li>
+<li>En «Sender Phone Number (or ID)» elegís tu número de prueba. Trae el 641448739058783 del autor.</li>
+<li>Borrás «Send Pre-approved Template Message to Reopen the Conversation». Esa rama casi nunca corre y, si corre, manda el hello_world de Meta en inglés.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> activás el flujo, escribís desde tu celular al número de prueba y aparece una ejecución en «Executions».</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si no aparece nada, revisá en la app de Meta → WhatsApp → Configuración que esté suscripto el campo «messages».</li>
+<li>Meta acepta un solo webhook por app. Si probás desde el editor y después activás, puede quedar mal apuntado. Dejá el flujo activo y probá mirando «Executions».</li>
+</ul>
+</li>
+</ul>
+<p><strong>P15 · Filtrar avisos, audios y reacciones</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> evitás que el flujo falle con cosas que no son texto.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «when message received» tocás «Add option» → «Receive Message Status Updates» y le sacás «All» para que quede vacía. Si no, cada «enviado», «entregado» o «leído» vuelve a disparar el flujo.</li>
+<li>Entre «when message received» y «company's knowledge» ponés un «If» con <code>{{ $json.messages?.[0]?.type }}</code> is equal to <code>text</code>.</li>
+<li>En la salida false agregás otro «If» con el mismo campo is not equal to <code>reaction</code>.</li>
+<li>En la salida true de ese segundo «If» ponés un nodo «WhatsApp Business Cloud» (Send), con la misma credencial y el mismo número.<ul>
+<li>Recipient's Phone Number: <code>{{ $('when message received').item.json.contacts[0].wa_id }}</code></li>
+<li>Text Body: «Por ahora solo leo mensajes escritos. ¿Podrías escribirme tu consulta?»</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> se cumplen las tres cosas:<ul>
+<li>un audio recibe esa frase;</li>
+<li>una reacción no recibe nada;</li>
+<li>no hay ejecuciones en rojo por los avisos de «leído».</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> si el audio no recibe respuesta, revisá que la salida false del primer «If» esté conectada.</li>
+</ul>
+<p><strong>P16 · Reescribir instrucciones y conectar Claude</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís a la IA cómo contestar y le ponés el «cerebro» de Claude.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrás «Prepare Prompt» y unís «company's knowledge» directo con «AI Agent».</li>
+<li>En «AI Agent», en «Prompt (User Message)», ponés: <code>{{ $('when message received').item.json.messages[0].text.body }}</code></li>
+<li>En «System Message», en modo <strong>Expression</strong> para que funcionen las llaves <code>{{ }}</code>, pegás este texto con el nombre del negocio (POR DEFINIR):
+ <code>Sos el asistente automático de WhatsApp de [negocio]. Respondé en 2 o 3 oraciones, con el mismo trato que use el cliente (vos, tú o usted), sin markdown. Usá SOLO la información del negocio que está abajo; no inventes precios, horarios ni condiciones. Si la respuesta no está o te piden hablar con una persona, respondé exactamente: Eso te lo confirma una persona del equipo. Ya le pasé tu consulta y te contacta a la brevedad. Hoy es {{ $now.toFormat('dd/MM/yyyy HH:mm') }}. INFORMACIÓN DEL NEGOCIO: {{ $("company's knowledge").item.json.content }}</code></li>
+<li>Borrás «Google Gemini Chat Model». Trae una versión de prueba (preview).</li>
+<li>Conectás a «AI Agent» un «Anthropic Chat Model» con tu clave. Para preguntas frecuentes alcanza el modelo Haiku más nuevo de la lista, que es rápido y barato.</li>
+<li>En Settings del workflow elegís la zona horaria del negocio. Por ejemplo, America/Argentina/Buenos_Aires (POR DEFINIR según el país).</li>
+</ol>
+</li>
+<li><strong>Revisión extra:</strong> abrí el nodo de memoria conectado al agente. Fijate que la clave de sesión sea el número del cliente. Si es un valor fijo, cambiala a <code>{{ $('when message received').item.json.contacts[0].wa_id }}</code>. Así no se mezclan las charlas de dos personas.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> preguntás el horario y contesta el del Doc, en 2–3 oraciones y sin asteriscos.</li>
+<li><strong>Si sale mal:</strong> si contesta con «{{ $now… }}» textual, el System Message no está en modo Expression.</li>
+</ul>
+<p><strong>P17 · Conectar la planilla de registro</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás anotada cada charla. De acá salen la revisión semanal y el reporte.</li>
+<li>
+<p><strong>Cómo:</strong></p>
+<ol>
+<li>Creás una hoja de Google con estos encabezados en la fila 1: <strong>Timestamp, User, Message, Response</strong>.</li>
+<li>La elegís en el nodo «Google Sheets». Viene apuntando a «Chat Logs» del autor.</li>
+<li>Al cambiar de planilla, n8n borra el mapeo. Volvés a cargarlo así:</li>
+</ol>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Columna</th>
+<th>Qué va</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Timestamp</td>
+<td><code>{{ $json.currentDate }}</code></td>
+</tr>
+<tr>
+<td>User</td>
+<td><code>{{ $('when message received').item.json.messages[0].from }}</code></td>
+</tr>
+<tr>
+<td>Message</td>
+<td><code>{{ $('when message received').item.json.messages[0].text.body }}</code></td>
+</tr>
+<tr>
+<td>Response</td>
+<td><code>{{ $('AI Agent').item.json.output }}</code></td>
+</tr>
+</tbody>
+</table></div>
+<ol start="4">
+<li>En «Column to match on» ponés Timestamp.</li>
+<li>En los Settings <strong>del nodo</strong> → «On Error» → «Continue». La respuesta al cliente sale después de la planilla: si la planilla falla, no sale.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> cada mensaje de prueba aparece como fila nueva.
+- <strong>Si sale mal:</strong> si hay columnas vacías, se borró el mapeo. Volvé a cargarlo.
+- <strong>Privacidad:</strong> la planilla tiene teléfonos de clientes. Compartila solo con el dueño.</li>
+</ol>
+</li>
+</ul>
+<p><strong>P18 · Sumar aviso por mail al dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cuando el asistente no sabe, le avisás al dueño con un link directo al chat.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Después de «Send AI Agent's Answer» agregás un «If» con <code>{{ $('cleanAnswer').item.json.answer }}</code> contains <code>te lo confirma una persona del equipo</code>.</li>
+<li>En la salida true ponés un «Gmail» (Send a message) al mail del dueño (POR DEFINIR).</li>
+<li>Asunto: «Cliente para atender por WhatsApp».</li>
+<li>Cuerpo, en tres líneas:<ul>
+<li><code>{{ $('when message received').item.json.contacts[0].profile.name }}</code></li>
+<li><code>https://wa.me/{{ $('when message received').item.json.contacts[0].wa_id }}</code></li>
+<li><code>{{ $('when message received').item.json.messages[0].text.body }}</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> preguntás algo que no está en el Doc y te llega el mail con el link que abre el chat.</li>
+<li><strong>Si sale mal:</strong> si no llega el mail, la frase no coincide letra por letra. Si cambiás la frase en P16, cambiala acá también.</li>
+</ul>
+<h3>5 · Prueba</h3>
+<p><strong>P19 · Mandar 20 mensajes de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás con datos de prueba antes de mostrarle nada al cliente.</li>
+<li><strong>Cómo:</strong> desde tu celular, y desde un segundo teléfono agregado como destinatario de prueba, mandás estos 20 mensajes. Anotás OK o MAL en una hoja.</li>
+</ul>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Cantidad</th>
+<th>Qué mandás</th>
+<th>Qué tiene que pasar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>Preguntas que están en el Doc: horario, dirección, pagos, cuotas, envíos, cambios, precio de lo más pedido, feriados</td>
+<td>Contesta con el dato del Doc</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Preguntas que no están: stock de un producto, descuento por cantidad, «¿me guardás uno?», factura</td>
+<td>Deriva y llega el mail</td>
+</tr>
+<tr>
+<td>2</td>
+<td>«Quiero hablar con alguien»</td>
+<td>Deriva y llega el mail</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Pregunta tratando de usted</td>
+<td>Contesta de usted</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Pregunta con faltas de ortografía</td>
+<td>Entiende y contesta</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Pregunta encadenada, como «¿y los sábados?», para probar la memoria</td>
+<td>Entiende de qué se hablaba</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Audio</td>
+<td>Recibe la frase de «solo leo mensajes escritos»</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Reacción</td>
+<td>No recibe nada</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Foto o sticker</td>
+<td>Recibe la frase de «solo leo mensajes escritos»</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> los 20 están anotados.</li>
+<li><strong>Si sale mal:</strong> si en el segundo teléfono contesta como si siguiera tu charla, es la memoria compartida. Volvé a la revisión extra de P16.</li>
+</ul>
+<p><strong>P20 · ¿Cero inventos y todo responde bien?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P22.</li>
+<li><strong>NO:</strong> vas a P21.</li>
+<li><strong>Listo cuando:</strong> se cumplen las cuatro condiciones:<ul>
+<li>todo está bien contestado o bien derivado;</li>
+<li><strong>ninguna respuesta tiene un dato inventado</strong>;</li>
+<li>cada derivación mandó su mail;</li>
+<li>la planilla está completa.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P21 · Corregir Doc o instrucciones</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás según el tipo de error.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Dato mal → corregís el Doc.</li>
+<li>Inventa o se extiende → ajustás el System Message.</li>
+<li>Error en rojo → revisás el nodo que falla en «Executions».</li>
+<li>Después volvés a P19 con las preguntas que fallaron más 3 que andaban bien.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> pasan todas.</li>
+<li><strong>Si sale mal:</strong> si sigue inventando un dato, agregalo explícito al Doc. La IA inventa cuando hay un hueco.</li>
+</ul>
+<h3>6 · Demo</h3>
+<p><strong>P22 · ⭐ Probar el asistente desde su celular</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño ve por primera vez su asistente contestando con la info de su local. Es el primer resultado visible, cerca del día 6.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Sumás su celular como destinatario de prueba en la app de Meta. Le llega un código y te lo pasa.</li>
+<li>En una videollamada o en persona, de 20 minutos, le pedís que escriba lo que quiera.</li>
+<li>Le mostrás el mail de derivación y la planilla.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong><ul>
+<li>El código de verificación.</li>
+<li>20 minutos de su tiempo.</li>
+<li>Cuántos minutos le lleva contestar una consulta a mano, para el reporte (POR DEFINIR).</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el asistente funcionando con sus datos.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> probó al menos 5 preguntas suyas.</li>
+<li><strong>Si sale mal:</strong> si pregunta algo que no está, buenísimo. Le mostrás la derivación y lo sumás al Doc ahí mismo.</li>
+</ul>
+<p><strong>P23 · ¿Aprueba el asistente?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P24 con su OK por escrito, por ejemplo «Aprobado, lancemos».</li>
+<li><strong>NO:</strong> vas a P21. Incluí una ronda de cambios. Lo que sea nuevo alcance se cotiza aparte.</li>
+<li><strong>Listo cuando:</strong> tenés el OK escrito.</li>
+</ul>
+<h3>7 · Lanzamiento</h3>
+<p><strong>P24 · Conectar el número real del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás del número de prueba al número de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Opción C, número nuevo:</strong> en la app de Meta → WhatsApp → Configuración de la API → Agregar número. Cargás el nombre visible, que Meta revisa y puede tardar, y lo verificás por SMS o llamada. El número no puede tener WhatsApp instalado.</li>
+<li><strong>Opción B:</strong> primero el dueño hace una copia de seguridad y borra la cuenta en la app. Después hacés lo mismo que en C.</li>
+<li><strong>Opción A, coexistencia:</strong> seguís el registro de Meta y el dueño lo confirma desde su app.</li>
+<li>Si te lo pide, cargás un medio de pago en el WhatsApp Manager.</li>
+<li>Pasás la app de Meta a modo <strong>Publicada (Live)</strong>. Necesita la URL de política de privacidad.</li>
+<li>Asignás la nueva cuenta de WhatsApp al usuario del sistema.</li>
+<li>En n8n cambiás «Sender Phone Number» en <strong>los dos nodos de envío</strong>: el de respuestas y el de audios. Si el ID de la cuenta de WhatsApp Business cambió, actualizalo en la credencial.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> el código de verificación y estar disponible en ese horario.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 1–2 horas tuyas, pero 1–3 días de calendario por las revisiones de Meta.</li>
+<li><strong>Listo cuando:</strong> el número figura como «Conectado» en el WhatsApp Manager.</li>
+<li><strong>Si sale mal:</strong> si dice «número ya registrado en WhatsApp», falta borrarlo de la app o usar coexistencia.</li>
+</ul>
+<p><strong>P25 · Activar flujo y probar en vivo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encendés el asistente con el número real.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Activás el workflow en n8n.</li>
+<li>Desde un celular que NO esté en la lista de prueba, por ejemplo el de un amigo, mandás tres mensajes: uno del Doc, uno que derive y un audio.</li>
+<li>Mirás «Executions».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> los tres funcionan y no hay ejecuciones en rojo.</li>
+<li><strong>Si sale mal:</strong> si un número desconocido no recibe respuesta, la app de Meta sigue en modo desarrollo.</li>
+</ul>
+<p><strong>P26 · ¿Entran y salen mensajes reales?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P27.</li>
+<li><strong>NO:</strong> volvés a P24. Revisá estas cuatro cosas:<ul>
+<li>que la app esté publicada;</li>
+<li>que esté suscripto el campo «messages»;</li>
+<li>que el token tenga asignada la cuenta nueva;</li>
+<li>que el número esté bien elegido en los dos nodos de envío.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P27 · Entregar guía corta de uso</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le dejás al dueño una página con todo lo que necesita saber.</li>
+<li><strong>Cómo:</strong> armás un Google Doc de una página con estos puntos:<ul>
+<li>qué contesta el asistente y qué no;</li>
+<li>cómo le llega el aviso por mail;</li>
+<li>qué hacer con el aviso: tocar el link y escribirle al cliente ese mismo día;</li>
+<li>cómo actualizar el Doc: primera pestaña, sin tablas, y el cambio vale desde el mensaje siguiente;</li>
+<li>que no toque n8n;</li>
+<li>cómo contactarte.</li>
+</ul>
+</li>
+<li><strong>Si eligieron coexistencia:</strong> avisale que el asistente contesta cada mensaje que entra, incluso mientras él está chateando con ese cliente. Es una limitación conocida de esta versión.</li>
+<li><strong>Qué le entregás:</strong> la guía y el mensaje 3.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te confirmó que la leyó.</li>
+<li><strong>Si sale mal:</strong> si no la lee, mandale un audio de un minuto con lo mismo.</li>
+</ul>
+<h3>8 · Funcionamiento y seguimiento</h3>
+<p><strong>P28 · Contestar consultas frecuentes al instante</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Pasa solo: el asistente responde en segundos, de día y de noche.</li>
+<li><strong>Cómo lo controlás:</strong> la primera semana mirás «Executions» 10 minutos por día.</li>
+<li><strong>Sobre las reglas de WhatsApp:</strong> el asistente solo contesta a quien le escribió. Eso es dentro de la ventana de 24 horas, así que no necesita plantillas aprobadas por Meta. No lo uses para mandar promociones a nadie.</li>
+<li><strong>Listo cuando:</strong> pasan 7 días sin ejecuciones en rojo.</li>
+<li><strong>Si sale mal:</strong> si de golpe nada anda, revisá el crédito de Anthropic y el estado del número en el WhatsApp Manager.</li>
+</ul>
+<p><strong>P29 · Avisar por mail lo que no sabe</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Pasa solo: cada derivación genera un mail al dueño.</li>
+<li><strong>Listo cuando:</strong> cada fila de la planilla con «te lo confirma una persona del equipo» tiene su mail.</li>
+<li><strong>Si sale mal:</strong> si los mails caen en spam, pedile al dueño que marque el remitente como «No es spam».</li>
+</ul>
+<p><strong>P30 · Escribirle al cliente derivado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> esto lo hace el dueño. Toca el link del mail y responde.</li>
+<li><strong>Por qué importa:</strong> esto no lo controlás vos, y es lo que más pesa en cómo lo vive el cliente final.</li>
+<li><strong>Qué le pedís:</strong> que responda en el día.</li>
+<li><strong>Listo cuando:</strong> el cliente derivado recibió respuesta de una persona.</li>
+<li><strong>Si sale mal:</strong> si el dueño no responde, lo vas a ver el lunes en la planilla. Recordáselo con el número concreto: «la semana pasada quedaron 6 sin contestar».</li>
+</ul>
+<p><strong>P31 · Completar el Doc cada lunes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés los ajustes semanales. Es lo que justifica la mensualidad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En la planilla filtrás la columna Response por «te lo confirma una persona del equipo». Esas son las preguntas que el asistente no supo contestar.</li>
+<li>Le mandás la lista al dueño por WhatsApp. Él te contesta por audio.</li>
+<li>Escribís las respuestas en el Doc. Desde el mensaje siguiente las contesta solo.</li>
+<li>Leés 10 respuestas al azar para cazar errores.</li>
+<li>Mirás el consumo de Anthropic.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> las respuestas a las preguntas nuevas.</li>
+<li><strong>Cuánto tarda:</strong> 45–60 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> todas las preguntas sin respuesta de la semana están en el Doc o marcadas como «siempre las atiende una persona», por ejemplo el stock.</li>
+<li><strong>Si sale mal:</strong> si el dueño no contesta, dejá esas preguntas derivando. No completes con datos supuestos.</li>
+</ul>
+<p><strong>P32 · Mandar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás lo que pasó con números de la planilla.</li>
+<li><strong>Cómo:</strong> contás estas cosas:<ul>
+<li>total de consultas;</li>
+<li>consultas derivadas;</li>
+<li>consultas contestadas solas (total menos derivadas);</li>
+<li>preguntas nuevas sumadas al Doc;</li>
+<li>las 5 preguntas más hechas.</li>
+</ul>
+</li>
+<li><strong>Horas liberadas:</strong> contestadas solas × minutos por consulta ÷ 60. Los minutos los da el dueño (POR DEFINIR). Aclará que es una estimación.</li>
+<li><strong>No prometas ventas.</strong> Lo que garantizás es que el sistema funcione y que el reporte llegue.</li>
+<li><strong>Qué le entregás:</strong> el reporte y el mensaje 4.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo recibió y respondió.</li>
+<li><strong>Si sale mal:</strong> si hubo pocas consultas, decilo tal cual y proponé dónde publicar el número.</li>
+</ul>
+<h3>9 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong></p>
+<ul>
+<li><strong>SÍ:</strong> pasás a P34.</li>
+<li><strong>NO:</strong> pasás a P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer el próximo servicio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> usás la planilla para elegir qué ofrecerle.<ul>
+<li><strong>Más de unas 50 consultas por mes</strong> → «07 · Respuesta 24/7». Suma Instagram y ofrece el siguiente paso.</li>
+<li><strong>Tiene empleados que le preguntan todo</strong> → «13 · El Cerebro del Equipo». Ya tenés medio Doc hecho.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos, dentro del reporte.</li>
+<li><strong>Listo cuando:</strong> se lo mencionaste con un dato de su planilla.</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar en orden</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo, que también es reputación.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Le transferís la propiedad del Doc y de la planilla. Son de él.</li>
+<li>Desactivás el flujo.</li>
+<li>Revocás el token y borrás el usuario del sistema.</li>
+<li>Te sacás como administrador de su Meta Business.</li>
+</ol>
+</li>
+<li><strong>Sobre el número:</strong> sigue siendo suyo. Si quiere volver a la app común, hay que darlo de baja de la API primero.</li>
+<li><strong>POR DEFINIR:</strong> si le entregás el archivo del flujo.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no te queda ningún acceso a sus cuentas.</li>
+</ul>
+<hr />
+<h2>3. Listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup y del primer mes, el día 0.</li>
+<li>☐ Cuestionario respondido, en texto o audio. Se lo pedís el día 0 y lo entrega el día 2.</li>
+<li>☐ Las 10 preguntas que más le hacen o capturas de chats, el día 0.</li>
+<li>☐ Qué número usar, si está en WhatsApp Business y si recibe SMS, el día 0.</li>
+<li>☐ Acceso de administrador a su Meta Business, el día 0.</li>
+<li>☐ Mail para recibir los avisos, el día 0.</li>
+<li>☐ Nombre visible, dirección, web o Instagram y política de privacidad, el día 1.</li>
+<li>☐ OK del Doc, el día 3.</li>
+<li>☐ Código de verificación de su celular para la demo, el día 6.</li>
+<li>☐ Minutos que le lleva una consulta a mano, el día 6.</li>
+<li>☐ Aprobación escrita para lanzar, el día 6.</li>
+<li>☐ Código de verificación del número real, el día 7.</li>
+<li>☐ Respuestas a las preguntas nuevas, todos los lunes.</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Base de conocimiento (Google Doc) aprobada.</li>
+<li>☐ Asistente contestando en su WhatsApp.</li>
+<li>☐ Aviso por mail con link directo al chat en cada derivación.</li>
+<li>☐ Planilla con el registro de las charlas.</li>
+<li>☐ Guía de uso de una página.</li>
+<li>☐ Revisión semanal de preguntas nuevas.</li>
+<li>☐ Reporte del primer mes.</li>
+</ul>
+<p><strong>El calendario, con 2 horas por día</strong></p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago (P1) y bienvenida con cuestionario (P2)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Elegís el número (P4) y el cliente te da el acceso (P5). Vos abrís cuentas (P8) y creás la app de Meta y el token (P9)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Recibís el cuestionario (P3 y P6). Importás la plantilla y conectás WhatsApp de prueba (P13 y P14)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Escribís el Doc (P10) y se lo mandás a revisar (P11)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Llega el OK del Doc (P12). Hacés los filtros, Claude, la planilla y el aviso por mail (P15 a P18)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mandás los 20 mensajes de prueba y corregís (P19 a P21)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>⭐ Demo con su celular y aprobación (P22 y P23)</td>
+</tr>
+<tr>
+<td>7–9</td>
+<td>Conectás el número real (P24), activás, probás en vivo y entregás la guía (P25 a P27)</td>
+</tr>
+<tr>
+<td>Semana 2</td>
+<td>Mirás «Executions» todos los días y hacés la primera revisión del lunes (P28 a P31)</td>
+</tr>
+<tr>
+<td>Semanas 3 y 4</td>
+<td>Revisión de cada lunes (P31)</td>
+</tr>
+<tr>
+<td>Día 30</td>
+<td>Reporte del primer mes y charla de renovación (P32 a P34)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes listos para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago, arrancamos 🙌
+Para que el asistente conteste con la info real del local necesito 4 cosas:
+1. Que respondas el cuestionario que te paso abajo. Podés mandarme audios, yo los paso.
+2. Las 10 preguntas que más te hacen por WhatsApp. Sirven capturas.
+3. Qué número vamos a usar y si hoy lo tenés en WhatsApp Business.
+4. Que me sumes como admin en tu Meta Business. Te mando cómo.</p>
+<p>Si lo tenés para el [fecha], en unos días te muestro el asistente funcionando. El plazo corre desde que tengo todo 👌</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! ¿Cómo va? Para seguir con el asistente me falta solo esto: [lo que falta].
+Si te queda más cómodo, mandámelo en audio y yo lo paso. Apenas lo tengo, sigo 🙌</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está activo! 🎉 Desde hoy el asistente contesta solo, en [número], las preguntas de siempre.
+Lo que no sabe te llega por mail con un link: lo tocás y le escribís al cliente. Tratá de hacerlo en el día.
+Te dejo la guía de una página: [link].
+El lunes reviso las preguntas nuevas y te paso las que necesito que me contestes.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Te paso cómo le fue al asistente en el primer mes:
+• Consultas que entraron: [N]
+• Contestadas solas: [N]
+• Pasadas a vos: [N]
+• Preguntas nuevas que sumamos: [N]
+• Tiempo que te ahorró, estimado: [N] horas</p>
+<p>Lo más preguntado: [1], [2] y [3].
+Este mes vamos a [mejora concreta]. ¿Hay algo que quieras cambiar o sumar?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p05">← Volver a la ficha 05</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · El Cerebro del Equipo · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega El Cerebro del Equipo, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · El Cerebro del Equipo">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 13 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>El Cerebro del Equipo</h1>
+  <p class="bajada">Asistente interno con los procesos del negocio. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Negocios con 5 empleados o más</span><span class="chip">Setup USD 1.000–2.000</span><span class="chip">2–3 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Lo que asumí para armar esto:</strong></p>
+<ul>
+<li>La versión mínima es el <strong>chat web con usuario y clave</strong>. La versión por WhatsApp (paso 7 de la ficha) queda como ajuste para más adelante.</li>
+<li>Usás <strong>el mismo n8n</strong> donde instalaste el sistema anterior de este cliente. Si no hay uno, ponelo como POR DEFINIR.</li>
+<li>El rubro exacto, el nombre del negocio y el del encargado van como <strong>POR DEFINIR</strong> hasta la entrevista.</li>
+</ul>
+<p>n8n es la herramienta donde armás flujos automáticos con cajitas conectadas. Cada cajita se llama <strong>nodo</strong>.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de El Cerebro del Equipo" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>La idea en una línea:</strong> el asistente es tan bueno como el manual. La instalación técnica te lleva unas 4 horas. El trabajo de verdad es sacarle al dueño lo que sabe y escribirlo bien.</p>
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar setup y primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás el setup y confirmás la fecha de arranque.</li>
+<li><strong>Cómo:</strong> mandás el link de pago o los datos de transferencia, por el mismo medio que usaste en el sistema anterior. Si el primer mes se cobra junto con el setup queda POR DEFINIR.</li>
+<li><strong>Qué le pedís:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> el comprobante y la fecha de arranque.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si el pago se demora, no arrancás la instalación. Podés mandar igual la bienvenida para que vaya juntando material.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida con lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le explicás qué necesitás y en qué orden.</li>
+<li><strong>Cómo:</strong> mandás el mensaje 1 (está al final). Le adjuntás un Google Doc de media página con lo que tiene que hacer en P3 y P4, explicado con capturas.</li>
+<li><strong>Qué le pedís:</strong> que agende la entrevista de P5 para el día 2.</li>
+<li><strong>Qué le entregás:</strong> el calendario de entrega (lo armás con la lista 3).</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño contestó y hay fecha de entrevista.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, mandá el mensaje 2.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Compartir accesos y documentos del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conseguís las tres cosas sin las que no podés instalar.</li>
+<li><strong>Cómo:</strong> el dueño hace estas tres cosas:<ol>
+<li><strong>Planilla.</strong> Entra a sheets.new con la cuenta de Google del negocio. Le pone de nombre «Manual del equipo – [negocio]». Toca Compartir, escribe tu mail y elige «Editor». Así la planilla es de él desde el día uno.</li>
+<li><strong>Clave de Anthropic.</strong> Entra a console.anthropic.com, crea la cuenta con la tarjeta del negocio, carga crédito y pone un <strong>límite de gasto mensual</strong>. Después te invita como miembro o genera una clave y te la pasa por un medio privado. Una API es la puerta para que un programa (n8n) use Claude. Se paga por uso y aparte de la suscripción a Claude.</li>
+<li><strong>Material.</strong> Crea una carpeta en Drive llamada «Material para el manual». Ahí pone todo lo que exista: listas de precios, procesos escritos, reglamentos, audios donde explica cosas y capturas del grupo del equipo donde se repiten preguntas.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> lo de arriba, más el nombre exacto del negocio y quién va a ser el <strong>encargado</strong> de las dudas (el que aparece en la respuesta «consultalo con…»).</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días del lado del cliente.</li>
+<li><strong>Listo cuando:</strong> podés editar la planilla, la clave existe y tiene crédito, y la carpeta tiene algo adentro.</li>
+<li><strong>Si sale mal:</strong> lo más común es que no tenga nada escrito. Es normal en negocios chicos. La entrevista de P5 lo reemplaza, así que no frenes por eso.</li>
+</ul>
+<p><strong>P4 · Anotar preguntas del equipo cinco días</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís al dueño que registre cada pregunta que le hace el equipo durante 5 días hábiles.</li>
+<li><strong>Cómo:</strong> que use un chat de WhatsApp consigo mismo o una nota del celular. Formato de cada línea: fecha · quién · qué preguntó.</li>
+<li><strong>Para qué sirve:</strong> te da dos cosas.<ul>
+<li>La <strong>línea base</strong> del indicador: cuántas preguntas recibe el dueño por semana antes del asistente.</li>
+<li>La lista real de temas para el manual.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> eso, y que te lo mande el día 5.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 días, en paralelo con todo lo demás.</li>
+<li><strong>Listo cuando:</strong> tenés la lista con al menos 3 días anotados.</li>
+<li><strong>Si sale mal:</strong> si se olvida, mandale un recordatorio corto los días 2 y 3. Si anota solo 2 días, calculá el promedio semanal y marcalo como «estimado».</li>
+</ul>
+<p><strong>P5 · Entrevistar al dueño una hora</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le sacás de la cabeza lo que el equipo siempre le pregunta.</li>
+<li><strong>Cómo:</strong> hacés una videollamada o vas en persona, y tomás notas en un Google Doc mientras habla. Si querés grabar, pedile permiso antes. Seguí estos cuatro bloques:<ol>
+<li><strong>Procesos del día:</strong> apertura, cierre de caja, pedidos a proveedores, cobros. «Contame paso a paso cómo se hace».</li>
+<li><strong>Precios y descuentos:</strong> qué puede decidir un empleado solo y qué no.</li>
+<li><strong>Políticas:</strong> cambios, devoluciones, faltas, horarios, francos.</li>
+<li><strong>Ejemplos:</strong> qué se le dice a un cliente que se queja, que pide descuento o que llega tarde.</li>
+</ol>
+</li>
+<li><strong>Las dos preguntas clave:</strong><ul>
+<li>«¿Qué te preguntan que ya explicaste mil veces?»</li>
+<li>«¿Qué cosas NO puede decidir nadie sin vos?» Esas van al manual como «consultalo con [encargado]».</li>
+</ul>
+</li>
+<li><strong>Qué NO va al manual:</strong> contraseñas, datos personales de clientes ni sueldos. Todo lo que está en la planilla viaja a Claude con cada pregunta, y lo puede ver cualquiera que tenga la clave del chat.</li>
+<li><strong>Qué le pedís:</strong> una hora sin interrupciones. Preguntale también cuánto tarda hoy un empleado nuevo en arrancar solo. Esa es la segunda línea base.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora de entrevista y 30 minutos para ordenar las notas.</li>
+<li><strong>Listo cuando:</strong> tenés al menos 30 temas listados, cada uno con su respuesta o con la marca «a confirmar».</li>
+<li><strong>Si sale mal:</strong> si el dueño se va por las ramas, volvé a la pregunta «paso a paso, ¿qué hace el empleado?».</li>
+</ul>
+<p><strong>P6 · ¿Tengo accesos, entrevista y clave?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> si se cumplen las cuatro:<ul>
+<li>podés editar la planilla;</li>
+<li>la clave de Anthropic tiene crédito;</li>
+<li>la entrevista está hecha con 30 temas o más;</li>
+<li>el dueño ya está anotando las preguntas.</li>
+</ul>
+</li>
+<li><strong>NO</strong> si falta cualquiera. Vas a P7.</li>
+</ul>
+<p><strong>P7 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, sin repetir todo.</li>
+<li><strong>Cómo:</strong> mandás el mensaje 2 con el link o la captura exacta de lo que tiene que hacer.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> te responde. Ahí volvés a P3.</li>
+<li><strong>Si sale mal:</strong> si pasan 3 días sin respuesta, pedile una llamada de 10 minutos y lo hacen juntos con pantalla compartida.</li>
+</ul>
+<h3>3 · Instalación de la plantilla</h3>
+<blockquote>
+<p><strong>Regla de oro:</strong> no le cambies el nombre a ningún nodo. El código de la plantilla los busca por su nombre exacto, y si lo cambiás, se rompe.</p>
+</blockquote>
+<p><strong>P8 · Crear pestañas FAQ y Unanswered</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> preparás la planilla del cliente con la estructura que espera la plantilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Renombrá «Hoja 1» a <strong>FAQ</strong>.</li>
+<li>En la celda A1 escribí <strong>Question</strong> y en la B1 <strong>Answer</strong>, en inglés y tal cual. El código de «Build FAQ Context» busca esos nombres.</li>
+<li>Agregá una segunda pestaña llamada <strong>Unanswered</strong> y dejala vacía.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> hay dos pestañas con esos nombres exactos.</li>
+<li><strong>Si sale mal:</strong> un espacio de más («Question ») hace que no encuentre nada. Revisá letra por letra.</li>
+</ul>
+<p><strong>P9 · Importar plantilla y conectar Google Sheets</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés el flujo a tu n8n y lo conectás a la planilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrá a n8n.io/workflows/17826, tocá «Use for free» y copiala a tu n8n.</li>
+<li>Renombrá el flujo como «Cerebro del equipo – [negocio]». El flujo sí se puede renombrar; los nodos no.</li>
+<li>En el nodo <strong>Get FAQ</strong>, creá la credencial de Google. Una credencial es un permiso guardado. En n8n Cloud se crea con «Sign in with Google». Elegí la planilla y la pestaña FAQ.</li>
+<li>En <strong>Log Unanswered</strong>, elegí la misma planilla y la pestaña Unanswered.</li>
+<li>Siempre en Log Unanswered, andá a Columns → Mapping Column Mode y elegí <strong>«Map Automatically»</strong>. Viene en «Map Each Column Manually» y sin columnas, y eso hace fallar todo con el error «columns.schema is required…».</li>
+</ol>
+</li>
+<li><strong>Si usás un n8n propio en vez de n8n Cloud:</strong> necesitás un proyecto en Google Cloud con las APIs de Sheets y Drive activadas. Ese proyecto tiene que estar en producción y no en modo «Testing», porque en ese modo Google corta el acceso a los 7 días.</li>
+<li><strong>Cuánto tarda:</strong> 40 minutos.</li>
+<li><strong>Listo cuando:</strong> en los dos nodos aparece la planilla elegida, sin avisos rojos.</li>
+<li><strong>Si sale mal:</strong> si la planilla no aparece en la lista, la cuenta de Google que conectaste no tiene acceso. Revisá que el cliente te la haya compartido como Editor.</li>
+</ul>
+<p><strong>P10 · Cambiar Gemini por Claude de Anthropic</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> reemplazás el modelo de IA que trae la plantilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá el nodo «Google Gemini Chat Model».</li>
+<li>En «Answer from FAQ with Gemini», tocá el + de la entrada <strong>Model</strong> y elegí «Anthropic Chat Model».</li>
+<li>Creá la credencial con la clave del cliente.</li>
+<li>Dejá el modelo que trae, Claude Sonnet 5, y no toques la temperatura: ese modelo la ignora.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo queda conectado y sin triángulo rojo.</li>
+<li><strong>Si sale mal:</strong> si da error de crédito o de saldo, el cliente tiene que cargar saldo en la consola de Anthropic.</li>
+</ul>
+<p><strong>P11 · Pegar prompt y traducir respuestas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le das al asistente sus instrucciones en español y le prohibís inventar. El prompt es el texto de instrucciones que le das a la IA.</li>
+<li>
+<p><strong>Cómo:</strong></p>
+<ol>
+<li>En «Answer from FAQ with Gemini», reemplazá el prompt por este. Cambiá solo lo que está entre corchetes:<blockquote>
+<p>Sos el asistente interno del equipo de [negocio]. Respondé usando SOLO el manual de abajo. Si la respuesta no está clara en el manual, respondé exactamente: No lo tengo en el manual, consultalo con [encargado]. Ya quedó anotado para sumarlo. No inventes nada. Empezá con ANSWERED: si encontraste la respuesta o con UNANSWERED: si no, sin negrita. MANUAL: {{ $json.faq }} PREGUNTA: {{ $json.question }}</p>
+</blockquote>
+</li>
+</ol>
+<p>Las dos variables entre llaves dobles no se tocan. Las marcas ANSWERED: y UNANSWERED: quedan en inglés, porque el nodo «Shape Reply» decide con ellas.
+2. En el código de «Shape Reply» buscá <code>'I am not sure about that - I will pass this to our support team.'</code> y cambiala por <code>'No lo tengo en el manual, consultalo con [encargado]. Ya quedó anotado para sumarlo.'</code>
+3. En ese mismo código, al final del return y antes de la última <code>}</code>, agregá esto: <code>, fecha: $now.toFormat('yyyy-MM-dd HH:mm')</code>. Así cada pregunta sin respuesta queda guardada con su fecha.
+- <strong>Cuánto tarda:</strong> 30 minutos.
+- <strong>Listo cuando:</strong> guardás y el código no muestra errores en rojo.
+- <strong>Si sale mal:</strong> si borraste una coma o una llave sin querer, el código marca error de sintaxis. Deshacé con Ctrl+Z y volvé a pegar.</p>
+</li>
+</ul>
+<p><strong>P12 · Proteger el chat con usuario y clave</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás el chat para que solo entre el equipo. Viene abierto a cualquiera que tenga el link.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Customer Question», andá a Authentication, elegí <strong>Basic Auth</strong> y creá la credencial. Basic Auth es un usuario y una clave que pide el navegador. Por ejemplo, usuario «equipo» y una clave de 12 caracteres o más. Guardala.</li>
+<li>En Options, completá estos campos:<ul>
+<li>Title: «Asistente de [negocio]».</li>
+<li>Subtitle: «El manual del equipo».</li>
+<li>Input Placeholder: «Escribí tu pregunta acá».</li>
+<li>Initial Message(s): «Preguntame cómo se hace cualquier cosa del negocio. Mandá todo en un solo mensaje: no me acuerdo de la pregunta anterior».</li>
+</ul>
+</li>
+<li><strong>Todavía no publiques.</strong></li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> Authentication dice Basic Auth.</li>
+<li><strong>Si sale mal:</strong> si queda en «None», cualquiera con el link lee el manual del negocio. Revisalo siempre antes de publicar.</li>
+</ul>
+<h3>4 · Prueba con datos de prueba</h3>
+<p><strong>P13 · Cargar cinco filas de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cargás datos falsos para probar sin mezclar con el manual real.</li>
+<li><strong>Cómo:</strong> en la pestaña FAQ cargás 5 filas que empiecen con «PRUEBA». Por ejemplo, «PRUEBA ¿A qué hora se abre?» → «PRUEBA a las 9».</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> hay 5 filas debajo de los encabezados.</li>
+<li><strong>Si sale mal:</strong> si la pestaña FAQ queda vacía, el chat no contesta nada.</li>
+</ul>
+<p><strong>P14 · Hacer diez preguntas de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás los tres caminos posibles del asistente.</li>
+<li><strong>Cómo:</strong> en el editor, tocá «Open chat» en el nodo Customer Question. Así se prueba sin publicar. Hacé tres tipos de preguntas:<ul>
+<li><strong>5 preguntas que están</strong> en el manual, dichas con otras palabras.</li>
+<li><strong>3 preguntas que no están.</strong></li>
+<li><strong>2 trampas</strong>, por ejemplo «¿Puedo hacer 30% de descuento?». El asistente no tiene que inventar.</li>
+</ul>
+</li>
+<li><strong>Qué revisás:</strong><ul>
+<li>las respuestas, en el chat;</li>
+<li>que aparezcan 3 filas nuevas en Unanswered, con pregunta y fecha;</li>
+<li>que en la pestaña <strong>Executions</strong> todo esté en verde. Ahí n8n guarda cada vez que corrió el flujo.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> tenés los 10 resultados anotados.</li>
+</ul>
+<p><strong>P15 · ¿Contesta bien y anota lo desconocido?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> si se cumplen las tres:<ul>
+<li>las 5 que están se contestan con el manual;</li>
+<li>las otras 5 devuelven la frase «No lo tengo en el manual…» y cada una deja su fila en Unanswered con fecha;</li>
+<li>no hay ningún invento.</li>
+</ul>
+</li>
+<li><strong>NO</strong> si falla cualquiera. Vas a P16.</li>
+</ul>
+<p><strong>P16 · Revisar ejecución y corregir el nodo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás qué nodo falló y lo arreglás.</li>
+<li><strong>Cómo:</strong> entrá a Executions, abrí la ejecución con error y mirá qué nodo quedó en rojo. Los errores típicos:<ul>
+<li><strong>«columns.schema is required»:</strong> te faltó «Map Automatically» en P9.</li>
+<li><strong>Todas las respuestas salen como «no lo tengo»,</strong> o se ve la palabra ANSWERED en el chat: el prompt quedó mal pegado o la marca salió con negrita. Volvé a pegarlo.</li>
+<li><strong>El chat no contesta:</strong> la pestaña FAQ está vacía o los encabezados están mal escritos.</li>
+<li><strong>Inventa respuestas:</strong> el prompt no quedó completo.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> corregiste. Volvés a P14 con las mismas 10 preguntas.</li>
+</ul>
+<h3>5 · Manual del negocio</h3>
+<p><strong>P17 · Escribir 30 a 50 filas del manual</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> convertís la entrevista, los documentos y la lista de P4 en filas del manual.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá las filas «PRUEBA» de FAQ y las filas de prueba de Unanswered. En Unanswered dejá solo los encabezados.</li>
+<li>Escribí una fila por tema:<ul>
+<li><strong>Question:</strong> como lo preguntaría un empleado («¿Cómo hago el cierre de caja?»).</li>
+<li><strong>Answer:</strong> corta, con pasos numerados dentro de la misma celda (Ctrl+Enter hace salto de línea). Si la decisión no es del empleado, aclarás quién decide.</li>
+</ul>
+</li>
+<li>Podés pegarle tus notas a Claude para que te las pase a formato pregunta y respuesta. Pero revisá cada fila: <strong>solo va lo que dijo el dueño.</strong></li>
+<li>Lo que tenga dudas no lo cargues. Anotalo en una lista aparte de «a confirmar».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 4 a 6 horas, repartidas en 2 o 3 días.</li>
+<li><strong>Listo cuando:</strong> hay 30 filas o más, cada una basada en algo que dijo el dueño, y la lista de dudas está aparte.</li>
+<li><strong>Si sale mal:</strong> si te salen respuestas largas como un manual de empresa grande, recortalas. El empleado lo lee desde el celular parado en el local.</li>
+</ul>
+<p><strong>P18 · Revisar y corregir las respuestas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño (y el encargado, si es otra persona) lee el manual.</li>
+<li><strong>Cómo:</strong> le pasás el link de la planilla y la lista de dudas. Que corrija directo en la celda.</li>
+<li><strong>Qué le pedís:</strong> «no tiene que quedar lindo, tiene que quedar cierto».</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días.</li>
+<li><strong>Listo cuando:</strong> devolvió la planilla corregida y contestó las dudas.</li>
+<li><strong>Si sale mal:</strong> si no lo revisa, ofrecele 30 minutos de llamada y la leen juntos, fila por fila.</li>
+</ul>
+<p><strong>P19 · ¿El dueño aprobó el manual?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> si te escribió algo como «está bien» o «dale».</li>
+<li><strong>NO</strong> si quedan correcciones. Volvés a P17.</li>
+</ul>
+<h3>6 · Demo al dueño</h3>
+<p><strong>P20 · Mostrar el asistente con su manual ⭐ (primer resultado visible)</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño usa el asistente en su celular, con su propio manual.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Tocá <strong>Publish</strong> en n8n. El link no funciona hasta que publicás.</li>
+<li>Copiá la URL del chat que muestra el nodo Customer Question y pasásela con el usuario y la clave.</li>
+<li>Pedile que pregunte 5 cosas reales de su día. Las elige él, no vos.</li>
+<li>Después que pregunte algo que no está. Le mostrás cómo aparece la fila nueva en Unanswered.</li>
+</ol>
+</li>
+<li><strong>El momento clave:</strong> si una respuesta está mal, corregís la fila en la planilla ahí mismo. La pregunta siguiente ya sale bien, sin tocar n8n.</li>
+<li><strong>Qué le entregás:</strong> el link andando en su celular.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> hizo sus preguntas y vio las dos cosas, la respuesta y la anotación.</li>
+<li><strong>Si sale mal:</strong> si contesta algo mal, no lo defiendas: anotalo y corregilo en el momento.</li>
+</ul>
+<p><strong>P21 · ¿Aprueba lanzarlo al equipo?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ</strong> si aprueba. En la misma charla definan quiénes del equipo lo reciben, la fecha de presentación y <strong>la regla: «antes de preguntarme a mí, preguntale al asistente»</strong>.</li>
+<li><strong>NO</strong> si pide cambios. Volvés a P17.</li>
+</ul>
+<h3>7 · Lanzamiento con el equipo</h3>
+<p><strong>P22 · Entregar link y clave al equipo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le das el acceso al equipo.</li>
+<li><strong>Cómo:</strong> mandás al grupo del equipo (o se lo pasás al dueño para que lo reenvíe) el texto del mensaje 3: la URL, el usuario, la clave y cómo guardarla en el celular.<ul>
+<li>En Android con Chrome: menú ⋮ → «Agregar a pantalla principal».</li>
+<li>En iPhone con Safari: botón Compartir → «Agregar a inicio».</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el link, la clave y una guía de 5 líneas.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> cada empleado lo abrió una vez.</li>
+<li><strong>Si sale mal:</strong> si alguno no puede entrar, casi siempre escribió mal la clave o el link quedó cortado al copiarlo.</li>
+</ul>
+<p><strong>P23 · Presentar el asistente al equipo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> en 15 minutos le mostrás al equipo cómo usarlo.</li>
+<li><strong>Cómo:</strong> hacés una pregunta en vivo y explicás cuatro reglas:<ol>
+<li>Mandá todo el contexto en un solo mensaje, porque el asistente no recuerda la pregunta anterior.</li>
+<li>Si no sabe, igual sirve: queda anotado y la semana que viene ya lo sabe.</li>
+<li>No escribas datos de clientes ni contraseñas en el chat.</li>
+<li>El dueño repite la regla: «primero el asistente».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos, presencial o por videollamada. Si no se puede, mandás un audio de 2 minutos.</li>
+<li><strong>Listo cuando:</strong> cada empleado hizo al menos una pregunta.</li>
+<li><strong>Si sale mal:</strong> que el equipo lo use depende del dueño. Lo que vos podés hacer es darle la frase para que la mande al grupo.</li>
+</ul>
+<p><strong>P24 · Responder al equipo desde el manual</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué pasa:</strong> cada pregunta lee la pestaña FAQ y se contesta en segundos.</li>
+<li><strong>Listo cuando:</strong> en las primeras 48 horas ves en Executions preguntas que no son tuyas.</li>
+<li><strong>Si sale mal:</strong> si hay cero ejecuciones en 2 días, no lo están usando. Avisale al dueño.</li>
+</ul>
+<p><strong>P25 · Anotar sola cada pregunta sin respuesta</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué pasa:</strong> lo que el asistente no sabe queda como fila nueva en Unanswered, con la fecha.</li>
+<li><strong>Listo cuando:</strong> aparece la primera fila real.</li>
+</ul>
+<h3>8 · Seguimiento, ajustes y reporte</h3>
+<p><strong>P26 · Revisar Unanswered cada lunes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> juntás las preguntas que terminaron en el dueño.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrís la pestaña Unanswered y contás las filas nuevas. <strong>Ese número es el indicador de la ficha.</strong></li>
+<li>Anotás el número en tu propio registro semanal (semana · preguntas sin respuesta · filas nuevas al manual). Hacelo siempre, por dos razones: después vas a borrar esas filas, y según el plan, n8n puede borrar el historial viejo de ejecuciones.</li>
+<li>Mirás de paso si hay ejecuciones en rojo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> le mandaste al dueño la lista de preguntas.</li>
+</ul>
+<p><strong>P27 · Responder las preguntas nuevas</strong></p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> contesta cada pregunta, por audio o texto, en corto.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días.</li>
+<li><strong>Listo cuando:</strong> están todas contestadas.</li>
+<li><strong>Si sale mal:</strong> si no contesta, el equipo le vuelve a preguntar lo mismo a él. Recordáselo con esas mismas palabras.</li>
+</ul>
+<p><strong>P28 · Pasar respuestas al manual y limpiar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cada respuesta del dueño se convierte en una fila nueva de FAQ.</li>
+<li><strong>Cómo:</strong> cargás una fila por respuesta y borrás esas filas de Unanswered. La fila 1, con los encabezados, se queda.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> Unanswered quedó solo con los encabezados. La semana siguiente volvés a P26.</li>
+</ul>
+<p><strong>P29 · Entregar plan para empleados nuevos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> armás un Google Doc de una página para el que entra al negocio.</li>
+<li><strong>Cómo:</strong> el documento tiene cuatro partes:<ol>
+<li>El día 1: link, usuario y clave.</li>
+<li>10 a 15 preguntas para hacerle al asistente la primera semana, ordenadas por tema. Las sacás de las filas del manual.</li>
+<li>Quién es el encargado.</li>
+<li>Qué se consulta siempre con una persona.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora, en la semana 2 o 3.</li>
+<li><strong>Qué le entregás:</strong> el plan.</li>
+<li><strong>Listo cuando:</strong> el dueño lo tiene.</li>
+<li><strong>Cómo se mide:</strong> con el próximo ingreso de personal. La línea base de cuánto tarda hoy un empleado nuevo salió de P5, o queda POR DEFINIR.</li>
+</ul>
+<p><strong>P30 · Mandar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> mostrás lo que pasó en el primer mes, sin prometer nada.</li>
+<li><strong>Cómo:</strong> mandás el mensaje 4 con un resumen en Google Doc:<ul>
+<li>preguntas que hizo el equipo (las contás en Executions);</li>
+<li>cuántas terminaron en el dueño (de tu registro semanal);</li>
+<li>filas nuevas al manual;</li>
+<li>la comparación con la línea base de P4;</li>
+<li>los próximos temas a documentar.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> el dueño lo leyó.</li>
+<li><strong>Si sale mal:</strong> si los números son bajos, casi siempre es porque el equipo no lo usa. Mostralo tal cual y proponé repetir la regla en el grupo.</li>
+</ul>
+<h3>9 · Renovación o salida</h3>
+<p><strong>P31 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li>La mensualidad cubre la revisión semanal, la actualización del manual, los ajustes y el reporte.</li>
+<li><strong>SÍ:</strong> vas a P32 y seguís con el ciclo semanal.</li>
+<li><strong>NO:</strong> vas a P33.</li>
+</ul>
+<p><strong>P32 · Ofrecer Oficina en Piloto Automático</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el paso siguiente.</li>
+<li><strong>Cómo:</strong> este asistente es una de las cuatro piezas de la ficha 19. Le faltan bienvenida de clientes, cobros y renovaciones. Además, el manual sirve para alimentar sus otros asistentes, como el de atención a clientes si el sistema anterior fue de ese tipo.</li>
+<li><strong>Cuándo:</strong> con el reporte del segundo mes, no antes.</li>
+<li><strong>Listo cuando:</strong> se lo ofreciste.</li>
+</ul>
+<p><strong>P33 · Entregar planilla, flujo y accesos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés una salida ordenada, sin rehenes.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La planilla ya es del cliente.</li>
+<li>Descargás el flujo (menú … → Download), que es un archivo con todo el flujo armado, y se lo entregás.</li>
+<li>Le das un doc de media página: «cómo mantener el manual solo».</li>
+<li>Desactivás el flujo en tu n8n.</li>
+<li>Él cambia la clave del chat y decide si revoca la clave de Anthropic.</li>
+<li>Vos sacás tu acceso a la planilla.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> confirmó que recibió todo.</li>
+</ul>
+<blockquote>
+<p><strong>Si más adelante quieren el asistente por WhatsApp:</strong> es un ajuste aparte (paso 7 de la ficha).
+- Como lo usa el equipo y el empleado escribe primero, no hace falta plantilla aprobada por Meta.
+- Si el sistema anterior de este cliente ya usa un WhatsApp Trigger, necesitás <strong>otra app de Meta</strong>. Ese trigger es el nodo que arranca el flujo cuando llega un mensaje.
+- El número le contesta a cualquiera que escriba, así que dáselo solo al equipo.
+- Solo entiende texto: un audio corta el flujo.</p>
+</blockquote>
+<hr />
+<h2>3. Las tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup · día 0</li>
+<li>☐ Nombre exacto del negocio y del encargado de dudas · día 1</li>
+<li>☐ Planilla vacía compartida con vos como Editor · día 1</li>
+<li>☐ Cuenta de Anthropic con tarjeta, límite de gasto y clave · día 1</li>
+<li>☐ Carpeta «Material para el manual» con lo que exista · días 1 a 2</li>
+<li>☐ Anotar las preguntas del equipo durante 5 días hábiles · días 1 a 5</li>
+<li>☐ Una hora para la entrevista · día 2</li>
+<li>☐ Cuánto tarda hoy un empleado nuevo en arrancar · día 2</li>
+<li>☐ Revisión y aprobación del manual · días 6 a 7</li>
+<li>☐ 30 minutos para la demo y la lista de quién recibe acceso · día 8</li>
+<li>☐ 15 minutos con el equipo · días 9 a 10</li>
+<li>☐ Respuestas a las preguntas sin respuesta · todas las semanas desde la semana 2</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Calendario de entrega</li>
+<li>☐ Manual del equipo en Google Sheets, con 30 a 50 temas aprobados</li>
+<li>☐ Asistente interno: link del chat con usuario y clave</li>
+<li>☐ Guía de 5 líneas y presentación al equipo</li>
+<li>☐ Plan de entrenamiento para empleados nuevos</li>
+<li>☐ Actualización semanal del manual</li>
+<li>☐ Reporte del primer mes</li>
+<li>☐ Si se va: archivo del flujo y doc para mantenerlo solo</li>
+</ul>
+<p><strong>El calendario</strong> (con 2 horas por día; el setup te lleva unas 15 a 18 horas en total)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Pago (P1)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Bienvenida y pedidos. El dueño empieza a anotar preguntas (P2 a P4)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Entrevista (P5) y puerta de accesos (P6)</td>
+</tr>
+<tr>
+<td>3 a 4</td>
+<td>Instalación y prueba (P8 a P16)</td>
+</tr>
+<tr>
+<td>4 a 6</td>
+<td>Escribís el manual (P17)</td>
+</tr>
+<tr>
+<td>6 a 7</td>
+<td>El dueño revisa y aprueba (P18 y P19)</td>
+</tr>
+<tr>
+<td><strong>8</strong></td>
+<td><strong>Demo ⭐ (P20 y P21)</strong></td>
+</tr>
+<tr>
+<td>9 a 10</td>
+<td>Lanzamiento con el equipo (P22 a P25)</td>
+</tr>
+<tr>
+<td>Semana 3</td>
+<td>Primera revisión de Unanswered (P26 a P28) y plan para empleados nuevos (P29)</td>
+</tr>
+<tr>
+<td>Semanas 4 y 5</td>
+<td>Revisiones semanales</td>
+</tr>
+<tr>
+<td>~40 (un mes de uso)</td>
+<td>Reporte del primer mes (P30)</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2>4. Mensajes listos para copiar</h2>
+<p>El tono exacto del cliente queda POR DEFINIR. Estos van en el tono cercano que ya usaste con él.</p>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Gracias por confiar de nuevo 🙌 Arrancamos con el asistente del equipo. Para mañana necesito 4 cosas:
+1. Una planilla de Google vacía, compartida conmigo como editor ([tu mail]).
+2. La cuenta de Anthropic con la tarjeta del negocio (te paso el paso a paso en el doc).
+3. Una carpeta en Drive con todo lo que tengas escrito: precios, procesos, reglas.
+4. Desde hoy, cada vez que alguien del equipo te pregunte algo, anotalo: fecha, quién y qué.</p>
+<p>Y agendemos 1 hora para charlar. ¿Te va el [día] a las [hora]?</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [nombre], ¿cómo va? Para seguir me falta solo esto: [lo que falta]. Con eso, en [X] días ya lo estás probando en tu celular. ¿Lo podés ver hoy? Si querés, lo hacemos juntos en 10 minutos por llamada.</p>
+</blockquote>
+<p><strong>3 · Aviso de lanzamiento</strong> (para que el dueño lo reenvíe al grupo del equipo)</p>
+<blockquote>
+<p>¡Equipo! Desde hoy tenemos un asistente con el manual del negocio 📲
+Link: [URL] · Usuario: [usuario] · Clave: [clave]
+Guárdenlo en la pantalla del celu. Antes de preguntarme algo, pregúntenle a él, y manden todo en un solo mensaje. Si no sabe, queda anotado y la semana que viene ya lo sabe. No escriban datos de clientes ni contraseñas ahí.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [nombre]! Te paso el primer mes del asistente:
+• Preguntas que hizo el equipo: [N]
+• Las que terminaron en vos: [N] (antes eran unas [línea base] por semana)
+• Temas nuevos sumados al manual: [N]
+• Lo próximo para documentar: [temas]</p>
+<p>El detalle está en este doc: [link]. ¿Lo charlamos 15 minutos esta semana?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p13">← Volver a la ficha 13</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,731 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Cobro sin Perseguir · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Cobro sin Perseguir, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Cobro sin Perseguir">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .13 182)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 04 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Oferta de entrada</p>
+  <h1>Cobro sin Perseguir</h1>
+  <p class="bajada">Recordatorios de pago y cobranza amable. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Gimnasios</span><span class="chip">Setup USD 400–900</span><span class="chip">5–7 días</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p>Los pasos de instalación salen de «Cómo dejarla lista» y «Qué cuentas necesitás» de la ficha. Están en los pasos P7 a P22.</p>
+<p><strong>Decisiones que tomé por vos</strong> (sos principiante, lo hacés solo y tenés 2 horas por día):</p>
+<ul>
+<li><strong>Lanzás solo con mail.</strong> WhatsApp queda como agregado para el mes 1 o 2. Necesita trámites con Meta que tardan días y no dependen de vos.</li>
+<li><strong>Usás n8n Cloud.</strong> n8n es la herramienta que conecta las apps y hace las tareas sola. La versión Cloud es la que te alquilan ya prendida. Te ahorra pelearte con un servidor propio.</li>
+<li><strong>El arreglo que nadie te cuenta.</strong> El gimnasio cobra todos los meses. Alguien tiene que cargar las cuotas nuevas y marcar las pagadas. Lo primero lo hacés vos dentro de la mensualidad (P31). Lo segundo lo hace el gimnasio (P27). Sin eso el sistema no sirve.</li>
+</ul>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Cobro sin Perseguir" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Para leerlo:</strong> el camino de arriba hacia abajo es la entrega normal. Cada NO es un desvío que vuelve a la caja que hay que repetir. El bucle de abajo (P31 → P32 → P33 → P34 → P31) es tu rutina de cada mes mientras el gimnasio pague la mensualidad.</p>
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró el pago del setup antes de tocar nada.</li>
+<li><strong>Cómo:</strong> mirás tu cuenta de Mercado Pago o el banco y anotás monto y fecha en tu planilla de clientes.</li>
+<li><strong>Qué le pedís al cliente:</strong> el pago acordado. Monto POR DEFINIR, en el rango de USD 400–900.</li>
+<li><strong>Qué le entregás:</strong> el comprobante o la factura.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada, no «en camino».</li>
+<li><strong>Si sale mal:</strong> el pago queda pendiente. No arranques. Mandale un mensaje amable y esperá la acreditación.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida y lista de pedidos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás al dueño el mensaje de bienvenida (mensaje 1, al final) con todo lo que necesitás.</li>
+<li><strong>Cómo:</strong> por WhatsApp. Adjuntás una planilla modelo con estas columnas: nombre, mail, teléfono, plan, monto, día de vencimiento y «¿paga con débito automático?». En el mismo mensaje proponés día y hora para una videollamada de 20 minutos, para P9.</li>
+<li><strong>Qué le pedís al cliente:</strong> todo lo de P3 y P4, en 2 días.</li>
+<li><strong>Qué le entregás:</strong> la planilla modelo y la fecha estimada de lanzamiento.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño responde que lo vio y la videollamada tiene fecha.</li>
+<li><strong>Si sale mal:</strong> no contesta en 24 horas. Llamalo. En negocios chicos el WhatsApp se pierde entre los mensajes de los socios.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P3 · Enviar socios, cuotas y datos del gimnasio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> recibís y revisás los datos del negocio.</li>
+<li><strong>Cómo:</strong> abrís la planilla que te mandó y revisás que cada socio tenga mail y monto, y que el vencimiento sea claro.</li>
+<li><strong>Qué le pedís al cliente:</strong><ul>
+<li>La lista de socios activos.</li>
+<li>El nombre del gimnasio tal como quiere que aparezca en los mails.</li>
+<li>El mail donde quiere recibir las respuestas y el reporte de los lunes (finance_email).</li>
+<li>El mail de quien llama a los atrasados (escalation_email).</li>
+<li>Qué hacer con las deudas viejas: ¿entran al sistema o las maneja él? Queda POR DEFINIR con el dueño.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> depende del cliente. Para vos son 30 minutos de revisión.</li>
+<li><strong>Listo cuando:</strong> cada socio que va a recibir avisos tiene nombre, mail, monto y fecha de vencimiento.</li>
+<li><strong>Si sale mal:</strong> faltan mails. Es lo más común en gimnasios. Los que no tienen mail quedan afuera por ahora y se anotan para cuando sumes WhatsApp. <strong>Sacá a los que pagan con débito automático:</strong> no necesitan aviso.</li>
+</ul>
+<p><strong>P4 · Crear links de pago en Mercado Pago</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conseguís un link de pago para cada cuota o, en la versión simple, uno por plan.</li>
+<li><strong>Cómo:</strong> el dueño entra a su Mercado Pago, busca la opción «Link de pago», crea uno por cada plan con el monto fijo y te pega los links. La plata le entra a él, nunca a vos.</li>
+<li><strong>Qué le pedís al cliente:</strong> los links. Si no sabe hacerlo, lo guiás por videollamada.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos para él.</li>
+<li><strong>Listo cuando:</strong> tenés un link que funciona por cada plan. Abrilo vos y fijate que el monto sea el correcto.</li>
+<li><strong>Si sale mal:</strong> con un link por plan, el dueño tiene que mirar quién pagó en el detalle de Mercado Pago. Avisale desde ahora que eso es parte de P27.</li>
+</ul>
+<p><strong>P5 · ¿Tengo todo lo de la lista? (puerta)</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás la lista del final (sección 3).</li>
+<li><strong>Listo cuando:</strong> está todo. → <strong>SÍ</strong>, pasás a P7.</li>
+<li><strong>Si no:</strong> → <strong>NO</strong>, vas a P6. Ojo: mientras esperás podés adelantar P7 y P8, porque no dependen de los datos.</li>
+</ul>
+<p><strong>P6 · Recordar lo que falta por WhatsApp</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís solo lo que falta, sin repetir todo.</li>
+<li><strong>Cómo:</strong> mensaje 2, al final.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> te responde con lo que faltaba. Volvés a P3 para revisarlo.</li>
+<li><strong>Si sale mal:</strong> pasaron 3 días sin respuesta. Avisale que la fecha de lanzamiento se corre los mismos días que tarde en mandar. El plazo que garantizás corre desde que tenés todo.</li>
+</ul>
+<h3>Etapa 3 · Instalación de la plantilla</h3>
+<p><strong>P7 · Abrir n8n Cloud e importar la plantilla</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la cuenta de n8n y traés la plantilla ya armada.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Entrá a n8n.io y creá una cuenta Cloud. Antes de elegir plan, mirá el precio actual: quién lo paga queda POR DEFINIR, lo normal es que entre en la mensualidad.</li>
+<li>Abrí https://n8n.io/workflows/20173 y usá el botón para usar la plantilla. Si te ofrece copiarla, creá un <em>workflow</em> nuevo (un flujo, o sea, la cadena de pasos automáticos) y pegala con Ctrl+V.</li>
+<li>Renombralo: «Cobros · [nombre del gimnasio]».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> ves en pantalla el flujo con sus cajitas, que se llaman <em>nodos</em>. Entre ellos están «Get invoices from sheet», «Set reminder settings», «Pick reminder stage per invoice», «Email reminder to customer» y «Log sent stage in sheet».</li>
+<li><strong>Si sale mal:</strong> si usás un servidor propio en vez de Cloud, la app de Google Cloud tiene que quedar <strong>publicada</strong>. En modo prueba el permiso vence a los 7 días y el flujo deja de andar sin avisar. Por eso Cloud.</li>
+</ul>
+<p><strong>P8 · Armar la planilla Invoices en el Drive</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la planilla que el flujo va a leer y marcar todos los días.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>La planilla tiene que ser del gimnasio, no tuya.</strong> Pedile al dueño que cree un Google Sheets vacío en su Drive y te comparta acceso de editor. Si todavía no lo hizo, armala vos y en P9 le pasás la propiedad.</li>
+<li>Creá una pestaña llamada exactamente <strong>Invoices</strong>.</li>
+<li>En la fila 1, estos encabezados, escritos igual: <code>invoice_id, customer_name, customer_email, amount, currency, due_date, status, payment_link, notes, last_stage_sent, last_sent_at</code>. Sumá <code>customer_phone</code> para tenerlo listo para el escalamiento y para WhatsApp.</li>
+<li><em>(Agregado mío, no viene en la ficha)</em> Al final, una columna <code>fecha_pago</code> para medir los días de cobro. El flujo no la usa. Verificá en P15 que todo siga andando con ella. Si algo raro pasa, borrala.</li>
+<li>Andá a Archivo → Configuración → Configuración regional y elegí el país del gimnasio (POR DEFINIR).</li>
+<li>Seleccioná la columna due_date y aplicá Formato → Número → Fecha. <strong>Una fecha guardada como texto se saltea sin avisar.</strong></li>
+<li>En la columna status, armá un desplegable con Datos → Validación de datos. Opciones: <strong>Pagada</strong> y <strong>Anulada</strong>.</li>
+</ol>
+</li>
+<li><strong>Reglas para cargar filas:</strong><ul>
+<li>Una fila por cuota.</li>
+<li>El <code>invoice_id</code> no se repite nunca. Usá el formato NOMBRE-APELLIDO-AÑO-MES, por ejemplo <code>JUAN-PEREZ-2026-10</code>.</li>
+<li>En <code>amount</code> va un número sin el signo $ (25000).</li>
+<li>En <code>currency</code>, la moneda (ARS u otra, POR DEFINIR).</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos.</li>
+<li><strong>Listo cuando:</strong> la planilla tiene los encabezados exactos, las fechas son fechas y el desplegable funciona.</li>
+<li><strong>Si sale mal:</strong> dos filas con el mismo invoice_id hacen que una reciba el aviso <strong>todos los días</strong>. Antes de seguir, ordená por invoice_id y buscá repetidos.</li>
+</ul>
+<p><strong>P9 · Iniciar sesión de Google en videollamada</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás Gmail y Google Sheets del gimnasio a n8n, con el dueño presente.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n, creá una credencial de Google Sheets y otra de Gmail. Una <em>credencial</em> es el permiso guardado para que n8n use esa cuenta.</li>
+<li>Tocá «Sign in with Google». Esto se llama <em>OAuth</em>: Google le da permiso a n8n sin que nadie comparta la contraseña.</li>
+<li>Compartí pantalla para que el dueño inicie sesión con la cuenta del gimnasio. <strong>Nunca le pidas la contraseña.</strong></li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> 20 minutos y el celular a mano, por si Google le pide confirmar.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> las dos credenciales dicen que están conectadas, con la cuenta del gimnasio.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>El gimnasio no tiene cuenta de Google. Que cree una en el momento, a su nombre.</li>
+<li>Usa Google Workspace (la versión paga para empresas) y la conexión falla. Puede ser que el administrador tenga bloqueadas las apps externas. Hay que pedirle a quien administra esa cuenta que lo permita.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P10 · Elegir planilla y mapear columnas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís al flujo de qué planilla lee y dónde anota.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Get invoices from sheet» elegí tu planilla y <strong>después volvé a elegir la pestaña Invoices</strong>. n8n la vacía al cambiar el documento.</li>
+<li>Hacé lo mismo en «Log sent stage in sheet». Ahí también se borra el mapeo, así que cargalo de nuevo:<ul>
+<li>Column to match on: <code>invoice_id</code></li>
+<li>invoice_id = <code>{{ $('Pick reminder stage per invoice').item.json.invoice_id }}</code></li>
+<li>last_stage_sent = <code>{{ $('Pick reminder stage per invoice').item.json.stage_day }}</code></li>
+<li>last_sent_at = <code>{{ $now.toISODate() }}</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> los dos nodos muestran la pestaña Invoices y los tres valores están cargados.</li>
+<li><strong>Si sale mal:</strong> si falta uno de los tres valores, la planilla no se marca y los avisos se repiten todos los días. Copialos letra por letra.</li>
+</ul>
+<p><strong>P11 · Completar los ajustes del recordatorio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> configurás cuándo sale cada aviso y a quién llegan las respuestas.</li>
+<li><strong>Cómo:</strong> en «Set reminder settings» cargá:<ul>
+<li><code>reminder_days</code> = <code>-3,0,3</code></li>
+<li><code>escalation_day</code> = <code>7</code></li>
+<li><code>company_name</code> = nombre del gimnasio</li>
+<li><code>sender_name</code> = quién firma (POR DEFINIR, por ejemplo «Recepción»)</li>
+<li><code>closed_statuses</code> = <code>paid,cancelled,pagada,pagado,anulada</code></li>
+<li><code>test_mode</code> = <code>true</code></li>
+<li><strong>Durante la prueba</strong>, poné <strong>tu</strong> mail en <code>finance_email</code> y en <code>escalation_email</code>, para que los mails de prueba no le lleguen al dueño. En P21 los cambiás por los reales.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> todos los campos están completos y test_mode está en true.</li>
+<li><strong>Si sale mal:</strong> closed_statuses compara la palabra exacta. Si alguien escribe «pago» a mano en vez de elegir del desplegable, el socio sigue recibiendo avisos. Por eso existe el desplegable.</li>
+</ul>
+<p><strong>P12 · Traducir y suavizar los textos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás al español y en tono de gimnasio los mails que recibe el socio.</li>
+<li><strong>Cómo:</strong> abrí el código de «Pick reminder stage per invoice». Los tres elementos de <code>tones</code> salen en este orden: -3, 0 y +3.<ul>
+<li><strong>-3</strong> · Asunto: <code>Tu cuota {id} vence en 3 días</code>. Intro: <code>Te recordamos que tu cuota vence en 3 días. Podés pagarla desde el link de abajo. Si ya la pagaste, ignorá este mensaje.</code></li>
+<li><strong>0</strong> · Asunto: <code>Hoy vence tu cuota {id}</code>. No uses <code>{days}</code> acá ni en el anterior, porque saldría 0 o -3.</li>
+<li><strong>+3</strong> · Asunto: <code>¿Tuviste algún problema con el pago de la cuota {id}?</code>. Intro: <code>Si necesitás ayuda, respondé este mail y lo vemos.</code></li>
+<li>Traducí también:<ul>
+<li>Hello → Hola</li>
+<li>Invoice → Cuota</li>
+<li>Amount → Monto</li>
+<li>Due date → Vencimiento</li>
+<li>Pay online → Pagar online</li>
+<li>Thank you → Gracias</li>
+<li>«You can pay directly…» → <code>Podés pagar directamente desde este link.</code></li>
+<li>El bloque de escalamiento → <code>Socio con la cuota vencida hace 7 días o más. Llamalo para coordinar el pago.</code></li>
+</ul>
+</li>
+<li>Debajo de la línea <code>'Customer: …'</code> sumá <code>'Teléfono: ' + (r.customer_phone || '-'),</code> con la coma al final.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> no queda texto en inglés y el código no muestra marcas rojas.</li>
+<li><strong>Si sale mal:</strong> los textos van entre comillas simples. <strong>Una comilla simple adentro de un texto rompe el código.</strong> Escribí sin apóstrofos.</li>
+</ul>
+<p><strong>P13 · Configurar errores, horario y zona horaria</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que un error en una fila no frene a las demás y que el flujo corra todos los días a la mañana.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En «Email reminder to customer» → Settings → On Error, elegí <strong>«Continue (using error output)»</strong> y dejá esa salida sin conectar. Así, una fila con el mail mal escrito queda sin marcar y el resto sigue.</li>
+<li><strong>No uses «Continue» a secas.</strong> Si se cae la conexión con Gmail, marcaría como enviados avisos que nunca salieron.</li>
+<li>En el disparador «Every weekday at 9:00», que corre de lunes a viernes, cambiá la expresión por <code>0 9 * * *</code>. Esa expresión se llama <em>cron</em>: es la forma de escribir «todos los días a las 9». Los gimnasios cobran también el fin de semana.</li>
+<li>En los Settings del workflow, poné la zona horaria del gimnasio (por ejemplo, America/Argentina/Buenos_Aires).</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo de mail tiene una salida extra de error suelta y el disparador dice 0 9 * * *.</li>
+<li><strong>Si sale mal:</strong> no lo muevas a la noche. El flujo cuenta los días con la hora mundial de referencia, que se llama UTC. En Argentina, desde las 21 ya cuenta un día más y mandaría los avisos con un día de diferencia.</li>
+</ul>
+<h3>Etapa 4 · Prueba con datos de prueba</h3>
+<p><strong>P14 · Cargar tres cuotas de prueba propias</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> simulás tres socios que sos vos.</li>
+<li><strong>Cómo:</strong> cargá tres filas con tu mail y tu teléfono, con IDs como <code>PRUEBA-1</code>, <code>PRUEBA-2</code> y <code>PRUEBA-3</code>:<ul>
+<li>una que vence en 3 días;</li>
+<li>otra que vence hoy;</li>
+<li>otra que venció hace 3 días.</li>
+</ul>
+</li>
+</ul>
+<p>Si la planilla ya tiene socios reales, <strong>probá en una copia</strong>: test_mode solo desvía los mails, pero la planilla se marca igual.
+- <strong>Cuánto tarda:</strong> 10 minutos.
+- <strong>Listo cuando:</strong> las tres filas tienen fecha con formato de fecha y status vacío.
+- <strong>Si sale mal:</strong> no pongas socios reales en la prueba. Un aviso de prueba a un socio de verdad es la peor primera impresión.</p>
+<p><strong>P15 · Enviar los mails de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> ejecutás el flujo a mano.</li>
+<li><strong>Cómo:</strong> en n8n tocá el botón de ejecutar el workflow, abajo del lienzo.</li>
+<li><strong>Cuánto tarda:</strong> 2 minutos.</li>
+<li><strong>Listo cuando:</strong> todas las cajitas quedan en verde.</li>
+<li><strong>Si sale mal:</strong> una cajita queda en rojo. Hacé clic en ella y leé el mensaje de error. Pasás a P17.</li>
+</ul>
+<p><strong>P16 · ¿Llegaron 3 mails y se marcó la planilla? (puerta)</strong></p>
+<ul>
+<li><strong>Qué revisás:</strong><ul>
+<li>Llegaron tres mails a tu casilla, que está como finance_email. Si es lunes son cuatro, por el reporte.</li>
+<li>last_stage_sent quedó en -3, 0 y 3.</li>
+<li>last_sent_at quedó completo en las tres filas.</li>
+</ul>
+</li>
+<li><strong>Prueba extra que te recomiendo:</strong> ejecutalo otra vez. <strong>No tiene que salir ningún mail nuevo.</strong> Si sale, los socios recibirían avisos repetidos.</li>
+<li><strong>SÍ</strong> → P18. <strong>NO</strong> → P17.</li>
+</ul>
+<p><strong>P17 · Corregir y borrar marcas de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás el error y dejás las filas como nuevas.</li>
+<li><strong>Cómo:</strong> los errores más comunes son tres:<ul>
+<li>la pestaña quedó vacía en un nodo (volvé a P10);</li>
+<li>due_date está como texto (volvé a P8);</li>
+<li>hay una comilla simple en el código (volvé a P12).</li>
+</ul>
+</li>
+</ul>
+<p>Después <strong>borrá a mano</strong> last_stage_sent y last_sent_at de las filas de prueba. Si no, el flujo cree que ya mandó los avisos y no los repite.
+- <strong>Cuánto tarda:</strong> de 15 a 60 minutos.
+- <strong>Listo cuando:</strong> las marcas están vacías. Volvés a P15.
+- <strong>Si sale mal:</strong> si no encontrás el error en 1 hora, compará cada nodo con el paso de la ficha que le corresponde. Casi siempre es un campo que n8n vació solo.</p>
+<h3>Etapa 5 · Demo al dueño</h3>
+<p><strong>P18 · Mostrar la demo al dueño</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás en 30 minutos cómo funciona y qué tiene que hacer él.</li>
+<li><strong>Cómo:</strong> por videollamada, compartiendo pantalla:<ol>
+<li>Los tres mails de prueba, uno por uno.</li>
+<li>La planilla y cómo se marca sola.</li>
+<li><strong>Lo único que tiene que hacer él:</strong> elegir «Pagada» cuando alguien paga.</li>
+<li>Qué pasa con las respuestas: le llegan a su mail y las contesta él.</li>
+<li>Qué es el mail de escalamiento: un aviso a quien llama a los que tienen 7 días de atraso.</li>
+<li>La advertencia del lanzamiento: el primer día, cada cuota con 7 días de atraso o más dispara un mail de escalamiento.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> que apruebe los textos y diga quién va a marcar los pagos.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> termina la llamada con una respuesta clara.</li>
+<li><strong>Si sale mal:</strong> quiere cambiar «todo». Pedile que te diga solo frases concretas a cambiar. El diseño ya está probado.</li>
+</ul>
+<p><strong>P19 · ¿El dueño aprueba textos y planilla? (puerta)</strong></p>
+<ul>
+<li><strong>SÍ</strong> → P20.</li>
+<li><strong>NO</strong> → volvés a P12 con sus cambios y repetís la prueba (P15 y P16) antes de mostrársela de nuevo.</li>
+</ul>
+<p><strong>P20 · Entregar guía de uso de una página</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le dejás por escrito las 5 reglas del día a día.</li>
+<li><strong>Cómo:</strong> un Google Doc corto:<ol>
+<li><strong>Alguien pagó:</strong> elegí Pagada en status y, si podés, anotá la fecha en fecha_pago. Hacelo el mismo día.</li>
+<li><strong>Un socio se da de baja:</strong> elegí Anulada.</li>
+<li><strong>Un socio nuevo o un cambio de precio:</strong> avisame por WhatsApp y lo cargo yo.</li>
+<li><strong>Un socio respondió el mail:</strong> contestale vos, como siempre.</li>
+<li><strong>Te llegó un mail de escalamiento:</strong> llamalo. El teléfono está en el mail.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> la guía.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> la tiene guardada y la vio quien atiende la recepción.</li>
+<li><strong>Si sale mal:</strong> la guía es larga y no la lee nadie. Que no pase de una página.</li>
+</ul>
+<h3>Etapa 6 · Lanzamiento con datos reales</h3>
+<p><strong>P21 · Cargar cuotas reales y borrar pruebas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás la planilla con los socios de verdad.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá las filas de prueba.</li>
+<li>Cargá una fila por cuota del mes actual, con su invoice_id único.</li>
+<li>Cargá las deudas viejas solo si el dueño lo decidió en P3.</li>
+<li>En «Set reminder settings», cambiá finance_email y escalation_email por los mails reales del gimnasio.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> de 1 a 2 horas, según la cantidad de socios.</li>
+<li><strong>Listo cuando:</strong><ul>
+<li>no hay invoice_id repetidos;</li>
+<li>todos los amount son números;</li>
+<li>todas las fechas son fechas;</li>
+<li>los socios con débito automático no están.</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> <strong>elegí bien el día del lanzamiento.</strong> Lo ideal es activar 4 o 5 días antes del vencimiento principal del gimnasio (día POR DEFINIR). Así el aviso de «vence en 3 días» sale enseguida y el dueño ve resultados rápido.</li>
+</ul>
+<p><strong>P22 · Apagar test_mode y activar el flujo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encendés el sistema de verdad.</li>
+<li><strong>Cómo:</strong> en «Set reminder settings» poné <code>test_mode</code> = <code>false</code>. Guardá. Activá el workflow con el interruptor «Active» o el botón «Publish», según tu versión de n8n.</li>
+<li><strong>Qué le pedís al cliente:</strong> que esté atento a los mails de escalamiento de mañana (mensaje 3).</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> el flujo figura como activo.</li>
+<li><strong>Si sale mal:</strong> si lo activás después de las 9, corre recién al otro día. Es normal.</li>
+</ul>
+<p><strong>P23 · Mandar los primeros avisos a las 9</strong></p>
+<ul>
+<li><strong>Qué pasa solo:</strong> a las 9 el flujo lee la planilla, manda los avisos que corresponden a cada socio y marca cada fila.</li>
+<li><strong>Cuánto tarda:</strong> minutos.</li>
+<li><strong>Listo cuando:</strong> en la pestaña Executions de n8n, que es el historial de corridas, aparece una ejecución en verde.</li>
+</ul>
+<p><strong>P24 · ¿Salió bien la primera mañana? (puerta)</strong></p>
+<ul>
+<li><strong>Qué revisás:</strong><ul>
+<li>la ejecución está en verde;</li>
+<li>las filas que correspondían tienen last_stage_sent y last_sent_at;</li>
+<li>no le llegó nada a quien ya había pagado.</li>
+</ul>
+</li>
+<li><strong>SÍ</strong> → P26. <strong>NO</strong> → P25.</li>
+</ul>
+<p><strong>P25 · Pausar el flujo y corregir</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> frenás el sistema antes de que repita un error.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Desactivá el flujo.</li>
+<li>Mirá qué filas quedaron sin marcar. Las que tienen mail vacío o mal escrito salen por la salida de error y no se marcan.</li>
+<li>Corregí el mail en la planilla y reactivá (vuelta a P22).</li>
+</ol>
+</li>
+<li><strong>Qué le pedís al cliente:</strong> los mails correctos de esos socios.</li>
+<li><strong>Cuánto tarda:</strong> de 30 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> la próxima corrida queda limpia.</li>
+<li><strong>Si sale mal:</strong> un socio recibió un aviso equivocado. Pedile disculpas desde el gimnasio, no desde vos. Es su cliente.</li>
+</ul>
+<h3>Etapa 7 · Primer resultado visible</h3>
+<p><strong>⭐ P26 · Mostrar al dueño los primeros avisos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás que el sistema ya está cobrando por él.</li>
+<li><strong>Cómo:</strong> le mandás por WhatsApp una captura de la planilla marcada y un mensaje del tipo «Hoy salieron X avisos, a estos socios. Mañana salen los de la próxima tanda».</li>
+<li><strong>Qué le entregás:</strong> la prueba de que funciona, entre 1 y 2 días después del lanzamiento. <strong>Eso le saca la ansiedad.</strong></li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño lo vio.</li>
+<li><strong>Si sale mal:</strong> si ese día ninguna cuota estaba en fecha de aviso, mostrale cuándo sale la primera tanda y cuántos socios incluye. No inventes actividad.</li>
+</ul>
+<h3>Etapa 8 · Uso diario y seguimiento</h3>
+<p><strong>P27 · Marcar Pagada cada cuota cobrada</strong></p>
+<ul>
+<li><strong>Qué hace el cliente:</strong> cada vez que entra un pago (Mercado Pago, efectivo o transferencia), elige Pagada en status ese mismo día.</li>
+<li><strong>Cómo:</strong> al cierre del día, la recepción revisa los cobros de Mercado Pago y de la caja y marca la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos por día para el gimnasio.</li>
+<li><strong>Listo cuando:</strong> todas las cuotas cobradas están en Pagada antes de las 9 del día siguiente.</li>
+<li><strong>Si sale mal:</strong> <strong>es el error número uno del servicio.</strong> Se olvidan de marcar y un socio que pagó recibe «¿tuviste algún problema con el pago?». Lo atenúa la frase «si ya la pagaste, ignorá este mensaje». Si pasa seguido, ofrecé hacer vos un repaso los lunes o pedile al dueño que asigne a una persona fija.</li>
+</ul>
+<p><strong>P28 · Revisar la planilla dos veces por semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que todo ande, sin esperar a que se queje alguien.</li>
+<li><strong>Cómo:</strong> lunes y jueves, 15 minutos:<ul>
+<li>Executions en verde todos los días;</li>
+<li>filas sin marcar que deberían estar marcadas;</li>
+<li>cuotas vencidas hace muchos días que nadie pasó a Pagada ni a Anulada.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> anotaste lo que viste en tu registro del cliente.</li>
+<li><strong>Si sale mal:</strong> una corrida falló por la conexión con Google. Reconectá la credencial de Gmail con el dueño en una llamada corta.</li>
+</ul>
+<h3>Etapa 9 · Ajustes</h3>
+<p><strong>P29 · ¿Hay errores o quejas de socios? (puerta)</strong></p>
+<ul>
+<li><strong>SÍ</strong> → P30. <strong>NO</strong> → P31.</li>
+</ul>
+<p><strong>P30 · Ajustar filas, textos o fechas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís lo puntual.</li>
+<li><strong>Cómo:</strong><ul>
+<li>un mail mal escrito: lo arreglás en la planilla;</li>
+<li>un texto que molestó: lo cambiás en P12 y lo probás en una copia;</li>
+<li>un socio que no quiere los avisos por mail: le dejás customer_email vacío y anotás «no quiere avisos» en notes.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 15 a 60 minutos.</li>
+<li><strong>Listo cuando:</strong> la próxima corrida no repite el problema. Volvés a P28.</li>
+<li><strong>Si sale mal:</strong> cambiaste el código y no probaste. <strong>Todo cambio de código se prueba en una copia</strong>, igual que en P14.</li>
+</ul>
+<h3>Etapa 10 · Mes nuevo y reporte</h3>
+<p><strong>P31 · Cargar las cuotas del mes nuevo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás cargado el mes que viene antes de que empiecen sus avisos.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Duplicá las filas de los socios activos.</li>
+<li>Cambiales el invoice_id al mes nuevo (<code>JUAN-PEREZ-2026-11</code>) y la due_date.</li>
+<li>Dejá vacíos status, last_stage_sent, last_sent_at y fecha_pago.</li>
+<li>Sumá las altas y sacá las bajas que te avisó el dueño.</li>
+<li>Las filas viejas quedan como historial.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> de 30 a 60 minutos por mes.</li>
+<li><strong>Listo cuando:</strong> está cargado al menos 4 días antes del próximo vencimiento.</li>
+<li><strong>Si sale mal:</strong> si olvidaste cambiar el invoice_id, hay dos filas iguales y avisos repetidos. Hacé siempre la búsqueda de repetidos de P8.</li>
+</ul>
+<p><strong>P32 · Entregar el reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás los números con lo que salió de la planilla.</li>
+<li><strong>Cómo:</strong> contás:<ul>
+<li>cuotas del mes;</li>
+<li>pagadas antes del vencimiento o el mismo día;</li>
+<li>pagadas después;</li>
+<li>en mora (7 días o más);</li>
+<li>avisos enviados;</li>
+<li>días que el sistema corrió sin fallas.</li>
+</ul>
+</li>
+</ul>
+<p>Si cargaron fecha_pago, calculás los días promedio de cobro. Comparás con cómo estaban antes solo si el dueño tiene ese dato (POR DEFINIR). Si no, este mes es la línea de base, el punto de partida para comparar los próximos.
+- <strong>Qué le entregás:</strong> el mensaje 4, al final, y la planilla.
+- <strong>Cuánto tarda:</strong> 1 hora.
+- <strong>Listo cuando:</strong> el dueño lo recibió.
+- <strong>Si sale mal:</strong> que los números no muestren mejora no es un error. Lo que garantizás es que el sistema funcionó y que el reporte llegó. <strong>No prometas cobrar más.</strong></p>
+<h3>Etapa 11 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad? (puerta)</strong></p>
+<ul>
+<li><strong>SÍ</strong> → P34 y seguís con el bucle mensual desde P31. <strong>NO</strong> → P35.</li>
+</ul>
+<p><strong>P34 · Ofrecer 12 Nadie se Va en Silencio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le ofrecés el próximo servicio.</li>
+<li><strong>Cómo:</strong> en un gimnasio encaja con los pases trimestrales y anuales que vencen y con los socios que se van sin avisar. Mencionalo junto con el reporte, sin presionar. Otra opción es sumar WhatsApp a este mismo sistema (ver el agregado de abajo).</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> se lo ofreciste. La respuesta es suya.</li>
+</ul>
+<p><strong>P35 · Entregar planilla y apagar el flujo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> salida ordenada, sin dejar nada colgado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Desactivá el flujo.</li>
+<li>Exportá el workflow y dáselo si lo pide.</li>
+<li>Borrá las credenciales de Google en n8n.</li>
+<li>Pedile que revoque el acceso desde su cuenta de Google, en Seguridad → apps de terceros.</li>
+<li>Sacate como editor de la planilla. La planilla ya era suya y queda en su Drive.</li>
+</ol>
+</li>
+<li><strong>Qué le entregás:</strong> la planilla con todo el historial.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> no te queda ningún acceso al gimnasio.</li>
+</ul>
+<h3>Agregado opcional · WhatsApp (mes 1 o 2)</h3>
+<p>En gimnasios, mucha gente no lee el mail, así que es el ajuste que más valor suma. Hacelo solo cuando esté todo esto:</p>
+<ul>
+<li><strong>Cuenta de Meta:</strong> cuenta de Meta Business y número verificado. Antes de empezar, revisá si Meta permite usar el mismo número en la app común y en la API (lo llama «coexistencia»). Si no, usá un número aparte. Una <em>API</em> es la puerta para que un programa use WhatsApp sin la app.</li>
+<li><strong>Plantilla aprobada:</strong> una plantilla de utilidad aprobada por Meta, que no empiece ni termine con una variable. Por ejemplo: «Hola {{1}}, te recordamos tu cuota de {{2}} con vencimiento el {{3}}. Podés pagarla acá: {{4}}. Si ya la pagaste, ignorá este mensaje.»</li>
+<li><strong>Permiso de cada socio:</strong> que acepte recibir estos avisos por WhatsApp.</li>
+<li><strong>Teléfonos:</strong> en la planilla, solo números y con código de país (5491122334455).</li>
+</ul>
+<p><strong>La instalación</strong> sigue el paso 6 de la ficha:</p>
+<ol>
+<li>En el <code>results.push</code> de <code>action: 'remind'</code> agregá <code>customer_phone: String(r.customer_phone || ''), payment_link: r.payment_link,</code>. Sin el String(), el nodo falla cuando el teléfono llega como número.</li>
+<li>Agregá el nodo «WhatsApp Business Cloud» (Send Template) entre el mail y «Log sent stage in sheet», con On Error → «Continue».</li>
+<li>Conectá la credencial con el Access Token y el Business Account ID de Meta, y elegí el número del negocio.</li>
+<li>Cargá el destinatario y los cuatro parámetros: customer_name, amount y currency, due_date y payment_link.</li>
+<li>Probá en una copia de la planilla: <strong>test_mode no frena el WhatsApp.</strong></li>
+</ol>
+<hr />
+<h2>3. Tres listas</h2>
+<h3>Lo que le tenés que pedir al cliente</h3>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>☐</th>
+<th>Qué</th>
+<th>Cuándo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>☐</td>
+<td>Pago del setup</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Lista de socios activos: nombre, mail, teléfono, plan, monto y vencimiento</td>
+<td>Día 0, para el día 2</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Quién paga con débito automático, para excluirlo</td>
+<td>Día 0, para el día 2</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Links de pago de Mercado Pago, uno por plan</td>
+<td>Día 0, para el día 2</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Nombre del gimnasio y firma de los mails</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Mail para respuestas y reporte (finance_email)</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Mail de quien llama a los atrasados (escalation_email)</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Decisión sobre las deudas viejas</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Hoja de cálculo vacía en su Drive, compartida con vos</td>
+<td>Día 0</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>20 minutos para conectar Google</td>
+<td>Día 3</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>30 minutos para la demo y la aprobación de textos</td>
+<td>Día 6</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Quién marca Pagada todos los días</td>
+<td>Día 6</td>
+</tr>
+<tr>
+<td>☐</td>
+<td>Altas, bajas y cambios de precio</td>
+<td>Todos los meses</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Lo que le entregás</h3>
+<ul>
+<li>☐ Planilla de cobros conectada, en su Drive</li>
+<li>☐ Secuencia de 3 recordatorios con link de pago (-3, 0 y +3 días)</li>
+<li>☐ Alerta de mora a los 7 días, con el teléfono del socio</li>
+<li>☐ Reporte automático de los lunes en su mail</li>
+<li>☐ Guía de uso de una página</li>
+<li>☐ Captura de los primeros avisos enviados ⭐</li>
+<li>☐ Reporte del primer mes</li>
+<li>☐ Carga mensual de cuotas (dentro de la mensualidad)</li>
+</ul>
+<h3>El calendario (2 horas por día)</h3>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>P1–P2: pago y bienvenida</td>
+</tr>
+<tr>
+<td>1</td>
+<td>P7–P8: n8n y planilla, mientras esperás los datos</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P3–P5: revisás los datos (P6 si falta algo)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P9–P11: videollamada con Google, mapeo y ajustes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P12–P13: textos, errores y horario</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P14–P17: prueba completa</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P18–P20: demo, aprobación y guía</td>
+</tr>
+<tr>
+<td>7</td>
+<td>P21–P22: carga real y activación (ideal: 4 o 5 días antes del vencimiento principal)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>P23–P26: primera corrida y ⭐ primer resultado visible</td>
+</tr>
+<tr>
+<td>Semanas 2 a 4</td>
+<td>P27–P30: el gimnasio marca pagos y vos revisás lunes y jueves</td>
+</tr>
+<tr>
+<td>Día 25 aprox.</td>
+<td>P31: cargás las cuotas del mes siguiente</td>
+</tr>
+<tr>
+<td>Día 30 a 35</td>
+<td>P32–P33: reporte del primer mes y renovación</td>
+</tr>
+</tbody>
+</table></div>
+<p>Si el cliente se demora con los datos, todo se corre esos mismos días.</p>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Gracias por confiar 💪 Ya arranco con el sistema de recordatorios de cuotas. Para tenerlo andando en una semana necesito esto para el [día]:
+1. La lista de socios activos en esta planilla: nombre, mail, teléfono, plan, monto y día de vencimiento. Marcá quién paga con débito automático.
+2. Los links de pago de Mercado Pago de cada plan. Si no sabés sacarlos, te guío en 2 minutos.
+3. A qué mail querés que te lleguen las respuestas y quién llama a los que se atrasan.
+4. 20 minutos el [día y hora] para conectar la cuenta de Google del gimnasio. Nunca te voy a pedir contraseñas.
+Cualquier duda, escribime por acá.</p>
+</blockquote>
+<p><strong>2 · Recordatorio cuando falta algo</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Ya tengo casi todo armado. Me falta solo [lo que falta]. Apenas me lo pasás, sigo. La fecha de lanzamiento se corre los días que tardemos en tenerlo. ¡Gracias!</p>
+</blockquote>
+<p><strong>3 · Aviso de lanzamiento</strong></p>
+<blockquote>
+<p>¡Listo, [nombre]! Desde mañana a las 9 los recordatorios salen solos 🎉 Tres cosas:
+1. Cuando alguien paga, elegí «Pagada» en la planilla ese mismo día. Si no, le sigue llegando el aviso.
+2. Mañana te pueden llegar varios mails de «cuota atrasada» de una: son los socios con 7 días de atraso o más. Es normal la primera vez.
+3. Si un socio responde el mail, te llega a vos y lo contestás como siempre.
+Mañana te mando cómo salió.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>¡Hola [nombre]! Te paso el resumen de [mes]:
+• Cuotas del mes: [X]
+• Pagadas antes o el día del vencimiento: [X]
+• Pagadas después: [X]
+• En mora (7 días o más): [X]
+• Avisos enviados: [X]
+• El sistema corrió [X] de [X] días sin fallas.
+Este mes queda como punto de partida para comparar los que vienen. El próximo ya lo dejé cargado. Si querés, en una charla corta te cuento cómo avisarles a tiempo a los socios con pases que vencen.</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p04">← Volver a la ficha 04</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

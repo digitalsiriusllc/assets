@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Motor de Contenido · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Motor de Contenido, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Motor de Contenido">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.71 .2 350)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 17 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Transformación</p>
+  <h1>Motor de Contenido</h1>
+  <p class="bajada">Estrategia, guiones y publicaciones con IA, todos los meses. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Profesionales con marca personal</span><span class="chip">Setup USD 3.000–4.500</span><span class="chip">3–4 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p>La instalación sigue «Cómo dejarla lista» y las cuentas de la ficha (P10 a P16).</p>
+<p>Trabajo con dos supuestos. Si alguno no es así, decímelo y lo ajusto:</p>
+<ul>
+<li><strong>Canal:</strong> el contenido es solo para Instagram, porque la plantilla trabaja con una sola plataforma.</li>
+<li><strong>Tablero:</strong> no sé si alguno de los sistemas que ya le instalaste es el <strong>11 · Tablero del Dueño</strong>. El paso P21 tiene los dos caminos: si ya existe, lo extendés; si no existe, armás una versión mínima.</li>
+</ul>
+<p><strong>Cómo se conectan las fichas:</strong> el Motor de Contenido «está hecho de» la ficha 11. El orden es este: primero el Motor genera y publica. Después el Tablero mide qué publicación trajo consultas. Ese reporte alimenta los ajustes del mes siguiente.</p>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Motor de Contenido" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Para ganar días:</strong> la instalación (P10 a P16) no depende de que apruebe el enfoque. Podés arrancarla en paralelo con P8 y P9. Solo P13, el paso de los prompts, espera a que estén definidos el rubro y la llamada a la acción.</p>
+<hr />
+<h2>2. El paso a paso</h2>
+<p><strong>Palabras que vas a ver</strong>, explicadas una sola vez:</p>
+<ul>
+<li><strong>n8n:</strong> la herramienta que conecta apps y hace tareas sola.</li>
+<li><strong>Nodo:</strong> cada cajita de un flujo de n8n.</li>
+<li><strong>Credencial:</strong> el permiso guardado para que n8n entre a una cuenta.</li>
+<li><strong>API:</strong> la puerta por la que un programa usa a otro.</li>
+<li><strong>Clave de API:</strong> la contraseña de esa puerta.</li>
+<li><strong>Prompt:</strong> la instrucción que le das a la IA.</li>
+<li><strong>JSON:</strong> texto ordenado que leen las máquinas.</li>
+<li><strong>Disparador o trigger:</strong> el nodo que arranca el flujo.</li>
+<li><strong>CTA:</strong> el llamado a la acción, o sea, lo que le pedís al lector («Escribime por WhatsApp»).</li>
+<li><strong>Hook:</strong> la primera frase, la que frena el scroll.</li>
+<li><strong>Pilar:</strong> un tema fijo que se repite en el mes.</li>
+</ul>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar el setup</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás el link de pago del setup y esperás la confirmación.</li>
+<li><strong>Cómo:</strong> usá el mismo medio de cobro que en los sistemas anteriores. El monto es el acordado, entre USD 3.000 y 4.500, <strong>POR DEFINIR</strong>.</li>
+<li><strong>Qué le pedís:</strong> que pague.</li>
+<li><strong>Qué le entregás:</strong> el comprobante.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada.</li>
+<li><strong>Si sale mal:</strong> si se demora, no arranques igual «por confianza». Un mensaje amable y esperás.</li>
+</ul>
+<p><strong>P2 · Enviar bienvenida con la lista de pedidos</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás por WhatsApp qué necesitás de él y el link a un formulario.</li>
+<li><strong>Cómo:</strong> armá un Google Form con las preguntas de P3 y mandá el mensaje 1 de la sección 4.</li>
+<li><strong>Qué le pedís:</strong> el formulario completo y el acceso a Meta.</li>
+<li><strong>Qué le entregás:</strong> el calendario de la entrega y la fecha estimada del primer post.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te confirma que lo leyó.</li>
+<li><strong>Si sale mal:</strong> si no contesta en 24 horas, llamalo. Ya hay confianza.</li>
+</ul>
+<h3>Etapa 2 · Datos y accesos</h3>
+<p><strong>P3 · Completar formulario de marca y objetivos</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> él completa el formulario y vos lo revisás.</li>
+<li><strong>Cómo:</strong> el formulario pregunta esto:<ul>
+<li>Profesión exacta y especialidad.</li>
+<li>A quién le habla.</li>
+<li>Qué quiere que pase con el contenido: consultas por WhatsApp, turnos, etc.</li>
+<li>Su llamada a la acción real, por ejemplo «Escribime CONSULTA por WhatsApp».</li>
+<li>Cuántas veces por semana puede publicar.</li>
+<li>Cuántos videos por semana está dispuesto a grabar.</li>
+<li>Su tono: cercano, formal, con humor.</li>
+<li>3 a 5 colegas o competidores que admira.</li>
+<li>3 publicaciones suyas que le gustaron.</li>
+<li>Temas prohibidos.</li>
+<li>Si su profesión tiene reglas de publicidad. En salud, abogacía o finanzas suele haber límites con testimonios, promesas o el «antes y después».</li>
+<li>Logo, colores, tipografía y 10 fotos suyas en una carpeta de Drive.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo anterior.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días, según él.</li>
+<li><strong>Listo cuando:</strong> están todas las respuestas obligatorias.</li>
+<li><strong>Si sale mal:</strong> respuestas vagas («le hablo a todos»). Hacele una llamada de 15 minutos y completalo vos con lo que te diga.</li>
+</ul>
+<p><strong>P4 · Dar acceso a Instagram en Meta</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> él te suma como persona con acceso a su Instagram en Meta Business Suite. Así podés programar publicaciones sin su contraseña.</li>
+<li><strong>Cómo:</strong> guialo así: Meta Business Suite → Configuración → Personas → Agregar → tu mail → permiso para crear y publicar contenido en la cuenta de Instagram.</li>
+<li><strong>Qué le pedís:</strong> que haga eso. Si usa Canva, que también te invite a su equipo.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos de él.</li>
+<li><strong>Listo cuando:</strong> entrás a Meta Business Suite, ves su cuenta y podés abrir el Planificador.</li>
+<li><strong>Si sale mal:</strong> si su Instagram no es cuenta profesional o no está vinculado a Meta Business Suite, compartan pantalla y lo hacen juntos. No le pidas la contraseña.</li>
+</ul>
+<p><strong>P5 · ¿Está todo lo pedido?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> chequeás el formulario completo y el acceso a Meta.</li>
+<li><strong>Cómo:</strong> usá la lista de la sección 3.</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> todo está tildado. SÍ va a P7. NO va a P6.</li>
+<li><strong>Si sale mal:</strong> no avances «con lo que hay». Sin la llamada a la acción real ni el tono, la IA escribe genérico.</li>
+</ul>
+<p><strong>P6 · Recordar por WhatsApp lo que falta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís exactamente qué falta.</li>
+<li><strong>Cómo:</strong> usá el mensaje 2 de la sección 4, con la lista puntual.</li>
+<li><strong>Qué le pedís:</strong> lo que falte.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos. Después esperás.</li>
+<li><strong>Listo cuando:</strong> te manda lo que faltaba. Volvés a P3.</li>
+<li><strong>Si sale mal:</strong> si pasan 3 días, ofrecele completarlo juntos en una llamada de 20 minutos.</li>
+</ul>
+<h3>Etapa 3 · Investigación y estrategia</h3>
+<p><strong>P7 · Investigar competencia y preguntas del público</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> juntás lo que la plantilla no hace sola: qué le funciona a la competencia y qué pregunta su público.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí el Instagram de los 3 a 5 colegas que nombró.</li>
+<li>Anotá en un documento sus 10 publicaciones con más comentarios: formato, tema y gancho.</li>
+<li>Sumá las preguntas que más le hacen al cliente. Sacalas de sus DMs y de su WhatsApp, o del bot si le instalaste el 05 o el 07.</li>
+<li>Pegale todo eso a Claude y pedile: «Agrupá en 4 pilares de contenido para un [profesión] que le habla a [público]. Para cada pilar: propósito, formatos y si lleva CTA de venta».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> acceso de lectura a sus preguntas frecuentes, si no las tenés.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 3 a 4 horas, o sea, 1 o 2 días tuyos.</li>
+<li><strong>Listo cuando:</strong> tenés un documento con competencia, preguntas y 3 a 5 pilares.</li>
+<li><strong>Si sale mal:</strong> si la competencia casi no publica, mirá referentes del mismo rubro en otro país.</li>
+</ul>
+<p><strong>P8 · Entregar resumen y pilares propuestos</strong> (entrego)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás un resumen de una página.</li>
+<li><strong>Cómo:</strong> un Google Doc con «Lo que le funciona a tu competencia», «Lo que más te preguntan» y «Los pilares que te propongo». Lo mandás por WhatsApp con un audio corto.</li>
+<li><strong>Qué le pedís:</strong> que lo lea y te diga si se siente identificado.</li>
+<li><strong>Qué le entregás:</strong> el resumen. Es su primera prueba de que el trabajo arrancó.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> lo recibió.</li>
+<li><strong>Si sale mal:</strong> si es largo, no lo lee. Una página, máximo.</li>
+</ul>
+<p><strong>P9 · ¿Aprueba el enfoque?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás su sí o sus cambios.</li>
+<li><strong>Cómo:</strong> preguntale: «¿Te ves hablando de estos temas todo el mes?».</li>
+<li><strong>Qué le pedís:</strong> el sí o los cambios.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> dice que sí. NO vuelve a P7 con sus cambios.</li>
+<li><strong>Si sale mal:</strong> si dice «no sé», ofrecele dos versiones distintas y que elija una.</li>
+</ul>
+<h3>Etapa 4 · Instalación de la plantilla</h3>
+<p><strong>P10 · Crear cuenta Google y planilla de 4 pestañas</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> creás una cuenta de Google solo para el contenido de este cliente y la planilla que usa el flujo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Creá la cuenta, por ejemplo contenido.[marca]@gmail.com, con el nombre <strong>POR DEFINIR</strong>. Va aparte porque el disparador pide acceso a todo el Drive.</li>
+<li>En esa cuenta creá una planilla de Google con 4 pestañas.</li>
+<li>Copiá los encabezados de la fila 1 <strong>tal cual</strong>, en inglés, con paréntesis, % y barras:<ul>
+<li><strong>Planificación:</strong> Brand Name, Industry, Platform, Target Audience, Content Goal, Tone, Start Date, Duration (Days), Posting Frequency / Week, Promotion Level, Max Promo Posts / Week, Min Educational Posts / Week, CTA Cooldown (Days), Max Same Pillar Streak</li>
+<li><strong>Pilares:</strong> Pillar Name, Primary Purpose, Platform, Weight (%), Allowed Formats, CTA Allowed</li>
+<li><strong>Calendario:</strong> Sr No, Date, Platform, Pillar ID, Format, Post Intent, Hook Angle, CTA Type, Status</li>
+<li><strong>Posts:</strong> Sr No, Hook (Option 1), Hook (Option 2), Main Content, CTA, Hashtags, Platform Variant, Date</li>
+</ul>
+</li>
+<li>Compartí la planilla con el mail del cliente como Editor.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> las 4 pestañas existen y los encabezados están pegados desde este texto, no tipeados a mano.</li>
+<li><strong>Si sale mal:</strong> después aparece el error «Column names were updated after the node's setup». Casi siempre es un espacio o una barra distinta. Volvé a copiar y pegar.</li>
+</ul>
+<p><strong>P11 · Importar plantilla y conectar las cuentas</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla a tu n8n y le cargás las credenciales.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Abrí https://n8n.io/workflows/12294, copiá la plantilla y pegala con Ctrl+V en un flujo nuevo de tu n8n. Llamalo «Motor de Contenido · [cliente]».</li>
+<li>Creá estas credenciales con la cuenta de P10: «Google Sheets Trigger OAuth2», «Google Sheets OAuth2» y «Gmail OAuth2». OAuth es el botón de «Iniciar sesión con Google» que da permiso. En un n8n propio, primero activá las APIs de Google Drive y Google Sheets en Google Cloud Console.</li>
+<li>En platform.openai.com cargá saldo. Es aparte de ChatGPT Plus; con USD 5 a 10 sobra para arrancar. Quién paga ese saldo está <strong>POR DEFINIR</strong>.</li>
+<li>Creá una clave de API en «API keys», cargala como credencial de OpenAI y elegila en los nodos «Message a model».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada. Si la cuenta de OpenAI la paga él, su tarjeta.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> ningún nodo muestra el triángulo rojo de credencial faltante.</li>
+<li><strong>Si sale mal:</strong> OpenAI sin saldo da error de cuota. Revisá Billing.</li>
+</ul>
+<p><strong>P12 · Elegir planilla en nodos y ajustar disparador</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le decís a cada nodo de Google Sheets qué pestaña usar y hacés que el disparador mire solo la fecha.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En los 5 nodos que dicen «your_google_sheet_id_here» elegí la planilla de P10:<ul>
+<li>Planificación en «Google Sheets Trigger» y en «Get row(s) in sheet».</li>
+<li>Pilares en «Append row in sheet».</li>
+<li>Calendario en «Append row in sheet6».</li>
+<li>Posts en «Append row in sheet7».</li>
+</ul>
+</li>
+<li>En «Google Sheets Trigger» andá a Options → Columns to Watch y elegí solo «Start Date».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> los 5 nodos muestran la planilla y la pestaña correctas, y Columns to Watch tiene solo Start Date.</li>
+<li><strong>Si sale mal:</strong> si no hacés el paso 2, cualquier cambio en la fila regenera el mes entero y lo suma repetido.</li>
+</ul>
+<p><strong>P13 · Adaptar los prompts al rubro y al español</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás las instrucciones de la IA, que vienen pensadas para empresas de software en inglés.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En el mensaje de sistema de «Message a model7», cambiá «specializing in B2B and SaaS marketing» por el rubro, por ejemplo «specializing in personal brand marketing for [profesión]».</li>
+<li>En el mensaje de sistema de «Message a model6», cambiá «specializing in B2B SaaS and marketing automation» por lo mismo.</li>
+<li>En el mensaje de usuario de «Message a model6»:<ul>
+<li>Reemplazá los CTA de ejemplo («Book a demo today», «Download our free guide», «Join 500+ marketers using InboxPlus») por su llamada a la acción real de P3.</li>
+<li>Reemplazá «#Marketing #B2BSaaS #EmailAutomation» por 3 hashtags de su rubro, <strong>POR DEFINIR</strong> con él.</li>
+</ul>
+</li>
+<li>Borrá la línea «[Rest of the prompt remains the same...]» del final del mensaje de usuario de «Message a model7».</li>
+<li>En los tres nodos de OpenAI, sumá al mensaje de sistema: «Escribí los textos en español rioplatense, con voseo. Dejá en inglés las claves del JSON y los valores fijos (Format, CTA Type, CTA Allowed, pillar_type, Status). No inventes cifras, estadísticas, testimonios, precios ni promociones: si falta un dato, escribí [COMPLETAR].»</li>
+<li>Si su profesión tiene reglas de publicidad, sumá una línea con lo que no puede decir, según lo que te contestó en P3.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> confirmar los 3 hashtags.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> no queda ningún texto de SaaS, InboxPlus o «Book a demo» en ningún nodo. Buscalos con Ctrl+F dentro de cada prompt.</li>
+<li><strong>Si sale mal:</strong> si traducís también las claves del JSON, los nodos de código no encuentran los datos. Solo cambiás el texto de las instrucciones.</li>
+</ul>
+<p><strong>P14 · Arreglar el Switch y activar Execute Once</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís las dos fallas de armado que trae la plantilla.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Borrá el nodo «Switch By Format».</li>
+<li>Conectá «Append row in sheet6» directo a «Loop Over Items». No alcanza con conectar la salida «Video» del Switch: esas fechas salen sin texto y «done» se dispara dos veces.</li>
+<li>En «Message a model7» abrí Settings y activá «Execute Once».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> el Switch no existe y Execute Once está prendido en «Message a model7».</li>
+<li><strong>Si sale mal:</strong> sin Execute Once, la IA pide el calendario una vez por pilar, gasta de más y guarda solo el primero.</li>
+</ul>
+<p><strong>P15 · Sumar mail de aprobación al dueño</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> agregás el aviso automático de «tu contenido está listo».</li>
+<li><strong>Cómo:</strong><ol>
+<li>Conectá la salida «done» de «Loop Over Items» a un nodo «Gmail», con la acción «Send a message».</li>
+<li>En Settings activá «Execute Once».</li>
+<li>Ponele como destinatario el mail del cliente y como asunto «Tu contenido del mes está listo».</li>
+<li>En el cuerpo escribí: «Entrá a la planilla [link], revisá Calendario y Posts, cambiá Status de Pending a Aprobado en lo que apruebes y grabá lo que en Format diga Reel o Video».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> el nodo está conectado y configurado.</li>
+<li><strong>Si sale mal:</strong> si llega dos veces, falta Execute Once.</li>
+</ul>
+<p><strong>P16 · Armar plantillas de marca en Canva</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás listos los diseños base, porque la plantilla de n8n escribe los textos pero no hace imágenes.</li>
+<li><strong>Cómo:</strong> en el Canva del cliente, o en el tuyo (<strong>POR DEFINIR</strong>), creá con su logo, colores y tipografía:<ul>
+<li>Un post simple.</li>
+<li>Un carrusel de 5 placas.</li>
+<li>Una portada de reel.</li>
+<li>Una historia.</li>
+</ul>
+</li>
+</ul>
+<p>Ponelos en una carpeta «Plantillas [marca]».
+- <strong>Qué le pedís:</strong> OK visual a las 4 plantillas por WhatsApp.
+- <strong>Qué le entregás:</strong> las plantillas.
+- <strong>Cuánto tarda:</strong> 2 a 3 horas.
+- <strong>Listo cuando:</strong> te dice que le gustan.
+- <strong>Si sale mal:</strong> si no tiene identidad visual, usá 2 colores y 1 tipografía simples. No es momento de hacerle un branding.</p>
+<h3>Etapa 5 · Prueba</h3>
+<p><strong>P17 · Cargar fila de prueba y ejecutar</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> probás el flujo a mano antes de prenderlo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Con el flujo <strong>apagado</strong>, cargá <strong>una sola fila</strong> en Planificación. Con dos filas se corta en «Message a model7» con «Paired item data ... unavailable».</li>
+<li>Completá así:<ul>
+<li>Platform: Instagram.</li>
+<li>Duration (Days): 30.</li>
+<li>Posting Frequency / Week: lo que dijo en P3, por ejemplo 3.</li>
+<li>Promotion Level: Low, Medium o High, en inglés. Para marca personal sugiero Low o Medium, <strong>POR DEFINIR</strong>.</li>
+<li>Las columnas de reglas van en números. Sugerencia a confirmar: Max Promo Posts / Week 1, Min Educational Posts / Week 2, CTA Cooldown (Days) 3, Max Same Pillar Streak 2.</li>
+<li>Start Date: con apóstrofo adelante ('AAAA-MM-DD).</li>
+<li>Target Audience y Content Goal: pegá lo de P7.</li>
+</ul>
+</li>
+<li>Tocá «Execute workflow».</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos más lo que tarda en correr.</li>
+<li><strong>Listo cuando:</strong> la ejecución termina en verde o en rojo, y en los dos casos sabés en qué nodo.</li>
+<li><strong>Si sale mal:</strong> si cargás la fecha sin apóstrofo, la IA puede leer 1/11 como 11 de enero.</li>
+</ul>
+<p><strong>P18 · Generar pilares, calendario y textos</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. El flujo trabaja.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Lee la fila.</li>
+<li>La IA arma los pilares y los escribe en Pilares.</li>
+<li>Arma una fecha por publicación y la escribe en Calendario, con Status «Pending».</li>
+<li>Escribe el texto de cada fecha en Posts: 2 ganchos, cuerpo, CTA y hashtags.</li>
+<li>Manda el mail.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> unos minutos.</li>
+<li><strong>Listo cuando:</strong> se llenaron las 3 pestañas.</li>
+<li><strong>Si sale mal:</strong> si se frena a la mitad, pasá a P20.</li>
+</ul>
+<p><strong>P19 · ¿Salió completo y sin errores?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> revisás el resultado con esta lista:<ul>
+<li>Pilares tiene 3 a 5 filas.</li>
+<li>Calendario tiene tantas fechas como frecuencia por semana × 4, más o menos.</li>
+<li>Posts tiene una fila por fecha, <strong>incluidas las de Video con guion</strong>.</li>
+<li>Las fechas arrancan en Start Date.</li>
+<li>Los textos están en rioplatense.</li>
+<li>Aparece [COMPLETAR] donde falta un dato, y no hay cifras inventadas.</li>
+<li>Te llegó <strong>un solo</strong> mail.</li>
+</ul>
+</li>
+<li><strong>Cómo:</strong> abrís la planilla y la bandeja del mail.</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> todo da bien. Después borrás las filas generadas de Pilares, Calendario y Posts, dejando los encabezados. SÍ va a P21. NO va a P20.</li>
+<li><strong>Si sale mal:</strong> si no borrás las filas de prueba, el mes real se suma abajo y queda todo mezclado.</li>
+</ul>
+<p><strong>P20 · Leer el error y corregir el nodo</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás el nodo en rojo y lo arreglás.</li>
+<li><strong>Cómo:</strong> en n8n, Executions → la última → el nodo en rojo → leé el mensaje. Los errores más comunes:<ul>
+<li>«Column names were updated»: encabezado distinto. Volvé a P10.</li>
+<li>«Paired item data»: hay dos filas en Planificación.</li>
+<li>Posts de video vacíos: el Switch sigue conectado. Volvé a P14.</li>
+<li>Textos en inglés o hablando de SaaS: volvé a P13.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 2 horas.</li>
+<li><strong>Listo cuando:</strong> corregiste y volvés a P17.</li>
+<li><strong>Si sale mal:</strong> si no entendés el error, copialo entero en Claude junto con el nombre del nodo.</li>
+</ul>
+<h3>Etapa 6 · Conexión con el tablero (ficha 11)</h3>
+<p><strong>P21 · Conectar consultas por publicación al tablero</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> armás la forma de saber qué publicación trajo cada consulta. Es la mitad de «Cómo se mide» de este servicio.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Si ya tiene el Tablero del Dueño:</strong> sumá a la fuente de consultas, que puede ser la planilla o el CRM, la opción de origen «Contenido» y una columna «Publicación» (fecha o Sr No del post). Agregá al reporte semanal una línea «Consultas por contenido».</li>
+<li><strong>Si no lo tiene:</strong> creá aparte una planilla «Consultas por contenido» con un Google Form de 3 preguntas que él contesta desde el celular:<ol>
+<li>Fecha.</li>
+<li>Canal: DM, WhatsApp u otro.</li>
+<li>¿Qué publicación mencionó? Si no sabe, «no sabe».</li>
+</ol>
+</li>
+<li>En los dos casos, cada publicación lleva su llamada a la acción con una palabra clave, por ejemplo «Escribime CONSULTA». Así se reconoce que viene del contenido.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que acepte anotar las consultas. Son 20 segundos cada una.</li>
+<li><strong>Qué le entregás:</strong> el link del formulario, guardado en su celular.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> cargaste una consulta de prueba y aparece en el tablero o en la planilla.</li>
+<li><strong>Si sale mal:</strong> si sabés que no lo va a anotar, mirá quién recibe sus mensajes. Si tiene asistente, que lo haga ella. Si no, sumá a la llamada a la acción la palabra clave y contalas vos una vez por semana en los DMs.</li>
+</ul>
+<h3>Etapa 7 · Demo y aprobación</h3>
+<p><strong>P22 · Cargar fila del mes y cambiar fecha</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás el flujo prendido y cargás los datos reales del mes.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Primero activá el flujo</strong> con el interruptor de arriba a la derecha.</li>
+<li>En la única fila de Planificación actualizá todo menos la fecha.</li>
+<li><strong>Al final</strong> cambiá Start Date, con apóstrofo. La primera vez, poné la fecha en que querés el primer post, unos 3 días después de hoy.</li>
+<li>Cada mes repetís: primero el resto de la fila, Start Date al final.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> la fila está completa y la fecha cambiada.</li>
+<li><strong>Si sale mal:</strong> no aprietes «Execute workflow» además. El disparador ya va a correr y te duplica el mes.</li>
+</ul>
+<p><strong>P23 · Generar el mes y avisar por mail</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada.</li>
+<li><strong>Cómo:</strong> dentro de la hora siguiente el disparador detecta la fecha nueva, genera el mes y le manda el mail al cliente.</li>
+<li><strong>Qué le pedís / qué le entregás:</strong> nada. El mail lo manda el sistema.</li>
+<li><strong>Cuánto tarda:</strong> hasta 1 hora.</li>
+<li><strong>Listo cuando:</strong> las pestañas están llenas y el mail salió.</li>
+<li><strong>Si sale mal:</strong> si pasó más de una hora sin nada, mirá en Executions si corrió. Si dio error, volvé a P20. Si no corrió, revisá que el flujo esté activo.</li>
+</ul>
+<p><strong>P24 · Presentar el calendario en videollamada corta</strong> (entrego)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el mes completo antes de que lo revise solo.</li>
+<li><strong>Cómo:</strong> videollamada de 30 minutos con pantalla compartida:<ul>
+<li>Pilares: por qué estos temas.</li>
+<li>Calendario: qué día, qué formato.</li>
+<li>Posts: 2 o 3 textos leídos en voz alta.</li>
+<li>Le mostrás qué tiene que grabar y cómo marcar «Aprobado».</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que complete los [COMPLETAR] con datos reales suyos.</li>
+<li><strong>Qué le entregás:</strong> el calendario del mes y los textos.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> entendió cómo aprobar y qué grabar.</li>
+<li><strong>Si sale mal:</strong> si se pierde en la planilla, filtrá la vista para que vea solo fecha, formato y texto.</li>
+</ul>
+<p><strong>P25 · ¿Aprueba calendario y textos?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás que marque «Aprobado» en lo que le guste.</li>
+<li><strong>Cómo:</strong> mirá la columna Status de Calendario.</li>
+<li><strong>Qué le pedís:</strong> la aprobación, o los cambios.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 día.</li>
+<li><strong>Listo cuando:</strong> al menos la primera semana está en «Aprobado». SÍ va a P27. NO va a P26.</li>
+<li><strong>Si sale mal:</strong> no esperes que apruebe el mes entero para arrancar. Con la primera semana alcanza.</li>
+</ul>
+<p><strong>P26 · Corregir textos o regenerar el mes</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> aplicás sus cambios.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Cambios chicos</strong> (una frase, un tono): editá la celda en Posts. No dispara nada, porque el disparador mira solo Start Date.</li>
+<li><strong>Cambios grandes</strong> (pilares, enfoque):<ol>
+<li>Apagá el flujo.</li>
+<li>Borrá las filas de Pilares, Calendario y Posts.</li>
+<li>Corregí Target Audience o Content Goal.</li>
+<li>Tocá «Execute workflow».</li>
+<li>Volvé a prender el flujo.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que te diga qué cambiar, no solo «no me convence».</li>
+<li><strong>Qué le entregás:</strong> la versión corregida.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 2 horas.</li>
+<li><strong>Listo cuando:</strong> está corregido. Volvés a P24, aunque sea por mensaje.</li>
+<li><strong>Si sale mal:</strong> si regenerás sin borrar, se duplica todo.</li>
+</ul>
+<h3>Etapa 8 · Lanzamiento</h3>
+<p><strong>P27 · Marcar Aprobado y grabar los reels</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> él aprueba y graba lo que tiene Format Reel o Video, usando el guion de Main Content.</li>
+<li><strong>Cómo:</strong> sube los videos a una carpeta de Drive «Material grabado». El nombre del archivo es la fecha del post.</li>
+<li><strong>Qué le pedís:</strong> cada video al menos 2 días antes de su fecha.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> el tiempo que él dedique a grabar, <strong>POR DEFINIR</strong>.</li>
+<li><strong>Listo cuando:</strong> los videos de la primera semana están en la carpeta.</li>
+<li><strong>Si sale mal:</strong> si no graba, cambiá ese día por un carrusel con el mismo texto y avisale. El calendario no se cae.</li>
+</ul>
+<p><strong>P28 · Diseñar en Canva y programar en Meta</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> convertís cada post aprobado en pieza y lo dejás programado.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En Canva, duplicá la plantilla del formato, pegá el texto y descargá.</li>
+<li>En Meta Business Suite andá a Planificador → Crear publicación.</li>
+<li>Subí la pieza o el video.</li>
+<li>Pegá Hook (Option 1 u Option 2, el mejor) + Main Content + CTA + Hashtags.</li>
+<li>Elegí fecha y hora, y programá.</li>
+<li>En Calendario, sumá al Status una nota tuya, por ejemplo «Programado», en otra columna. No cambies los valores de Status.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 20 a 45 minutos por pieza.</li>
+<li><strong>Listo cuando:</strong> la semana aprobada está programada.</li>
+<li><strong>Si sale mal:</strong> nunca programes algo con [COMPLETAR] adentro ni algo que no esté en «Aprobado».</li>
+</ul>
+<p><strong>P29 · ⭐ Publicar el primer post del plan</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Meta lo publica a la hora programada.</li>
+<li><strong>Cómo:</strong> a esa hora entrá a su perfil y confirmá que salió bien: texto completo, imagen correcta.</li>
+<li><strong>Qué le pedís:</strong> nada.</li>
+<li><strong>Qué le entregás:</strong> el aviso de lanzamiento, con el mensaje 3.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> el post está en su perfil.</li>
+<li><strong>Si sale mal:</strong> si Meta no lo publicó, publicalo a mano desde el Planificador y revisá que tus permisos sigan activos.</li>
+</ul>
+<h3>Etapa 9 · Seguimiento y reporte</h3>
+<p><strong>P30 · Anotar de qué post vino cada consulta</strong> (cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> él, o quien atiende sus mensajes, carga cada consulta en el formulario o tablero de P21.</li>
+<li><strong>Cómo:</strong> al recibir la consulta, abre el link guardado y completa los 3 campos.</li>
+<li><strong>Qué le pedís:</strong> constancia.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 20 segundos por consulta.</li>
+<li><strong>Listo cuando:</strong> es continuo. Vos lo revisás una vez por semana.</li>
+<li><strong>Si sale mal:</strong> si a la semana hay cero cargas, preguntale si hubo consultas. Si las hubo, cargalas juntos en 10 minutos.</li>
+</ul>
+<p><strong>P31 · Entregar reporte de qué contenido trajo consultas</strong> (entrego)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás un reporte de una página a las 3 semanas de publicación.</li>
+<li><strong>Cómo:</strong> juntá estos datos:<ul>
+<li>Publicaciones planificadas contra publicadas.</li>
+<li>Consultas por contenido, de P30.</li>
+<li>Las 3 publicaciones con más alcance, guardados y mensajes, de Meta Business Suite → Estadísticas.</li>
+<li>Qué pilar rinde más.</li>
+</ul>
+</li>
+</ul>
+<p>Pegáselos a Claude y pedile que redacte «qué funcionó, qué no y qué cambiamos». Revisá que no invente ni un número. Si tiene el Tablero 11, esto entra en su reporte del lunes.
+- <strong>Qué le pedís:</strong> que lo lea.
+- <strong>Qué le entregás:</strong> el reporte y el mensaje 4.
+- <strong>Cuánto tarda:</strong> 1,5 horas.
+- <strong>Listo cuando:</strong> lo recibió.
+- <strong>Si sale mal:</strong> si hay pocas consultas, mostralo igual. Lo que garantizás es publicar en fecha y medir, no la cantidad de consultas.</p>
+<h3>Etapa 10 · Ajustes</h3>
+<p><strong>P32 · Ajustar pilares y datos del mes siguiente</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís el plan con lo aprendido.</li>
+<li><strong>Cómo:</strong> con el reporte, cambiá en la fila de Planificación lo que haga falta:<ul>
+<li>Target Audience: sumá las preguntas nuevas.</li>
+<li>Content Goal.</li>
+<li>La frecuencia, si no llegó a grabar.</li>
+<li>El nivel de promoción.</li>
+</ul>
+</li>
+</ul>
+<p>Si un pilar no rinde, decilo en Target Audience para que la IA le baje el peso. <strong>No toques Start Date todavía.</strong>
+- <strong>Qué le pedís:</strong> su opinión de 2 minutos: ¿qué te gustó publicar?
+- <strong>Qué le entregás:</strong> nada.
+- <strong>Cuánto tarda:</strong> 1 hora.
+- <strong>Listo cuando:</strong> la fila está actualizada, salvo la fecha.
+- <strong>Si sale mal:</strong> cambiar todo de golpe impide saber qué funcionó. Cambiá 1 o 2 cosas por mes.</p>
+<h3>Etapa 11 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás la mensualidad del mes siguiente. El monto, entre USD 800 y 1.200, está <strong>POR DEFINIR</strong>. Cubre investigación, diseño, programación y reporte.</li>
+<li><strong>Cómo:</strong> mandá el link de pago junto con el reporte.</li>
+<li><strong>Qué le pedís:</strong> el pago.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 3 días.</li>
+<li><strong>Listo cuando:</strong> pagó. SÍ vuelve a P22: cambiás Start Date al primer día del mes siguiente, con una semana de margen para grabar. NO va a P34.</li>
+<li><strong>Si sale mal:</strong> si duda, preguntá qué le haría seguir. Muchas veces es bajar la frecuencia, no cortar.</li>
+</ul>
+<p><strong>P34 · Entregar planilla, plantillas y cerrar accesos</strong> (entrego)</p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo para que se quede con todo lo suyo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Pasale la propiedad de la planilla, o dale una copia en su Drive.</li>
+<li>Dejale las plantillas de Canva en su cuenta.</li>
+<li>Avisale qué posts quedan programados.</li>
+<li>Apagá el flujo en n8n y borrá sus credenciales.</li>
+<li>Quitate de Meta Business Suite.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> que confirme que tiene todo.</li>
+<li><strong>Qué le entregás:</strong> planilla, plantillas, carpeta de material y el último reporte.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> confirmó y no te queda ningún acceso.</li>
+<li><strong>Si sale mal:</strong> no borres nada antes de que confirme que lo tiene.</li>
+</ul>
+<h3>Etapa 12 · Próximo servicio</h3>
+<p><strong>P35 · Ofrecer Negocio Integrado al tercer mes</strong> (yo)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le proponés la ficha 20, que une captación, venta y operación en un solo tablero.</li>
+<li><strong>Cómo:</strong> encaja con este cliente porque ya vio funcionar varios de tus sistemas, que es la condición de la ficha. Esperá a tener 2 reportes del Motor. Mostrale cómo el contenido ya alimenta su tablero y qué faltaría conectar.</li>
+<li><strong>Qué le pedís:</strong> una reunión de 30 minutos.</li>
+<li><strong>Qué le entregás:</strong> una propuesta, que es otra conversación.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora de preparación.</li>
+<li><strong>Listo cuando:</strong> se hizo la reunión.</li>
+<li><strong>Si sale mal:</strong> no lo ofrezcas en el primer mes. Primero que vea al Motor funcionando.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup (día 0)</li>
+<li>☐ Formulario: profesión, público, objetivo, llamada a la acción real, frecuencia, videos por semana, tono, competidores, posts que le gustaron, temas prohibidos, reglas de su profesión (día 0)</li>
+<li>☐ Logo, colores, tipografía y 10 fotos en Drive (día 0)</li>
+<li>☐ Acceso a Instagram en Meta Business Suite e invitación a Canva (día 0)</li>
+<li>☐ Sus preguntas frecuentes, si no las tenés (día 1)</li>
+<li>☐ Aprobación del enfoque y los pilares (día 3)</li>
+<li>☐ OK a las plantillas de Canva y a los 3 hashtags (día 4)</li>
+<li>☐ Datos reales en los [COMPLETAR] y aprobación de la primera semana (día 6 y 7)</li>
+<li>☐ Videos grabados en la carpeta, 2 días antes de cada fecha (desde el día 7)</li>
+<li>☐ Anotar cada consulta que viene del contenido (desde el día 9)</li>
+<li>☐ Pago de la mensualidad (día 30)</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Resumen de competencia, preguntas y pilares</li>
+<li>☐ Plantillas de marca en Canva</li>
+<li>☐ Planilla con pilares, calendario y textos del mes</li>
+<li>☐ Formulario o tablero de consultas por contenido</li>
+<li>☐ Publicaciones diseñadas y programadas</li>
+<li>☐ Reporte mensual de qué contenido trajo consultas</li>
+<li>☐ Al salir: planilla, plantillas y material</li>
+</ul>
+<p><strong>El calendario</strong>, con 3 horas tuyas por día:</p>
+<ul>
+<li><strong>Día 0:</strong> pago y bienvenida (P1–P2).</li>
+<li><strong>Día 1:</strong> él completa el formulario y los accesos (P3–P5). Vos arrancás la investigación (P7).</li>
+<li><strong>Día 2:</strong> investigación (P7).</li>
+<li><strong>Día 3:</strong> entregás el resumen (P8) y arrancás la instalación (P10–P11).</li>
+<li><strong>Día 4:</strong> aprueba el enfoque (P9). Seguís con la instalación (P12–P15).</li>
+<li><strong>Día 5:</strong> Canva (P16) y prueba (P17–P20).</li>
+<li><strong>Día 6:</strong> tablero (P21) y fila real con Start Date en el día 9 (P22). El mes se genera solo (P23).</li>
+<li><strong>Día 7:</strong> demo (P24), aprobación de la primera semana (P25) y él empieza a grabar (P27).</li>
+<li><strong>Día 8:</strong> diseñás y programás la primera semana (P28).</li>
+<li><strong>Día 9:</strong> ⭐ primer post publicado (P29).</li>
+<li><strong>Días 10 a 29:</strong> cada semana diseñás y programás lo aprobado, y revisás las consultas anotadas. Son unas 3 a 5 horas por semana.</li>
+<li><strong>Día 29 y 30:</strong> reporte (P31), ajustes (P32) y renovación (P33). Si renueva, generás el mes 2 con Start Date en el día 39.</li>
+</ul>
+<hr />
+<h2>4. Mensajes para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Arrancamos con tu contenido! 🙌 Para tener el primer post publicado en unos 9 días necesito 3 cosas:
+1) Completar este formulario (te lleva 15 min): [link]
+2) Subir logo, colores y unas 10 fotos tuyas acá: [carpeta]
+3) Sumarme en Meta Business Suite → Configuración → Personas, con permiso para publicar en tu Instagram. Así no necesito tu contraseña.
+Con eso, en 3 días te mando lo que hace tu competencia y los temas que te propongo.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>¡Hola! Para no frenar la fecha del primer post me falta [lo que falta]. Si te resulta más fácil, lo completamos juntos en una llamada de 15 minutos. ¿Hoy o mañana te queda bien?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡Ya salió el primer post del plan! 🎉 [link]
+Ya quedó programada la semana. Recordá: los videos van a la carpeta 2 días antes de su fecha. Y cada vez que alguien te escriba por una publicación, anotalo acá en 20 segundos: [link del formulario]. Con eso a fin de mes te digo qué contenido te trae consultas.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Te paso el resumen del primer mes de contenido 📊 [link]
+En corto: publicamos [X] de [Y] posts planificados. Llegaron [Z] consultas por el contenido. El tema que mejor anduvo fue [pilar]. Para el mes que viene propongo [1 o 2 cambios].
+Si te parece bien, te dejo el link de la mensualidad [link] y la semana que viene ya tenés el calendario nuevo para revisar.</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p17">← Volver a la ficha 17</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

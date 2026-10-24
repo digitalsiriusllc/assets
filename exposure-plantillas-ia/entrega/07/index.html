@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Respuesta 24/7 · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Respuesta 24/7, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Respuesta 24/7">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 07 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Respuesta 24/7</h1>
+  <p class="bajada">Atención inmediata en WhatsApp e Instagram. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Inmobiliarias</span><span class="chip">Setup USD 1.500–2.000</span><span class="chip">2–3 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Supuestos que tomé.</strong> Si alguno no va, decímelo y ajusto el diagrama.</p>
+<ol>
+<li><strong>Número de WhatsApp.</strong> Sugerido: el asistente usa un <strong>número nuevo</strong>, con un chip nuevo. Las charlas que el asistente deriva las contesta una persona desde el WhatsApp que la inmobiliaria ya usa.<ul>
+<li>Si el dueño quiere usar sí o sí su número de siempre, averiguá si Meta le habilita el modo <strong>coexistencia</strong> (usar el mismo número en la app y en el sistema).</li>
+<li>Sin coexistencia, al conectar ese número al sistema deja de funcionar en la app del celular.</li>
+</ul>
+</li>
+<li><strong>Cuentas a nombre del cliente.</strong> Todas las cuentas (Meta, Google, Gemini, Airtable, ManyChat) van a nombre del cliente y con su tarjeta. Si el sistema que ya le instalaste corre en un n8n del cliente, lo reusás.<ul>
+<li>Quién paga los costos mensuales de las plataformas: <strong>POR DEFINIR</strong>.</li>
+</ul>
+</li>
+<li><strong>Instagram va después.</strong> Lo conectás en la semana 3 o 4, cuando WhatsApp ya anda estable. Con 2 horas por día no conviene abrir dos frentes juntos.</li>
+</ol>
+<blockquote>
+<p>Los pasos de instalación salen de «Cómo dejarla lista» de la ficha. La parte de Instagram (plantilla 2718, paso P28) va con pasos generales: antes de instalarla, leé las notas que trae en n8n.</p>
+</blockquote>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Respuesta 24/7" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<p><strong>Palabras que vas a ver en el paso a paso:</strong></p>
+<ul>
+<li><strong>n8n:</strong> el programa donde arma el flujo.</li>
+<li><strong>Nodo:</strong> cada cajita del flujo dentro de n8n.</li>
+<li><strong>Credencial:</strong> la llave que guardás en n8n para entrar a una cuenta.</li>
+<li><strong>API:</strong> la puerta para que dos programas se hablen.</li>
+</ul>
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>1 · Pago y bienvenida</h3>
+<p><strong>P1 · Confirmar pago y mandar bienvenida</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> confirmás que entró el pago y arrancás con la lista de pedidos.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Verificás el pago en tu cuenta.</li>
+<li>Mandás el <strong>mensaje 1</strong> de abajo.</li>
+<li>Creás en tu Drive una carpeta «[Inmobiliaria] · Respuesta 24/7» con un documento de checklist (copiá las listas del final).</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> lo del mensaje 1, con fecha límite el día 3.</li>
+<li><strong>Qué le entregás:</strong> la lista clara de lo que necesitás. Le aclarás que el plazo de entrega corre desde que está todo.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> contestó y quedó agendada la charla de P2.</li>
+<li><strong>Si sale mal:</strong> no contesta en 24 horas. Llamalo. Un cliente que ya te compró atiende.</li>
+</ul>
+<p><strong>P2 · Hacer charla de arranque de 30 minutos</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> definís con el dueño las cinco cosas que solo él puede decidir.</li>
+<li><strong>Cómo:</strong> llamada o videollamada con estas preguntas:<ol>
+<li>¿Qué número usa el asistente? Explicale los dos caminos del supuesto 1.</li>
+<li>¿Quién toma las charlas derivadas, a qué mail le avisamos y en cuánto tiempo responde?</li>
+<li>Visitas: qué días, en qué horario, cuánto duran y quién las hace.</li>
+<li>¿Qué no tiene que decir nunca el asistente? Por ejemplo: tasaciones, negociar precios o confirmar una reserva.</li>
+<li>Cómo están hoy: cuántas consultas les entran por mes y cuánto tardan en contestar. Si no lo sabe, anotá <strong>POR DEFINIR</strong> con una estimación suya. Es la línea de base para comparar en el reporte.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> esas cinco respuestas.</li>
+<li><strong>Qué le entregás:</strong> un resumen por WhatsApp de lo acordado.</li>
+<li><strong>Cuánto tarda:</strong> 45 minutos con el resumen.</li>
+<li><strong>Listo cuando:</strong> te respondió «ok» al resumen.</li>
+<li><strong>Si sale mal:</strong> quiere su número de siempre y no hay coexistencia. Explicale que dejaría de usarlo en el celular y ofrecé el número nuevo. No sigas sin esta decisión.</li>
+</ul>
+<h3>2 · Datos y accesos</h3>
+<p><strong>P3 · Mandar preguntas frecuentes y lista de propiedades</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente junta la información con la que va a responder el asistente.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Le compartís un Google Doc con una tabla de dos columnas, Pregunta y Respuesta.</li>
+<li>Dejás escritas unas 15 preguntas para que él solo complete las respuestas. Por ejemplo: horario, zonas, requisitos para alquilar, garantías que aceptan, honorarios, formas de pago, cómo se reserva, tasaciones.</li>
+<li>Puede contestar por audio y vos lo pasás a texto.</li>
+<li>Para las propiedades, le pedís un Excel exportado del sistema o portal que use. Columnas: dirección o barrio, operación, tipo, ambientes, precio y moneda, expensas, estado y link de la publicación.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> el doc completo y el Excel.</li>
+<li><strong>Qué le entregás:</strong> el doc ya armado, para que solo complete.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos tuyos. Él tiene 1 a 3 días.</li>
+<li><strong>Listo cuando:</strong> hay al menos 15 respuestas concretas y un Excel con todas las propiedades disponibles.</li>
+<li><strong>Si sale mal:</strong> responde «depende». Pedile la regla concreta. Si no la hay, esa pregunta se marca «derivar a una persona». No inventes la respuesta.</li>
+</ul>
+<p><strong>P4 · Dar accesos a Meta, Google y número</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente te da acceso a las cuentas donde va a vivir el sistema.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Meta:</strong> en business.facebook.com → Configuración del negocio → Usuarios → Personas → Agregar, con tu mail y control total. Si no tiene cuenta de Meta Business, la crea él con su Facebook.</li>
+<li><strong>Google:</strong> te comparte el calendario de visitas con permiso «Hacer cambios en eventos».</li>
+<li><strong>Gmail:</strong> no le pidas la contraseña. Agendá 10 minutos para que él mismo inicie sesión cuando conectes la credencial en P13.</li>
+<li><strong>Gemini:</strong> entra a aistudio.google.com con la cuenta del negocio y crea una API key. Una API key es una contraseña que le da permiso a n8n para usar la IA. Le carga su tarjeta.</li>
+<li><strong>Airtable:</strong> abre una cuenta gratis y te invita. Airtable es una planilla con forma de base de datos.</li>
+<li><strong>Datos para la verificación de Meta:</strong> razón social, número fiscal, domicilio y web o mail del dominio.</li>
+<li><strong>Número:</strong> el chip nuevo, o la confirmación de coexistencia.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> todo lo anterior.</li>
+<li><strong>Cuánto tarda:</strong> él, 1 a 2 días. Vos, 1 hora para chequear cada acceso.</li>
+<li><strong>Listo cuando:</strong> entrás a cada cuenta con tu usuario.</li>
+<li><strong>Si sale mal:</strong> su Facebook está bloqueado o no recuerda la contraseña. Es lo que más demora, así que resolvelo primero.</li>
+</ul>
+<p><strong>P5 · ¿Está todo lo pedido?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> revisás el checklist con lo de P2, P3 y P4. Agregá los teléfonos de prueba: el tuyo y uno más.</li>
+<li><strong>SÍ:</strong> pasás a P7.</li>
+<li><strong>NO:</strong> vas a P6.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+</ul>
+<p><strong>P6 · Mandar recordatorio con lo que falta</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> pedís solo lo que falta, sin sermón.</li>
+<li><strong>Cómo:</strong> mandás el <strong>mensaje 2</strong>, con una cosa por línea. Ofrecé hacerlo juntos por llamada.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Listo cuando:</strong> llega lo que faltaba. Volvés a P3.</li>
+<li><strong>Si sale mal:</strong> después de dos recordatorios sigue sin llegar. Llamalo, acordá una fecha nueva y recordale que el plazo corre desde que está todo.</li>
+</ul>
+<h3>3 · Cuentas y plantilla</h3>
+<p><strong>P7 · Crear app de Meta y pedir verificación</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la app que conecta WhatsApp con tu sistema y arrancás la verificación del negocio, que tarda días.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Entrá a developers.facebook.com → Mis apps → Crear app.</li>
+<li>Elegí el caso de uso para conectarse con clientes por WhatsApp y el portfolio comercial (la cuenta de negocio) del cliente.</li>
+<li>Meta te da un <strong>número de prueba gratis</strong>. En «Configuración de la API» agregá hasta 5 teléfonos de prueba: solo esos números pueden escribirle mientras pruebas.</li>
+<li>Anotá el <strong>App ID</strong> y el <strong>App Secret</strong> en Configuración de la app → Básica.</li>
+<li>En paralelo, en Configuración del negocio → Centro de seguridad → Verificación del negocio, cargás los documentos del cliente.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas. La verificación de Meta puede tardar varios días y no depende de vos.</li>
+<li><strong>Listo cuando:</strong> tenés App ID y App Secret, y el número de prueba te manda el mensaje de ejemplo «hello_world» a tu celular.</li>
+<li><strong>Si sale mal:</strong> Meta rechaza la verificación. Casi siempre el nombre legal no coincide exacto con el documento: corregilo y reenviá. Mientras tanto podés seguir trabajando con el número de prueba.</li>
+</ul>
+<p><strong>P8 · Importar plantilla y cargar credenciales</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> traés la plantilla a n8n y la conectás a WhatsApp.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En n8n.io/workflows/18998 tocás «Use for free», copiás y pegás en un workflow nuevo.</li>
+<li><strong>Token permanente.</strong> Hacelo ya, así no lo repetís. En Configuración del negocio → Usuarios del sistema → Agregar, con rol Admin. Asignale la app y la cuenta de WhatsApp. Generá un token con los permisos <code>whatsapp_business_messaging</code> y <code>whatsapp_business_management</code>, sin vencimiento. Un token es una contraseña larga que da permiso.</li>
+<li>Seguí el <strong>paso 1 de la ficha</strong>:<ul>
+<li>En «WhatsApp Trigger» creá una credencial «WhatsApp OAuth API»: el App ID va en Client ID y el App Secret en Client Secret. Tocá <strong>Unpin</strong> para sacar los datos de ejemplo fijados.</li>
+<li>En «Send WhatsApp Reply», «Send Unsupported Notice», «Send Fallback Reply to Customer», «Get Audio File» y «Download Audio Binary» usá una credencial «WhatsApp API» con el token permanente y el Business Account ID.</li>
+<li>En Sender Phone Number elegí por ahora el número de prueba.</li>
+</ul>
+</li>
+<li>Activá el workflow. Al activarlo, n8n le pasa a Meta su <strong>webhook</strong>: la dirección a la que Meta avisa cada vez que entra un mensaje.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> le escribís «hola» al número de prueba y en n8n → Executions aparece la ejecución con tu mensaje. Que responda en inglés todavía es normal.</li>
+<li><strong>Si sale mal:</strong> no aparece nada.<ul>
+<li>Revisá que el workflow esté activo y que hiciste Unpin.</li>
+<li>Usá esta app de Meta solo para este flujo: admite una sola dirección de aviso.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P9 · Arreglar memoria y respuesta de respaldo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> corregís los dos errores que trae la plantilla. Son obligatorios.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Paso 2 de la ficha.</strong> En «Per-User Memory», el campo Key queda así:
+<code>real-estate-{{ $('WhatsApp Trigger').item.json.messages[0].from }}</code>
+La memoria es lo que el asistente recuerda de cada charla. Así, cada teléfono tiene la suya.</li>
+<li><strong>Paso 3 de la ficha.</strong> En «Send Fallback Reply to Customer» borrás la expresión del Text Body y escribís un texto fijo: «¡Gracias por escribirnos! En un rato te responde una persona del equipo de [Inmobiliaria].»</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> los dos campos están cambiados y guardados. Se prueban de verdad en P15, pruebas 8 y 10.</li>
+<li><strong>Si sale mal:</strong> la expresión se pone roja. Copiala de nuevo sin espacios extra y fijate que el nodo se llame exactamente «WhatsApp Trigger».</li>
+</ul>
+<h3>4 · Adaptación al negocio</h3>
+<p><strong>P10 · Reescribir el asistente con datos reales</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás las instrucciones de la IA para que sea el asistente de esta inmobiliaria. A esas instrucciones se las llama <em>prompt</em>.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Paso 4 de la ficha.</strong> Entrá a «Real Estate Assistant» → Options → System Message.</li>
+<li>Pegale a Claude el prompt original y el doc de preguntas. Pedile que lo reescriba en rioplatense con el nombre del negocio y que cambie el bloque KNOWLEDGE BASE por las preguntas reales.</li>
+<li>Dejá en inglés el bloque OUTPUT y las etiquetas HOT, WARM y COLD.</li>
+<li>Revisá que el prompt incluya estas reglas:<ul>
+<li>El asistente se presenta como asistente virtual de [Inmobiliaria].</li>
+<li>Nunca inventa precios ni disponibilidad: usa solo lo que devuelve la búsqueda de propiedades.</li>
+<li>No negocia ni tasa.</li>
+<li>Habla solo de temas del negocio, porque Meta no permite asistentes de uso general.</li>
+<li>No discrimina a nadie.</li>
+<li>Cuando deriva, dice quién lo va a contactar y desde qué número.</li>
+</ul>
+</li>
+<li>En Settings del workflow → Timezone elegí la zona del negocio (<strong>POR DEFINIR</strong>, por ejemplo America/Argentina/Buenos_Aires) y cambiá «Europe/London» en el prompt.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 3 horas, en dos días.</li>
+<li><strong>Listo cuando:</strong> le hacés 5 preguntas del doc al número de prueba y las 5 respuestas coinciden con el doc.</li>
+<li><strong>Si sale mal:</strong> inventa respuestas. Agregá la regla «Si no está en la base, decí que lo consultás con una persona y derivá».</li>
+</ul>
+<p><strong>P11 · ⭐ Mandar video del asistente respondiendo</strong> (primer resultado visible)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás al cliente, a la semana, que su asistente ya existe.</li>
+<li><strong>Cómo:</strong> grabás la pantalla del celular mientras le hacés 3 o 4 preguntas reales de su doc al número de prueba. Que dure un minuto. Lo mandás con «Así va respondiendo tu asistente con tus datos. Es la versión de prueba, todavía faltan la agenda y las propiedades».</li>
+<li><strong>Qué le entregás:</strong> el video.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> lo vio y te contestó.</li>
+<li><strong>Si sale mal:</strong> te dice «eso no se dice así». Si es un cambio chico, lo hacés ya. Si no, lo anotás para P21.</li>
+</ul>
+<p><strong>P12 · Conectar agenda, propiedades y planilla de leads</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le das al asistente acceso a las propiedades, al calendario y a la planilla donde se anota cada consulta.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Airtable.</strong> Creá una base «Propiedades» e importá el Excel.<ul>
+<li>Abrí el nodo «search_properties» y fijate qué campos usa. Nombrá las columnas igual.</li>
+<li>Para operación y estado usá campos de selección, así no hay «Alquiler» y «alquiler» mezclados.</li>
+<li>Creá un token de Airtable con permiso de lectura sobre esa base y cargalo como credencial.</li>
+</ul>
+</li>
+<li><strong>Calendar, paso 5 de la ficha.</strong><ul>
+<li>En «check_availability» y «book_appointment» elegí el calendario de visitas.</li>
+<li>En sus descripciones cambiá «Monday to Saturday, 9 AM to 7 PM», «Viewings are 45 minutes» y «Europe/London» por los datos de P2.</li>
+<li>La descripción es lo que lee la IA para saber cuándo usar cada herramienta.</li>
+</ul>
+</li>
+<li><strong>Planilla, final del paso 6 de la ficha.</strong><ul>
+<li>Creá un Google Sheet con la pestaña «Leads» y estas columnas exactas: User ID, User Name, Question, AI Answer, Escalated, lead_status, appointment_requested, Lead Summary.</li>
+<li>Te recomiendo sumar una columna «Fecha» con el valor <code>{{ $now }}</code> en «Log Lead to Sheet». Sin fecha no podés contar las consultas fuera de horario.</li>
+<li>Conectala en «Log Lead to Sheet».</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2,5 horas.</li>
+<li><strong>Listo cuando:</strong> se cumplen las tres cosas:<ul>
+<li>Escribís «busco 2 ambientes en alquiler en [barrio]» y responde con propiedades reales.</li>
+<li>Pedís una visita y aparece el evento en el calendario.</li>
+<li>Aparece la fila en «Leads».</li>
+</ul>
+</li>
+<li><strong>Si sale mal:</strong> no encuentra propiedades que existen. Casi siempre son nombres de columnas distintos o valores escritos distinto.</li>
+</ul>
+<p><strong>P13 · Cambiar avisos internos a Gmail</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que los avisos al vendedor y a vos lleguen de verdad.</li>
+<li><strong>Cómo:</strong> <strong>paso 6 de la ficha.</strong><ul>
+<li>Reemplazá «Notify Agent (Escalation)» por un nodo Gmail con la operación Send. Va al mail del vendedor, con nombre, teléfono, Lead Summary y mensaje, traducido.</li>
+<li>Reemplazá «Notify Developer (Error Alert)» por otro Gmail que va a tu mail. Sigue conectado a «Send Fallback Reply to Customer».</li>
+<li>La credencial de Gmail la conecta el cliente con su sesión, en los 10 minutos que acordaron en P4.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> que el vendedor active las notificaciones de Gmail en el celular.</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> escribís «quiero hablar con alguien» y al vendedor le llega el mail en español con todos los datos.</li>
+<li><strong>Si sale mal:</strong> el mail cae en spam. Marcalo como «no es spam» y creá un filtro para que nunca vaya a spam.</li>
+</ul>
+<p><strong>P14 · Ajustar notas de voz y modelo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés que entienda los audios y que reciba bien el texto.</li>
+<li><strong>Cómo:</strong> <strong>paso 7 de la ficha.</strong><ol>
+<li>En «Analyze audio» poné la operación en Transcribe a Recording. Revisá que Input Type siga en Binary File(s) con el campo <code>data</code> y elegí un modelo de Gemini.</li>
+<li>En «Normalize Input Text» poné:
+ <code>{{ $json.messages?.[0]?.text?.body || $json.content?.parts?.[0]?.text || $json.text }}</code></li>
+<li>Traducí «Send Unsupported Notice»: «Por ahora leo texto y escucho audios. ¿Me lo escribís o me mandás un audio?»</li>
+<li>Para arrancar, dejá Gemini también para el chat. Es una sola cuenta y menos cosas que pueden fallar. Pasar a Claude después es cambiar un solo nodo.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> mandás un audio y responde a lo que dijiste.</li>
+<li><strong>Si sale mal:</strong> responde con texto raro entre llaves. Revisá la expresión de «Normalize Input Text».</li>
+</ul>
+<h3>5 · Prueba</h3>
+<p><strong>P15 · Correr diez pruebas con teléfonos de prueba</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás cada parte antes de que la vea el cliente.</li>
+<li><strong>Cómo:</strong> usás dos teléfonos de la lista de prueba. Anotás cada prueba en una planilla con «qué esperaba», «qué pasó» y OK o NO. Las diez pruebas:<ol>
+<li>Pregunta frecuente.</li>
+<li>Búsqueda de propiedad.</li>
+<li>Pedido de visita: tiene que aparecer en el calendario.</li>
+<li>Pregunta que no sabe: tiene que derivar y llegar el mail.</li>
+<li>«Quiero hablar con una persona».</li>
+<li>Nota de voz.</li>
+<li>Foto o sticker: tiene que llegar el aviso de formato no soportado.</li>
+<li>Dos teléfonos a la vez: no tienen que mezclarse las charlas.</li>
+<li>Tema que no es del negocio: tiene que declinar con amabilidad.</li>
+<li>Error forzado: cambiás la API key de Gemini por una inválida un minuto. Al cliente le tiene que llegar el texto de respaldo y a vos el mail de error. Después la restaurás.
+- En cada prueba, chequeá también la fila en «Leads» con su HOT, WARM o COLD.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> las diez pruebas están en OK.</li>
+<li><strong>Si sale mal:</strong> ver P17.</li>
+</ul>
+<p><strong>P16 · ¿Pasaron las diez pruebas?</strong> (puerta)</p>
+<ul>
+<li><strong>SÍ:</strong> pasás a la demo, P18.</li>
+<li><strong>NO:</strong> vas a P17.</li>
+</ul>
+<p><strong>P17 · Corregir el paso que falló</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> encontrás y arreglás la falla.</li>
+<li><strong>Cómo:</strong><ul>
+<li>En n8n → Executions abrí la ejecución en rojo. Te marca el nodo que falló y el error.</li>
+<li>Corregí ese nodo.</li>
+<li>Repetí <strong>todas</strong> las pruebas, no solo la que falló, porque un arreglo puede romper otra cosa.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> de 1 a 2 horas.</li>
+<li><strong>Listo cuando:</strong> la prueba que falló da OK. Volvés a P15.</li>
+<li><strong>Si sale mal:</strong> no entendés el error. Pegale a Claude el mensaje de error y el nombre del nodo.</li>
+</ul>
+<h3>6 · Demo al cliente</h3>
+<p><strong>P18 · Mostrar el asistente en vivo</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás el sistema funcionando, de punta a punta.</li>
+<li><strong>Cómo:</strong> 30 minutos en persona o por videollamada.<ul>
+<li>Le mostrás una charla completa, la fila en la planilla, la visita en el calendario y el mail de derivación.</li>
+<li>Le entregás una guía de una página: cómo actualizar las propiedades en Airtable, qué hacer cuando llega un mail de derivación y a quién avisar si algo anda raro.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> la guía.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> vio todo el recorrido.</li>
+<li><strong>Si sale mal:</strong> algo falla en vivo. Mostrá la grabación de P15 y corregilo después. Por eso conviene tenerla grabada.</li>
+</ul>
+<p><strong>P19 · Probar desde su propio teléfono</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño prueba como si fuera un cliente difícil.</li>
+<li><strong>Cómo:</strong> agregás antes su número a la lista de prueba. Le pedís que «lo rompa» con preguntas propias.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> hizo al menos 5 preguntas propias.</li>
+<li><strong>Si sale mal:</strong> pregunta algo que no estaba en el doc. Es normal: lo sumás en P21.</li>
+</ul>
+<p><strong>P20 · ¿El dueño aprueba?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> pedís el «aprobado» por escrito, por WhatsApp.</li>
+<li><strong>SÍ:</strong> pasás a P22.</li>
+<li><strong>NO:</strong> vas a P21.</li>
+</ul>
+<p><strong>P21 · Ajustar los textos que pidió cambiar</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés los cambios pedidos.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Los cambios van en el prompt o en el doc de preguntas.</li>
+<li>Le mandás un video corto con lo cambiado. No hace falta otra reunión.</li>
+<li>Lo que esté fuera del alcance lo anotás como posible servicio aparte. Por ejemplo, escribirle a contactos viejos es la ficha 16.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te responde «aprobado». Si pide más cambios, volvés a P18.</li>
+<li><strong>Si sale mal:</strong> pide cambios sin fin. Hacé una ronda antes de lanzar y dejá el resto para los ajustes del primer mes, que ya están incluidos.</li>
+</ul>
+<h3>7 · Lanzamiento</h3>
+<p><strong>P22 · Pasar al número real del negocio</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cambiás el número de prueba por el número real.</li>
+<li><strong>Cómo:</strong><ol>
+<li>En la app de Meta → WhatsApp → Configuración de la API → Agregar número de teléfono.</li>
+<li>Cargá el nombre visible, que tiene que coincidir con el negocio porque Meta lo revisa, y la categoría.</li>
+<li>Verificá el número por SMS o llamada.</li>
+<li>Creá el PIN de seguridad y anotalo en el doc de accesos del cliente.</li>
+<li>En cada nodo que manda mensajes, cambiá Sender Phone Number al número real. El token permanente ya lo tenés desde P8.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas, más la revisión del nombre por parte de Meta.</li>
+<li><strong>Listo cuando:</strong> el número figura como conectado en el Administrador de WhatsApp.</li>
+<li><strong>Si sale mal:</strong> Meta rechaza el nombre visible. Usá el nombre comercial exacto de la web o de los carteles.</li>
+</ul>
+<p><strong>P23 · ¿Responde bien desde el número real?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> le escribís desde un teléfono que <strong>no</strong> esté en la lista de prueba y repetís las pruebas 1, 3 y 4.</li>
+<li><strong>SÍ:</strong> pasás a P24.</li>
+<li><strong>NO:</strong> revisás Sender Phone Number en cada nodo, el token y el estado del número. Volvés a P22.</li>
+</ul>
+<p><strong>P24 · Publicar el número en portales y redes</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el cliente hace que la gente le escriba a ese número.</li>
+<li><strong>Cómo:</strong> le pasás el link <code>wa.me/[código de país y número, sin +]</code>. Lo pone en:<ul>
+<li>los portales donde publica (<strong>POR DEFINIR</strong> cuáles),</li>
+<li>la bio de Instagram,</li>
+<li>la web,</li>
+<li>la firma de mail,</li>
+<li>los carteles.</li>
+<li>Con coexistencia no hay que cambiar nada.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el link y una lista de dónde ponerlo.</li>
+<li><strong>Cuánto tarda:</strong> 1 día del cliente.</li>
+<li><strong>Listo cuando:</strong> el número aparece al menos en los portales y en la bio.</li>
+<li><strong>Si sale mal:</strong> algún portal tarda en actualizar. Mientras tanto, que lo publique en la bio y en los estados.</li>
+</ul>
+<p><strong>P25 · Responder cada consulta en segundos</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué pasa:</strong> cada mensaje que entra recibe respuesta. El asistente busca propiedades, agenda visitas y anota la fila en la planilla.</li>
+<li><strong>Regla de WhatsApp:</strong> el asistente solo contesta a quien le escribió. Escribirle primero a alguien exige plantillas aprobadas por Meta y permiso de la persona. Eso no es parte de este servicio.</li>
+<li><strong>Tu parte:</strong> la primera semana revisás Executions 15 minutos por día.</li>
+<li><strong>Listo cuando:</strong> se responde la primera consulta real. Guardá la captura para el reporte.</li>
+<li><strong>Si sale mal:</strong> no entran consultas reales. O el número todavía no está publicado, o el workflow se desactivó: revisá tu mail de errores.</li>
+</ul>
+<p><strong>P26 · Derivar charla caliente con resumen por mail</strong> (pasa solo)</p>
+<ul>
+<li><strong>Qué pasa:</strong> si el lead es HOT, si pide una persona o si el asistente no sabe la respuesta, sale el mail al vendedor y la fila queda marcada como derivada (Escalated).</li>
+<li><strong>Listo cuando:</strong> llega la primera derivación real.</li>
+<li><strong>Si sale mal:</strong> deriva todo. El prompt es demasiado prudente: lo ajustás en P30.</li>
+</ul>
+<p><strong>P27 · Tomar la charla derivada en el día</strong> (lo hace el cliente)</p>
+<ul>
+<li><strong>Qué hacés:</strong> el vendedor contacta a la persona con el resumen en la mano.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Escribe desde el número acordado en P2, sin volver a preguntar lo que ya está en el resumen.</li>
+<li>Si agenda una visita por fuera del asistente, la carga en el calendario para que el asistente no ofrezca ese horario.</li>
+</ul>
+</li>
+<li><strong>Listo cuando:</strong> las derivadas se responden dentro del plazo acordado (<strong>POR DEFINIR</strong> con el dueño).</li>
+<li><strong>Si sale mal:</strong> nadie mira los mails. Es lo que más arruina el servicio, y no depende de vos. Hablalo con el dueño y sumá un segundo destinatario.</li>
+</ul>
+<h3>8 · Segundo canal</h3>
+<p><strong>P28 · Conectar Instagram con ManyChat</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> sumás los mensajes directos de Instagram, con el mismo asistente.</li>
+<li><strong>Cómo:</strong><ol>
+<li>La cuenta de Instagram tiene que ser profesional y estar vinculada a la página de Facebook.</li>
+<li>En Instagram → Configuración → Mensajes y respuestas a historias → Herramientas conectadas → activá «Permitir acceso a los mensajes».</li>
+<li>Contratá ManyChat Pro a nombre del cliente y conectá Instagram.</li>
+<li>Instalá la plantilla 2718 en n8n siguiendo su «Cómo dejarla lista». Reusá el mismo prompt y las mismas preguntas.</li>
+<li>Instagram también deja responder solo dentro de las 24 horas desde el último mensaje de la persona.</li>
+<li>Repetí las pruebas 1, 2, 4 y 9 desde una cuenta de Instagram de prueba.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> el acceso a Instagram y el pago de ManyChat Pro.</li>
+<li><strong>Cuánto tarda:</strong> de 3 a 4 horas, en la semana 3 o 4.</li>
+<li><strong>Listo cuando:</strong> un mensaje directo de prueba recibe respuesta en segundos y la derivación llega al mail.</li>
+<li><strong>Si sale mal:</strong> ManyChat no recibe nada. Casi siempre falta el permiso de acceso a los mensajes.</li>
+</ul>
+<h3>9 · Seguimiento, ajustes y reporte</h3>
+<p><strong>P29 · Revisar charlas y planilla dos veces por semana</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás que el asistente responda bien.</li>
+<li><strong>Cómo:</strong> martes y viernes, 30 minutos.<ul>
+<li>Mirás las ejecuciones con error.</li>
+<li>En la planilla buscás respuestas flojas y derivaciones que no hacían falta.</li>
+<li>Revisás las visitas en el calendario.</li>
+<li>Anotás todo en un doc «Mejoras».</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora por semana.</li>
+<li><strong>Listo cuando:</strong> el doc de mejoras está al día.</li>
+<li><strong>Si sale mal:</strong> encontrás una respuesta que inventó datos. Corregila el mismo día, no la dejes para P30.</li>
+</ul>
+<p><strong>P30 · Sumar preguntas nuevas y corregir respuestas</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> el asistente aprende lo que no sabía.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Las preguntas que derivó por no saber se las pasás al cliente para que te dé la respuesta. Las sumás al prompt.</li>
+<li>Le mandás una línea por semana con lo que mejoraste.</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> respuestas nuevas y el aviso de cada propiedad vendida, alquilada o nueva.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora por semana.</li>
+<li><strong>Listo cuando:</strong> no quedan preguntas repetidas sin respuesta.</li>
+<li><strong>Si sale mal:</strong> el asistente ofrece una propiedad que ya se alquiló. Acordá que la actualice él en Airtable, mostrale cómo, o pedile la lista cada viernes.</li>
+</ul>
+<p><strong>P31 · Entregar reporte del primer mes</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás con números lo que hizo el sistema.</li>
+<li><strong>Cómo:</strong> a los 30 días del lanzamiento sacás los datos de la planilla y el calendario:<ul>
+<li>consultas atendidas,</li>
+<li>consultas fuera de horario,</li>
+<li>tiempo de primera respuesta, con una muestra de Executions comparada con la línea de base de P2,</li>
+<li>visitas pedidas y agendadas,</li>
+<li>derivadas,</li>
+<li>HOT, WARM y COLD,</li>
+<li>ajustes que hiciste.</li>
+<li>Lo mandás con el <strong>mensaje 4</strong>. No te adjudiques ventas: las cierra su equipo.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el reporte.</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> lo leyó y quedó agendada una charla de 15 minutos.</li>
+<li><strong>Si sale mal:</strong> no hay suficientes datos. Puede faltar la columna Fecha o el número estar poco publicado. Decilo tal cual y corregilo para el mes 2.</li>
+</ul>
+<h3>10 · Renovación o salida</h3>
+<p><strong>P32 · ¿Sigue con la mensualidad?</strong> (puerta)</p>
+<ul>
+<li><strong>Qué hacés:</strong> en la charla de 15 minutos repasás qué cubre la mensualidad: revisión, ajustes, actualización y reporte.</li>
+<li><strong>SÍ:</strong> pasás a P33 y el ciclo vuelve a P29 el mes siguiente.</li>
+<li><strong>NO:</strong> vas a P34.</li>
+</ul>
+<p><strong>P33 · Ofrecer Máquina de Conversión</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> usás el reporte para mostrar el siguiente cuello de botella.</li>
+<li><strong>Cómo:</strong> la ficha 15 ya tiene partes andando. El asistente es la 07, la etiqueta HOT, WARM o COLD es el germen de la 08 y la agenda es parte de la 03. Faltan la propuesta el mismo día (10) y el seguimiento (09). Ofrecela solo si el reporte muestra leads calientes que se enfrían.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> dijo sí, no o «más adelante».</li>
+<li><strong>Si sale mal:</strong> dice «no por ahora». Seguís con la mensualidad y lo volvés a plantear con el reporte del mes 3.</li>
+</ul>
+<p><strong>P34 · Entregar accesos y apagar ordenado</strong></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás bien para dejar la puerta abierta.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Exportás la planilla.</li>
+<li>Desactivás el workflow.</li>
+<li>Le das un doc con todas las cuentas y qué tiene que pagar o cancelar: Gemini, ManyChat, n8n.</li>
+<li>Quitás tus accesos.</li>
+<li>Le confirmás que el número sigue siendo suyo.</li>
+</ul>
+</li>
+<li><strong>Qué le entregás:</strong> el doc de cierre y la planilla.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> te confirma que recibió todo.</li>
+<li><strong>Si sale mal:</strong> quiere que dejes andando el asistente sin mensualidad. Explicale que, sin alguien que lo revise, la información queda vieja y responde mal.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Día 1: acceso de administrador a su cuenta de Meta Business.</li>
+<li>☐ Día 1: decisión del número, número nuevo o coexistencia, y el chip si hace falta.</li>
+<li>☐ Día 1: nombre, mail y plazo de respuesta de quien toma las derivadas.</li>
+<li>☐ Día 1: horario, duración y responsables de las visitas.</li>
+<li>☐ Día 1: datos para la verificación de Meta.</li>
+<li>☐ Día 1: tarjeta cargada en sus cuentas (Gemini y lo que haga falta).</li>
+<li>☐ Día 1: números de hoy (consultas por mes y tiempo de respuesta), o <strong>POR DEFINIR</strong>.</li>
+<li>☐ Día 1–2: calendario de visitas compartido y cuenta de Airtable.</li>
+<li>☐ Día 2: dos teléfonos de prueba.</li>
+<li>☐ Día 3: doc de preguntas frecuentes completo.</li>
+<li>☐ Día 3: Excel con las propiedades.</li>
+<li>☐ Día 7 (P13): 10 minutos para conectar Gmail con su sesión.</li>
+<li>☐ Día 10: 30 minutos para la demo y el «aprobado» por escrito.</li>
+<li>☐ Día 12: publicar el número.</li>
+<li>☐ Semana 3: acceso a Instagram y pago de ManyChat Pro.</li>
+<li>☐ Cada semana: propiedades vendidas, alquiladas o nuevas.</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Video del asistente respondiendo ⭐</li>
+<li>☐ Asistente en WhatsApp con la información real del negocio</li>
+<li>☐ Búsqueda de propiedades conectada a su lista</li>
+<li>☐ Agenda de visitas en su Google Calendar</li>
+<li>☐ Derivación por mail con resumen</li>
+<li>☐ Planilla de leads con HOT, WARM y COLD</li>
+<li>☐ Guía de una página para su equipo</li>
+<li>☐ Instagram conectado</li>
+<li>☐ Ajustes de respuestas durante el primer mes</li>
+<li>☐ Reporte mensual</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, con 2 horas por día)</p>
+<ul>
+<li><strong>Día 1:</strong> P1 y P2.</li>
+<li><strong>Días 2–3:</strong> P3 a P7, mientras el cliente junta lo suyo.</li>
+<li><strong>Días 4–5:</strong> P8 y P9. Arranca P10.</li>
+<li><strong>Día 6:</strong> termina P10. <strong>⭐ P11, el video.</strong></li>
+<li><strong>Días 7–8:</strong> P12 a P14.</li>
+<li><strong>Días 9–10:</strong> P15 a P17, las pruebas.</li>
+<li><strong>Día 10–11:</strong> P18 a P21, la demo y la aprobación.</li>
+<li><strong>Días 11–12:</strong> P22 a P24. <strong>Lanzamiento.</strong></li>
+<li><strong>Días 12–17:</strong> P25 a P27 andando, con revisión diaria.</li>
+<li><strong>Semana 4:</strong> P28, Instagram. Pasás a revisar dos veces por semana.</li>
+<li><strong>30 días después del lanzamiento:</strong> P31, el primer reporte.</li>
+</ul>
+<hr />
+<h2>4. Mensajes listos para copiar</h2>
+<p><strong>1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Recibí el pago, gracias por confiar de nuevo 🙌 Arrancamos con el asistente de WhatsApp. Para avanzar necesito esto hasta el [día]:
+1. Acceso a la cuenta de Meta del negocio (te mando cómo)
+2. Las preguntas que más te hacen, con su respuesta (te paso un doc, también valen audios)
+3. La lista de propiedades en Excel
+4. Nombre y mail de quien toma las consultas cuando el asistente las deriva</p>
+<p>¿Te va una llamada de 30 min el [día] a las [hora]? Ahí definimos el número.</p>
+</blockquote>
+<p><strong>2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Ya tengo armada la parte de [X]. Para seguir me falta solo:
+• [lo que falta]</p>
+<p>Si me lo pasás hoy o mañana, el [día] te mando un video de tu asistente respondiendo. ¿Lo vemos juntos por llamada?</p>
+</blockquote>
+<p><strong>3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], desde hoy el asistente atiende en el [número]! 🚀 Responde en segundos a cualquier hora, busca en tus propiedades y agenda visitas en tu calendario. Cuando una consulta necesita a una persona, a [vendedor] le llega un mail con el resumen. Dos pedidos: avisame cada vez que se alquile o venda algo, y si ves una respuesta rara, mandame captura. Esta semana lo reviso todos los días.</p>
+</blockquote>
+<p><strong>4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te paso el resumen del primer mes del asistente:
+• Consultas atendidas: [N] ([N] fuera de horario)
+• Primera respuesta: [X] segundos (antes: [Y])
+• Visitas agendadas: [N]
+• Derivadas a [vendedor]: [N] ([N] calientes)
+• Mejoras que hice: [2 o 3]</p>
+<p>Para el mes que viene propongo: [1 o 2]. ¿Lo charlamos 15 min el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p07">← Volver a la ficha 07</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>

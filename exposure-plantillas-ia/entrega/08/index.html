@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Entrega · Filtro de Oro · EXPOSURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Cómo se entrega Filtro de Oro, de punta a punta: diagrama de flujo, paso a paso, qué pedirle al cliente y mensajes listos.">
+<meta property="og:title" content="Entrega · Filtro de Oro">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600;700&family=Unbounded:wght@600;700&display=swap">
+<style>
+:root{--bg:#0E0D12;--surface:#16151B;--surface-2:#1E1C25;--line:rgba(255,255,255,.08);--line-2:rgba(255,255,255,.15);--fg:#F4F2F7;--muted:#A9A4B4;--dim:#716C7D;--ink:#0E0D12;
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;--f-body:"Geist",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--f-mono:"Geist Mono",ui-monospace,Consolas,monospace;color-scheme:dark}
+*{box-sizing:border-box}html{background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.page{max-width:900px;margin:0 auto;padding-inline:clamp(16px,4vw,32px);padding-block:20px 80px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-block:6px 26px}
+.top a{color:var(--muted);text-decoration:none}.top a:hover{color:var(--fg)}
+.top b{font-family:var(--f-display);letter-spacing:.2em;color:var(--fg);font-size:12px}
+.eti{font-family:var(--f-mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--tone)}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(26px,5vw,42px);line-height:1.1;letter-spacing:-.02em;margin:10px 0 12px;text-wrap:balance}
+.bajada{color:var(--muted);font-size:17px;max-width:62ch;margin:0}
+.ejemplo{display:inline-flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.chip{font-family:var(--f-mono);font-size:12px;padding:5px 10px;border-radius:999px;border:1px solid var(--line-2);color:var(--muted)}
+.chip.t{color:var(--ink);background:var(--tone);border-color:transparent}
+.doc h1{display:none}
+.doc h2{font-family:var(--f-display);font-weight:600;font-size:clamp(20px,3vw,26px);letter-spacing:-.015em;margin:48px 0 14px;padding-top:18px;border-top:1px solid color-mix(in oklch,var(--tone) 40%,transparent);text-wrap:balance}
+.doc h3{font-family:var(--f-display);font-weight:600;font-size:17px;margin:30px 0 10px;color:var(--tone);text-wrap:balance}
+.doc p,.doc li{color:#DCD8E3}
+.doc strong{color:var(--fg)}
+.doc ul,.doc ol{padding-left:22px}
+.doc li{margin:4px 0}
+.doc a{color:var(--tone)}
+.doc code{font-family:var(--f-mono);font-size:.9em;background:var(--surface-2);padding:1px 6px;border-radius:6px}
+.doc blockquote{margin:12px 0;padding:14px 16px;border-radius:16px 16px 16px 4px;background:var(--surface-2);border:1px solid var(--line-2)}
+.doc blockquote p{margin:4px 0;color:var(--fg)}
+.doc table{border-collapse:collapse;width:100%;font-size:14px}
+.tabla{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:12px}
+.doc th,.doc td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.doc th{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:500}
+.diagrama{margin:16px 0;background:#fff;border-radius:18px;padding:10px;border:1px solid var(--line-2)}
+.diagrama img{display:block;width:100%;height:auto}
+.doc hr{border:0;border-top:1px solid var(--line);margin:28px 0}
+.zoom{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:12px;color:var(--muted);margin-top:6px}
+.zoom a{color:var(--tone)}
+.pie{margin-top:56px;padding-top:18px;border-top:1px solid var(--line);font-size:13px;color:var(--dim)}
+.volver{display:inline-flex;margin-top:28px;padding:12px 16px;border-radius:12px;background:var(--tone);color:var(--ink);font-family:var(--f-display);font-weight:600;font-size:14px;text-decoration:none}
+</style>
+</head>
+<body style="--tone:oklch(.82 .15 72)">
+<div class="page">
+  <header class="top"><a href="../../"><b>EXPOSURE</b> · Las 20 Plantillas IA</a><span>Ficha 08 de 20</span></header>
+  <p class="eti">La entrega, de punta a punta · Ticket medio</p>
+  <h1>Filtro de Oro</h1>
+  <p class="bajada">Calificación automática de leads. Qué hacés, en qué orden, qué le pedís al cliente y qué le entregás, desde que te paga hasta que renueva.</p>
+  <div class="ejemplo"><span class="chip t">Ejemplo: Inmobiliarias</span><span class="chip">Setup USD 1.000–1.800</span><span class="chip">2 semanas</span></div>
+  <article class="doc">
+<h2>Antes de arrancar</h2>
+<p><strong>Antes de arrancar</strong>, hay tres cosas que no sé. Las dejé como <strong>POR DEFINIR</strong> y no frenan el dibujo:</p>
+<ol>
+<li><strong>El sistema de entrada que ya le instalaste.</strong> Importa saber si ese sistema "escucha" mensajes de WhatsApp. Meta admite un solo receptor de WhatsApp por app, y los dos sistemas podrían chocar. Lo resolvés en P6.</li>
+<li><strong>Dónde está hoy el número de WhatsApp del negocio.</strong> Puede estar en la app del celular o ya conectado a la API, que es la puerta para que un programa use WhatsApp. Lo resolvés en P6.</li>
+<li><strong>Para qué operaciones es el filtro: compras, alquileres o las dos.</strong> Supuse <strong>solo compras</strong>, porque la plantilla está armada para compradores. Es la versión mínima. Lo confirmás en P3.</li>
+</ol>
+<p>La instalación sigue «Cómo dejarla lista» y las cuentas de la ficha (P10 a P16).</p>
+<p><strong>Palabras que vas a ver:</strong></p>
+<ul>
+<li><strong>Lead</strong>: la persona que consulta.</li>
+<li><strong>n8n</strong>: el programa donde armás el flujo.</li>
+<li><strong>Nodo</strong>: cada cajita del flujo en n8n.</li>
+<li><strong>Ejecución</strong>: cada vez que el flujo corre.</li>
+<li><strong>Token o clave de API</strong>: una contraseña larga para que un programa entre a otro.</li>
+<li><strong>Webhook</strong>: la dirección donde Meta le avisa a n8n que llegó un mensaje.</li>
+<li><strong>Prompt</strong>: las instrucciones que le escribís a la IA.</li>
+</ul>
+<hr />
+<h2>1. El diagrama</h2>
+<div class="diagrama"><img src="diagrama.png" alt="Diagrama de la entrega de Filtro de Oro" loading="lazy"></div>
+<p class="zoom">Para leerlo en detalle, <a href="diagrama.png" target="_blank" rel="noopener">abrí la imagen en grande</a> y hacé zoom</p>
+
+<hr />
+<h2>2. El paso a paso</h2>
+<h3>Etapa 1 · Pago y bienvenida</h3>
+<p><strong>P1 · Pagar setup y primera mensualidad</strong> <em>(cliente)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> cobrás el setup y el primer mes antes de tocar nada.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Mandale un link de Mercado Pago o tus datos de transferencia.</li>
+<li>Montos: setup POR DEFINIR (rango de la ficha: USD 1.000–1.800) y mensualidad POR DEFINIR (USD 300–500).</li>
+<li>Sumá un acuerdo de una página con estos puntos:<ul>
+<li>Qué incluye.</li>
+<li>Plazo: lanzamiento a los 10 días hábiles <strong>desde que estén todos los accesos</strong>.</li>
+<li>Qué no se garantiza: las ventas.</li>
+<li>Quién paga las herramientas (Meta, OpenAI, Airtable si se pasa del plan gratis). POR DEFINIR. Te recomiendo que vayan con la tarjeta del cliente.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> el pago y el OK al acuerdo.</li>
+<li><strong>Qué le entregás:</strong> el acuerdo y el recibo.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos tuyos. El pago, lo que tarde él.</li>
+<li><strong>Listo cuando:</strong> la plata está acreditada y el acuerdo aceptado por escrito (un «dale, de acuerdo» por WhatsApp alcanza).</li>
+<li><strong>Si sale mal:</strong> si se demora el pago, no adelantes trabajo. Ya es cliente conforme, pero el orden te cuida a vos y a él.</li>
+</ul>
+<p><strong>P2 · Mandar bienvenida y agendar charla de definición</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mandás la bienvenida y fijás una reunión de 45–60 minutos dentro de las 48 horas.</li>
+<li><strong>Cómo:</strong> usá el <strong>Mensaje 1</strong> (abajo). Ya trae las preguntas para que vaya pensando.</li>
+<li><strong>Qué le pedís:</strong> que vaya a la charla con las respuestas y con 5 consultas reales de las últimas semanas.</li>
+<li><strong>Qué le entregás:</strong> nada todavía.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Listo cuando:</strong> la reunión está en el calendario de los dos.</li>
+<li><strong>Si sale mal:</strong> si no encuentra hueco en 3 días, ofrecele dos horarios concretos en vez de preguntarle «¿cuándo podés?».</li>
+</ul>
+<h3>Etapa 2 · Qué es un buen cliente</h3>
+<p><strong>P3 · Definir con el dueño el buen cliente</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> sacás de la cabeza del dueño los criterios que después va a usar la IA. Sin esto el sistema no sirve (es el «Ojo» de la ficha).</li>
+<li><strong>Cómo:</strong> en la reunión, preguntá una por una y anotá textual:<ol>
+<li><strong>Operación:</strong> ¿compras, alquileres o las dos? Recomendale empezar solo con compras.</li>
+<li><strong>Presupuesto mínimo</strong> en USD: POR DEFINIR.</li>
+<li><strong>Zonas</strong> que trabaja: POR DEFINIR.</li>
+<li><strong>Plazo:</strong> «compra en menos de X meses».</li>
+<li><strong>Forma de pago que sirve:</strong> contado, crédito hipotecario preaprobado, necesita vender su propiedad primero. Cuáles valen y cuáles no.</li>
+<li><strong>Otra inmobiliaria:</strong> ¿le sirve un lead que ya trabaja con otra?</li>
+<li><strong>Categorías de propiedad</strong> y <strong>qué vendedor atiende cada una</strong>, con su mail. Por ejemplo departamento, casa, PH, local, terreno, pero las categorías son POR DEFINIR.</li>
+<li><strong>Quién reparte a mano</strong> lo que no encaja en ninguna categoría.</li>
+<li><strong>Contacto humano:</strong> el teléfono o mail que la charla le da a quien quiera hablar con una persona.</li>
+<li><strong>Mail del dueño</strong> para el reporte semanal.</li>
+<li><strong>Slack y formulario:</strong> ¿el equipo usa Slack? ¿Tienen formulario web? (casi seguro que no).</li>
+<li><strong>Calibración:</strong> abran juntos las 5 consultas reales y preguntale de cada una «¿a este lo atenderías primero?». Esas 5 te sirven de prueba después.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> su tiempo y sus respuestas.</li>
+<li><strong>Qué le entregás:</strong> nada en el momento.</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> tenés respuesta para los 12 puntos.</li>
+<li><strong>Si sale mal:</strong> a veces el dueño responde «depende» a todo. Pedile ejemplos: «este lead que tenés acá, ¿sí o no? ¿Por qué?». El criterio sale de los ejemplos.</li>
+</ul>
+<p><strong>P4 · Entregar ficha de buen cliente y puntaje</strong> <em>(entrega)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás todo a un documento de una página que el dueño pueda leer en 2 minutos.</li>
+<li>
+<p><strong>Cómo:</strong></p>
+<ol>
+<li>Abrí un Google Docs con cuatro partes: criterios, puntos, corte y reparto.</li>
+<li>Proponé una tabla de puntos que sume 100. Es solo una propuesta y la decide él. Por ejemplo:</li>
+</ol>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Criterio</th>
+<th>Puntos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Presupuesto</td>
+<td>30</td>
+</tr>
+<tr>
+<td>Forma de pago</td>
+<td>25</td>
+</tr>
+<tr>
+<td>Plazo</td>
+<td>20</td>
+</tr>
+<tr>
+<td>Zona</td>
+<td>15</td>
+</tr>
+<tr>
+<td>No trabaja con otra inmobiliaria</td>
+<td>10</td>
+</tr>
+</tbody>
+</table></div>
+<ol start="3">
+<li>Corte sugerido: <strong>70 o más = calificado</strong>.</li>
+<li>Abajo, la lista categoría → vendedor → mail.
+- <strong>Qué le pedís:</strong> que la lea.
+- <strong>Qué le entregás:</strong> la ficha. Es el primer entregable concreto y le muestra que arrancaste.
+- <strong>Cuánto tarda:</strong> 1 hora.
+- <strong>Listo cuando:</strong> se la mandaste.
+- <strong>Si sale mal:</strong> si los puntos no ordenan bien las 5 consultas de calibración, ajustalos vos antes de mandarla.</li>
+</ol>
+</li>
+</ul>
+<p><strong>P5 · ¿El dueño aprobó la ficha?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> esperás su OK escrito.</li>
+<li><strong>Cómo:</strong> preguntale «¿Algo que cambiarías? Si está bien, con un "aprobado" arranco».</li>
+<li><strong>Qué le pedís:</strong> el OK.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> horas a 1 día.</li>
+<li><strong>Listo cuando:</strong> SÍ, hay «aprobado» escrito y pasás a P6. NO, volvés a P3 con una charla corta de 20 minutos.</li>
+<li><strong>Si sale mal:</strong> si después de dos vueltas no puede definir qué es un buen cliente, frená. Eso es consultoría, no un sistema. Ofrecele una sesión aparte para definirlo o ajustá el alcance.</li>
+</ul>
+<h3>Etapa 3 · Datos y accesos</h3>
+<p><strong>P6 · Pedir accesos de Meta, Gmail y vendedores</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís todo junto, en una sola lista, el mismo día.</li>
+<li><strong>Cómo:</strong> mandale por WhatsApp la lista con casillas (sección 3).<ul>
+<li><strong>Meta:</strong> que te agregue como administrador en Meta Business Suite. Entra a business.facebook.com → Configuración → Personas → Agregar.</li>
+<li><strong>Gmail:</strong> no le pidas la contraseña. Conectás Gmail en una videollamada de 10 minutos donde él inicia sesión.</li>
+<li><strong>Resolvé los dos POR DEFINIR de arriba:</strong><ul>
+<li><strong>Sistema anterior:</strong> abrí el flujo que le instalaste y fijate si tiene un nodo «WhatsApp Trigger». Si lo tiene, el Filtro va en <strong>otra app de Meta</strong> o tenés que unificarlos. Solo puede haber un receptor por app.</li>
+<li><strong>Número:</strong> si el número está hoy en la app WhatsApp Business del celular, el dueño tiene que decidir dos cosas. Una, usar un número nuevo solo para la charla. Otra, pasar ese número a la API. En ese caso, confirmá en el panel de Meta si el equipo podrá seguir contestando desde el celular, porque no siempre se puede. Que lo decida él, por escrito.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Qué le pedís:</strong> los accesos y esas dos decisiones.</li>
+<li><strong>Qué le entregás:</strong> la lista.</li>
+<li><strong>Cuánto tarda:</strong> 20 minutos.</li>
+<li><strong>Listo cuando:</strong> la lista está enviada con fecha límite (al día siguiente).</li>
+<li><strong>Si sale mal:</strong> si no entiende lo de Meta, hacelo con él en una videollamada compartiendo pantalla. Es lo más rápido.</li>
+</ul>
+<p><strong>P7 · Compartir accesos y mails de vendedores</strong> <em>(cliente)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> él te da lo pedido.</li>
+<li><strong>Cómo:</strong> él acepta tu invitación de Meta, carga la tarjeta en Meta y OpenAI (si se acordó así) y te confirma los mails.</li>
+<li><strong>Qué le pedís:</strong> lo de la lista.</li>
+<li><strong>Qué le entregás:</strong> nada.</li>
+<li><strong>Cuánto tarda:</strong> 1 a 2 días.</li>
+<li><strong>Listo cuando:</strong> podés entrar a cada cosa con tu usuario.</li>
+<li><strong>Si sale mal:</strong> a veces la invitación de Meta llega al mail equivocado. Pedile que te invite al mail exacto que usás en Facebook.</li>
+</ul>
+<p><strong>P8 · ¿Está todo lo pedido?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> tildás la lista.</li>
+<li><strong>Cómo:</strong> probá entrar a cada cuenta. No alcanza con «ya te lo mandé».</li>
+<li><strong>Listo cuando:</strong> SÍ, todo tildado, pasás a P10. NO, vas a P9.</li>
+<li><strong>Cuánto tarda:</strong> 10 minutos.</li>
+<li><strong>Si sale mal:</strong> recordá que el plazo corre desde acá, y está en el acuerdo.</li>
+</ul>
+<p><strong>P9 · Mandar recordatorio con lo que falta</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le recordás <strong>solo</strong> lo que falta.</li>
+<li><strong>Cómo:</strong> usá el <strong>Mensaje 2</strong>. Ofrecele hacerlo juntos en 15 minutos.</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> te responde con lo que faltaba. Volvés a P7.</li>
+<li><strong>Si sale mal:</strong> si pasan 3 días sin respuesta, llamalo. Mientras tanto podés adelantar P10, que no necesita sus accesos.</li>
+</ul>
+<h3>Etapa 4 · Instalación</h3>
+<p><strong>P10 · Crear cuentas e importar la plantilla</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> dejás listas tus herramientas y la plantilla limpia (paso 1 de «Cómo dejarla lista»).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>n8n Cloud:</strong> entrá a n8n.io y creá la cuenta. n8n Cloud ya tiene dirección pública HTTPS, que es la condición para que Meta llegue a tu flujo. Mirá el precio vigente del plan.</li>
+<li><strong>OpenAI:</strong> entrá a platform.openai.com → API keys → Create. Cargá crédito. La clave se ve una sola vez: guardala.</li>
+<li><strong>Airtable:</strong> creá la cuenta. Mejor con el mail del cliente, que te invita. Así, si un día se va, la base queda en su cuenta.</li>
+<li><strong>Plantilla:</strong> abrí n8n.io/workflows/12820 → «Use for free» → copiala a tu n8n. Antes de tocar nada, <strong>duplicala</strong> y guardá la copia como «ORIGINAL – no tocar».</li>
+<li><strong>Limpieza:</strong><ul>
+<li>Si no hay formulario web, borrá «Typeform Trigger» y «Normalize Form Leads».</li>
+<li>Si no usan Slack, borrá «Notify Agent via Slack».</li>
+<li>Si sí lo usan, cambiá el canal «test_n8n_invoice» por el de ellos.</li>
+</ul>
+</li>
+<li>Guardá el flujo como «Filtro de Oro – [Inmobiliaria]».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> el flujo abre sin nodos sueltos de Typeform ni Slack.</li>
+<li><strong>Si sale mal:</strong> si OpenAI te da error de pago al usar la clave, falta cargar crédito.</li>
+</ul>
+<p><strong>P11 · Conectar WhatsApp y apagar avisos de estado</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> conectás n8n con WhatsApp (paso 2).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>App de Meta:</strong> entrá a developers.facebook.com → Mis apps → Crear app → tipo Business → agregá el producto WhatsApp, vinculado a la cuenta del negocio. <strong>Tiene que ser una app sin otro WhatsApp Trigger</strong> (mirá lo que resolviste en P6).</li>
+<li><strong>Credencial del trigger:</strong><ul>
+<li>En la app de Meta, abrí Configuración → Básica y copiá el App ID y el App Secret.</li>
+<li>En n8n, en «WhatsApp Trigger», creá la credencial: Client ID = App ID, Client Secret = App Secret.</li>
+</ul>
+</li>
+<li><strong>Avisos de estado:</strong> en el mismo nodo, entrá a «Add option» → «Receive Message Status Updates», sacale «All» y dejalo vacío. Así no corre el flujo por cada «enviado», «entregado» o «leído».</li>
+<li><strong>Credencial de envío:</strong> en «Send message» cargá el Access Token y el Business Account ID.<ul>
+<li><strong>Usá un token permanente</strong>: en Meta Business Suite → Configuración → Usuarios del sistema → generá el token con permisos de WhatsApp.</li>
+<li>El token que muestra la pantalla de inicio de la API vence en 24 horas.</li>
+</ul>
+</li>
+<li><strong>Número de envío:</strong> en «Sender Phone Number (or ID)» sacá el número del autor (874689602398158).<ul>
+<li><strong>Hasta el lanzamiento usá el número de prueba que da Meta</strong> en WhatsApp → Configuración de la API.</li>
+<li>Ahí mismo agregá tu celular, y el del dueño para la demo, como destinatarios de prueba.</li>
+</ul>
+</li>
+<li><strong>Audios y fotos:</strong><ul>
+<li>Borrá «No Operation, do nothing».</li>
+<li>Poné en su lugar una copia de «Send message» con el texto: «¿Me lo escribís? Por ahora leo solo texto».</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 a 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> le escribís «hola» al número de prueba y en n8n → Executions aparece una ejecución.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Lo más común es que mañana todo deje de enviar porque usaste el token de 24 horas. Generá el permanente.</li>
+<li>Si no llega nada, revisá que el número esté en la app correcta.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P12 · Traducir la charla con opciones del negocio</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> la IA pasa a conversar en español, con las zonas, presupuestos y categorías del dueño (paso 3).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>«Lead Collection Agent»:</strong> traducí el prompt. Cambiá New York, Chicago, Texas y Florida por las zonas de la ficha. Cambiá los rangos de USD 500.000 a 2.000.000 por los rangos del dueño.</li>
+<li><strong>Apertura:</strong> sumá al principio un texto así: «Te hago unas preguntas cortas para pasarte con el asesor indicado. Tus datos los ve solo [Inmobiliaria]. Si preferís hablar con una persona: [contacto POR DEFINIR]».</li>
+<li><strong>Resumen final:</strong> dejalo con todos los datos, porque «Info Completeness Check» y «Extract Lead Info» leen solo ese último mensaje. Cambiá los marcadores {{first_name}}, {{budget}} y los demás por [nombre], [presupuesto], etc.</li>
+<li><strong>Esos dos nodos:</strong> traducilos con las opciones del dueño («Financiar con crédito hipotecario», «Pago contado», etc.).<ul>
+<li>«Info Completeness Check» tiene que seguir respondiendo <strong>Yes</strong> o <strong>No en inglés</strong>.</li>
+</ul>
+</li>
+<li><strong>«Structured Output Parser»:</strong> no toques los nombres de campo.</li>
+<li><strong>Categorías:</strong> escribilas en la charla <strong>exactamente igual</strong> que vas a escribirlas en P15.</li>
+<li><strong>Tono:</strong> POR DEFINIR (vos o usted, según cómo le habla la inmobiliaria a sus clientes).</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> hacés una charla completa desde tu celular, en español, y el resumen final sale con tus datos y no con huecos.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si el resumen sale con campos vacíos, quedó alguna llave doble {{ }}. Buscala y cambiala por corchetes.</li>
+<li>Si la charla nunca termina, «Info Completeness Check» está respondiendo en español. Tiene que decir Yes o No.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P13 · Armar tablas de Airtable y conectar nodos</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> creás la planilla donde queda cada lead (paso 4).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Base y tablas:</strong> en airtable.com creá una base «Filtro de Oro» con dos tablas, «Leads» (la principal) y «Duplicados».</li>
+<li><strong>Columnas de las dos tablas:</strong> todas de tipo «Single line text» (texto de una línea). Usá los nombres exactos en inglés, porque el flujo las busca por ese nombre:<ul>
+<li>First name, Last name, Phone number, Email, Location, Property Type, Timeframe, Payment Source, Pre Approved, Has Agent y Source.</li>
+</ul>
+</li>
+<li><strong>Columnas extra de la principal:</strong><ul>
+<li>Budget, Lead Status, Assigned Agent, Assigned Time y Qualified, de texto.</li>
+<li><strong>Puntaje</strong>, de tipo <strong>número</strong>.</li>
+</ul>
+</li>
+<li><strong>Columna Visita (opcional):</strong> sumá una columna de texto «Visita» para que el vendedor marque Sí o No. El flujo no la toca, y te sirve para medir.</li>
+<li><strong>Token:</strong> entrá a airtable.com/create/tokens y creá uno con permisos de lectura y escritura de registros y de lectura del esquema, con acceso a esta base.</li>
+<li><strong>En n8n:</strong> cargá el token y elegí base y tabla en los 5 nodos:<ul>
+<li>«Search records», «Create A Record» y «Get Records» van a Leads.</li>
+<li>«Create Duplicate record» y «Get Duplicates Records» van a Duplicados.</li>
+</ul>
+</li>
+<li><strong>Budget:</strong> en «Create A Record», mapeá Budget con <code>{{ $('Round-Robin Agent Assignment1').item.json['What is your budget range?'] }}</code>.</li>
+<li><strong>Búsqueda de duplicados:</strong> en «Search records» → «Filter By Formula» poné <code>{Email} = '{{ $json.Email }}'</code>.</li>
+<li><strong>Reporte:</strong> en «Send Weekly Report» cambiá user@example.com por el mail del dueño.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 2 horas.</li>
+<li><strong>Listo cuando:</strong> una charla de prueba crea una fila en Leads con todas las columnas llenas.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si aparece el error «Unknown field name», hay una columna mal escrita (mayúscula, espacio de más). Compará letra por letra.</li>
+<li>El plan gratis de Airtable tiene un tope de registros por base. Confirmá el número vigente.</li>
+</ul>
+</li>
+</ul>
+<p><strong>P14 · Cargar criterios y puntaje del dueño</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> la IA puntúa con la tabla de la ficha (paso 5).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Criterios:</strong> en «Basic LLM Chain» borrá los criterios del autor (USD 600.000, Texas, etc.). Pegá la tabla de puntos de P4, por ejemplo: «Sumá 30 si el presupuesto es de USD [POR DEFINIR] o más; 25 si paga contado o tiene crédito preaprobado…».</li>
+<li><strong>Formato de respuesta:</strong> cambiá «Only output the result: Yes / No» por «Respondé solo un número del 0 al 100».</li>
+<li><strong>Qualified:</strong> en «Create A Record» poné <code>{{ Number($json.text) &gt;= 70 ? 'Yes' : 'No' }}</code>, con el corte que aprobó el dueño.</li>
+<li><strong>Puntaje:</strong> poné <code>{{ Number($json.text) }}</code>.</li>
+<li><strong>Claude (opcional):</strong> si preferís Claude, reemplazá «OpenAI Chat Model» y «OpenAI Chat Model2» por «Anthropic Chat Model».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> las 5 consultas de calibración, cargadas a mano en una charla, dan puntajes que ordenan igual que el dueño.</li>
+<li><strong>Si sale mal:</strong> si el puntaje sale vacío, la IA está escribiendo texto además del número. Reforzá en el prompt: «Solo el número, sin palabras».</li>
+</ul>
+<p><strong>P15 · Repartir leads por categoría entre vendedores</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> cada lead llega al vendedor correcto, con los datos que necesita (paso 6).</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Switch:</strong> borrá «Route by Location/Property Type1». Uní la salida «In A only» de «Check for Duplicates in CRM» directo a «Round-Robin Agent Assignment1». Ese nodo no repartía nada y perdía a los que eligen «Other».</li>
+<li><strong>Reparto por turnos:</strong> en «Round-Robin Agent Assignment1» (reparte por turnos entre los vendedores de cada categoría), dentro de agentPools, escribí como claves las categorías <strong>en minúscula y con guiones</strong> («Local comercial» → «local-comercial»).<ul>
+<li>Al lado de cada clave van los mails de sus vendedores, respetando el formato que ya trae.</li>
+<li>En «default-unassigned» va el mail de quien reparte a mano.</li>
+</ul>
+</li>
+<li><strong>Mail al vendedor:</strong> en «Send a message» traducí el mail y sumá <code>{{ $json.fields.Budget }}</code>, <code>{{ $json.fields.Timeframe }}</code> y <code>{{ $json.fields.Puntaje }}</code>.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> una charla de cada categoría llega al mail del vendedor que corresponde.</li>
+<li><strong>Si sale mal:</strong> si todo cae en «default-unassigned», la clave no coincide con lo que dice la charla. Revisá acentos, espacios y guiones.</li>
+</ul>
+<p><strong>P16 · Separar calificados y armar nutrición por mail</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong><ul>
+<li>Al vendedor le llegan <strong>solo</strong> los calificados.</li>
+<li>Los demás reciben 2 mails en 48 horas (paso 7). «Nutrición» es mantener el contacto hasta que esté listo para comprar.</li>
+</ul>
+</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Separar:</strong> desconectá «Create A Record» de «Send a message». En el medio poné un nodo «If» que compare <code>{{ $json.fields.Qualified }}</code> con «Yes».<ul>
+<li>La salida <strong>true</strong> va a «Send a message».</li>
+<li>La salida <strong>false</strong> va a «Gmail» → «Wait» (48 horas) → «Gmail».</li>
+</ul>
+</li>
+<li><strong>Destinatario:</strong> en los dos mails poné <code>{{ $('Create A Record').item.json.fields.Email }}</code>.</li>
+<li><strong>Baja:</strong> sumá al pie de los dos mails: «Si no querés recibir más mails, respondé BAJA». Anotás a mano a quien la pida.</li>
+<li><strong>Contenido:</strong> POR DEFINIR con el dueño. Por ejemplo, el primero agradece y deja el contacto, y el segundo pregunta si cambió algo de su búsqueda.</li>
+<li><strong>WhatsApp:</strong> nada de WhatsApp en la nutrición. Pasadas 24 horas del último mensaje del lead, solo se puede escribir con una plantilla aprobada por Meta y a quien aceptó recibir mensajes. Para la primera versión, alcanza con mail.</li>
+<li><strong>Gmail:</strong> conectalo en la videollamada con el dueño. Él inicia sesión desde el botón «Sign in with Google» de n8n.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> un lead no calificado recibe el primer mail al instante y el vendedor no recibe nada.</li>
+<li><strong>Si sale mal:</strong><ul>
+<li>Si el lead no dio mail, el Gmail falla. Sumá antes un «If» que pregunte si Email está vacío, y en ese caso que no mande nada.</li>
+<li>También podés hacer que la charla pida el mail siempre.</li>
+</ul>
+</li>
+</ul>
+<h3>Etapa 5 · Prueba con datos de prueba</h3>
+<p><strong>P17 · Simular seis charlas con perfiles distintos</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> probás todos los caminos antes de que lo vea nadie.</li>
+<li><strong>Cómo:</strong> desde tu celular, al número de prueba, hacés estos seis casos:</li>
+</ul>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>Caso</th>
+<th>Lo que tiene que pasar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Comprador ideal</td>
+<td>Fila en Leads, Qualified Yes, puntaje 70 o más, mail al vendedor de esa categoría</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Presupuesto bajo</td>
+<td>Qualified No, sin mail al vendedor, sale el primer mail de nutrición</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Categoría que no existe</td>
+<td>Llega a «default-unassigned»</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Repetís el mail del caso 1</td>
+<td>Cae en la tabla Duplicados</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Mandás un audio</td>
+<td>Responde «¿Me lo escribís? Por ahora leo solo texto»</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Contestás desordenado y sin mail</td>
+<td>La charla repregunta hasta completar y nada se rompe</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><strong>Cuánto tarda:</strong> 1,5 horas.</li>
+<li><strong>Listo cuando:</strong> hiciste los 6 y anotaste el resultado de cada uno.</li>
+<li><strong>Si sale mal:</strong> el caso 6 suele caer en Duplicados. La búsqueda con mail vacío encuentra cualquier otra fila sin mail. Si pasa, hacé que la charla pida el mail siempre, o cambiá la fórmula de «Search records» para buscar por teléfono, con el nombre exacto del campo que ves en la salida del nodo anterior.</li>
+</ul>
+<p><strong>P18 · Calificar, guardar y avisar al vendedor</strong> <em>(sistema)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> nada. Mirás cómo el flujo hace su parte.</li>
+<li><strong>Cómo:</strong> lo que hace solo es esto:<ol>
+<li>Junta los datos.</li>
+<li>Revisa si está completo.</li>
+<li>Busca duplicados.</li>
+<li>Asigna vendedor.</li>
+<li>Puntúa.</li>
+<li>Guarda en Airtable.</li>
+<li>Separa calificados de no calificados.</li>
+<li>Manda el mail que corresponde.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> segundos por charla.</li>
+<li><strong>Listo cuando:</strong> cada ejecución aparece en verde en n8n → Executions.</li>
+<li><strong>Si sale mal:</strong> las ejecuciones en rojo te dicen en qué nodo se cortó. Eso va a P20.</li>
+</ul>
+<p><strong>P19 · ¿Los seis casos salieron bien?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> comparás lo que pasó con la tabla de P17.</li>
+<li><strong>Listo cuando:</strong> SÍ, los 6 coinciden, pasás a P21. NO, vas a P20.</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos.</li>
+<li><strong>Si sale mal:</strong> no pases a la demo con «casi todos». El que falla es justo el que va a aparecer en vivo.</li>
+</ul>
+<p><strong>P20 · Corregir el nodo que falló</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás y repetís <strong>todos</strong> los casos, no solo el que falló.</li>
+<li><strong>Cómo:</strong> en Executions, abrí la ejecución roja y hacé clic en el nodo marcado. Leé el error y compará con lo que configuraste en P11 a P16.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> el caso vuelve a correr bien. Volvés a P17.</li>
+<li><strong>Si sale mal:</strong> si no entendés el error, copialo entero y pegáselo a Claude junto con qué hace ese nodo.</li>
+</ul>
+<h3>Etapa 6 · Demo</h3>
+<p><strong>P21 · Mostrar la demo en vivo al dueño</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> el dueño prueba el sistema como si fuera un comprador.</li>
+<li><strong>Cómo:</strong> en una videollamada o en persona de 30 minutos:<ol>
+<li>El dueño le escribe desde su celular al número de prueba (ya lo agregaste en P11).</li>
+<li>Hace la charla completa.</li>
+<li>Le mostrás la fila en Airtable con el puntaje y el mail que recibió el vendedor.</li>
+<li>Después hace un caso de presupuesto bajo y ve que el vendedor <strong>no</strong> recibe nada y que sale el mail de nutrición.</li>
+<li>Al final le mostrás la guía para el equipo.</li>
+</ol>
+</li>
+<li><strong>Qué le pedís:</strong> 30 minutos y su celular.</li>
+<li><strong>Qué le entregás:</strong> la demo y el borrador de la guía.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos.</li>
+<li><strong>Listo cuando:</strong> vio los dos caminos funcionando.</li>
+<li><strong>Si sale mal:</strong> si algo falla en vivo, no improvises. Decí «lo anoto y te lo muestro mañana» y vas a P23.</li>
+</ul>
+<p><strong>P22 · ¿El dueño aprueba?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le pedís el OK para salir con leads reales.</li>
+<li><strong>Listo cuando:</strong> SÍ, escribe «aprobado, salimos», y pasás a P24. NO, vas a P23.</li>
+<li><strong>Cuánto tarda:</strong> en la misma reunión.</li>
+<li><strong>Si sale mal:</strong> si dice «sí, pero…», eso es un NO con cambios. Anotalos.</li>
+</ul>
+<p><strong>P23 · Anotar cambios pedidos y ajustarlos</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> separás lo que entra en el servicio de lo que no.</li>
+<li><strong>Cómo:</strong><ul>
+<li><strong>Dentro del alcance:</strong> textos, preguntas, puntos, corte, reparto. Los hacés.</li>
+<li><strong>Fuera del alcance:</strong> agendar visitas, mandar propuestas. No los metas ahora: anotalos para P34.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> hiciste los cambios. Volvés a P17 y repetís las pruebas.</li>
+<li><strong>Si sale mal:</strong> si pide cambios infinitos, recordale que la mensualidad incluye ajustes cada mes. Lanzar y ajustar con datos reales es mejor que adivinar.</li>
+</ul>
+<h3>Etapa 7 · Lanzamiento</h3>
+<p><strong>P24 · Activar el flujo y pasar guía al equipo</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> pasás del número de prueba al real y lo prendés.</li>
+<li><strong>Cómo:</strong><ol>
+<li><strong>Número real:</strong> cambiá «Sender Phone Number» al número real en <strong>los dos</strong> nodos de envío («Send message» y su copia de audios). Verificá que el número real esté en la misma app de Meta.</li>
+<li><strong>Activar:</strong> activá el flujo con el interruptor de arriba a la derecha en n8n.</li>
+<li><strong>Prueba real:</strong> escribile vos al número real y fijate que todo corra.</li>
+<li><strong>Avisos:</strong> mandá el <strong>Mensaje 3</strong> al dueño y la <strong>guía de una página</strong> al equipo. La guía explica cuatro cosas:<ul>
+<li>Qué trae el mail.</li>
+<li>Qué significa el puntaje.</li>
+<li>Qué hace quien recibe los «sin categoría».</li>
+<li>Cómo se contesta a quien pide hablar con una persona. Si el número pasó a la API, el vendedor lo llama o le escribe desde su propio teléfono.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> tu mensaje al número real generó una ejecución verde y el equipo recibió la guía.</li>
+<li><strong>Si sale mal:</strong> si las consultas reales no disparan nada, el número real no está suscripto a la app. Revisalo en developers.facebook.com → WhatsApp → Configuración.</li>
+</ul>
+<p><strong>P25 · ¿Cada lead real se procesó bien?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> las primeras 72 horas revisás Executions dos veces por día, 10 minutos cada vez.</li>
+<li><strong>Listo cuando:</strong> SÍ, todas las ejecuciones con leads reales están en verde, y pasás a P27. NO, vas a P26.</li>
+<li><strong>Cuánto tarda:</strong> 3 días.</li>
+<li><strong>Si sale mal:</strong> cuántos leads entran depende del mercado, no de vos. Si en 72 horas no entró ninguno, confirmá con tu propio mensaje que el sistema funciona y seguí esperando.</li>
+</ul>
+<p><strong>P26 · Revisar ejecuciones y corregir el error</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> arreglás el fallo y <strong>le avisás al vendedor del lead que se trabó</strong> para que lo atienda a mano.</li>
+<li><strong>Cómo:</strong> igual que en P20. La gente real escribe distinto que vos. Lo más común son respuestas con emojis o todas juntas en un solo mensaje.</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> el error no se repite. Volvés a P24.</li>
+<li><strong>Si sale mal:</strong> ningún lead puede quedar sin atender por un error tuyo. Antes de arreglar, pasá el lead a mano.</li>
+</ul>
+<h3>Etapa 8 · Primer resultado visible</h3>
+<p><strong>⭐ P27 · Vendedor recibe primer lead calificado con puntaje</strong> <em>(entrega)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> se lo mostrás al dueño apenas pasa.</li>
+<li><strong>Cómo:</strong> mandale una captura del mail que recibió el vendedor, con presupuesto, plazo y puntaje, y un renglón: «Este llegó filtrado y con todo lo que necesita saber tu vendedor».</li>
+<li><strong>Qué le entregás:</strong> la prueba de que funciona con su gente real.</li>
+<li><strong>Cuánto tarda:</strong> depende de cuándo entre un calificado. Suele ser en los primeros días si la inmobiliaria recibe consultas seguido.</li>
+<li><strong>Listo cuando:</strong> el dueño lo vio.</li>
+<li><strong>Si sale mal:</strong> si los primeros leads son todos no calificados, mostrale la planilla con los puntajes. Que el filtro descarte también es el sistema funcionando, y le ahorra visitas a su equipo.</li>
+</ul>
+<h3>Etapa 9 · Seguimiento, reporte y ajustes</h3>
+<p><strong>P28 · Revisar ejecuciones y planilla dos veces por semana</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> controlás 20 minutos, dos veces por semana.</li>
+<li><strong>Cómo:</strong> revisá cinco cosas:<ol>
+<li>Errores en Executions.</li>
+<li>Leads en «default-unassigned» que nadie tomó.</li>
+<li>La tabla Duplicados.</li>
+<li>Quién pidió BAJA.</li>
+<li>La columna Visita. Si no la llenan, preguntale a cada vendedor «¿los calificados de esta semana eran buenos?».</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 40 minutos por semana.</li>
+<li><strong>Listo cuando:</strong> anotaste lo que viste en una nota por semana. Te sirve para el reporte.</li>
+<li><strong>Si sale mal:</strong> si un vendedor dice «este de puntaje 55 era buenísimo», anotalo. Es materia prima para ajustar el corte.</li>
+</ul>
+<p><strong>P29 · Mandar reporte semanal al dueño</strong> <em>(sistema)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> verificás que el lunes salga el reporte automático de «Send Weekly Report».</li>
+<li><strong>Cuánto tarda:</strong> 5 minutos.</li>
+<li><strong>Listo cuando:</strong> el dueño lo recibió. Preguntale el primer lunes.</li>
+<li><strong>Si sale mal:</strong> si no llega, revisá spam y que el mail del dueño esté bien escrito en el nodo.</li>
+</ul>
+<p><strong>P30 · Entregar reporte del primer mes</strong> <em>(entrega)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> a los 30 días del lanzamiento le mandás el resumen y una charla de 20 minutos.</li>
+<li><strong>Cómo:</strong> sacá los números de Airtable:<ul>
+<li>Leads que completaron la charla.</li>
+<li>Calificados y no calificados.</li>
+<li>Leads por categoría y por vendedor.</li>
+<li>Duplicados.</li>
+<li>Errores y cuántos corregiste.</li>
+<li>Ajustes hechos.</li>
+<li>Visitas con calificados, si cargaron la columna Visita.</li>
+</ul>
+</li>
+</ul>
+<p>Sumá <strong>una</strong> recomendación. No prometas ventas.
+- <strong>Qué le entregás:</strong> el <strong>Mensaje 4</strong> y, si querés, la planilla con los números.
+- <strong>Cuánto tarda:</strong> 1 hora más la charla.
+- <strong>Listo cuando:</strong> lo leyó y tuvieron la charla.
+- <strong>Si sale mal:</strong> si no tiene tiempo para la charla, el mensaje solo alcanza. Lo importante es que el reporte llegue.</p>
+<p><strong>P31 · ¿Hay que ajustar preguntas, corte o reparto?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> decidís con el dueño, mirando lo anotado en P28.</li>
+<li><strong>Listo cuando:</strong> SÍ, hay algo que cambiar, y vas a P32. NO, pasás a P33.</li>
+<li><strong>Cuánto tarda:</strong> en la charla del mes.</li>
+</ul>
+<p><strong>P32 · Ajustar, probar un caso y avisar</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> hacés el cambio chico, lo probás con un caso y le avisás al dueño qué cambió.</li>
+<li><strong>Cómo:</strong> cada cambio se escribe en un solo lugar:<ul>
+<li>El corte, en «Create A Record».</li>
+<li>Las preguntas, en «Lead Collection Agent».</li>
+<li>El reparto, en agentPools.</li>
+<li>Si sumás categorías, hacelo <strong>en la charla y en agentPools a la vez</strong>.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 30 minutos a 1 hora.</li>
+<li><strong>Listo cuando:</strong> el caso de prueba sale bien. Volvés a P28.</li>
+<li><strong>Si sale mal:</strong> si el cambio rompe algo, volvé a la versión anterior. Antes de cada ajuste, duplicá el flujo.</li>
+</ul>
+<h3>Etapa 10 · Renovación o salida</h3>
+<p><strong>P33 · ¿Renueva la mensualidad?</strong> <em>(puerta)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le cobrás el mes siguiente con el reporte recién entregado.</li>
+<li><strong>Listo cuando:</strong> SÍ, pagó, y vas a P34. NO, vas a P35.</li>
+<li><strong>Si sale mal:</strong> si duda, preguntale qué le faltó y ofrecé arreglarlo ese mes.</li>
+</ul>
+<p><strong>P34 · Ofrecer 15 Máquina de Conversión</strong> <em>(vos)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> le mostrás la pieza que sigue, usando lo que anotaste en P23.</li>
+<li><strong>Cómo:</strong><ul>
+<li>Ya tiene entrada y filtro. La <strong>15 Máquina de Conversión</strong> suma lo que falta:<ul>
+<li>Agendar la visita del calificado (03 Cero Ausencias).</li>
+<li>Mandarle la propuesta el mismo día (10 Propuesta el Mismo Día).</li>
+<li>Seguirlo hasta que compra o dice que no (09 Seguimiento Constante).</li>
+</ul>
+</li>
+<li>Si le queda grande, ofrecé primero solo la agenda de visitas.</li>
+<li>Si su problema es que le faltan consultas, la alternativa es la <strong>18 Radar de Clientes</strong>.</li>
+</ul>
+</li>
+<li><strong>Cuánto tarda:</strong> 15 minutos dentro de la charla mensual.</li>
+<li><strong>Listo cuando:</strong> lo escuchó. La mensualidad del Filtro sigue igual (flecha punteada a P28).</li>
+</ul>
+<p><strong>P35 · Entregar accesos y apagar en orden</strong> <em>(entrega)</em></p>
+<ul>
+<li><strong>Qué hacés:</strong> cerrás prolijo, con 30 días de aviso, como diga el acuerdo.</li>
+<li><strong>Cómo:</strong><ol>
+<li>Bajá el flujo con Download, en formato JSON (el archivo con todo el flujo).</li>
+<li>Dejá la base de Airtable en la cuenta del cliente.</li>
+<li>Desactivá el flujo.</li>
+<li>Pedile que te saque de Meta Business Suite.</li>
+<li>Revocá los tokens.</li>
+<li>Mandale una nota con lo que queda en sus manos.</li>
+</ol>
+</li>
+<li><strong>Cuánto tarda:</strong> 1 hora.</li>
+<li><strong>Listo cuando:</strong> confirmó que tiene todo y vos ya no tenés accesos.</li>
+<li><strong>Si sale mal:</strong> si las cuentas estaban a tu nombre, transferilas antes de apagar. Por eso conviene crearlas a nombre del cliente desde P10.</li>
+</ul>
+<hr />
+<h2>3. Tres listas</h2>
+<p><strong>Lo que le tenés que pedir al cliente</strong></p>
+<ul>
+<li>☐ Pago del setup y del primer mes, y OK al acuerdo — día 1</li>
+<li>☐ Una hora para la charla de definición, con 5 consultas reales — día 2</li>
+<li>☐ Mails de cada vendedor y de quien reparte a mano — día 2</li>
+<li>☐ Mail del dueño para el reporte semanal y contacto humano para la charla — día 2</li>
+<li>☐ ¿Usan Slack? ¿Tienen formulario web? — día 2</li>
+<li>☐ OK escrito a la ficha de buen cliente — día 3</li>
+<li>☐ Acceso de administrador a Meta Business Suite — pedido el día 3, límite el día 4</li>
+<li>☐ Decisión sobre el número de WhatsApp (nuevo o pasar el actual a la API) — día 3</li>
+<li>☐ Tarjeta cargada en Meta y OpenAI, o acuerdo sobre quién paga — día 4</li>
+<li>☐ 10 minutos para conectar Gmail juntos — día 4 a 8</li>
+<li>☐ Su celular para la demo y el OK final — días 9 y 10</li>
+<li>☐ Que los vendedores marquen la columna «Visita» — desde el día 11</li>
+</ul>
+<p><strong>Lo que le entregás</strong></p>
+<ul>
+<li>☐ Ficha de buen cliente con tabla de puntos y corte</li>
+<li>☐ Charla de calificación por WhatsApp, en español</li>
+<li>☐ Puntaje automático de 0 a 100 en cada lead</li>
+<li>☐ Base de Airtable con leads y duplicados</li>
+<li>☐ Mail al vendedor correcto con presupuesto, plazo y puntaje</li>
+<li>☐ Dos mails de nutrición para los que no están listos, con opción de baja</li>
+<li>☐ Guía de una página para el equipo</li>
+<li>☐ Reporte semanal automático</li>
+<li>☐ Reporte del primer mes</li>
+<li>☐ (Solo si se va) Paquete de salida: flujo, base y accesos</li>
+</ul>
+<p><strong>El calendario</strong> (días hábiles, a 2 horas por día)</p>
+<div class="tabla"><table>
+<thead>
+<tr>
+<th>Día</th>
+<th>Qué pasa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>P1–P2: pago, bienvenida, reunión agendada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>P3–P4: charla de definición y ficha</td>
+</tr>
+<tr>
+<td>3</td>
+<td>P5–P6 y P10: OK a la ficha, pedido de accesos, importar y limpiar la plantilla</td>
+</tr>
+<tr>
+<td>4</td>
+<td>P7–P8 y P11: llegan los accesos, conectar WhatsApp</td>
+</tr>
+<tr>
+<td>5</td>
+<td>P12: charla en español</td>
+</tr>
+<tr>
+<td>6</td>
+<td>P13: Airtable</td>
+</tr>
+<tr>
+<td>7</td>
+<td>P14–P15: puntaje y reparto</td>
+</tr>
+<tr>
+<td>8</td>
+<td>P16: calificados y nutrición, Gmail conectado con el dueño</td>
+</tr>
+<tr>
+<td>9</td>
+<td>P17–P20: seis pruebas y correcciones</td>
+</tr>
+<tr>
+<td>10</td>
+<td>P21–P23: demo y ajustes</td>
+</tr>
+<tr>
+<td>11</td>
+<td>P24: lanzamiento</td>
+</tr>
+<tr>
+<td>11 a 14</td>
+<td>P25–P27: control dos veces por día; ⭐ primer lead calificado en cuanto entre</td>
+</tr>
+<tr>
+<td>Primer lunes después del lanzamiento</td>
+<td>P29: primer reporte semanal automático</td>
+</tr>
+<tr>
+<td>Semanas 3 a 6</td>
+<td>P28: control dos veces por semana</td>
+</tr>
+<tr>
+<td>Día 30 desde el lanzamiento</td>
+<td>P30–P33: reporte del mes, ajustes y renovación</td>
+</tr>
+</tbody>
+</table></div>
+<p>Son unas 22 horas tuyas en total. Si los accesos se atrasan, todo se corre esos días. Por eso el plazo cuenta desde P8.</p>
+<hr />
+<h2>4. Cuatro mensajes para copiar</h2>
+<p><strong>Mensaje 1 · Bienvenida</strong></p>
+<blockquote>
+<p>¡Hola [Nombre]! Ya me llegó el pago del Filtro de Oro, gracias por seguir confiando 🙌
+Arrancamos con una charla de 45 min para definir qué es para vos un buen cliente. ¿Te queda bien el [día] a las [hora]?
+Para esa charla pensá:
+1. Presupuesto mínimo que te sirve
+2. Zonas que trabajás
+3. En cuánto tiempo tiene que estar por comprar
+4. Formas de pago que te sirven (contado, crédito…)
+5. Tipos de propiedad y qué vendedor atiende cada uno, con su mail</p>
+<p>Si tenés a mano 5 consultas de las últimas semanas, traelas. Las usamos para calibrar.</p>
+</blockquote>
+<p><strong>Mensaje 2 · Recordatorio</strong></p>
+<blockquote>
+<p>Hola [Nombre], ¿cómo va? Para arrancar la instalación me falta solo esto:
+☐ [lo que falta]
+☐ [lo que falta]
+Con eso en [N] días hábiles lo tenemos andando. Si te traba algo, lo hacemos juntos en 15 min por videollamada. ¿Te queda hoy o mañana?</p>
+</blockquote>
+<p><strong>Mensaje 3 · Lanzamiento</strong></p>
+<blockquote>
+<p>¡[Nombre], ya está funcionando! 🚀
+Desde hoy, quien escribe a [número] responde unas preguntas cortas. Si califica, le llega al vendedor que corresponde un mail con presupuesto, plazo y puntaje. Los que todavía no están listos reciben dos mails para no perderlos.
+Te paso la guía para el equipo. Estos primeros días reviso yo cada consulta. Si ves algo raro, avisame por acá.</p>
+</blockquote>
+<p><strong>Mensaje 4 · Reporte del primer mes</strong></p>
+<blockquote>
+<p>Hola [Nombre], te dejo el resumen del primer mes del Filtro de Oro:
+• Consultas que completaron la charla: [X]
+• Calificadas: [X] · No calificadas: [X]
+• Por vendedor: [nombre] [X] · [nombre] [X]
+• Errores: [X], todos corregidos
+• Ajustes que hicimos: [cuáles]</p>
+<p>Para el mes que viene te propongo: [una sola cosa].
+¿Lo vemos 20 min el [día]?</p>
+</blockquote>
+  </article>
+  <a class="volver" href="../../#p08">← Volver a la ficha 08</a>
+  <p class="pie">Ejemplo armado con Claude a partir de la ficha y del prompt «Diagrama de entrega» de EXPOSURE, para un negocio de ejemplo del rubro. Adaptalo a tu cliente: lo marcado como POR DEFINIR depende de él. Ningún sistema garantiza ingresos: lo que se garantiza es que el sistema funcione.</p>
+</div>
+</body>
+</html>
